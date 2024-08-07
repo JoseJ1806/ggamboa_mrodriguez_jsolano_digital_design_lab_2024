@@ -5,20 +5,21 @@ entity Sumadorcompleto_4bits is
     port(
         A, B : in std_logic_vector(3 downto 0);
         Cin : in std_logic;
-        S : out std_logic_vector(3 downto 0);
+        Sum : out std_logic_vector(3 downto 0);
         Cout : out std_logic
     );
 end Sumadorcompleto_4bits;
 
 architecture Behavioral of Sumadorcompleto_4bits is
 	component Sumador_1bit is
-		port(
+        port(
             A, B, Cin : in std_logic;
-            S, Cout : out std_logic);
+            Sum, Cout : out std_logic
+        );
     end component;
-	signal C : STD_LOGIC_VECTOR(3 downto 0);  -- Señales de acarreo 
-	begin
-    -- Instanciación de los sumadores de 1 bit
+    signal C : STD_LOGIC_VECTOR(3 downto 0);  
+begin
+    
     sumador0 : Sumador_1bit
         port map (A(0), B(0), Cin, S(0), C(0));
 

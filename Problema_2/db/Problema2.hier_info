@@ -1,0 +1,61 @@
+|Sumadorcompleto_4bits
+A[0] => Sumador_1bit:sumador0.A
+A[1] => Sumador_1bit:sumador1.A
+A[2] => Sumador_1bit:sumador2.A
+A[3] => Sumador_1bit:sumador3.A
+B[0] => Sumador_1bit:sumador0.B
+B[1] => Sumador_1bit:sumador1.B
+B[2] => Sumador_1bit:sumador2.B
+B[3] => Sumador_1bit:sumador3.B
+Cin => Sumador_1bit:sumador0.Cin
+S[0] << Sumador_1bit:sumador0.S
+S[1] << Sumador_1bit:sumador1.S
+S[2] << Sumador_1bit:sumador2.S
+S[3] << Sumador_1bit:sumador3.S
+Cout << Sumador_1bit:sumador3.Cout
+
+
+|Sumadorcompleto_4bits|Sumador_1bit:sumador0
+A => S.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sumadorcompleto_4bits|Sumador_1bit:sumador1
+A => S.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sumadorcompleto_4bits|Sumador_1bit:sumador2
+A => S.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sumadorcompleto_4bits|Sumador_1bit:sumador3
+A => S.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+

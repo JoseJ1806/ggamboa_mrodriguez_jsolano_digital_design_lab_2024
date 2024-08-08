@@ -1,0 +1,10 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -sv -work work +incdir+C:/Users/Marco\ Rodriguez/Desktop/Quartus\ projects/Problema_3 {C:/Users/Marco Rodriguez/Desktop/Quartus projects/Problema_3/substractor.sv}
+vlog -sv -work work +incdir+C:/Users/Marco\ Rodriguez/Desktop/Quartus\ projects/Problema_3 {C:/Users/Marco Rodriguez/Desktop/Quartus projects/Problema_3/Problema_3.sv}
+

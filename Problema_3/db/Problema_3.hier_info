@@ -1,0 +1,63 @@
+|Problema_3
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+result[0] << substractor:generate_N_bit_Adder[0].f.port3
+result[1] << substractor:generate_N_bit_Adder[1].f.port3
+result[2] << substractor:generate_N_bit_Adder[2].f.port3
+result[3] << substractor:generate_N_bit_Adder[3].f.port3
+neg_flag << substractor:generate_N_bit_Adder[3].f.port3
+zr_flag << Equal0.DB_MAX_OUTPUT_PORT_TYPE
+cry_flag << substractor:generate_N_bit_Adder[3].f.port4
+of_flag << of_flag.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Problema_3|substractor:generate_N_bit_Adder[0].f
+a => u1.IN0
+a => u3.IN0
+b => u1.IN1
+b => u3.IN1
+c_in => u2.IN1
+c_in => u4.IN1
+result <= u2.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Problema_3|substractor:generate_N_bit_Adder[1].f
+a => u1.IN0
+a => u3.IN0
+b => u1.IN1
+b => u3.IN1
+c_in => u2.IN1
+c_in => u4.IN1
+result <= u2.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Problema_3|substractor:generate_N_bit_Adder[2].f
+a => u1.IN0
+a => u3.IN0
+b => u1.IN1
+b => u3.IN1
+c_in => u2.IN1
+c_in => u4.IN1
+result <= u2.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Problema_3|substractor:generate_N_bit_Adder[3].f
+a => u1.IN0
+a => u3.IN0
+b => u1.IN1
+b => u3.IN1
+c_in => u2.IN1
+c_in => u4.IN1
+result <= u2.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -8,28 +8,28 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema 2/simulation/modelsim
+Z0 dC:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_2/simulation/modelsim
 Esumador_1bit
 Z1 w1722996353
 Z2 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
 Z3 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
 Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z5 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 0
+!i122 1
 R0
-Z6 8C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema 2/Sumador_1bit.vhd
-Z7 FC:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema 2/Sumador_1bit.vhd
+Z6 8C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_2/Sumador_1bit.vhd
+Z7 FC:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_2/Sumador_1bit.vhd
 l0
 L6 1
 VcjGEOPHS;W1eHoOTUQU?m0
 !s100 B;7>oJY80]fcHi_mYM2AG1
 Z8 OV;C;2020.1;71
 31
-Z9 !s110 1723065653
+Z9 !s110 1723099748
 !i10b 1
-Z10 !s108 1723065653.000000
-Z11 !s90 -reportprogress|300|-93|-work|work|C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema 2/Sumador_1bit.vhd|
-Z12 !s107 C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema 2/Sumador_1bit.vhd|
+Z10 !s108 1723099748.000000
+Z11 !s90 -reportprogress|300|-93|-work|work|C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_2/Sumador_1bit.vhd|
+Z12 !s107 C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_2/Sumador_1bit.vhd|
 !i113 1
 Z13 o-93 -work work
 Z14 tExplicit 1 CvgOpt 0
@@ -39,7 +39,7 @@ R3
 R4
 R5
 DEx4 work 12 sumador_1bit 0 22 cjGEOPHS;W1eHoOTUQU?m0
-!i122 0
+!i122 1
 l12
 L11 5
 V_bW5Zo9PcAPVmZL90]aI`3
@@ -54,66 +54,108 @@ R12
 !i113 1
 R13
 R14
-Esumadorcompleto_4bits
-Z15 w1722997078
+Esumador_fpga
+Z15 w1723099643
 R4
 R5
-!i122 1
+!i122 2
 R0
-Z16 8C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema 2/Sumadorcompleto_4bits.vhd
-Z17 FC:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema 2/Sumadorcompleto_4bits.vhd
+Z16 8C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_2/sumador_fpga.vhd
+Z17 FC:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_2/sumador_fpga.vhd
+l0
+L4 1
+Ve^Y5W8daPzABNXWBlAPiX1
+!s100 DBZfOcI?k;L3<gD[?zLf=2
+R8
+31
+R9
+!i10b 1
+R10
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_2/sumador_fpga.vhd|
+Z19 !s107 C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_2/sumador_fpga.vhd|
+!i113 1
+R13
+R14
+Abehavioral
+Z20 DEx4 work 21 sumadorcompleto_4bits 0 22 3ZbNLU8Jm1UTYi9kBH@W@2
+R4
+R5
+DEx4 work 12 sumador_fpga 0 22 e^Y5W8daPzABNXWBlAPiX1
+!i122 2
+l39
+L10 40
+VeaE4]j0RznUE[jM]6TAXC3
+!s100 EQkU5^@1_Lg0]S?>P7L1`1
+R8
+31
+R9
+!i10b 1
+R10
+R18
+R19
+!i113 1
+R13
+R14
+Esumadorcompleto_4bits
+Z21 w1723099329
+R4
+R5
+!i122 0
+R0
+Z22 8C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_2/Sumadorcompleto_4bits.vhd
+Z23 FC:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_2/Sumadorcompleto_4bits.vhd
 l0
 L4 1
 V3ZbNLU8Jm1UTYi9kBH@W@2
 !s100 EGlea9o_ZN`mY8Z`=Hh_j0
 R8
 31
-Z18 !s110 1723065654
+Z24 !s110 1723099747
 !i10b 1
-R10
-Z19 !s90 -reportprogress|300|-93|-work|work|C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema 2/Sumadorcompleto_4bits.vhd|
-Z20 !s107 C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema 2/Sumadorcompleto_4bits.vhd|
+Z25 !s108 1723099747.000000
+Z26 !s90 -reportprogress|300|-93|-work|work|C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_2/Sumadorcompleto_4bits.vhd|
+Z27 !s107 C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_2/Sumadorcompleto_4bits.vhd|
 !i113 1
 R13
 R14
 Abehavioral
 R4
 R5
-DEx4 work 21 sumadorcompleto_4bits 0 22 3ZbNLU8Jm1UTYi9kBH@W@2
-!i122 1
-l20
-L13 21
-V?1@[@D]kim?Bz]5<VOU^@0
-!s100 805ZdlnQ2_Qe=CPOC7egT0
+R20
+!i122 0
+l23
+L13 26
+Vf`Oo>4dIARWZJ;LS15BDK2
+!s100 fFbC292P@zABEZ=3j2lf:3
 R8
 31
-R18
+R24
 !i10b 1
-R10
-R19
-R20
+R25
+R26
+R27
 !i113 1
 R13
 R14
 Esumadorcompleto_4bits_tb
-Z21 w1722996565
+Z28 w1722996565
 R4
 R5
-!i122 2
+!i122 3
 R0
-Z22 8C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema 2/Sumadorcompleto_4bits_tb.vhd
-Z23 FC:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema 2/Sumadorcompleto_4bits_tb.vhd
+Z29 8C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_2/Sumadorcompleto_4bits_tb.vhd
+Z30 FC:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_2/Sumadorcompleto_4bits_tb.vhd
 l0
 L4 1
 VOIALT98mEMGa:;>P?XzJH3
 !s100 O[IYZK044FSTQgao@8hKZ1
 R8
 31
-R18
+R9
 !i10b 1
-Z24 !s108 1723065654.000000
-Z25 !s90 -reportprogress|300|-93|-work|work|C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema 2/Sumadorcompleto_4bits_tb.vhd|
-!s107 C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema 2/Sumadorcompleto_4bits_tb.vhd|
+R10
+Z31 !s90 -reportprogress|300|-93|-work|work|C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_2/Sumadorcompleto_4bits_tb.vhd|
+!s107 C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_2/Sumadorcompleto_4bits_tb.vhd|
 !i113 1
 R13
 R14
@@ -121,18 +163,18 @@ Abehavioral
 R4
 R5
 DEx4 work 24 sumadorcompleto_4bits_tb 0 22 OIALT98mEMGa:;>P?XzJH3
-!i122 2
+!i122 3
 l21
 L7 51
 VeFHQLVE@jW?@VULGCR9ok3
 !s100 UNz<bj@4f>ZYQ7>dWBzAm3
 R8
 31
-R18
+R9
 !i10b 1
-R24
-R25
-Z26 !s107 C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema 2/Sumadorcompleto_4bits_tb.vhd|
+R10
+R31
+Z32 !s107 C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_2/Sumadorcompleto_4bits_tb.vhd|
 !i113 1
 R13
 R14

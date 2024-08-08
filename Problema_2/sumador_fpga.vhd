@@ -1,12 +1,11 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.NUMERIC_STD.ALL;
 
 entity sumador_fpga is
     Port ( SW : in STD_LOGIC_VECTOR(7 downto 0);  -- Switches S0 a S7
-           HEX0 : out STD_LOGIC_VECTOR(6 downto 0);  -- Display 7 segmentos para el resultado
-           HEX1 : out STD_LOGIC_VECTOR(6 downto 0));  -- Display 7 segmentos para el resultado de B
+           HEX0 : out STD_LOGIC_VECTOR(6 downto 0));  -- Display 7 segmentos para el resultado
 end sumador_fpga;
+
 
 architecture Behavioral of sumador_fpga is
     signal A : STD_LOGIC_VECTOR(3 downto 0);
@@ -14,26 +13,30 @@ architecture Behavioral of sumador_fpga is
     signal Cin : STD_LOGIC := '0';  
     signal S : STD_LOGIC_VECTOR(3 downto 0);
     signal Cout : STD_LOGIC;
-
-    -- Función para convertir el resultado a un formato adecuado para el display
-    function to_7seg(value: INTEGER) return STD_LOGIC_VECTOR is
-    begin
-        case value is
-            when 0 => return "1000000";  -- 0
-            when 1 => return "1111001";  -- 1
-            when 2 => return "0100100";  -- 2
-            when 3 => return "0110000";  -- 3
-            when 4 => return "0011001";  -- 4
-            when 5 => return "0010010";  -- 5
-            when 6 => return "0000010";  -- 6
-            when 7 => return "1111000";  -- 7
-            when 8 => return "0000000";  -- 8
-            when 9 => return "0010000";  -- 9
-            when others => return "1111111";  -- Error
-        end case;
-    end function;
-
-begin
+	 
+	function siete_seg(entrada: STD_LOGIC_VECTOR(3 downto 0)) return std_logic_vector is
+	begin
+		case entrada is
+			when "0000" => return "1111110";
+			when "0001" => return "0110000";
+			when "0010" => return "1101101";
+			when "0011" => return "1111011";
+			when "0100" => return "0110011";
+			when "0101" => return "1011011";
+			when "0110" => return "1011111";
+			when "0111" => return "1110000";
+			when "1000" => return "1111111";
+			when "1001" => return "1110011";
+			when "1010" => return "1110111";
+			when "1011" => return "0011111";
+			when "1100" => return "1001110";
+			when "1101" => return "0111101";
+			when "1110" => return "1001111";
+			when others => return "1000111";
+		end case;
+	end function;
+	
+	begin
     -- Asignar las entradas desde los switches
     A <= SW(3 downto 0);
     B <= SW(7 downto 4);
@@ -42,6 +45,5 @@ begin
         port map (A, B, Cin, S, Cout);
 
     -- Mostrar el resultado en los displays de 7 segmentos
-    HEX0 <= to_7seg(to_integer(unsigned(S)));  -- Muestra el resultado de la suma
-    HEX1 <= to_7seg(to_integer(unsigned(B)));  -- Muestra el valor de B
+    HEX0 <= siete_seg(S);  -- Muestra el resultado de la suma
 end Behavioral;

@@ -10,47 +10,58 @@
 # Copying C:/ModelSim/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
+# vlog -vlog01compat -work work +incdir+C:/Users/Marco\ Rodriguez/Desktop/Quartus\ projects/Problema_3 {C:/Users/Marco Rodriguez/Desktop/Quartus projects/Problema_3/binary_to_seven_segment.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 04:26:59 on Aug 08,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Marco Rodriguez/Desktop/Quartus projects/Problema_3" C:/Users/Marco Rodriguez/Desktop/Quartus projects/Problema_3/binary_to_seven_segment.v 
+# -- Compiling module binary_to_bcd_7_segment
+# 
+# Top level modules:
+# 	binary_to_bcd_7_segment
+# End time: 04:26:59 on Aug 08,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Marco\ Rodriguez/Desktop/Quartus\ projects/Problema_3 {C:/Users/Marco Rodriguez/Desktop/Quartus projects/Problema_3/substractor.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 00:23:55 on Aug 07,2024
+# Start time: 04:26:59 on Aug 08,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Marco Rodriguez/Desktop/Quartus projects/Problema_3" C:/Users/Marco Rodriguez/Desktop/Quartus projects/Problema_3/substractor.sv 
 # -- Compiling module substractor
 # 
 # Top level modules:
 # 	substractor
-# End time: 00:23:55 on Aug 07,2024, Elapsed time: 0:00:00
+# End time: 04:26:59 on Aug 08,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Marco\ Rodriguez/Desktop/Quartus\ projects/Problema_3 {C:/Users/Marco Rodriguez/Desktop/Quartus projects/Problema_3/Problema_3.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 00:23:55 on Aug 07,2024
+# Start time: 04:26:59 on Aug 08,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Marco Rodriguez/Desktop/Quartus projects/Problema_3" C:/Users/Marco Rodriguez/Desktop/Quartus projects/Problema_3/Problema_3.sv 
 # -- Compiling module Problema_3
 # 
 # Top level modules:
 # 	Problema_3
-# End time: 00:23:55 on Aug 07,2024, Elapsed time: 0:00:00
+# End time: 04:26:59 on Aug 08,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -sv -work work +incdir+C:/Users/Marco\ Rodriguez/Desktop/Quartus\ projects/Problema_3 {C:/Users/Marco Rodriguez/Desktop/Quartus projects/Problema_3/Problema_3_tb.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 00:23:55 on Aug 07,2024
+# Start time: 04:26:59 on Aug 08,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Marco Rodriguez/Desktop/Quartus projects/Problema_3" C:/Users/Marco Rodriguez/Desktop/Quartus projects/Problema_3/Problema_3_tb.sv 
 # -- Compiling module Problema_3_tb
 # 
 # Top level modules:
 # 	Problema_3_tb
-# End time: 00:23:55 on Aug 07,2024, Elapsed time: 0:00:00
+# End time: 04:26:59 on Aug 08,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  Problema_3_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" Problema_3_tb 
-# Start time: 00:23:55 on Aug 07,2024
+# Start time: 04:26:59 on Aug 08,2024
 # Loading sv_std.std
 # Loading work.Problema_3_tb
-# Loading work.substractor
 # Loading work.Problema_3
+# Loading work.binary_to_bcd_7_segment
+# Loading work.substractor
 # ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'c_in'. The port definition is at: C:/Users/Marco Rodriguez/Desktop/Quartus projects/Problema_3/substractor.sv(6).
-#    Time: 0 ps  Iteration: 0  Instance: /Problema_3_tb/uut_Problema_3/generate_N_bit_Adder[0]/genblk1/f File: C:/Users/Marco Rodriguez/Desktop/Quartus projects/Problema_3/Problema_3.sv Line: 23
+#    Time: 0 ps  Iteration: 0  Instance: /Problema_3_tb/uut/subtractor_loop[0]/genblk1/sub_inst File: C:/Users/Marco Rodriguez/Desktop/Quartus projects/Problema_3/Problema_3.sv Line: 43
 # 
 # add wave *
 # view structure
@@ -58,8 +69,14 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# WARNING: No extended dataflow license exists
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# End time: 00:27:38 on Aug 07,2024, Elapsed time: 0:03:43
+# seg_a0. Obtenido: 0100100
+# seg_a1. Obtenido: 1111001
+# seg_b0. Obtenido: 1111000
+# seg_b1. Obtenido: 1000000
+# seg_res0. Obtenido: 1000000
+# seg_res1. Obtenido: 1000000
+# ** Note: $stop    : C:/Users/Marco Rodriguez/Desktop/Quartus projects/Problema_3/Problema_3_tb.sv(60)
+#    Time: 100 ps  Iteration: 0  Instance: /Problema_3_tb
+# Break in Module Problema_3_tb at C:/Users/Marco Rodriguez/Desktop/Quartus projects/Problema_3/Problema_3_tb.sv line 60
+# End time: 04:27:46 on Aug 08,2024, Elapsed time: 0:00:47
 # Errors: 0, Warnings: 1

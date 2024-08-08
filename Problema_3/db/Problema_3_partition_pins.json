@@ -20,51 +20,219 @@
 					"strict" : false
 				},
 				{
-					"name" : "neg_flag",
+					"name" : "result[4]",
 					"strict" : false
 				},
 				{
-					"name" : "zr_flag",
+					"name" : "result[5]",
 					"strict" : false
 				},
 				{
-					"name" : "cry_flag",
+					"name" : "seg_a0[0]",
 					"strict" : false
 				},
 				{
-					"name" : "of_flag",
+					"name" : "seg_a0[1]",
 					"strict" : false
 				},
 				{
-					"name" : "a[0]",
+					"name" : "seg_a0[2]",
 					"strict" : false
 				},
 				{
-					"name" : "b[0]",
+					"name" : "seg_a0[3]",
 					"strict" : false
 				},
 				{
-					"name" : "a[1]",
+					"name" : "seg_a0[4]",
 					"strict" : false
 				},
 				{
-					"name" : "b[1]",
+					"name" : "seg_a0[5]",
 					"strict" : false
 				},
 				{
-					"name" : "a[2]",
+					"name" : "seg_a0[6]",
 					"strict" : false
 				},
 				{
-					"name" : "b[2]",
+					"name" : "seg_a1[0]",
 					"strict" : false
 				},
 				{
-					"name" : "a[3]",
+					"name" : "seg_a1[1]",
 					"strict" : false
 				},
 				{
-					"name" : "b[3]",
+					"name" : "seg_a1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_a1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_a1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_a1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_a1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_b0[0]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_b0[1]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_b0[2]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_b0[3]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_b0[4]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_b0[5]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_b0[6]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_b1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_b1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_b1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_b1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_b1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_b1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_b1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_res0[0]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_res0[1]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_res0[2]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_res0[3]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_res0[4]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_res0[5]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_res0[6]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_res1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_res1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_res1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_res1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_res1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_res1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_res1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "button_sub",
+					"strict" : false
+				},
+				{
+					"name" : "value[0]",
+					"strict" : false
+				},
+				{
+					"name" : "button_b",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "button_a",
+					"strict" : false
+				},
+				{
+					"name" : "value[1]",
+					"strict" : false
+				},
+				{
+					"name" : "value[2]",
+					"strict" : false
+				},
+				{
+					"name" : "value[3]",
+					"strict" : false
+				},
+				{
+					"name" : "value[4]",
+					"strict" : false
+				},
+				{
+					"name" : "value[5]",
 					"strict" : false
 				}
 			]

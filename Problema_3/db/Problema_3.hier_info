@@ -1,23 +1,97 @@
 |Problema_3
-a[0] => a[0].IN1
-a[1] => a[1].IN1
-a[2] => a[2].IN1
-a[3] => a[3].IN1
-b[0] => b[0].IN1
-b[1] => b[1].IN1
-b[2] => b[2].IN1
-b[3] => b[3].IN1
-result[0] << substractor:generate_N_bit_Adder[0].f.port3
-result[1] << substractor:generate_N_bit_Adder[1].f.port3
-result[2] << substractor:generate_N_bit_Adder[2].f.port3
-result[3] << substractor:generate_N_bit_Adder[3].f.port3
-neg_flag << substractor:generate_N_bit_Adder[3].f.port3
-zr_flag << Equal0.DB_MAX_OUTPUT_PORT_TYPE
-cry_flag << substractor:generate_N_bit_Adder[3].f.port4
-of_flag << of_flag.DB_MAX_OUTPUT_PORT_TYPE
+value[0] => reg_b[0].DATAIN
+value[0] => reg_a[0].DATAIN
+value[1] => reg_b[1].DATAIN
+value[1] => reg_a[1].DATAIN
+value[2] => reg_b[2].DATAIN
+value[2] => reg_a[2].DATAIN
+value[3] => reg_b[3].DATAIN
+value[3] => reg_a[3].DATAIN
+value[4] => reg_b[4].DATAIN
+value[4] => reg_a[4].DATAIN
+value[5] => reg_b[5].DATAIN
+value[5] => reg_a[5].DATAIN
+reset => reg_b[1].ACLR
+reset => reg_b[0].ACLR
+reset => reg_b[2].ACLR
+reset => reg_b[3].ACLR
+reset => reg_b[4].ACLR
+reset => reg_b[5].ACLR
+reset => reg_a[0].ACLR
+reset => reg_a[1].ACLR
+reset => reg_a[2].ACLR
+reset => reg_a[3].ACLR
+reset => reg_a[4].ACLR
+reset => reg_a[5].ACLR
+button_a => reg_a[0].LATCH_ENABLE
+button_a => reg_a[1].LATCH_ENABLE
+button_a => reg_a[2].LATCH_ENABLE
+button_a => reg_a[3].LATCH_ENABLE
+button_a => reg_a[4].LATCH_ENABLE
+button_a => reg_a[5].LATCH_ENABLE
+button_b => reg_b[1].LATCH_ENABLE
+button_b => reg_b[0].LATCH_ENABLE
+button_b => reg_b[2].LATCH_ENABLE
+button_b => reg_b[3].LATCH_ENABLE
+button_b => reg_b[4].LATCH_ENABLE
+button_b => reg_b[5].LATCH_ENABLE
+button_sub => result.OUTPUTSELECT
+button_sub => result.OUTPUTSELECT
+button_sub => result.OUTPUTSELECT
+button_sub => result.OUTPUTSELECT
+button_sub => result.OUTPUTSELECT
+button_sub => result.OUTPUTSELECT
+result[0] << result[0].DB_MAX_OUTPUT_PORT_TYPE
+result[1] << result[1].DB_MAX_OUTPUT_PORT_TYPE
+result[2] << result[2].DB_MAX_OUTPUT_PORT_TYPE
+result[3] << result[3].DB_MAX_OUTPUT_PORT_TYPE
+result[4] << result[4].DB_MAX_OUTPUT_PORT_TYPE
+result[5] << result[5].DB_MAX_OUTPUT_PORT_TYPE
+seg_a0[0] << binary_to_bcd_7_segment:conv_a.seg_units
+seg_a0[1] << binary_to_bcd_7_segment:conv_a.seg_units
+seg_a0[2] << binary_to_bcd_7_segment:conv_a.seg_units
+seg_a0[3] << binary_to_bcd_7_segment:conv_a.seg_units
+seg_a0[4] << binary_to_bcd_7_segment:conv_a.seg_units
+seg_a0[5] << binary_to_bcd_7_segment:conv_a.seg_units
+seg_a0[6] << binary_to_bcd_7_segment:conv_a.seg_units
+seg_a1[0] << binary_to_bcd_7_segment:conv_a.seg_tens
+seg_a1[1] << binary_to_bcd_7_segment:conv_a.seg_tens
+seg_a1[2] << binary_to_bcd_7_segment:conv_a.seg_tens
+seg_a1[3] << binary_to_bcd_7_segment:conv_a.seg_tens
+seg_a1[4] << binary_to_bcd_7_segment:conv_a.seg_tens
+seg_a1[5] << binary_to_bcd_7_segment:conv_a.seg_tens
+seg_a1[6] << binary_to_bcd_7_segment:conv_a.seg_tens
+seg_b0[0] << binary_to_bcd_7_segment:conv_b.seg_units
+seg_b0[1] << binary_to_bcd_7_segment:conv_b.seg_units
+seg_b0[2] << binary_to_bcd_7_segment:conv_b.seg_units
+seg_b0[3] << binary_to_bcd_7_segment:conv_b.seg_units
+seg_b0[4] << binary_to_bcd_7_segment:conv_b.seg_units
+seg_b0[5] << binary_to_bcd_7_segment:conv_b.seg_units
+seg_b0[6] << binary_to_bcd_7_segment:conv_b.seg_units
+seg_b1[0] << binary_to_bcd_7_segment:conv_b.seg_tens
+seg_b1[1] << binary_to_bcd_7_segment:conv_b.seg_tens
+seg_b1[2] << binary_to_bcd_7_segment:conv_b.seg_tens
+seg_b1[3] << binary_to_bcd_7_segment:conv_b.seg_tens
+seg_b1[4] << binary_to_bcd_7_segment:conv_b.seg_tens
+seg_b1[5] << binary_to_bcd_7_segment:conv_b.seg_tens
+seg_b1[6] << binary_to_bcd_7_segment:conv_b.seg_tens
+seg_res0[0] << binary_to_bcd_7_segment:conv_result.seg_units
+seg_res0[1] << binary_to_bcd_7_segment:conv_result.seg_units
+seg_res0[2] << binary_to_bcd_7_segment:conv_result.seg_units
+seg_res0[3] << binary_to_bcd_7_segment:conv_result.seg_units
+seg_res0[4] << binary_to_bcd_7_segment:conv_result.seg_units
+seg_res0[5] << binary_to_bcd_7_segment:conv_result.seg_units
+seg_res0[6] << binary_to_bcd_7_segment:conv_result.seg_units
+seg_res1[0] << binary_to_bcd_7_segment:conv_result.seg_tens
+seg_res1[1] << binary_to_bcd_7_segment:conv_result.seg_tens
+seg_res1[2] << binary_to_bcd_7_segment:conv_result.seg_tens
+seg_res1[3] << binary_to_bcd_7_segment:conv_result.seg_tens
+seg_res1[4] << binary_to_bcd_7_segment:conv_result.seg_tens
+seg_res1[5] << binary_to_bcd_7_segment:conv_result.seg_tens
+seg_res1[6] << binary_to_bcd_7_segment:conv_result.seg_tens
 
 
-|Problema_3|substractor:generate_N_bit_Adder[0].f
+|Problema_3|substractor:subtractor_loop[0].sub_inst
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -28,7 +102,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Problema_3|substractor:generate_N_bit_Adder[1].f
+|Problema_3|substractor:subtractor_loop[1].sub_inst
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -39,7 +113,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Problema_3|substractor:generate_N_bit_Adder[2].f
+|Problema_3|substractor:subtractor_loop[2].sub_inst
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -50,7 +124,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Problema_3|substractor:generate_N_bit_Adder[3].f
+|Problema_3|substractor:subtractor_loop[3].sub_inst
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -59,5 +133,114 @@ c_in => u2.IN1
 c_in => u4.IN1
 result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Problema_3|substractor:subtractor_loop[4].sub_inst
+a => u1.IN0
+a => u3.IN0
+b => u1.IN1
+b => u3.IN1
+c_in => u2.IN1
+c_in => u4.IN1
+result <= u2.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Problema_3|substractor:subtractor_loop[5].sub_inst
+a => u1.IN0
+a => u3.IN0
+b => u1.IN1
+b => u3.IN1
+c_in => u2.IN1
+c_in => u4.IN1
+result <= u2.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Problema_3|binary_to_bcd_7_segment:conv_a
+binary_in[0] => Ram0.RADDR
+binary_in[0] => Ram1.RADDR
+binary_in[1] => Ram0.RADDR1
+binary_in[1] => Ram1.RADDR1
+binary_in[2] => Ram0.RADDR2
+binary_in[2] => Ram1.RADDR2
+binary_in[3] => Ram0.RADDR3
+binary_in[3] => Ram1.RADDR3
+binary_in[4] => Ram0.RADDR4
+binary_in[4] => Ram1.RADDR4
+binary_in[5] => Ram0.RADDR5
+binary_in[5] => Ram1.RADDR5
+seg_units[0] <= Ram1.DATAOUT
+seg_units[1] <= Ram1.DATAOUT1
+seg_units[2] <= Ram1.DATAOUT2
+seg_units[3] <= Ram1.DATAOUT3
+seg_units[4] <= Ram1.DATAOUT4
+seg_units[5] <= Ram1.DATAOUT5
+seg_units[6] <= Ram1.DATAOUT6
+seg_tens[0] <= Ram0.DATAOUT
+seg_tens[1] <= Ram0.DATAOUT1
+seg_tens[2] <= Ram0.DATAOUT2
+seg_tens[3] <= Ram0.DATAOUT3
+seg_tens[4] <= Ram0.DATAOUT4
+seg_tens[5] <= Ram0.DATAOUT5
+seg_tens[6] <= Ram0.DATAOUT6
+
+
+|Problema_3|binary_to_bcd_7_segment:conv_b
+binary_in[0] => Ram0.RADDR
+binary_in[0] => Ram1.RADDR
+binary_in[1] => Ram0.RADDR1
+binary_in[1] => Ram1.RADDR1
+binary_in[2] => Ram0.RADDR2
+binary_in[2] => Ram1.RADDR2
+binary_in[3] => Ram0.RADDR3
+binary_in[3] => Ram1.RADDR3
+binary_in[4] => Ram0.RADDR4
+binary_in[4] => Ram1.RADDR4
+binary_in[5] => Ram0.RADDR5
+binary_in[5] => Ram1.RADDR5
+seg_units[0] <= Ram1.DATAOUT
+seg_units[1] <= Ram1.DATAOUT1
+seg_units[2] <= Ram1.DATAOUT2
+seg_units[3] <= Ram1.DATAOUT3
+seg_units[4] <= Ram1.DATAOUT4
+seg_units[5] <= Ram1.DATAOUT5
+seg_units[6] <= Ram1.DATAOUT6
+seg_tens[0] <= Ram0.DATAOUT
+seg_tens[1] <= Ram0.DATAOUT1
+seg_tens[2] <= Ram0.DATAOUT2
+seg_tens[3] <= Ram0.DATAOUT3
+seg_tens[4] <= Ram0.DATAOUT4
+seg_tens[5] <= Ram0.DATAOUT5
+seg_tens[6] <= Ram0.DATAOUT6
+
+
+|Problema_3|binary_to_bcd_7_segment:conv_result
+binary_in[0] => Ram0.RADDR
+binary_in[0] => Ram1.RADDR
+binary_in[1] => Ram0.RADDR1
+binary_in[1] => Ram1.RADDR1
+binary_in[2] => Ram0.RADDR2
+binary_in[2] => Ram1.RADDR2
+binary_in[3] => Ram0.RADDR3
+binary_in[3] => Ram1.RADDR3
+binary_in[4] => Ram0.RADDR4
+binary_in[4] => Ram1.RADDR4
+binary_in[5] => Ram0.RADDR5
+binary_in[5] => Ram1.RADDR5
+seg_units[0] <= Ram1.DATAOUT
+seg_units[1] <= Ram1.DATAOUT1
+seg_units[2] <= Ram1.DATAOUT2
+seg_units[3] <= Ram1.DATAOUT3
+seg_units[4] <= Ram1.DATAOUT4
+seg_units[5] <= Ram1.DATAOUT5
+seg_units[6] <= Ram1.DATAOUT6
+seg_tens[0] <= Ram0.DATAOUT
+seg_tens[1] <= Ram0.DATAOUT1
+seg_tens[2] <= Ram0.DATAOUT2
+seg_tens[3] <= Ram0.DATAOUT3
+seg_tens[4] <= Ram0.DATAOUT4
+seg_tens[5] <= Ram0.DATAOUT5
+seg_tens[6] <= Ram0.DATAOUT6
 
 

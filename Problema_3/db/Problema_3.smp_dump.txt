@@ -1,0 +1,7 @@
+
+State Machine - |Problema_3|state
+Name state.STATE_SUBTRACT state.STATE_SET_B state.STATE_SET_A state.STATE_IDLE 
+state.STATE_IDLE 0 0 0 0 
+state.STATE_SET_A 0 0 1 1 
+state.STATE_SET_B 0 1 0 1 
+state.STATE_SUBTRACT 1 0 0 1 

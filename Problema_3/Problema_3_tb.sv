@@ -1,89 +1,191 @@
-
 module Problema_3_tb;
+    logic [5:0] value;
+    logic reset;
+    logic button_a, button_b, button_sub;
+    logic [5:0] result;
+    logic [6:0] seg_a0, seg_a1, seg_b0, seg_b1, seg_res0, seg_res1;
 
-  // Parameters
-  parameter N = 4;
+    Problema_3 #(6) uut (
+        .value(value),
+        .reset(reset),
+        .button_a(button_a),
+        .button_b(button_b),
+        .button_sub(button_sub),
+        .result(result),
+        .seg_a0(seg_a0),
+        .seg_a1(seg_a1),
+        .seg_b0(seg_b0),
+        .seg_b1(seg_b1),
+        .seg_res0(seg_res0),
+        .seg_res1(seg_res1)
+    );
 
-  // Inputs for substractor
-  logic a, b, c_in;
+    initial begin
+        // Inicialización
+        reset = 1;
+        button_a = 0;
+        button_b = 0;
+        button_sub = 0;
+        value = 6'b000000;
+        #10;
 
-  // Outputs for substractor
-  logic result, c_out;
+        // Desactivar reset
+        reset = 0;
+        #10;
 
-  // Inputs for Problema_3
-  logic [N-1:0] a_vec, b_vec;
+        // Ingresar valor A = 12 
+        value = 6'b001100;
+        button_a = 1; #10 button_a = 0; #10;
 
-  // Outputs for Problema_3
-  logic [N-1:0] result_vec;
-  logic neg_flag, zr_flag, cry_flag, of_flag;
+        // Ingresar valor B = 7 
+        value = 6'b000111;
+        button_b = 1; #10 button_b = 0; #10;
 
-  // Instantiate the substractor module
-  substractor uut_substractor (
-    .a(a),
-    .b(b),
-    .c_in(c_in),
-    .result(result),
-    .c_out(c_out)
-  );
+        // Realizar la resta
+        button_sub = 1; #10 button_sub = 0; #10;
 
-  // Instantiate the Problema_3 module
-  Problema_3 #(.N(N)) uut_Problema_3 (
-    .a(a_vec),
-    .b(b_vec),
-    .result(result_vec),
-    .neg_flag(neg_flag),
-    .zr_flag(zr_flag),
-    .cry_flag(cry_flag),
-    .of_flag(of_flag)
-  );
+        #10;
 
-  initial begin
-    // Test Case 1: 0 - 0 - 0 = 0, No carry
-    a = 0; b = 0; c_in = 0;
-    #30;
 
-    // Test Case 2: 0 - 1 - 0 = 1, Carry generated
-    a = 0; b = 1; c_in = 0;
-    #30;
+        // Verificar las salidas de las pantallas de 7 segmentos
+        $display("seg_a0. Obtenido: %b", seg_a0);
+        $display("seg_a1. Obtenido: %b", seg_a1);
+        $display("seg_b0. Obtenido: %b", seg_b0);
+        $display("seg_b1. Obtenido: %b", seg_b1);
+        $display("seg_res0. Obtenido: %b", seg_res0);
+        $display("seg_res1. Obtenido: %b", seg_res1);
 
-    // Test Case 3: 1 - 1 - 1 = 1, Carry generated
-    a = 1; b = 1; c_in = 1;
-    #30;
-
-    // Test Case 4: 1 - 0 - 1 = 0, No carry
-    a = 1; b = 0; c_in = 1;
-    #30;
-  end
-
-  initial begin
-    
-    // Test Case 1: 4'b0000 - 4'b0000 = 4'b0000
-    a_vec = 4'b0000; b_vec = 4'b0000;
-    #30;
-
-    // Test Case 2: 4'b0001 - 4'b0001 = 4'b0000
-    a_vec = 4'b0001; b_vec = 4'b0001;
-    #30;
-
-    // Test Case 3: 4'b1111 - 4'b0001 = 4'b1110
-    a_vec = 4'b1111; b_vec = 4'b0001;
-    #30;
-
-    // Test Case 4: 4'b0111 - 4'b1000 = 4'b1111
-    a_vec = 4'b0111; b_vec = 4'b1000;
-    #30;
-
-    // Test Case 5: 4'b1000 - 4'b1000 = 4'b0000
-    a_vec = 4'b1000; b_vec = 4'b1000;
-    #30;
-	 
-    // Test Case 6: 4'b1010 - 4'b0101 = 4'b0101
-    a_vec = 4'b1010; b_vec = 4'b0101;
-    #30;
-
-    // Test Case 7: 4'b0011 - 4'b0110 = 4'b1101
-    a_vec = 4'b0011; b_vec = 4'b0110;
-    #30;
-  end
-
+        // Detener simulación
+        #10;
+        $stop;
+    end
 endmodule
+
+
+//module Problema_3_tb;
+//    logic [3:0] value;
+//    logic reset;
+//    logic button_a, button_b, button_sub;
+//    logic [3:0] result;
+//    logic [6:0] seg_a0, seg_a1, seg_b0, seg_b1, seg_res0, seg_res1;
+//
+//    Problema_3 #(4) uut (
+//        .value(value),
+//        .reset(reset),
+//        .button_a(button_a),
+//        .button_b(button_b),
+//        .button_sub(button_sub),
+//        .result(result),
+//        .seg_a0(seg_a0),
+//        .seg_a1(seg_a1),
+//        .seg_b0(seg_b0),
+//        .seg_b1(seg_b1),
+//        .seg_res0(seg_res0),
+//        .seg_res1(seg_res1)
+//    );
+//
+//    initial begin
+//        // Inicialización
+//        reset = 1;
+//        button_a = 0;
+//        button_b = 0;
+//        button_sub = 0;
+//        value = 4'b0000;
+//        #10;
+//
+//        // Desactivar reset
+//        reset = 0;
+//        #10;
+//
+//        // Ingresar valor A = 12 
+//        value = 4'b1100;
+//        button_a = 1; #10 button_a = 0; #10;
+//
+//        // Ingresar valor B = 7 
+//        value = 4'b0111;
+//        button_b = 1; #10 button_b = 0; #10;
+//
+//        // Realizar la resta
+//        button_sub = 1; #10 button_sub = 0; #10;
+//
+//        #10;
+//
+//        // Verificar las salidas de las pantallas de 7 segmentos
+//        $display("seg_a0. Obtenido: %b", seg_a0);
+//        $display("seg_a1. Obtenido: %b", seg_a1);
+//        $display("seg_b0. Obtenido: %b", seg_b0);
+//        $display("seg_b1. Obtenido: %b", seg_b1);
+//        $display("seg_res0. Obtenido: %b", seg_res0);
+//        $display("seg_res1. Obtenido: %b", seg_res1);
+//
+//        // Detener simulación
+//        #10;
+//        $stop;
+//    end
+//endmodule
+
+
+
+//module Problema_3_tb_2bits;
+//    logic [1:0] value;
+//    logic reset;
+//    logic button_a, button_b, button_sub;
+//    logic [1:0] result;
+//    logic [6:0] seg_a0, seg_a1, seg_b0, seg_b1, seg_res0, seg_res1;
+//
+//    Problema_3 #(2) uut (
+//        .value(value),
+//        .reset(reset),
+//        .button_a(button_a),
+//        .button_b(button_b),
+//        .button_sub(button_sub),
+//        .result(result),
+//        .seg_a0(seg_a0),
+//        .seg_a1(seg_a1),
+//        .seg_b0(seg_b0),
+//        .seg_b1(seg_b1),
+//        .seg_res0(seg_res0),
+//        .seg_res1(seg_res1)
+//    );
+//
+//    initial begin
+//        // Inicialización
+//        reset = 1;
+//        button_a = 0;
+//        button_b = 0;
+//        button_sub = 0;
+//        value = 2'b00;
+//        #10;
+//
+//        // Desactivar reset
+//        reset = 0;
+//        #10;
+//
+//        // Ingresar valor A = 2 
+//        value = 2'b10;
+//        button_a = 1; #10 button_a = 0; #10;
+//
+//        // Ingresar valor B = 1 
+//        value = 2'b01;
+//        button_b = 1; #10 button_b = 0; #10;
+//
+//        // Realizar la resta
+//        button_sub = 1; #10 button_sub = 0; #10;
+//
+//        // Esperar unos ciclos para ver el resultado
+//        #10;
+//
+//        // Verificar las salidas de las pantallas de 7 segmentos
+//        $display("seg_a0. Obtenido: %b", seg_a0);
+//        $display("seg_a1. Obtenido: %b", seg_a1);
+//        $display("seg_b0. Obtenido: %b", seg_b0);
+//        $display("seg_b1. Obtenido: %b", seg_b1);
+//        $display("seg_res0. Obtenido: %b", seg_res0);
+//        $display("seg_res1. Obtenido: %b", seg_res1);
+//
+//        // Detener simulación
+//        #10;
+//        $stop;
+//    end
+//endmodule
+//

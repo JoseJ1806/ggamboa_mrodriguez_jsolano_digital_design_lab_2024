@@ -1,5 +1,5 @@
 Analysis & Elaboration report for Problema_3
-Wed Aug 07 00:23:47 2024
+Thu Aug 08 04:26:51 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -11,8 +11,9 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   3. Parallel Compilation
   4. Parameter Settings for User Entity Instance: Top-level Entity: |Problema_3
   5. Analysis & Elaboration Settings
-  6. Port Connectivity Checks: "substractor:generate_N_bit_Adder[0].f"
-  7. Analysis & Elaboration Messages
+  6. Port Connectivity Checks: "substractor:subtractor_loop[5].sub_inst"
+  7. Port Connectivity Checks: "substractor:subtractor_loop[0].sub_inst"
+  8. Analysis & Elaboration Messages
 
 
 
@@ -39,7 +40,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Wed Aug 07 00:23:47 2024       ;
+; Analysis & Elaboration Status ; Successful - Thu Aug 08 04:26:51 2024       ;
 ; Quartus Prime Version         ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                 ; Problema_3                                  ;
 ; Top-level Entity Name         ; Problema_3                                  ;
@@ -75,7 +76,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------+-------+---------------------------------------------------+
 ; Parameter Name ; Value ; Type                                              ;
 +----------------+-------+---------------------------------------------------+
-; N              ; 4     ; Signed Integer                                    ;
+; N              ; 6     ; Signed Integer                                    ;
 +----------------+-------+---------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -167,8 +168,17 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "substractor:subtractor_loop[5].sub_inst"                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; c_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "substractor:generate_N_bit_Adder[0].f"                                                                                                                                                ;
+; Port Connectivity Checks: "substractor:subtractor_loop[0].sub_inst"                                                                                                                                              ;
 +----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port     ; Type  ; Severity ; Details                                                                                                                                                                            ;
 +----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -183,7 +193,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Aug 07 00:23:41 2024
+    Info: Processing started: Thu Aug 08 04:26:39 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Problema_3 -c Problema_3 --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -192,16 +202,31 @@ Info (12021): Found 1 design units, including 1 entities, in source file substra
 Info (12021): Found 1 design units, including 1 entities, in source file problema_3.sv
     Info (12023): Found entity 1: Problema_3 File: C:/Users/Marco Rodriguez/Desktop/Quartus projects/Problema_3/Problema_3.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file problema_3_tb.sv
-    Info (12023): Found entity 1: Problema_3_tb File: C:/Users/Marco Rodriguez/Desktop/Quartus projects/Problema_3/Problema_3_tb.sv Line: 2
+    Info (12023): Found entity 1: Problema_3_tb File: C:/Users/Marco Rodriguez/Desktop/Quartus projects/Problema_3/Problema_3_tb.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file binary_to_seven_segment.v
+    Info (12023): Found entity 1: binary_to_bcd_7_segment File: C:/Users/Marco Rodriguez/Desktop/Quartus projects/Problema_3/binary_to_seven_segment.v Line: 1
 Info (12127): Elaborating entity "Problema_3" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at Problema_3.sv(28): truncated value with size 32 to match size of target (1) File: C:/Users/Marco Rodriguez/Desktop/Quartus projects/Problema_3/Problema_3.sv Line: 28
-Warning (10230): Verilog HDL assignment warning at Problema_3.sv(31): truncated value with size 32 to match size of target (1) File: C:/Users/Marco Rodriguez/Desktop/Quartus projects/Problema_3/Problema_3.sv Line: 31
-Info (12128): Elaborating entity "substractor" for hierarchy "substractor:generate_N_bit_Adder[0].f" File: C:/Users/Marco Rodriguez/Desktop/Quartus projects/Problema_3/Problema_3.sv Line: 23
+Warning (10240): Verilog HDL Always Construct warning at Problema_3.sv(23): inferring latch(es) for variable "reg_a", which holds its previous value in one or more paths through the always construct File: C:/Users/Marco Rodriguez/Desktop/Quartus projects/Problema_3/Problema_3.sv Line: 23
+Warning (10240): Verilog HDL Always Construct warning at Problema_3.sv(23): inferring latch(es) for variable "reg_b", which holds its previous value in one or more paths through the always construct File: C:/Users/Marco Rodriguez/Desktop/Quartus projects/Problema_3/Problema_3.sv Line: 23
+Info (10041): Inferred latch for "reg_b[0]" at Problema_3.sv(23) File: C:/Users/Marco Rodriguez/Desktop/Quartus projects/Problema_3/Problema_3.sv Line: 23
+Info (10041): Inferred latch for "reg_b[1]" at Problema_3.sv(23) File: C:/Users/Marco Rodriguez/Desktop/Quartus projects/Problema_3/Problema_3.sv Line: 23
+Info (10041): Inferred latch for "reg_b[2]" at Problema_3.sv(23) File: C:/Users/Marco Rodriguez/Desktop/Quartus projects/Problema_3/Problema_3.sv Line: 23
+Info (10041): Inferred latch for "reg_b[3]" at Problema_3.sv(23) File: C:/Users/Marco Rodriguez/Desktop/Quartus projects/Problema_3/Problema_3.sv Line: 23
+Info (10041): Inferred latch for "reg_b[4]" at Problema_3.sv(23) File: C:/Users/Marco Rodriguez/Desktop/Quartus projects/Problema_3/Problema_3.sv Line: 23
+Info (10041): Inferred latch for "reg_b[5]" at Problema_3.sv(23) File: C:/Users/Marco Rodriguez/Desktop/Quartus projects/Problema_3/Problema_3.sv Line: 23
+Info (10041): Inferred latch for "reg_a[0]" at Problema_3.sv(23) File: C:/Users/Marco Rodriguez/Desktop/Quartus projects/Problema_3/Problema_3.sv Line: 23
+Info (10041): Inferred latch for "reg_a[1]" at Problema_3.sv(23) File: C:/Users/Marco Rodriguez/Desktop/Quartus projects/Problema_3/Problema_3.sv Line: 23
+Info (10041): Inferred latch for "reg_a[2]" at Problema_3.sv(23) File: C:/Users/Marco Rodriguez/Desktop/Quartus projects/Problema_3/Problema_3.sv Line: 23
+Info (10041): Inferred latch for "reg_a[3]" at Problema_3.sv(23) File: C:/Users/Marco Rodriguez/Desktop/Quartus projects/Problema_3/Problema_3.sv Line: 23
+Info (10041): Inferred latch for "reg_a[4]" at Problema_3.sv(23) File: C:/Users/Marco Rodriguez/Desktop/Quartus projects/Problema_3/Problema_3.sv Line: 23
+Info (10041): Inferred latch for "reg_a[5]" at Problema_3.sv(23) File: C:/Users/Marco Rodriguez/Desktop/Quartus projects/Problema_3/Problema_3.sv Line: 23
+Info (12128): Elaborating entity "substractor" for hierarchy "substractor:subtractor_loop[0].sub_inst" File: C:/Users/Marco Rodriguez/Desktop/Quartus projects/Problema_3/Problema_3.sv Line: 49
+Info (12128): Elaborating entity "binary_to_bcd_7_segment" for hierarchy "binary_to_bcd_7_segment:conv_a" File: C:/Users/Marco Rodriguez/Desktop/Quartus projects/Problema_3/Problema_3.sv Line: 76
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4767 megabytes
-    Info: Processing ended: Wed Aug 07 00:23:47 2024
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:14
+    Info: Peak virtual memory: 4766 megabytes
+    Info: Processing ended: Thu Aug 08 04:26:51 2024
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:13
 
 

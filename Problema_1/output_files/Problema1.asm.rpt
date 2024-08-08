@@ -1,5 +1,5 @@
 Assembler report for Problema1
-Wed Aug 07 01:59:51 2024
+Wed Aug 07 19:19:50 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -38,7 +38,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Wed Aug 07 01:59:51 2024 ;
+; Assembler Status      ; Successful - Wed Aug 07 19:19:50 2024 ;
 ; Revision Name         ; Problema1                             ;
 ; Top-level Entity Name ; Problema1                             ;
 ; Family                ; Cyclone V                             ;
@@ -67,8 +67,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Option         ; Setting                                                                                                                                                                ;
 +----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; JTAG usercode  ; 0x00AF9711                                                                                                                                                             ;
-; Checksum       ; 0x00AF9711                                                                                                                                                             ;
+; JTAG usercode  ; 0x00AFA4F5                                                                                                                                                             ;
+; Checksum       ; 0x00AFA4F5                                                                                                                                                             ;
 +----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -78,13 +78,13 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Aug 07 01:59:47 2024
+    Info: Processing started: Wed Aug 07 19:19:46 2024
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off Problema1 -c Problema1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4840 megabytes
-    Info: Processing ended: Wed Aug 07 01:59:51 2024
+    Info: Peak virtual memory: 4848 megabytes
+    Info: Processing ended: Wed Aug 07 19:19:50 2024
     Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:01
 

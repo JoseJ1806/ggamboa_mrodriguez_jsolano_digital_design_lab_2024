@@ -15,19 +15,19 @@ unis[0] << ent[0].DB_MAX_OUTPUT_PORT_TYPE
 unis[1] << WideOr2.DB_MAX_OUTPUT_PORT_TYPE
 unis[2] << WideOr1.DB_MAX_OUTPUT_PORT_TYPE
 unis[3] << Decoder1.DB_MAX_OUTPUT_PORT_TYPE
-dis1[6] << <VCC>
-dis1[5] << WideOr3.DB_MAX_OUTPUT_PORT_TYPE
-dis1[4] << WideOr3.DB_MAX_OUTPUT_PORT_TYPE
-dis1[3] << WideOr3.DB_MAX_OUTPUT_PORT_TYPE
-dis1[2] << <GND>
-dis1[1] << <GND>
-dis1[0] << WideOr3.DB_MAX_OUTPUT_PORT_TYPE
-dis2[6] << WideOr9.DB_MAX_OUTPUT_PORT_TYPE
-dis2[5] << WideOr8.DB_MAX_OUTPUT_PORT_TYPE
-dis2[4] << WideOr7.DB_MAX_OUTPUT_PORT_TYPE
-dis2[3] << WideOr6.DB_MAX_OUTPUT_PORT_TYPE
-dis2[2] << dis2.DB_MAX_OUTPUT_PORT_TYPE
-dis2[1] << WideOr5.DB_MAX_OUTPUT_PORT_TYPE
-dis2[0] << WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+disdecs[6] << <VCC>
+disdecs[5] << WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+disdecs[4] << WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+disdecs[3] << WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+disdecs[2] << <GND>
+disdecs[1] << <GND>
+disdecs[0] << WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+disunis[6] << WideOr9.DB_MAX_OUTPUT_PORT_TYPE
+disunis[5] << WideOr8.DB_MAX_OUTPUT_PORT_TYPE
+disunis[4] << WideOr7.DB_MAX_OUTPUT_PORT_TYPE
+disunis[3] << WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+disunis[2] << disunis.DB_MAX_OUTPUT_PORT_TYPE
+disunis[1] << WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+disunis[0] << WideOr4.DB_MAX_OUTPUT_PORT_TYPE
 
 

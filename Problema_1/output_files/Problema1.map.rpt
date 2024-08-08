@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Problema1
-Wed Aug 07 01:59:24 2024
+Wed Aug 07 19:19:26 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -43,7 +43,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Aug 07 01:59:24 2024       ;
+; Analysis & Synthesis Status     ; Successful - Wed Aug 07 19:19:26 2024       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; Problema1                                   ;
 ; Top-level Entity Name           ; Problema1                                   ;
@@ -260,7 +260,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Aug 07 01:59:18 2024
+    Info: Processing started: Wed Aug 07 19:19:20 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Problema1 -c Problema1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -273,9 +273,9 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "decs[1]" is stuck at GND File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_1/Problema1.sv Line: 2
     Warning (13410): Pin "decs[2]" is stuck at GND File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_1/Problema1.sv Line: 2
     Warning (13410): Pin "decs[3]" is stuck at GND File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_1/Problema1.sv Line: 2
-    Warning (13410): Pin "dis1[6]" is stuck at VCC File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_1/Problema1.sv Line: 4
-    Warning (13410): Pin "dis1[2]" is stuck at GND File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_1/Problema1.sv Line: 4
-    Warning (13410): Pin "dis1[1]" is stuck at GND File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_1/Problema1.sv Line: 4
+    Warning (13410): Pin "disdecs[6]" is stuck at VCC File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_1/Problema1.sv Line: 4
+    Warning (13410): Pin "disdecs[2]" is stuck at GND File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_1/Problema1.sv Line: 4
+    Warning (13410): Pin "disdecs[1]" is stuck at GND File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_1/Problema1.sv Line: 4
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -284,9 +284,9 @@ Info (21057): Implemented 37 device resources after synthesis - the final resour
     Info (21059): Implemented 22 output pins
     Info (21061): Implemented 11 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 8 warnings
-    Info: Peak virtual memory: 4841 megabytes
-    Info: Processing ended: Wed Aug 07 01:59:24 2024
+    Info: Peak virtual memory: 4839 megabytes
+    Info: Processing ended: Wed Aug 07 19:19:26 2024
     Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:05
+    Info: Total CPU time (on all processors): 00:00:04
 
 

@@ -16,7 +16,10 @@ architecture Behavioral of Sumadorcompleto_4bits is
             A, B, Cin : in std_logic;
             S, Cout : out std_logic);
     end component;
-	signal C : STD_LOGIC_VECTOR(3 downto 0);  -- Señales de acarreo 
+	
+	signal C : STD_LOGIC_VECTOR(3 downto 0);  -- Señales de acarreo		
+	
+	
 	begin
     -- Instanciación de los sumadores de 1 bit
     sumador0 : Sumador_1bit
@@ -30,4 +33,6 @@ architecture Behavioral of Sumadorcompleto_4bits is
 
     sumador3 : Sumador_1bit
         port map (A(3), B(3), C(2), S(3), Cout);
+	
+	 
 end Behavioral;

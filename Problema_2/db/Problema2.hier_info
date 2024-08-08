@@ -1,4 +1,22 @@
-|Sumadorcompleto_4bits
+|sumador_fpga
+SW[0] => sumadorcompleto_4bits:UUT.A[0]
+SW[1] => sumadorcompleto_4bits:UUT.A[1]
+SW[2] => sumadorcompleto_4bits:UUT.A[2]
+SW[3] => sumadorcompleto_4bits:UUT.A[3]
+SW[4] => sumadorcompleto_4bits:UUT.B[0]
+SW[5] => sumadorcompleto_4bits:UUT.B[1]
+SW[6] => sumadorcompleto_4bits:UUT.B[2]
+SW[7] => sumadorcompleto_4bits:UUT.B[3]
+HEX0[0] << Mux6.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[1] << Mux5.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[2] << Mux4.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[3] << Mux3.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[4] << Mux2.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[5] << Mux1.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[6] << Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sumador_fpga|Sumadorcompleto_4bits:UUT
 A[0] => Sumador_1bit:sumador0.A
 A[1] => Sumador_1bit:sumador1.A
 A[2] => Sumador_1bit:sumador2.A
@@ -8,14 +26,14 @@ B[1] => Sumador_1bit:sumador1.B
 B[2] => Sumador_1bit:sumador2.B
 B[3] => Sumador_1bit:sumador3.B
 Cin => Sumador_1bit:sumador0.Cin
-S[0] << Sumador_1bit:sumador0.S
-S[1] << Sumador_1bit:sumador1.S
-S[2] << Sumador_1bit:sumador2.S
-S[3] << Sumador_1bit:sumador3.S
-Cout << Sumador_1bit:sumador3.Cout
+S[0] <= Sumador_1bit:sumador0.S
+S[1] <= Sumador_1bit:sumador1.S
+S[2] <= Sumador_1bit:sumador2.S
+S[3] <= Sumador_1bit:sumador3.S
+Cout <= Sumador_1bit:sumador3.Cout
 
 
-|Sumadorcompleto_4bits|Sumador_1bit:sumador0
+|sumador_fpga|Sumadorcompleto_4bits:UUT|Sumador_1bit:sumador0
 A => S.IN0
 A => Cout.IN0
 B => S.IN1
@@ -26,7 +44,7 @@ S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Sumadorcompleto_4bits|Sumador_1bit:sumador1
+|sumador_fpga|Sumadorcompleto_4bits:UUT|Sumador_1bit:sumador1
 A => S.IN0
 A => Cout.IN0
 B => S.IN1
@@ -37,7 +55,7 @@ S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Sumadorcompleto_4bits|Sumador_1bit:sumador2
+|sumador_fpga|Sumadorcompleto_4bits:UUT|Sumador_1bit:sumador2
 A => S.IN0
 A => Cout.IN0
 B => S.IN1
@@ -48,7 +66,7 @@ S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Sumadorcompleto_4bits|Sumador_1bit:sumador3
+|sumador_fpga|Sumadorcompleto_4bits:UUT|Sumador_1bit:sumador3
 A => S.IN0
 A => Cout.IN0
 B => S.IN1

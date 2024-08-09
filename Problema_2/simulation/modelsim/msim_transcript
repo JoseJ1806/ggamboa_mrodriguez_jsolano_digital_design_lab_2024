@@ -12,18 +12,18 @@
 # 
 # vcom -93 -work work {C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_2/Sumadorcompleto_4bits.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 00:49:07 on Aug 08,2024
+# Start time: 18:02:18 on Aug 08,2024
 # vcom -reportprogress 300 -93 -work work C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_2/Sumadorcompleto_4bits.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity Sumadorcompleto_4bits
 # -- Compiling architecture Behavioral of Sumadorcompleto_4bits
-# End time: 00:49:07 on Aug 08,2024, Elapsed time: 0:00:00
+# End time: 18:02:18 on Aug 08,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_2/Sumador_1bit.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 00:49:08 on Aug 08,2024
+# Start time: 18:02:19 on Aug 08,2024
 # vcom -reportprogress 300 -93 -work work C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_2/Sumador_1bit.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -32,36 +32,37 @@
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity Sumador_1bit
 # -- Compiling architecture Behavioral of Sumador_1bit
-# End time: 00:49:08 on Aug 08,2024, Elapsed time: 0:00:00
+# End time: 18:02:19 on Aug 08,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_2/sumador_fpga.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 00:49:08 on Aug 08,2024
+# Start time: 18:02:19 on Aug 08,2024
 # vcom -reportprogress 300 -93 -work work C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_2/sumador_fpga.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity sumador_fpga
+# ** Warning: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_2/sumador_fpga.vhd(6): (vcom-1246) Range 0 downto 6 is null.
 # -- Compiling architecture Behavioral of sumador_fpga
 # -- Loading entity Sumadorcompleto_4bits
-# End time: 00:49:08 on Aug 08,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
+# End time: 18:02:19 on Aug 08,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
 # 
 # vcom -93 -work work {C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_2/Sumadorcompleto_4bits_tb.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 00:49:08 on Aug 08,2024
+# Start time: 18:02:19 on Aug 08,2024
 # vcom -reportprogress 300 -93 -work work C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_2/Sumadorcompleto_4bits_tb.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity Sumadorcompleto_4bits_tb
 # -- Compiling architecture Behavioral of Sumadorcompleto_4bits_tb
-# End time: 00:49:08 on Aug 08,2024, Elapsed time: 0:00:00
+# End time: 18:02:19 on Aug 08,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs="+acc"  Sumadorcompleto_4bits_tb
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs=""+acc"" Sumadorcompleto_4bits_tb 
-# Start time: 00:49:08 on Aug 08,2024
+# Start time: 18:02:19 on Aug 08,2024
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -77,5 +78,5 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# End time: 00:49:19 on Aug 08,2024, Elapsed time: 0:00:11
+# End time: 18:02:59 on Aug 08,2024, Elapsed time: 0:00:40
 # Errors: 0, Warnings: 0

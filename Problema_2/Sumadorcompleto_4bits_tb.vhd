@@ -24,33 +24,33 @@ begin
 
     process
     begin
-        -- Prueba 1: 0000 + 0000 + 0
+        -- Prueba 1
         A <= "0000";
         B <= "0000";
         Cin <= '0';
         wait for 10 ns;
         assert (S = "0000" and Cout = '0') report "Prueba 1 fallida" severity error;
 
-        -- Prueba 2: 0101 + 1010 + 0
-        A <= "0101";
-        B <= "1010";
+        -- Prueba 2
+        A <= "0011";
+        B <= "0110";
         Cin <= '0';
         wait for 10 ns;
-        assert (S = "1111" and Cout = '0') report "Prueba 2 fallida" severity error;
+        assert (S = "1001" and Cout = '0') report "Prueba 2 fallida" severity error;
 
-        -- Prueba 3: 1111 + 0001 + 0
+        -- Prueba 3
         A <= "1111";
+        B <= "0000";
+        Cin <= '0';
+        wait for 10 ns;
+        assert (S = "1111" and Cout = '0') report "Prueba 3 fallida" severity error;
+
+		-- Prueba 4
+        A <= "0101";
         B <= "0001";
         Cin <= '0';
         wait for 10 ns;
-        assert (S = "0000" and Cout = '1') report "Prueba 3 fallida" severity error;
-
-        -- Prueba 4: 1000 + 0111 + 1
-        A <= "1000";
-        B <= "0111";
-        Cin <= '1';
-        wait for 10 ns;
-        assert (S = "0000" and Cout = '1') report "Prueba 4 fallida" severity error;
+        assert (S = "0110" and Cout = '0') report "Prueba 4 fallida" severity error;
 
         wait;
     end process;

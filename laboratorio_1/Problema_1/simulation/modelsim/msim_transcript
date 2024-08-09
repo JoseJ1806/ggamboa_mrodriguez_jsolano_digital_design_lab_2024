@@ -1,0 +1,63 @@
+# Reading pref.tcl
+# do Problema1_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_1 {C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_1/Problema1.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:58:24 on Aug 07,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_1" C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_1/Problema1.sv 
+# -- Compiling module Problema1
+# ** Warning: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_1/Problema1.sv(78): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Warning: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_1/Problema1.sv(84): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Warning: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_1/Problema1.sv(90): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Warning: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_1/Problema1.sv(96): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Warning: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_1/Problema1.sv(102): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# Top level modules:
+# 	Problema1
+# End time: 01:58:24 on Aug 07,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 5
+# 
+# vlog -sv -work work +incdir+C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_1 {C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_1/Problema1_tb.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:58:24 on Aug 07,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_1" C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_1/Problema1_tb.sv 
+# -- Compiling module Problema1_tb
+# 
+# Top level modules:
+# 	Problema1_tb
+# End time: 01:58:24 on Aug 07,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  Problema1_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" Problema1_tb 
+# Start time: 01:58:25 on Aug 07,2024
+# Loading sv_std.std
+# Loading work.Problema1_tb
+# Loading work.Problema1
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'modulo'.  Expected 5, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /Problema1_tb/modulo File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_1/Problema1_tb.sv Line: 7
+# ** Warning: (vsim-3722) C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_1/Problema1_tb.sv(7): [TFMPC] - Missing connection for port 'dis1'.
+# ** Warning: (vsim-3722) C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_1/Problema1_tb.sv(7): [TFMPC] - Missing connection for port 'dis2'.
+# 
+# add wave *
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: jjsol  Hostname: J1806  ProcessID: 27692
+#           Attempting to use alternate WLF file "./wlft4i5a3w".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft4i5a3w
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# End time: 01:59:00 on Aug 07,2024, Elapsed time: 0:00:35
+# Errors: 0, Warnings: 5

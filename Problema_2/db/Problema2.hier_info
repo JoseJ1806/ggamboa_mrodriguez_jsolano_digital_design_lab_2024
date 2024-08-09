@@ -7,13 +7,6 @@ SW[4] => sumadorcompleto_4bits:UUT.B[0]
 SW[5] => sumadorcompleto_4bits:UUT.B[1]
 SW[6] => sumadorcompleto_4bits:UUT.B[2]
 SW[7] => sumadorcompleto_4bits:UUT.B[3]
-HEX0[0] << Mux6.DB_MAX_OUTPUT_PORT_TYPE
-HEX0[1] << Mux5.DB_MAX_OUTPUT_PORT_TYPE
-HEX0[2] << Mux4.DB_MAX_OUTPUT_PORT_TYPE
-HEX0[3] << Mux3.DB_MAX_OUTPUT_PORT_TYPE
-HEX0[4] << Mux2.DB_MAX_OUTPUT_PORT_TYPE
-HEX0[5] << Mux1.DB_MAX_OUTPUT_PORT_TYPE
-HEX0[6] << Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |sumador_fpga|Sumadorcompleto_4bits:UUT

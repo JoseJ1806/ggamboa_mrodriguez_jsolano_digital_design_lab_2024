@@ -25,9 +25,9 @@ VcjGEOPHS;W1eHoOTUQU?m0
 !s100 B;7>oJY80]fcHi_mYM2AG1
 Z8 OV;C;2020.1;71
 31
-Z9 !s110 1723099748
+Z9 !s110 1723161739
 !i10b 1
-Z10 !s108 1723099748.000000
+Z10 !s108 1723161739.000000
 Z11 !s90 -reportprogress|300|-93|-work|work|C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_2/Sumador_1bit.vhd|
 Z12 !s107 C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_2/Sumador_1bit.vhd|
 !i113 1
@@ -55,7 +55,7 @@ R12
 R13
 R14
 Esumador_fpga
-Z15 w1723099643
+Z15 w1723161716
 R4
 R5
 !i122 2
@@ -64,8 +64,8 @@ Z16 8C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_la
 Z17 FC:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_2/sumador_fpga.vhd
 l0
 L4 1
-Ve^Y5W8daPzABNXWBlAPiX1
-!s100 DBZfOcI?k;L3<gD[?zLf=2
+VNi]b[M<?H6ZONPAA8fTF80
+!s100 m=;dRK^9bRZWah<=IZ9:]1
 R8
 31
 R9
@@ -80,12 +80,12 @@ Abehavioral
 Z20 DEx4 work 21 sumadorcompleto_4bits 0 22 3ZbNLU8Jm1UTYi9kBH@W@2
 R4
 R5
-DEx4 work 12 sumador_fpga 0 22 e^Y5W8daPzABNXWBlAPiX1
+DEx4 work 12 sumador_fpga 0 22 Ni]b[M<?H6ZONPAA8fTF80
 !i122 2
-l39
-L10 40
-VeaE4]j0RznUE[jM]6TAXC3
-!s100 EQkU5^@1_Lg0]S?>P7L1`1
+l40
+L10 41
+VRNQ8F?=Q?>flCzY2@?D^I1
+!s100 a33^9hBZ3[]fOYYLVi1fV1
 R8
 31
 R9
@@ -97,7 +97,7 @@ R19
 R13
 R14
 Esumadorcompleto_4bits
-Z21 w1723099329
+Z21 w1723158681
 R4
 R5
 !i122 0
@@ -110,9 +110,9 @@ V3ZbNLU8Jm1UTYi9kBH@W@2
 !s100 EGlea9o_ZN`mY8Z`=Hh_j0
 R8
 31
-Z24 !s110 1723099747
+Z24 !s110 1723161738
 !i10b 1
-Z25 !s108 1723099747.000000
+Z25 !s108 1723161738.000000
 Z26 !s90 -reportprogress|300|-93|-work|work|C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_2/Sumadorcompleto_4bits.vhd|
 Z27 !s107 C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_2/Sumadorcompleto_4bits.vhd|
 !i113 1
@@ -138,7 +138,7 @@ R27
 R13
 R14
 Esumadorcompleto_4bits_tb
-Z28 w1722996565
+Z28 w1723160004
 R4
 R5
 !i122 3
@@ -166,8 +166,8 @@ DEx4 work 24 sumadorcompleto_4bits_tb 0 22 OIALT98mEMGa:;>P?XzJH3
 !i122 3
 l21
 L7 51
-VeFHQLVE@jW?@VULGCR9ok3
-!s100 UNz<bj@4f>ZYQ7>dWBzAm3
+V=k1^J=l]e@8kCeOaNUPE90
+!s100 2E429l_zc]NTnm@HiQjQS0
 R8
 31
 R9

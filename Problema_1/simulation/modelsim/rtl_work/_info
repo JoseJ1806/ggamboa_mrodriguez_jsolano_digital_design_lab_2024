@@ -11,55 +11,55 @@ cModel Technology
 Z0 dC:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_1/simulation/modelsim
 vProblema1
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-!s110 1724568474
+Z2 !s110 1724585765
 !i10b 1
-!s100 WmjY]GQ5g]2VnI:AObk>72
-Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IZMUQ_aeTW=WgmF@bQ]nO11
-Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s100 g9]_3l?U^BlIg[>R[gKGE2
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Io[RN28c[Hmj8L2ACHjD^m0
+Z4 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
-w1724568452
-8C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_1/Implementacion/Problema1.sv
-FC:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_1/Implementacion/Problema1.sv
+w1724585746
+8C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_1/problema1.sv
+FC:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_1/problema1.sv
 !i122 0
-L0 38 29
-Z4 OV;L;2020.1;71
+L0 38 214
+Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z5 !s108 1724568474.000000
-!s107 C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_1/Implementacion/Problema1.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_1/Implementacion|C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_1/Implementacion/Problema1.sv|
+Z6 !s108 1724585765.000000
+!s107 C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_1/problema1.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_1|C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_1/problema1.sv|
 !i113 1
-Z6 o-sv -work work
-!s92 -sv -work work +incdir+C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_1/Implementacion
-Z7 tCvgOpt 0
+Z7 o-sv -work work
+Z8 !s92 -sv -work work +incdir+C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_1
+Z9 tCvgOpt 0
 n@problema1
 vProblema1_tb
 R1
-!s110 1724568475
-!i10b 1
-!s100 W2HA<3K@2TVU8kZJ=_UBb3
 R2
-IdLLnM:aZS>m=[:coeZl2H1
+!i10b 1
+!s100 Zh6m[Ug2kVg5f=zB:K8:E3
 R3
+IUBZ7FJ5ldK5=3g`o4n1@P1
+R4
 S1
 R0
-w1724567889
+w1724584831
 8C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_1/Problema1_tb.sv
 FC:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_1/Problema1_tb.sv
 !i122 1
 L0 1 33
-R4
+R5
 r1
 !s85 0
 31
-R5
+R6
 !s107 C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_1/Problema1_tb.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_1|C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_1/Problema1_tb.sv|
 !i113 1
-R6
-!s92 -sv -work work +incdir+C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_1
 R7
+R8
+R9
 n@problema1_tb

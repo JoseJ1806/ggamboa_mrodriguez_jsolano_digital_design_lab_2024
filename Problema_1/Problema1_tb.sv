@@ -3,7 +3,7 @@ module Problema1_tb();
 	logic [3:0] A,B;
 	logic [3:0] ALU_Sel;
 //Salidas
-	wire[3:0] ALU_Out;
+	wire[7:0] ALU_Out;
 	wire CarryOut;
 //Entero para mostrar todas las operaciones de la ALU
 	integer i;

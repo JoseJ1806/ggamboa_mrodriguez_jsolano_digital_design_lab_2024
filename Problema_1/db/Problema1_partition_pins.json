@@ -1,0 +1,165 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "ALU_Out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_Out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_Out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_Out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "CarryOut",
+					"strict" : false
+				},
+				{
+					"name" : "result_decs[0]",
+					"strict" : false
+				},
+				{
+					"name" : "result_decs[1]",
+					"strict" : false
+				},
+				{
+					"name" : "result_decs[2]",
+					"strict" : false
+				},
+				{
+					"name" : "result_decs[3]",
+					"strict" : false
+				},
+				{
+					"name" : "result_unis[0]",
+					"strict" : false
+				},
+				{
+					"name" : "result_unis[1]",
+					"strict" : false
+				},
+				{
+					"name" : "result_unis[2]",
+					"strict" : false
+				},
+				{
+					"name" : "result_unis[3]",
+					"strict" : false
+				},
+				{
+					"name" : "disp_decs[6]",
+					"strict" : false
+				},
+				{
+					"name" : "disp_decs[5]",
+					"strict" : false
+				},
+				{
+					"name" : "disp_decs[4]",
+					"strict" : false
+				},
+				{
+					"name" : "disp_decs[3]",
+					"strict" : false
+				},
+				{
+					"name" : "disp_decs[2]",
+					"strict" : false
+				},
+				{
+					"name" : "disp_decs[1]",
+					"strict" : false
+				},
+				{
+					"name" : "disp_decs[0]",
+					"strict" : false
+				},
+				{
+					"name" : "disp_unis[6]",
+					"strict" : false
+				},
+				{
+					"name" : "disp_unis[5]",
+					"strict" : false
+				},
+				{
+					"name" : "disp_unis[4]",
+					"strict" : false
+				},
+				{
+					"name" : "disp_unis[3]",
+					"strict" : false
+				},
+				{
+					"name" : "disp_unis[2]",
+					"strict" : false
+				},
+				{
+					"name" : "disp_unis[1]",
+					"strict" : false
+				},
+				{
+					"name" : "disp_unis[0]",
+					"strict" : false
+				},
+				{
+					"name" : "A[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_Sel[2]",
+					"strict" : false
+				},
+				{
+					"name" : "B[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_Sel[0]",
+					"strict" : false
+				},
+				{
+					"name" : "A[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_Sel[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_Sel[3]",
+					"strict" : false
+				},
+				{
+					"name" : "B[1]",
+					"strict" : false
+				},
+				{
+					"name" : "A[2]",
+					"strict" : false
+				},
+				{
+					"name" : "B[2]",
+					"strict" : false
+				},
+				{
+					"name" : "A[3]",
+					"strict" : false
+				},
+				{
+					"name" : "B[3]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

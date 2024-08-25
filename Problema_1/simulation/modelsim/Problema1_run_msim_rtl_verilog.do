@@ -5,7 +5,7 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
-vlog -sv -work work +incdir+C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_1/Implementacion {C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_1/Implementacion/Problema1.sv}
+vlog -sv -work work +incdir+C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_1 {C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_1/problema1.sv}
 
 vlog -sv -work work +incdir+C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_1 {C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Problema_1/Problema1_tb.sv}
 

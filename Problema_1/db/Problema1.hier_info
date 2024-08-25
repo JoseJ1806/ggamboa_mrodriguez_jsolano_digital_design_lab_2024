@@ -1,0 +1,30 @@
+|Problema1
+A[0] => Add0.IN4
+A[0] => Selector2.IN5
+A[1] => Add0.IN3
+A[1] => Selector1.IN5
+A[1] => Selector3.IN5
+A[2] => Add0.IN2
+A[2] => Selector0.IN5
+A[2] => Selector2.IN4
+A[3] => Add0.IN1
+A[3] => Selector1.IN4
+B[0] => Add0.IN8
+B[1] => Add0.IN7
+B[2] => Add0.IN6
+B[3] => Add0.IN5
+ALU_Sel[0] => Equal0.IN7
+ALU_Sel[0] => Equal1.IN7
+ALU_Sel[1] => Equal0.IN6
+ALU_Sel[1] => Equal1.IN6
+ALU_Sel[2] => Equal0.IN5
+ALU_Sel[2] => Equal1.IN5
+ALU_Sel[3] => Equal0.IN4
+ALU_Sel[3] => Equal1.IN4
+ALU_Out[0] <= Selector3.DB_MAX_OUTPUT_PORT_TYPE
+ALU_Out[1] <= Selector2.DB_MAX_OUTPUT_PORT_TYPE
+ALU_Out[2] <= Selector1.DB_MAX_OUTPUT_PORT_TYPE
+ALU_Out[3] <= Selector0.DB_MAX_OUTPUT_PORT_TYPE
+CarryOut <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+
+

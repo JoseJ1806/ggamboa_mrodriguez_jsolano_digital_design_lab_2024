@@ -1,1 +1,5 @@
+<<<<<<< Updated upstream:laboratorio_1/Problema_1/db/Problema1.smart_action.txt
 DONE
+=======
+SOURCE
+>>>>>>> Stashed changes:Problema_1/db/Problema1.smart_action.txt

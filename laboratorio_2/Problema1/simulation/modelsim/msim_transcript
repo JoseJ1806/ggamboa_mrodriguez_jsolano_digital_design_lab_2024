@@ -1,0 +1,286 @@
+# Reading pref.tcl
+# do ALU_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/Marco\ Rodriguez/Desktop/LAB2/Problema1 {C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/display_converter.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:28:49 on Aug 25,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1" C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/display_converter.sv 
+# -- Compiling module display_converter
+# 
+# Top level modules:
+# 	display_converter
+# End time: 17:28:49 on Aug 25,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Marco\ Rodriguez/Desktop/LAB2/Problema1 {C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/mux_10to1.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:28:49 on Aug 25,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1" C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/mux_10to1.sv 
+# -- Compiling module mux_10to1
+# 
+# Top level modules:
+# 	mux_10to1
+# End time: 17:28:49 on Aug 25,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Marco\ Rodriguez/Desktop/LAB2/Problema1 {C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/xor_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:28:49 on Aug 25,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1" C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/xor_module.sv 
+# -- Compiling module xor_module
+# -- Compiling module xor_gate_single
+# 
+# Top level modules:
+# 	xor_module
+# End time: 17:28:49 on Aug 25,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Marco\ Rodriguez/Desktop/LAB2/Problema1 {C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/or_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:28:49 on Aug 25,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1" C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/or_module.sv 
+# -- Compiling module or_module
+# -- Compiling module or_gate_single
+# 
+# Top level modules:
+# 	or_module
+# End time: 17:28:49 on Aug 25,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Marco\ Rodriguez/Desktop/LAB2/Problema1 {C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/not_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:28:49 on Aug 25,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1" C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/not_module.sv 
+# -- Compiling module not_module
+# -- Compiling module not_gate_single
+# 
+# Top level modules:
+# 	not_module
+# End time: 17:28:49 on Aug 25,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Marco\ Rodriguez/Desktop/LAB2/Problema1 {C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/and_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:28:49 on Aug 25,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1" C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/and_module.sv 
+# -- Compiling module and_module
+# -- Compiling module and_gate_single
+# 
+# Top level modules:
+# 	and_module
+# End time: 17:28:49 on Aug 25,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Marco\ Rodriguez/Desktop/LAB2/Problema1 {C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/deco_2_4.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:28:49 on Aug 25,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1" C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/deco_2_4.sv 
+# -- Compiling module deco_2_3
+# 
+# Top level modules:
+# 	deco_2_3
+# End time: 17:28:49 on Aug 25,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Marco\ Rodriguez/Desktop/LAB2/Problema1 {C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/adder_nbits.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:28:49 on Aug 25,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1" C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/adder_nbits.sv 
+# -- Compiling module adder_nbits
+# 
+# Top level modules:
+# 	adder_nbits
+# End time: 17:28:49 on Aug 25,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Marco\ Rodriguez/Desktop/LAB2/Problema1 {C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/ALU.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:28:49 on Aug 25,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1" C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/ALU.sv 
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# End time: 17:28:49 on Aug 25,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Marco\ Rodriguez/Desktop/LAB2/Problema1 {C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/full_adder.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:28:49 on Aug 25,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1" C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/full_adder.sv 
+# -- Compiling module full_adder
+# 
+# Top level modules:
+# 	full_adder
+# End time: 17:28:50 on Aug 25,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Marco\ Rodriguez/Desktop/LAB2/Problema1 {C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/full_substractor.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:28:50 on Aug 25,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1" C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/full_substractor.sv 
+# -- Compiling module full_substractor
+# 
+# Top level modules:
+# 	full_substractor
+# End time: 17:28:50 on Aug 25,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Marco\ Rodriguez/Desktop/LAB2/Problema1 {C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/substractor_nbits.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:28:50 on Aug 25,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1" C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/substractor_nbits.sv 
+# -- Compiling module substractor_nbits
+# 
+# Top level modules:
+# 	substractor_nbits
+# End time: 17:28:50 on Aug 25,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Marco\ Rodriguez/Desktop/LAB2/Problema1 {C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/shifter_nbits.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:28:50 on Aug 25,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1" C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/shifter_nbits.sv 
+# -- Compiling module shifter_nbits
+# 
+# Top level modules:
+# 	shifter_nbits
+# End time: 17:28:50 on Aug 25,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+C:/Users/Marco\ Rodriguez/Desktop/LAB2/Problema1 {C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/ALU_tb.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:28:50 on Aug 25,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1" C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/ALU_tb.sv 
+# -- Compiling module ALU_tb
+# 
+# Top level modules:
+# 	ALU_tb
+# End time: 17:28:50 on Aug 25,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  ALU_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" ALU_tb 
+# Start time: 17:28:50 on Aug 25,2024
+# Loading sv_std.std
+# Loading work.ALU_tb
+# Loading work.ALU
+# Loading work.display_converter
+# Loading work.mux_10to1
+# Loading work.adder_nbits
+# Loading work.substractor_nbits
+# Loading work.not_module
+# Loading work.and_module
+# Loading work.or_module
+# Loading work.xor_module
+# Loading work.shifter_nbits
+# Loading work.deco_2_3
+# Loading work.full_adder
+# Loading work.full_substractor
+# Loading work.not_gate_single
+# Loading work.and_gate_single
+# Loading work.or_gate_single
+# Loading work.xor_gate_single
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'DUT'.  Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_tb/DUT File: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/ALU_tb.sv Line: 20
+# ** Warning: (vsim-3722) C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/ALU_tb.sv(20): [TFMPC] - Missing connection for port 'led_disp'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'c_in'. The port definition is at: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/full_adder.sv(6).
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_tb/DUT/adder/generate_N_bit_Adder[0]/genblk1/f File: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/adder_nbits.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'c_in'. The port definition is at: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/full_substractor.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_tb/DUT/substractor/generate_N_bit_Adder[0]/genblk1/f File: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/substractor_nbits.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'out'. The port definition is at: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/mux_10to1.sv(1).
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_tb/DUT/mux_neg_flag File: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/ALU.sv Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'out_suma'. The port definition is at: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/mux_10to1.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_tb/DUT/mux_neg_flag File: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/ALU.sv Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'out_rest'. The port definition is at: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/mux_10to1.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_tb/DUT/mux_neg_flag File: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/ALU.sv Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'out_not'. The port definition is at: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/mux_10to1.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_tb/DUT/mux_neg_flag File: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/ALU.sv Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'out_and'. The port definition is at: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/mux_10to1.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_tb/DUT/mux_neg_flag File: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/ALU.sv Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'out_or'. The port definition is at: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/mux_10to1.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_tb/DUT/mux_neg_flag File: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/ALU.sv Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'out_xor'. The port definition is at: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/mux_10to1.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_tb/DUT/mux_neg_flag File: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/ALU.sv Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'out_right_ar'. The port definition is at: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/mux_10to1.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_tb/DUT/mux_neg_flag File: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/ALU.sv Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'out_right_lo'. The port definition is at: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/mux_10to1.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_tb/DUT/mux_neg_flag File: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/ALU.sv Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'out_left_ar'. The port definition is at: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/mux_10to1.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_tb/DUT/mux_neg_flag File: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/ALU.sv Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'out_left_lo'. The port definition is at: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/mux_10to1.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_tb/DUT/mux_neg_flag File: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/ALU.sv Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'out'. The port definition is at: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/mux_10to1.sv(1).
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_tb/DUT/mux_zr_flag File: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/ALU.sv Line: 42
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'out_suma'. The port definition is at: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/mux_10to1.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_tb/DUT/mux_zr_flag File: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/ALU.sv Line: 42
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'out_rest'. The port definition is at: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/mux_10to1.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_tb/DUT/mux_zr_flag File: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/ALU.sv Line: 42
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'out_not'. The port definition is at: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/mux_10to1.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_tb/DUT/mux_zr_flag File: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/ALU.sv Line: 42
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'out_and'. The port definition is at: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/mux_10to1.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_tb/DUT/mux_zr_flag File: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/ALU.sv Line: 42
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'out_or'. The port definition is at: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/mux_10to1.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_tb/DUT/mux_zr_flag File: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/ALU.sv Line: 42
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'out_xor'. The port definition is at: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/mux_10to1.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_tb/DUT/mux_zr_flag File: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/ALU.sv Line: 42
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'out_right_ar'. The port definition is at: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/mux_10to1.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_tb/DUT/mux_zr_flag File: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/ALU.sv Line: 42
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'out_right_lo'. The port definition is at: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/mux_10to1.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_tb/DUT/mux_zr_flag File: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/ALU.sv Line: 42
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'out_left_ar'. The port definition is at: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/mux_10to1.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_tb/DUT/mux_zr_flag File: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/ALU.sv Line: 42
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'out_left_lo'. The port definition is at: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/mux_10to1.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_tb/DUT/mux_zr_flag File: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/ALU.sv Line: 42
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'out'. The port definition is at: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/mux_10to1.sv(1).
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_tb/DUT/mux_cry_flag File: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/ALU.sv Line: 43
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'out_suma'. The port definition is at: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/mux_10to1.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_tb/DUT/mux_cry_flag File: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/ALU.sv Line: 43
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'out_rest'. The port definition is at: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/mux_10to1.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_tb/DUT/mux_cry_flag File: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/ALU.sv Line: 43
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'out_not'. The port definition is at: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/mux_10to1.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_tb/DUT/mux_cry_flag File: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/ALU.sv Line: 43
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'out_and'. The port definition is at: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/mux_10to1.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_tb/DUT/mux_cry_flag File: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/ALU.sv Line: 43
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'out_or'. The port definition is at: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/mux_10to1.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_tb/DUT/mux_cry_flag File: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/ALU.sv Line: 43
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'out_xor'. The port definition is at: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/mux_10to1.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_tb/DUT/mux_cry_flag File: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/ALU.sv Line: 43
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'out_right_ar'. The port definition is at: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/mux_10to1.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_tb/DUT/mux_cry_flag File: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/ALU.sv Line: 43
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'out_right_lo'. The port definition is at: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/mux_10to1.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_tb/DUT/mux_cry_flag File: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/ALU.sv Line: 43
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'out_left_ar'. The port definition is at: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/mux_10to1.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_tb/DUT/mux_cry_flag File: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/ALU.sv Line: 43
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'out_left_lo'. The port definition is at: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/mux_10to1.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_tb/DUT/mux_cry_flag File: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/ALU.sv Line: 43
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'out'. The port definition is at: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/mux_10to1.sv(1).
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_tb/DUT/mux_of_flag File: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/ALU.sv Line: 44
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'out_suma'. The port definition is at: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/mux_10to1.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_tb/DUT/mux_of_flag File: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/ALU.sv Line: 44
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'out_rest'. The port definition is at: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/mux_10to1.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_tb/DUT/mux_of_flag File: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/ALU.sv Line: 44
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'out_not'. The port definition is at: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/mux_10to1.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_tb/DUT/mux_of_flag File: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/ALU.sv Line: 44
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'out_and'. The port definition is at: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/mux_10to1.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_tb/DUT/mux_of_flag File: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/ALU.sv Line: 44
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'out_or'. The port definition is at: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/mux_10to1.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_tb/DUT/mux_of_flag File: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/ALU.sv Line: 44
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'out_xor'. The port definition is at: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/mux_10to1.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_tb/DUT/mux_of_flag File: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/ALU.sv Line: 44
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'out_right_ar'. The port definition is at: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/mux_10to1.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_tb/DUT/mux_of_flag File: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/ALU.sv Line: 44
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'out_right_lo'. The port definition is at: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/mux_10to1.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_tb/DUT/mux_of_flag File: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/ALU.sv Line: 44
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'out_left_ar'. The port definition is at: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/mux_10to1.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_tb/DUT/mux_of_flag File: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/ALU.sv Line: 44
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'out_left_lo'. The port definition is at: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/mux_10to1.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_tb/DUT/mux_of_flag File: C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/ALU.sv Line: 44
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# WARNING: No extended dataflow license exists
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# End time: 17:29:32 on Aug 25,2024, Elapsed time: 0:00:42
+# Errors: 0, Warnings: 48

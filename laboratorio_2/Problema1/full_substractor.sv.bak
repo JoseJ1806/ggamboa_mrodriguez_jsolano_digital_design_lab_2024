@@ -1,0 +1,12 @@
+module full_substractor
+
+(
+
+	input logic a,        
+	input logic b,  
+	input logic c_in,	
+	output logic result,
+	output logic c_out
+
+
+);

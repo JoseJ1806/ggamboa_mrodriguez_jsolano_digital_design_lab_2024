@@ -1,0 +1,481 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/simulation/modelsim
+vadder_nbits
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z2 !s110 1724628529
+!i10b 1
+!s100 JMY3G^S:D>4JNjR[_eCkb2
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I<_hnndfJ5K=To1I@B=GC_3
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+w1724628490
+8C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/adder_nbits.sv
+FC:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/adder_nbits.sv
+!i122 7
+Z5 L0 1 35
+Z6 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z7 !s108 1724628529.000000
+!s107 C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/adder_nbits.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1|C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/adder_nbits.sv|
+!i113 1
+Z8 o-sv -work work
+Z9 !s92 -sv -work work {+incdir+C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1}
+Z10 tCvgOpt 0
+vALU
+R1
+R2
+!i10b 1
+!s100 zJkgSnA6Kf9Dk<]Y>hDag2
+R3
+I@moGEcU7cZV_<l>m2A=KE2
+R4
+S1
+R0
+Z11 w1686834544
+8C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/ALU.sv
+FC:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/ALU.sv
+!i122 8
+L0 1 46
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/ALU.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1|C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/ALU.sv|
+!i113 1
+R8
+R9
+R10
+n@a@l@u
+vALU_tb
+R1
+Z12 !s110 1724628530
+!i10b 1
+!s100 SkdO`@DVn5XXMXK4PaUUJ1
+R3
+IgZ`Sm^5PkNnEk6cgePozd1
+R4
+S1
+R0
+w1724628476
+8C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/ALU_tb.sv
+FC:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/ALU_tb.sv
+!i122 13
+L0 1 152
+R6
+r1
+!s85 0
+31
+Z13 !s108 1724628530.000000
+!s107 C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/ALU_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1|C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/ALU_tb.sv|
+!i113 1
+R8
+R9
+R10
+n@a@l@u_tb
+vand_gate_single
+R1
+R2
+!i10b 1
+!s100 XMj6BMjBi8L3[38[O1]jD0
+R3
+ICdX?;fikJm?lh88N_hW862
+R4
+S1
+R0
+R11
+Z14 8C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/and_module.sv
+Z15 FC:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/and_module.sv
+!i122 5
+L0 19 8
+R6
+r1
+!s85 0
+31
+R7
+Z16 !s107 C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/and_module.sv|
+Z17 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1|C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/and_module.sv|
+!i113 1
+R8
+R9
+R10
+vand_module
+R1
+R2
+!i10b 1
+!s100 `mF3;XMHcaeB2`@2WIXz<3
+R3
+I3^9]Sg`[0L;XO<KiLoGMD0
+R4
+S1
+R0
+R11
+R14
+R15
+!i122 5
+Z18 L0 1 17
+R6
+r1
+!s85 0
+31
+R7
+R16
+R17
+!i113 1
+R8
+R9
+R10
+vdeco_2_3
+R1
+R2
+!i10b 1
+!s100 I`mlV7D;I0iVG1oYmJm5c3
+R3
+I:JiQiRf9<:P`8KA2SAch@2
+R4
+S1
+R0
+R11
+8C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/deco_2_4.sv
+FC:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/deco_2_4.sv
+!i122 6
+L0 1 23
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/deco_2_4.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1|C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/deco_2_4.sv|
+!i113 1
+R8
+R9
+R10
+vdisplay_converter
+R1
+R2
+!i10b 1
+!s100 l=i1k_dHgRU[1o=F_@[ek0
+R3
+IK:_6kSiWA:iT?M1beS_EM1
+R4
+S1
+R0
+R11
+8C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/display_converter.sv
+FC:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/display_converter.sv
+!i122 0
+L0 1 11
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/display_converter.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1|C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/display_converter.sv|
+!i113 1
+R8
+R9
+R10
+vfull_adder
+R1
+R12
+!i10b 1
+!s100 8=`VYX=:?SG3VTJMXSd=73
+R3
+IM4>?VQ04@6[zBkX=OUU>50
+R4
+S1
+R0
+R11
+8C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/full_adder.sv
+FC:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/full_adder.sv
+!i122 9
+L0 1 20
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/full_adder.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1|C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/full_adder.sv|
+!i113 1
+R8
+R9
+R10
+vfull_substractor
+R1
+R12
+!i10b 1
+!s100 j?GBkoeA0`h^]JjYbdcSU2
+R3
+IA23fjn`b@XbU`7^3gA;Ma2
+R4
+S1
+R0
+R11
+8C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/full_substractor.sv
+FC:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/full_substractor.sv
+!i122 10
+L0 1 25
+R6
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/full_substractor.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1|C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/full_substractor.sv|
+!i113 1
+R8
+R9
+R10
+vmux_10to1
+R1
+R2
+!i10b 1
+!s100 M@kGVSIa:gdXF@M`Y_5G^2
+R3
+ID6`f;eQU]I8L;a:XKYg9K3
+R4
+S1
+R0
+w1724627140
+8C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/mux_10to1.sv
+FC:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/mux_10to1.sv
+!i122 1
+L0 1 29
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/mux_10to1.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1|C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/mux_10to1.sv|
+!i113 1
+R8
+R9
+R10
+vnot_gate_single
+R1
+R2
+!i10b 1
+!s100 m>m>F<kk2@WNmNAol_GS^2
+R3
+IlceRHjRY=EDHnzdSzKP:22
+R4
+S1
+R0
+R11
+Z19 8C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/not_module.sv
+Z20 FC:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/not_module.sv
+!i122 4
+Z21 L0 20 8
+R6
+r1
+!s85 0
+31
+R7
+Z22 !s107 C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/not_module.sv|
+Z23 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1|C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/not_module.sv|
+!i113 1
+R8
+R9
+R10
+vnot_module
+R1
+R2
+!i10b 1
+!s100 ^WbT1?S9]U@bVKLhFEZQa3
+R3
+I[8MX_17KojTd:=6PNhlPd1
+R4
+S1
+R0
+R11
+R19
+R20
+!i122 4
+R18
+R6
+r1
+!s85 0
+31
+R7
+R22
+R23
+!i113 1
+R8
+R9
+R10
+vor_gate_single
+R1
+R2
+!i10b 1
+!s100 7?eRnC^3:XEZ=:c;2J`ih3
+R3
+InOEa3hTT=QT2H:7]zjTN<2
+R4
+S1
+R0
+R11
+Z24 8C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/or_module.sv
+Z25 FC:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/or_module.sv
+!i122 3
+R21
+R6
+r1
+!s85 0
+31
+R7
+Z26 !s107 C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/or_module.sv|
+Z27 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1|C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/or_module.sv|
+!i113 1
+R8
+R9
+R10
+vor_module
+R1
+R2
+!i10b 1
+!s100 =96bVz[I;3dE4[0e>LGSO0
+R3
+In[6SeP^c_1:;E[e`T`3ma2
+R4
+S1
+R0
+R11
+R24
+R25
+!i122 3
+R18
+R6
+r1
+!s85 0
+31
+R7
+R26
+R27
+!i113 1
+R8
+R9
+R10
+vshifter_nbits
+R1
+R12
+!i10b 1
+!s100 2KTL]SE>7EN@eBTYXcFYo3
+R3
+Ie2KL_Pf9f<VSg>^Wii8bn2
+R4
+S1
+R0
+R11
+8C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/shifter_nbits.sv
+FC:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/shifter_nbits.sv
+!i122 12
+L0 1 58
+R6
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/shifter_nbits.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1|C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/shifter_nbits.sv|
+!i113 1
+R8
+R9
+R10
+vsubstractor_nbits
+R1
+R12
+!i10b 1
+!s100 ?ghBC1aGPU4ZVGR]jmOZi3
+R3
+IcIaOn@DGW?2<_<YO_:88c1
+R4
+S1
+R0
+R11
+8C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/substractor_nbits.sv
+FC:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/substractor_nbits.sv
+!i122 11
+R5
+R6
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/substractor_nbits.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1|C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/substractor_nbits.sv|
+!i113 1
+R8
+R9
+R10
+vxor_gate_single
+R1
+R2
+!i10b 1
+!s100 QjHeLiBn3HX=ae[?ejAKF1
+R3
+I04OT;lFBdUj8=oc[aQoa72
+R4
+S1
+R0
+R11
+Z28 8C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/xor_module.sv
+Z29 FC:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/xor_module.sv
+!i122 2
+R21
+R6
+r1
+!s85 0
+31
+R7
+Z30 !s107 C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/xor_module.sv|
+Z31 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1|C:/Users/Marco Rodriguez/Desktop/LAB2/Problema1/xor_module.sv|
+!i113 1
+R8
+R9
+R10
+vxor_module
+R1
+R2
+!i10b 1
+!s100 YQ4dhj55Z945k^QEf8?Mz3
+R3
+I67GAZ<_`[@C20h_ieoJjO1
+R4
+S1
+R0
+R11
+R28
+R29
+!i122 2
+R18
+R6
+r1
+!s85 0
+31
+R7
+R30
+R31
+!i113 1
+R8
+R9
+R10

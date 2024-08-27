@@ -8,500 +8,500 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/simulation/modelsim
+Z0 dC:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/simulation/modelsim
 vadder_nbits
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1724728946
+Z2 !s110 1724743376
 !i10b 1
 !s100 JMY3G^S:D>4JNjR[_eCkb2
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
-ITjH7>2_c^4KFZGB2aQb1^0
+Ign[laNYb>3Z8iWMbBAHJ20
 Z4 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
-w1724628490
-8C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/adder_nbits.sv
-FC:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/adder_nbits.sv
+Z5 w1724737103
+8C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/adder_nbits.sv
+FC:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/adder_nbits.sv
 !i122 6
-Z5 L0 1 35
-Z6 OV;L;2020.1;71
+Z6 L0 1 35
+Z7 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z7 !s108 1724728946.000000
-!s107 C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/adder_nbits.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1|C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/adder_nbits.sv|
+Z8 !s108 1724743376.000000
+!s107 C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/adder_nbits.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1|C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/adder_nbits.sv|
 !i113 1
-Z8 o-sv -work work
-Z9 !s92 -sv -work work {+incdir+C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1}
-Z10 tCvgOpt 0
+Z9 o-sv -work work
+Z10 !s92 -sv -work work +incdir+C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1
+Z11 tCvgOpt 0
 vALU
 R1
 R2
 !i10b 1
-!s100 a@0i8]mT`Y;VWWM;V>G7D2
+!s100 bL@HJm:QXg>42TSUUDAai1
 R3
-I=L<OkTGUR7NX;d``oM5BL3
+IbOm;5]GPa4ZcQ4C0m4lnC2
 R4
 S1
 R0
-w1724716731
-8C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/ALU.sv
-FC:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/ALU.sv
+w1724738406
+8C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/ALU.sv
+FC:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/ALU.sv
 !i122 7
-L0 1 43
-R6
+L0 1 42
+R7
 r1
 !s85 0
 31
-R7
-!s107 C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/ALU.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1|C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/ALU.sv|
-!i113 1
 R8
+!s107 C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/ALU.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1|C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/ALU.sv|
+!i113 1
 R9
 R10
+R11
 n@a@l@u
 vALU_tb
 R1
-R2
+Z12 !s110 1724743377
 !i10b 1
 !s100 ]_PAcQMF3K]XY=IMKXZ4J0
 R3
-I:AW>Vg3_nFieRod?X4HA43
+ILH>z@6S]:beWVE5>Kc6]d2
 R4
 S1
 R0
-w1724728929
-8C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/ALU_tb.sv
-FC:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/ALU_tb.sv
+R5
+8C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/ALU_tb.sv
+FC:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/ALU_tb.sv
 !i122 15
 L0 1 152
-R6
+R7
 r1
 !s85 0
 31
-R7
-!s107 C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/ALU_tb.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1|C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/ALU_tb.sv|
+Z13 !s108 1724743377.000000
+!s107 C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/ALU_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1|C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/ALU_tb.sv|
 !i113 1
-R8
 R9
 R10
+R11
 n@a@l@u_tb
 vand_gate_single
 R1
-Z11 !s110 1724728945
+R2
 !i10b 1
 !s100 XMj6BMjBi8L3[38[O1]jD0
 R3
-I2nGPcHX;oRTic05b4@9@z0
+I69gMzHT7KIMfXhF?dQ8993
 R4
 S1
 R0
-Z12 w1686834544
-Z13 8C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/and_module.sv
-Z14 FC:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/and_module.sv
+R5
+Z14 8C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/and_module.sv
+Z15 FC:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/and_module.sv
 !i122 4
 L0 19 8
-R6
+R7
 r1
 !s85 0
 31
-Z15 !s108 1724728945.000000
-Z16 !s107 C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/and_module.sv|
-Z17 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1|C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/and_module.sv|
-!i113 1
 R8
+Z16 !s107 C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/and_module.sv|
+Z17 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1|C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/and_module.sv|
+!i113 1
 R9
 R10
+R11
 vand_module
-R1
-R11
-!i10b 1
-!s100 `mF3;XMHcaeB2`@2WIXz<3
-R3
-I4j:60YWkSG0=QQ:[^7NVU2
-R4
-S1
-R0
-R12
-R13
-R14
-!i122 4
-Z18 L0 1 17
-R6
-r1
-!s85 0
-31
-R15
-R16
-R17
-!i113 1
-R8
-R9
-R10
-vdeco_2_3
-R1
-R11
-!i10b 1
-!s100 I`mlV7D;I0iVG1oYmJm5c3
-R3
-Ini1nOaY:oGDWAFf?]c9SL2
-R4
-S1
-R0
-R12
-8C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/deco_2_4.sv
-FC:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/deco_2_4.sv
-!i122 5
-Z19 L0 1 23
-R6
-r1
-!s85 0
-31
-R15
-!s107 C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/deco_2_4.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1|C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/deco_2_4.sv|
-!i113 1
-R8
-R9
-R10
-vdisplay_converter
-R1
-R11
-!i10b 1
-!s100 l=i1k_dHgRU[1o=F_@[ek0
-R3
-I<fCH0jW?iG^h=1_J>gi<=2
-R4
-S1
-R0
-R12
-8C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/display_converter.sv
-FC:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/display_converter.sv
-!i122 0
-L0 1 11
-R6
-r1
-!s85 0
-31
-R15
-!s107 C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/display_converter.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1|C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/display_converter.sv|
-!i113 1
-R8
-R9
-R10
-vdivider_nbits
 R1
 R2
 !i10b 1
-!s100 GH3TzR2GK?coJYTV8X;K01
+!s100 `mF3;XMHcaeB2`@2WIXz<3
 R3
-IN_IRfgd@QQ1SD;imCY;?]0
+I:z^eDzWV:;AJ:ja<R`P3Q2
 R4
 S1
 R0
-w1724726375
-8C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/divider_nbits.sv
-FC:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/divider_nbits.sv
-!i122 13
-Z20 L0 1 25
-R6
+R5
+R14
+R15
+!i122 4
+Z18 L0 1 17
+R7
 r1
 !s85 0
 31
-R7
-!s107 C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/divider_nbits.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1|C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/divider_nbits.sv|
-!i113 1
 R8
+R16
+R17
+!i113 1
 R9
 R10
+R11
+vdeco_2_3
+R1
+R2
+!i10b 1
+!s100 I`mlV7D;I0iVG1oYmJm5c3
+R3
+Ij0km:O8>E4GRZ<z9:@7fH1
+R4
+S1
+R0
+R5
+8C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/deco_2_4.sv
+FC:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/deco_2_4.sv
+!i122 5
+Z19 L0 1 23
+R7
+r1
+!s85 0
+31
+R8
+!s107 C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/deco_2_4.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1|C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/deco_2_4.sv|
+!i113 1
+R9
+R10
+R11
+vdisplay_converter
+R1
+Z20 !s110 1724743375
+!i10b 1
+!s100 l=i1k_dHgRU[1o=F_@[ek0
+R3
+IdTNBg]i6JQ7iL=oOXbaE`0
+R4
+S1
+R0
+R5
+8C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/display_converter.sv
+FC:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/display_converter.sv
+!i122 0
+L0 1 11
+R7
+r1
+!s85 0
+31
+Z21 !s108 1724743375.000000
+!s107 C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/display_converter.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1|C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/display_converter.sv|
+!i113 1
+R9
+R10
+R11
+vdivider_nbits
+R1
+R12
+!i10b 1
+!s100 GH3TzR2GK?coJYTV8X;K01
+R3
+ISo6_EXUF]O`jX`V=7dRMc0
+R4
+S1
+R0
+R5
+8C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/divider_nbits.sv
+FC:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/divider_nbits.sv
+!i122 13
+Z22 L0 1 25
+R7
+r1
+!s85 0
+31
+R8
+!s107 C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/divider_nbits.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1|C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/divider_nbits.sv|
+!i113 1
+R9
+R10
+R11
 vfull_adder
 R1
 R2
 !i10b 1
 !s100 8=`VYX=:?SG3VTJMXSd=73
 R3
-I0Jl]bEj9]DYP1S9Sl_ZOO2
+IIoTBB9>;;jcXPXMG2cQ8?2
 R4
 S1
 R0
-R12
-8C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/full_adder.sv
-FC:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/full_adder.sv
+R5
+8C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/full_adder.sv
+FC:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/full_adder.sv
 !i122 8
 L0 1 20
-R6
+R7
 r1
 !s85 0
 31
-R7
-!s107 C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/full_adder.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1|C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/full_adder.sv|
-!i113 1
 R8
+!s107 C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/full_adder.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1|C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/full_adder.sv|
+!i113 1
 R9
 R10
+R11
 vfull_substractor
 R1
 R2
 !i10b 1
 !s100 j?GBkoeA0`h^]JjYbdcSU2
 R3
-I^kCc5UE?S8n4EM64;A<k_0
+I0E=DZOP=U1a8T9:?5`O610
 R4
 S1
 R0
-R12
-8C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/full_substractor.sv
-FC:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/full_substractor.sv
+R5
+8C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/full_substractor.sv
+FC:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/full_substractor.sv
 !i122 9
-R20
-R6
+R22
+R7
 r1
 !s85 0
 31
-R7
-!s107 C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/full_substractor.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1|C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/full_substractor.sv|
-!i113 1
 R8
+!s107 C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/full_substractor.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1|C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/full_substractor.sv|
+!i113 1
 R9
 R10
+R11
 vmoduler_nbits
 R1
-R2
+R12
 !i10b 1
 !s100 n8YQlI97iad^6e53c>[H81
 R3
-IUeKeZ6mcP6[DoLJj0OTIK2
+I32c7T1YMQMI4Ik9h4:6JA2
 R4
 S1
 R0
-w1724726381
-8C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/moduler_nbits.sv
-FC:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/moduler_nbits.sv
+R5
+8C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/moduler_nbits.sv
+FC:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/moduler_nbits.sv
 !i122 14
 R19
-R6
+R7
 r1
 !s85 0
 31
-R7
-!s107 C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/moduler_nbits.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1|C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/moduler_nbits.sv|
+R13
+!s107 C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/moduler_nbits.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1|C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/moduler_nbits.sv|
 !i113 1
-R8
 R9
 R10
+R11
 vmultiplicator_nbits
 R1
 R2
 !i10b 1
 !s100 hLDCffbcgiPY^QoE^0MXI3
 R3
-ISh9GRJPA6da<Ddd^fVcfM2
+IBiPRU;^SbBCV=g=e0bBQW0
 R4
 S1
 R0
-w1724726259
-8C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/multiplicator_nbits.sv
-FC:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/multiplicator_nbits.sv
+R5
+8C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/multiplicator_nbits.sv
+FC:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/multiplicator_nbits.sv
 !i122 12
 L0 1 31
-R6
+R7
 r1
 !s85 0
 31
-R7
-!s107 C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/multiplicator_nbits.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1|C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/multiplicator_nbits.sv|
-!i113 1
 R8
+!s107 C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/multiplicator_nbits.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1|C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/multiplicator_nbits.sv|
+!i113 1
 R9
 R10
+R11
 vmux_10to1
 R1
-R11
+R20
 !i10b 1
 !s100 gVNe;WCak3JKEJHNBHKo<3
 R3
-I22Qi9j><>Sjhj6l[:Ekbi1
+ITQ6adH:75bgb4Gn9J^Wnb2
 R4
 S1
 R0
-w1724701866
-8C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/mux_10to1.sv
-FC:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/mux_10to1.sv
+w1724743292
+8C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/mux_10to1.sv
+FC:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/mux_10to1.sv
 !i122 1
 L0 1 30
-R6
+R7
 r1
 !s85 0
 31
-R15
-!s107 C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/mux_10to1.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1|C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/mux_10to1.sv|
+R21
+!s107 C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/mux_10to1.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1|C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/mux_10to1.sv|
 !i113 1
-R8
 R9
 R10
+R11
 vor_gate_single
 R1
-R11
+R2
 !i10b 1
 !s100 7?eRnC^3:XEZ=:c;2J`ih3
 R3
-Ih^fPY3IBN6BlbV_6W=[[<2
+IXh_=kN4LXmQYH7P2KD><13
 R4
 S1
 R0
-R12
-Z21 8C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/or_module.sv
-Z22 FC:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/or_module.sv
+R5
+Z23 8C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/or_module.sv
+Z24 FC:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/or_module.sv
 !i122 3
-Z23 L0 20 8
-R6
+Z25 L0 20 8
+R7
 r1
 !s85 0
 31
-R15
-Z24 !s107 C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/or_module.sv|
-Z25 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1|C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/or_module.sv|
-!i113 1
 R8
+Z26 !s107 C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/or_module.sv|
+Z27 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1|C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/or_module.sv|
+!i113 1
 R9
 R10
+R11
 vor_module
 R1
-R11
+R2
 !i10b 1
 !s100 =96bVz[I;3dE4[0e>LGSO0
 R3
-I27YzjOH>iUGURNQc<?f]?2
+IoKhYhO^=S:VKNHZFnS]ZY3
 R4
 S1
 R0
-R12
-R21
-R22
+R5
+R23
+R24
 !i122 3
 R18
-R6
+R7
 r1
 !s85 0
 31
-R15
-R24
-R25
-!i113 1
 R8
+R26
+R27
+!i113 1
 R9
 R10
+R11
 vshifter_nbits
 R1
 R2
 !i10b 1
 !s100 2KTL]SE>7EN@eBTYXcFYo3
 R3
-ImkdUn@82?P:_nE6GzX2@T2
+Ie?o6[@U`EUB9kLX6bA<LA2
 R4
 S1
 R0
-R12
-8C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/shifter_nbits.sv
-FC:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/shifter_nbits.sv
+R5
+8C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/shifter_nbits.sv
+FC:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/shifter_nbits.sv
 !i122 11
 L0 1 58
-R6
+R7
 r1
 !s85 0
 31
-R7
-!s107 C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/shifter_nbits.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1|C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/shifter_nbits.sv|
-!i113 1
 R8
+!s107 C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/shifter_nbits.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1|C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/shifter_nbits.sv|
+!i113 1
 R9
 R10
+R11
 vsubstractor_nbits
 R1
 R2
 !i10b 1
 !s100 ?ghBC1aGPU4ZVGR]jmOZi3
 R3
-IeNJ]Jk=bB[CH5hN7jCcEO3
+IWDVzET305KZzKLZC0ahOM2
 R4
 S1
 R0
-R12
-8C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/substractor_nbits.sv
-FC:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/substractor_nbits.sv
-!i122 10
 R5
+8C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/substractor_nbits.sv
+FC:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/substractor_nbits.sv
+!i122 10
 R6
+R7
 r1
 !s85 0
 31
-R7
-!s107 C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/substractor_nbits.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1|C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/substractor_nbits.sv|
-!i113 1
 R8
+!s107 C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/substractor_nbits.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1|C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/substractor_nbits.sv|
+!i113 1
 R9
 R10
+R11
 vxor_gate_single
 R1
-R11
+R2
 !i10b 1
 !s100 QjHeLiBn3HX=ae[?ejAKF1
 R3
-IIoiR]eS:d2L`JlCOG@oQK0
+I55i5@Q^d46LJaOfYWKS`:0
 R4
 S1
 R0
-R12
-Z26 8C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/xor_module.sv
-Z27 FC:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/xor_module.sv
+R5
+Z28 8C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/xor_module.sv
+Z29 FC:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/xor_module.sv
 !i122 2
-R23
-R6
+R25
+R7
 r1
 !s85 0
 31
-R15
-Z28 !s107 C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/xor_module.sv|
-Z29 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1|C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/xor_module.sv|
-!i113 1
 R8
+Z30 !s107 C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/xor_module.sv|
+Z31 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1|C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/xor_module.sv|
+!i113 1
 R9
 R10
+R11
 vxor_module
 R1
-R11
+R2
 !i10b 1
 !s100 YQ4dhj55Z945k^QEf8?Mz3
 R3
-Id^11HffXHdY_GfT[RCk0E1
+IS>Km3K]H:U1^j7;Emfe4:2
 R4
 S1
 R0
-R12
-R26
-R27
+R5
+R28
+R29
 !i122 2
 R18
-R6
+R7
 r1
 !s85 0
 31
-R15
-R28
-R29
-!i113 1
 R8
+R30
+R31
+!i113 1
 R9
 R10
+R11

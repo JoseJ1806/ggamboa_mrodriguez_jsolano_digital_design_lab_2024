@@ -1,5 +1,5 @@
 Analysis & Elaboration report for ALU
-Mon Aug 26 21:22:18 2024
+Tue Aug 27 01:22:27 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -31,8 +31,7 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
  23. Port Connectivity Checks: "mux_10to1:mux_neg_flag"
  24. Port Connectivity Checks: "substractor_nbits:substractor|full_substractor:generate_N_bit_Adder[0].f"
  25. Port Connectivity Checks: "adder_nbits:adder|full_adder:generate_N_bit_Adder[0].f"
- 26. Port Connectivity Checks: "display_converter:hex_converter"
- 27. Analysis & Elaboration Messages
+ 26. Analysis & Elaboration Messages
 
 
 
@@ -59,7 +58,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Mon Aug 26 21:22:18 2024       ;
+; Analysis & Elaboration Status ; Successful - Tue Aug 27 01:22:27 2024       ;
 ; Quartus Prime Version         ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                 ; ALU                                         ;
 ; Top-level Entity Name         ; ALU                                         ;
@@ -79,8 +78,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 20          ;
+; Maximum allowed            ; 12          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -439,107 +438,94 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "display_converter:hex_converter"                                                                                                ;
-+----------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                                                                     ;
-+----------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------+
-; led_disp ; Output ; Warning  ; Output or bidir port (7 bits) is wider than the port expression (1 bits) it drives; bit(s) "led_disp[6..1]" have no fanouts ;
-; led_disp ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                         ;
-+----------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------+
-
-
 +---------------------------------+
 ; Analysis & Elaboration Messages ;
 +---------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Mon Aug 26 21:22:12 2024
+    Info: Processing started: Tue Aug 27 01:22:22 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALU -c ALU --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file display_converter.sv
-    Info (12023): Found entity 1: display_converter File: C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/display_converter.sv Line: 1
+    Info (12023): Found entity 1: display_converter File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/display_converter.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux_10to1.sv
-    Info (12023): Found entity 1: mux_10to1 File: C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/mux_10to1.sv Line: 1
+    Info (12023): Found entity 1: mux_10to1 File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/mux_10to1.sv Line: 1
 Info (12021): Found 2 design units, including 2 entities, in source file xor_module.sv
-    Info (12023): Found entity 1: xor_module File: C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/xor_module.sv Line: 1
-    Info (12023): Found entity 2: xor_gate_single File: C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/xor_module.sv Line: 20
+    Info (12023): Found entity 1: xor_module File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/xor_module.sv Line: 1
+    Info (12023): Found entity 2: xor_gate_single File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/xor_module.sv Line: 20
 Info (12021): Found 2 design units, including 2 entities, in source file or_module.sv
-    Info (12023): Found entity 1: or_module File: C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/or_module.sv Line: 1
-    Info (12023): Found entity 2: or_gate_single File: C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/or_module.sv Line: 20
+    Info (12023): Found entity 1: or_module File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/or_module.sv Line: 1
+    Info (12023): Found entity 2: or_gate_single File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/or_module.sv Line: 20
 Info (12021): Found 2 design units, including 2 entities, in source file and_module.sv
-    Info (12023): Found entity 1: and_module File: C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/and_module.sv Line: 1
-    Info (12023): Found entity 2: and_gate_single File: C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/and_module.sv Line: 19
+    Info (12023): Found entity 1: and_module File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/and_module.sv Line: 1
+    Info (12023): Found entity 2: and_gate_single File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/and_module.sv Line: 19
 Info (12021): Found 1 design units, including 1 entities, in source file deco_2_4.sv
-    Info (12023): Found entity 1: deco_2_3 File: C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/deco_2_4.sv Line: 1
+    Info (12023): Found entity 1: deco_2_3 File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/deco_2_4.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file adder_nbits.sv
-    Info (12023): Found entity 1: adder_nbits File: C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/adder_nbits.sv Line: 1
+    Info (12023): Found entity 1: adder_nbits File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/adder_nbits.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu.sv
-    Info (12023): Found entity 1: ALU File: C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/ALU.sv Line: 1
+    Info (12023): Found entity 1: ALU File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/ALU.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file full_adder.sv
-    Info (12023): Found entity 1: full_adder File: C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/full_adder.sv Line: 1
+    Info (12023): Found entity 1: full_adder File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/full_adder.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file full_substractor.sv
-    Info (12023): Found entity 1: full_substractor File: C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/full_substractor.sv Line: 1
+    Info (12023): Found entity 1: full_substractor File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/full_substractor.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file substractor_nbits.sv
-    Info (12023): Found entity 1: substractor_nbits File: C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/substractor_nbits.sv Line: 1
+    Info (12023): Found entity 1: substractor_nbits File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/substractor_nbits.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file shifter_nbits.sv
-    Info (12023): Found entity 1: shifter_nbits File: C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/shifter_nbits.sv Line: 1
+    Info (12023): Found entity 1: shifter_nbits File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/shifter_nbits.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu_tb.sv
-    Info (12023): Found entity 1: ALU_tb File: C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/ALU_tb.sv Line: 1
+    Info (12023): Found entity 1: ALU_tb File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/ALU_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file full_multiplicator.sv
-    Info (12023): Found entity 1: full_multiplicator File: C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/full_multiplicator.sv Line: 1
+    Info (12023): Found entity 1: full_multiplicator File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/full_multiplicator.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file multiplicator_nbits.sv
-    Info (12023): Found entity 1: multiplicator_nbits File: C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/multiplicator_nbits.sv Line: 1
+    Info (12023): Found entity 1: multiplicator_nbits File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/multiplicator_nbits.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file full_divider.sv
-    Info (12023): Found entity 1: full_divider File: C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/full_divider.sv Line: 1
+    Info (12023): Found entity 1: full_divider File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/full_divider.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file divider_nbits.sv
-    Info (12023): Found entity 1: divider_nbits File: C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/divider_nbits.sv Line: 1
+    Info (12023): Found entity 1: divider_nbits File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/divider_nbits.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file full_moduler.sv
-    Info (12023): Found entity 1: full_moduler File: C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/full_moduler.sv Line: 1
+    Info (12023): Found entity 1: full_moduler File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/full_moduler.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file moduler_nbits.sv
-    Info (12023): Found entity 1: moduler_nbits File: C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/moduler_nbits.sv Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at ALU.sv(20): created implicit net for "led_disp" File: C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/ALU.sv Line: 20
+    Info (12023): Found entity 1: moduler_nbits File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/moduler_nbits.sv Line: 1
 Info (12127): Elaborating entity "ALU" for the top level hierarchy
-Warning (10034): Output port "led_disp1" at ALU.sv(12) has no driver File: C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/ALU.sv Line: 12
-Warning (10034): Output port "led_disp2" at ALU.sv(14) has no driver File: C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/ALU.sv Line: 14
-Info (12128): Elaborating entity "display_converter" for hierarchy "display_converter:hex_converter" File: C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/ALU.sv Line: 20
-Info (12128): Elaborating entity "mux_10to1" for hierarchy "mux_10to1:muxresult" File: C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/ALU.sv Line: 22
-Info (12128): Elaborating entity "adder_nbits" for hierarchy "adder_nbits:adder" File: C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/ALU.sv Line: 27
-Warning (10230): Verilog HDL assignment warning at adder_nbits.sv(28): truncated value with size 32 to match size of target (1) File: C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/adder_nbits.sv Line: 28
-Warning (10230): Verilog HDL assignment warning at adder_nbits.sv(31): truncated value with size 32 to match size of target (1) File: C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/adder_nbits.sv Line: 31
-Info (12128): Elaborating entity "full_adder" for hierarchy "adder_nbits:adder|full_adder:generate_N_bit_Adder[0].f" File: C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/adder_nbits.sv Line: 23
-Info (12128): Elaborating entity "substractor_nbits" for hierarchy "substractor_nbits:substractor" File: C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/ALU.sv Line: 28
-Warning (10230): Verilog HDL assignment warning at substractor_nbits.sv(28): truncated value with size 32 to match size of target (1) File: C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/substractor_nbits.sv Line: 28
-Warning (10230): Verilog HDL assignment warning at substractor_nbits.sv(31): truncated value with size 32 to match size of target (1) File: C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/substractor_nbits.sv Line: 31
-Info (12128): Elaborating entity "full_substractor" for hierarchy "substractor_nbits:substractor|full_substractor:generate_N_bit_Adder[0].f" File: C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/substractor_nbits.sv Line: 23
-Info (12128): Elaborating entity "multiplicator_nbits" for hierarchy "multiplicator_nbits:multiplicator" File: C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/ALU.sv Line: 29
-Warning (10230): Verilog HDL assignment warning at multiplicator_nbits.sv(26): truncated value with size 32 to match size of target (1) File: C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/multiplicator_nbits.sv Line: 26
-Info (12128): Elaborating entity "divider_nbits" for hierarchy "divider_nbits:divider" File: C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/ALU.sv Line: 30
-Warning (10036): Verilog HDL or VHDL warning at divider_nbits.sv(12): object "remainder" assigned a value but never read File: C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/divider_nbits.sv Line: 12
-Warning (10230): Verilog HDL assignment warning at divider_nbits.sv(15): truncated value with size 32 to match size of target (4) File: C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/divider_nbits.sv Line: 15
-Warning (10230): Verilog HDL assignment warning at divider_nbits.sv(16): truncated value with size 32 to match size of target (4) File: C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/divider_nbits.sv Line: 16
-Warning (10230): Verilog HDL assignment warning at divider_nbits.sv(20): truncated value with size 32 to match size of target (1) File: C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/divider_nbits.sv Line: 20
-Warning (10230): Verilog HDL assignment warning at divider_nbits.sv(23): truncated value with size 32 to match size of target (1) File: C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/divider_nbits.sv Line: 23
-Info (12128): Elaborating entity "moduler_nbits" for hierarchy "moduler_nbits:moduler" File: C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/ALU.sv Line: 31
-Warning (10230): Verilog HDL assignment warning at moduler_nbits.sv(14): truncated value with size 32 to match size of target (4) File: C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/moduler_nbits.sv Line: 14
-Warning (10230): Verilog HDL assignment warning at moduler_nbits.sv(18): truncated value with size 32 to match size of target (1) File: C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/moduler_nbits.sv Line: 18
-Warning (10230): Verilog HDL assignment warning at moduler_nbits.sv(21): truncated value with size 32 to match size of target (1) File: C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/moduler_nbits.sv Line: 21
-Info (12128): Elaborating entity "and_module" for hierarchy "and_module:andmodule" File: C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/ALU.sv Line: 33
-Info (12128): Elaborating entity "and_gate_single" for hierarchy "and_module:andmodule|and_gate_single:generate_bit_to_bit[0].gateand" File: C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/and_module.sv Line: 11
-Info (12128): Elaborating entity "or_module" for hierarchy "or_module:ormodule" File: C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/ALU.sv Line: 34
-Info (12128): Elaborating entity "or_gate_single" for hierarchy "or_module:ormodule|or_gate_single:generate_bit_to_bit[0].gateor" File: C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/or_module.sv Line: 11
-Info (12128): Elaborating entity "xor_module" for hierarchy "xor_module:xormodule" File: C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/ALU.sv Line: 35
-Info (12128): Elaborating entity "xor_gate_single" for hierarchy "xor_module:xormodule|xor_gate_single:generate_bit_to_bit[0].gatexor" File: C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/xor_module.sv Line: 11
-Info (12128): Elaborating entity "shifter_nbits" for hierarchy "shifter_nbits:shifter" File: C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/ALU.sv Line: 36
-Warning (10230): Verilog HDL assignment warning at shifter_nbits.sv(52): truncated value with size 32 to match size of target (1) File: C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/shifter_nbits.sv Line: 52
-Info (12128): Elaborating entity "deco_2_3" for hierarchy "shifter_nbits:shifter|deco_2_3:deco" File: C:/Users/Marco Rodriguez/Desktop/TALLER 2024/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/shifter_nbits.sv Line: 24
-Warning (12241): 7 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 19 warnings
-    Info: Peak virtual memory: 4770 megabytes
-    Info: Processing ended: Mon Aug 26 21:22:18 2024
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:14
+Info (12128): Elaborating entity "display_converter" for hierarchy "display_converter:hex_converter" File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/ALU.sv Line: 19
+Info (12128): Elaborating entity "mux_10to1" for hierarchy "mux_10to1:muxresult" File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/ALU.sv Line: 21
+Info (12128): Elaborating entity "adder_nbits" for hierarchy "adder_nbits:adder" File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/ALU.sv Line: 26
+Warning (10230): Verilog HDL assignment warning at adder_nbits.sv(28): truncated value with size 32 to match size of target (1) File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/adder_nbits.sv Line: 28
+Warning (10230): Verilog HDL assignment warning at adder_nbits.sv(31): truncated value with size 32 to match size of target (1) File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/adder_nbits.sv Line: 31
+Info (12128): Elaborating entity "full_adder" for hierarchy "adder_nbits:adder|full_adder:generate_N_bit_Adder[0].f" File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/adder_nbits.sv Line: 23
+Info (12128): Elaborating entity "substractor_nbits" for hierarchy "substractor_nbits:substractor" File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/ALU.sv Line: 27
+Warning (10230): Verilog HDL assignment warning at substractor_nbits.sv(28): truncated value with size 32 to match size of target (1) File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/substractor_nbits.sv Line: 28
+Warning (10230): Verilog HDL assignment warning at substractor_nbits.sv(31): truncated value with size 32 to match size of target (1) File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/substractor_nbits.sv Line: 31
+Info (12128): Elaborating entity "full_substractor" for hierarchy "substractor_nbits:substractor|full_substractor:generate_N_bit_Adder[0].f" File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/substractor_nbits.sv Line: 23
+Info (12128): Elaborating entity "multiplicator_nbits" for hierarchy "multiplicator_nbits:multiplicator" File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/ALU.sv Line: 28
+Warning (10230): Verilog HDL assignment warning at multiplicator_nbits.sv(26): truncated value with size 32 to match size of target (1) File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/multiplicator_nbits.sv Line: 26
+Info (12128): Elaborating entity "divider_nbits" for hierarchy "divider_nbits:divider" File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/ALU.sv Line: 29
+Warning (10036): Verilog HDL or VHDL warning at divider_nbits.sv(12): object "remainder" assigned a value but never read File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/divider_nbits.sv Line: 12
+Warning (10230): Verilog HDL assignment warning at divider_nbits.sv(15): truncated value with size 32 to match size of target (4) File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/divider_nbits.sv Line: 15
+Warning (10230): Verilog HDL assignment warning at divider_nbits.sv(16): truncated value with size 32 to match size of target (4) File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/divider_nbits.sv Line: 16
+Warning (10230): Verilog HDL assignment warning at divider_nbits.sv(20): truncated value with size 32 to match size of target (1) File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/divider_nbits.sv Line: 20
+Warning (10230): Verilog HDL assignment warning at divider_nbits.sv(23): truncated value with size 32 to match size of target (1) File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/divider_nbits.sv Line: 23
+Info (12128): Elaborating entity "moduler_nbits" for hierarchy "moduler_nbits:moduler" File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/ALU.sv Line: 30
+Warning (10230): Verilog HDL assignment warning at moduler_nbits.sv(14): truncated value with size 32 to match size of target (4) File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/moduler_nbits.sv Line: 14
+Warning (10230): Verilog HDL assignment warning at moduler_nbits.sv(18): truncated value with size 32 to match size of target (1) File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/moduler_nbits.sv Line: 18
+Warning (10230): Verilog HDL assignment warning at moduler_nbits.sv(21): truncated value with size 32 to match size of target (1) File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/moduler_nbits.sv Line: 21
+Info (12128): Elaborating entity "and_module" for hierarchy "and_module:andmodule" File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/ALU.sv Line: 32
+Info (12128): Elaborating entity "and_gate_single" for hierarchy "and_module:andmodule|and_gate_single:generate_bit_to_bit[0].gateand" File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/and_module.sv Line: 11
+Info (12128): Elaborating entity "or_module" for hierarchy "or_module:ormodule" File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/ALU.sv Line: 33
+Info (12128): Elaborating entity "or_gate_single" for hierarchy "or_module:ormodule|or_gate_single:generate_bit_to_bit[0].gateor" File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/or_module.sv Line: 11
+Info (12128): Elaborating entity "xor_module" for hierarchy "xor_module:xormodule" File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/ALU.sv Line: 34
+Info (12128): Elaborating entity "xor_gate_single" for hierarchy "xor_module:xormodule|xor_gate_single:generate_bit_to_bit[0].gatexor" File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/xor_module.sv Line: 11
+Info (12128): Elaborating entity "shifter_nbits" for hierarchy "shifter_nbits:shifter" File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/ALU.sv Line: 35
+Warning (10230): Verilog HDL assignment warning at shifter_nbits.sv(52): truncated value with size 32 to match size of target (1) File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/shifter_nbits.sv Line: 52
+Info (12128): Elaborating entity "deco_2_3" for hierarchy "shifter_nbits:shifter|deco_2_3:deco" File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/shifter_nbits.sv Line: 24
+Warning (12241): 6 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 16 warnings
+    Info: Peak virtual memory: 4776 megabytes
+    Info: Processing ended: Tue Aug 27 01:22:27 2024
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:06
 
 

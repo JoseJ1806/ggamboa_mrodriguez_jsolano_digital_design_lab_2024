@@ -19,20 +19,13 @@ result[0] << result[0].DB_MAX_OUTPUT_PORT_TYPE
 result[1] << result[1].DB_MAX_OUTPUT_PORT_TYPE
 result[2] << result[2].DB_MAX_OUTPUT_PORT_TYPE
 result[3] << result[3].DB_MAX_OUTPUT_PORT_TYPE
-led_disp1[0] << <GND>
-led_disp1[1] << <GND>
-led_disp1[2] << <GND>
-led_disp1[3] << <GND>
-led_disp1[4] << <GND>
-led_disp1[5] << <GND>
-led_disp1[6] << <GND>
-led_disp2[0] << <GND>
-led_disp2[1] << <GND>
-led_disp2[2] << <GND>
-led_disp2[3] << <GND>
-led_disp2[4] << <GND>
-led_disp2[5] << <GND>
-led_disp2[6] << <GND>
+led_disp[0] << display_converter:hex_converter.port4
+led_disp[1] << display_converter:hex_converter.port4
+led_disp[2] << display_converter:hex_converter.port4
+led_disp[3] << display_converter:hex_converter.port4
+led_disp[4] << display_converter:hex_converter.port4
+led_disp[5] << display_converter:hex_converter.port4
+led_disp[6] << display_converter:hex_converter.port4
 
 
 |ALU|display_converter:hex_converter

@@ -9,9 +9,8 @@ module ALU
 	output logic cry_flag,
 	output logic of_flag,
 	output logic [N-1:0] result,
-	output [6:0] led_disp1,
-	output [6:0] led_disp2
-);
+	output [6:0] led_disp
+	);
 
 	wire [N-1:0] out_suma, out_rest, out_and, out_or, out_xor, out_shifter, out_mult, out_div, out_mod;
 	wire [23:0] module_flags_out;  // Extendido a 24 bits

@@ -1,0 +1,30 @@
+module n_bit_adder #(
+    parameter N = 2     // Ancho de bits predeterminado
+)(
+    input logic [N-1:0] a,    // Primer operando de N bits
+    input logic [N-1:0] b,    // Segundo operando de N bits
+    input logic cin,          // Bit de acarreo de entrada
+    output logic [N-1:0] sum, // Resultado de la suma de N bits
+    output logic cout         // Bit de acarreo de salida
+);
+
+    logic [N:0] carry;  // Vector de acarreo de N+1 bits
+
+    assign carry[0] = cin;
+
+    genvar i;
+    generate
+        for (i = 0; i < N; i++) begin : adder_loop
+            full_adder fa (
+                .a(a[i]),
+                .b(b[i]),
+                .cin(carry[i]),
+                .sum(sum[i]),
+                .cout(carry[i+1])
+            );
+        end
+    endgenerate
+
+    assign cout = carry[N];
+
+endmodule

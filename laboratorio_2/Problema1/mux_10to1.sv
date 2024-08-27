@@ -1,5 +1,5 @@
 module mux_10to1 #(parameter N=4)(output [N-1:0] out, 
-											 input [N-1:0] out_suma, out_rest, out_and, out_or, out_xor, out_right_lo, out_left_lo, out_mult, out_div, out_mod
+											 input [N-1:0] out_suma, out_rest, out_and, out_or, out_xor, out_right_lo, out_left_lo, out_mult, out_div, out_mod,
 											 input [3:0] select);
 
 logic [N-1:0] out_alu;

@@ -36,47 +36,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "led_disp[0]",
+					"name" : "a[1]",
 					"strict" : false
 				},
 				{
-					"name" : "led_disp[1]",
-					"strict" : false
-				},
-				{
-					"name" : "led_disp[2]",
-					"strict" : false
-				},
-				{
-					"name" : "led_disp[3]",
-					"strict" : false
-				},
-				{
-					"name" : "led_disp[4]",
-					"strict" : false
-				},
-				{
-					"name" : "led_disp[5]",
-					"strict" : false
-				},
-				{
-					"name" : "led_disp[6]",
-					"strict" : false
-				},
-				{
-					"name" : "s[2]",
-					"strict" : false
-				},
-				{
-					"name" : "s[1]",
-					"strict" : false
-				},
-				{
-					"name" : "s[3]",
-					"strict" : false
-				},
-				{
-					"name" : "a[2]",
+					"name" : "b[1]",
 					"strict" : false
 				},
 				{
@@ -88,11 +52,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "a[1]",
-					"strict" : false
-				},
-				{
-					"name" : "b[1]",
+					"name" : "a[2]",
 					"strict" : false
 				},
 				{
@@ -109,6 +69,18 @@
 				},
 				{
 					"name" : "s[0]",
+					"strict" : false
+				},
+				{
+					"name" : "s[3]",
+					"strict" : false
+				},
+				{
+					"name" : "s[1]",
+					"strict" : false
+				},
+				{
+					"name" : "s[2]",
 					"strict" : false
 				}
 			]

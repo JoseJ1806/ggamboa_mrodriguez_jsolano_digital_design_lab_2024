@@ -1,0 +1,39 @@
+module Main
+     #(parameter N = 2)
+	  (
+	  //Se definen las entradas 	  
+	  input logic [N-1:0] A,B,Sel,
+	  input logic clk, reset,
+	  
+	  //Se definen las salidas 
+	 
+     output logic [2*N-1:0] result,
+	  output logic NFlag_out,
+	  output logic ZFlag_out,
+	  output logic CFlag_out,
+	  output logic VFlag_out
+);
+
+reg [N-1:0] Output_A_num1;   
+reg [N-1:0] Output_B_num1;  
+reg [3:0] Output_sel;
+reg [2*N-1:0] Oresult_seg;
+reg logic N_Flag;
+reg logic Z_Flag;
+reg logic C_Flag;
+reg Logic V_Flag;
+
+FlipFlop_in #(.N(N)) ff1_inst (.clk(clk),.reset(reset),.A_numf1(A),.B_numf1(B),.sf1(Sel),.Output_A_numf1(Output_A_num1),.Output_B_numf1(Output_B_num1),
+.Output_sf1(Output_sel));
+
+
+Alu #(.N(N)) alu_inst (.A(Output_A_num1),.B(Output_B_num1),.ALU_sel(Output_sel),
+               .ALU_Result(Oresult_seg),
+			      .NFlag(N_Flag),.ZFlag(Z_Flag),.CFlag(C_Flag),.VFlag(V_Flag));
+
+
+FlipFlop_out #(.N(N)) ff2_inst (.clk(clk),.reset(reset),.input_result(Oresult_seg),.NFlag_in(N_Flag),.ZFlag_in(Z_Flag),.CFlag_in(C_Flag),
+							 .VFlag_in(V_Flag),.output_result(Oresult_seg),.NFlag_out(N_Flag),.ZFlag_out(Z_Flag),.CFlag_out(C_Flag),
+							 .VFlag_out(V_Flag));
+	endmodule
+	

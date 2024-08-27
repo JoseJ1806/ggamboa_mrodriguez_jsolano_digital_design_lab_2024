@@ -1,0 +1,90 @@
+/* Operaciones logicas y aritmeticas de la ALU
+----------------------------------------------------------------------
+|ALU_Sel|   ALU Operation
+----------------------------------------------------------------------
+| 0000  |   ALU_Out = A + B;
+----------------------------------------------------------------------
+| 0001  |   ALU_Out = A - B;
+----------------------------------------------------------------------
+| 0010  |   ALU_Out = A * B;
+----------------------------------------------------------------------
+| 0011  |   ALU_Out = A / B;
+----------------------------------------------------------------------
+| 0100  |   ALU_Out = A << 1;
+----------------------------------------------------------------------
+| 0101  |   ALU_Out = A >> 1;
+----------------------------------------------------------------------
+| 1000  |   ALU_Out = A and B;
+----------------------------------------------------------------------
+| 1001  |   ALU_Out = A or B;
+----------------------------------------------------------------------
+| 1010  |   ALU_Out = A xor B;
+----------------------------------------------------------------------*/
+
+module Alu 
+#(parameter: N = 2)
+(input logic [N-1:0] A,B, //entrada de la ALU
+					  input logic [N-1:0] ALU_Sel,//selector de la ALU
+					  output logic [N-1:0]ALU_Out, //salida dela ALU 
+					   output logic NFlag,
+						output logic ZFlag,
+						output logic CFlag,
+						output logic VFlag
+);
+
+always_comb begin
+		//Operaciones de la ALU
+		case(ALU_Sel)
+		
+			4'b0000: begin 
+				ALU_Result = A + B;
+				
+			end
+		
+			4'b0100: begin  // Logical shift left
+				ALU_Result = A << 1;
+				assign ZFlag  = (result == 2'b00);
+				assign CFlag = (A[N-1] == 1'b1);
+				NFlag = 1'b0;
+				VFlag = 1'b0;
+			end
+						
+			4'b0101: begin // Logical shift right
+				ALU_Result = A >> 1;
+				assign Zflag  = (result == 2'b00);
+				assign CFlag = (A[0] == 1'b1);
+			end
+						
+			4'b1000: begin//  Logical and 
+				ALU_Result = A & B;
+				NFlag = 1'b0;
+            assign ZFlag = (result == 2'b00);
+            CFlag = 1'b0;
+            VFlag = 1'b0;
+			end
+						
+			4'b1001: begin //  Logical or
+				ALU_Result = A | B;
+				NFlag = 1'b0;
+            assign ZFlag = (result == 2'b00);
+            CFlag = 1'b0;
+            VFlag = 1'b0;
+			end
+						
+			4'b1010: begin //  Logical xor 
+				ALU_Result = A ^ B;
+				NFlag = 1'b0;
+            assign ZFlag = (result == 2'b00);
+            CFlag = 1'b0;
+            VFlag = 1'b0;
+			end
+						
+			default: begin 
+				ALU_Result = A + B;
+			end
+		endcase
+
+end
+												
+endmodule 					
+					  

@@ -1,0 +1,301 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema2/simulation/modelsim
+vAlu
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z2 !s110 1724740714
+!i10b 1
+!s100 5VlA0YJUWnzOWS`5NkkcD0
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IP[iXhEQCm>lK7GW?QOKLX2
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+w1724740680
+8C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema2/Alu.sv
+FC:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema2/Alu.sv
+!i122 1
+L0 26 129
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1724740714.000000
+!s107 C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema2/Alu.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema2|C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema2/Alu.sv|
+!i113 1
+Z7 o-sv -work work
+Z8 !s92 -sv -work work +incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema2
+Z9 tCvgOpt 0
+n@alu
+vFlipFlop_in
+R1
+!s110 1724740713
+!i10b 1
+!s100 P99H?8VZU[kEV6GiNbF1J2
+R3
+IVl?;cd=^c:RbQZWm>`zXY3
+R4
+S1
+R0
+w1724737409
+8C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema2/FlipFlop_in.sv
+FC:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema2/FlipFlop_in.sv
+!i122 0
+L0 1 25
+R5
+r1
+!s85 0
+31
+!s108 1724740713.000000
+!s107 C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema2/FlipFlop_in.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema2|C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema2/FlipFlop_in.sv|
+!i113 1
+R7
+R8
+R9
+n@flip@flop_in
+vFlipFlop_out
+R1
+Z10 !s110 1724740715
+!i10b 1
+!s100 H4jK<cE[c1TXh]3H;di<c0
+R3
+Ii`G2hlLQf;P7SFUVI8V120
+R4
+S1
+R0
+w1724737039
+8C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema2/FlipFlop_out.sv
+FC:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema2/FlipFlop_out.sv
+!i122 8
+Z11 L0 1 35
+R5
+r1
+!s85 0
+31
+Z12 !s108 1724740715.000000
+!s107 C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema2/FlipFlop_out.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema2|C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema2/FlipFlop_out.sv|
+!i113 1
+R7
+R8
+R9
+n@flip@flop_out
+vfull_adder
+R1
+R2
+!i10b 1
+!s100 7FJ6XP4R:Q^1YBHYa>D?F3
+R3
+IG_9>]jOVM6PU>>@m9bL>D2
+R4
+S1
+R0
+w1724732217
+8C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema2/full_adder.sv
+FC:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema2/full_adder.sv
+!i122 3
+Z13 L0 1 15
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema2/full_adder.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema2|C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema2/full_adder.sv|
+!i113 1
+R7
+R8
+R9
+vfull_subtractor
+R1
+!s110 1724740716
+!i10b 1
+!s100 X2nOmm3Ci5hFPD:7j`Qnl2
+R3
+IUSnILBjW;hbFV_QSIHNOg1
+R4
+S1
+R0
+w1724737663
+8C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema2/full_subtractor.sv
+FC:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema2/full_subtractor.sv
+!i122 10
+R13
+R5
+r1
+!s85 0
+31
+!s108 1724740716.000000
+!s107 C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema2/full_subtractor.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema2|C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema2/full_subtractor.sv|
+!i113 1
+R7
+R8
+R9
+vMain
+R1
+R10
+!i10b 1
+!s100 2LR_miWmS^a9`z033AE1@2
+R3
+IAU8nJDMAH5z_mIQ8nB7h<0
+R4
+S1
+R0
+w1724740474
+8C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema2/Main.sv
+FC:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema2/Main.sv
+!i122 9
+L0 1 63
+R5
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema2/Main.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema2|C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema2/Main.sv|
+!i113 1
+R7
+R8
+R9
+n@main
+vn_bit_adder
+R1
+R2
+!i10b 1
+!s100 <ElbIaM]2fIjIijo7i1Y=2
+R3
+ID:3_F9^k>GWD34fXPh<gU0
+R4
+S1
+R0
+w1724733762
+8C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema2/n_bit_adder.sv
+FC:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema2/n_bit_adder.sv
+!i122 2
+L0 1 44
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema2/n_bit_adder.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema2|C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema2/n_bit_adder.sv|
+!i113 1
+R7
+R8
+R9
+vn_bit_divider
+R1
+R10
+!i10b 1
+!s100 nTVCKJe=lHR75Un^JmFeQ0
+R3
+I`1][i^z[kOLbPdKm5_UeH3
+R4
+S1
+R0
+w1724735065
+8C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema2/n_bit_divider.sv
+FC:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema2/n_bit_divider.sv
+!i122 6
+L0 1 38
+R5
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema2/n_bit_divider.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema2|C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema2/n_bit_divider.sv|
+!i113 1
+R7
+R8
+R9
+vn_bit_modulus
+R1
+R10
+!i10b 1
+!s100 SldlRBbz]Sbl6akGiP`nd1
+R3
+IXW_T^NSDb_U7TbM0=^MRb3
+R4
+S1
+R0
+w1724734607
+8C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema2/n_bit_modulus.sv
+FC:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema2/n_bit_modulus.sv
+!i122 7
+R11
+R5
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema2/n_bit_modulus.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema2|C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema2/n_bit_modulus.sv|
+!i113 1
+R7
+R8
+R9
+vn_bit_multiplier
+R1
+R10
+!i10b 1
+!s100 [38zDaba[X1lQ]PHTSWcB2
+R3
+ITMJ5H[Ole1B;X]`zBe^zY0
+R4
+S1
+R0
+w1724733759
+8C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema2/n_bit_multiplier.sv
+FC:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema2/n_bit_multiplier.sv
+!i122 4
+L0 1 30
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema2/n_bit_multiplier.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema2|C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema2/n_bit_multiplier.sv|
+!i113 1
+R7
+R8
+R9
+vn_bit_subtractor
+R1
+R10
+!i10b 1
+!s100 UW[6m4Imn>Uz`g6VBYgdB3
+R3
+I;@0X1ab`o]QD?[hZYnnao0
+R4
+S1
+R0
+w1724733912
+8C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema2/n_bit_subtractor.sv
+FC:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema2/n_bit_subtractor.sv
+!i122 5
+L0 1 39
+R5
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema2/n_bit_subtractor.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema2|C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema2/n_bit_subtractor.sv|
+!i113 1
+R7
+R8
+R9

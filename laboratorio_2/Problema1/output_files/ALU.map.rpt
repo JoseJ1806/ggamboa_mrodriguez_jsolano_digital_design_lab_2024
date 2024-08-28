@@ -1,0 +1,531 @@
+Analysis & Elaboration report for ALU
+Tue Aug 27 01:22:27 2024
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Parameter Settings for User Entity Instance: Top-level Entity: |ALU
+  5. Parameter Settings for User Entity Instance: mux_10to1:muxresult
+  6. Parameter Settings for User Entity Instance: adder_nbits:adder
+  7. Parameter Settings for User Entity Instance: substractor_nbits:substractor
+  8. Parameter Settings for User Entity Instance: multiplicator_nbits:multiplicator
+  9. Parameter Settings for User Entity Instance: divider_nbits:divider
+ 10. Parameter Settings for User Entity Instance: moduler_nbits:moduler
+ 11. Parameter Settings for User Entity Instance: and_module:andmodule
+ 12. Parameter Settings for User Entity Instance: or_module:ormodule
+ 13. Parameter Settings for User Entity Instance: xor_module:xormodule
+ 14. Parameter Settings for User Entity Instance: shifter_nbits:shifter
+ 15. Parameter Settings for User Entity Instance: mux_10to1:mux_neg_flag
+ 16. Parameter Settings for User Entity Instance: mux_10to1:mux_zr_flag
+ 17. Parameter Settings for User Entity Instance: mux_10to1:mux_cry_flag
+ 18. Parameter Settings for User Entity Instance: mux_10to1:mux_of_flag
+ 19. Analysis & Elaboration Settings
+ 20. Port Connectivity Checks: "mux_10to1:mux_of_flag"
+ 21. Port Connectivity Checks: "mux_10to1:mux_cry_flag"
+ 22. Port Connectivity Checks: "mux_10to1:mux_zr_flag"
+ 23. Port Connectivity Checks: "mux_10to1:mux_neg_flag"
+ 24. Port Connectivity Checks: "substractor_nbits:substractor|full_substractor:generate_N_bit_Adder[0].f"
+ 25. Port Connectivity Checks: "adder_nbits:adder|full_adder:generate_N_bit_Adder[0].f"
+ 26. Analysis & Elaboration Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-----------------------------------------------------------------------------+
+; Analysis & Elaboration Summary                                              ;
++-------------------------------+---------------------------------------------+
+; Analysis & Elaboration Status ; Successful - Tue Aug 27 01:22:27 2024       ;
+; Quartus Prime Version         ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                 ; ALU                                         ;
+; Top-level Entity Name         ; ALU                                         ;
+; Family                        ; Cyclone V                                   ;
+; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
+; Total registers               ; N/A until Partition Merge                   ;
+; Total pins                    ; N/A until Partition Merge                   ;
+; Total virtual pins            ; N/A until Partition Merge                   ;
+; Total block memory bits       ; N/A until Partition Merge                   ;
+; Total PLLs                    ; N/A until Partition Merge                   ;
+; Total DLLs                    ; N/A until Partition Merge                   ;
++-------------------------------+---------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 20          ;
+; Maximum allowed            ; 12          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |ALU ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; N              ; 4     ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux_10to1:muxresult ;
++----------------+-------+-----------------------------------------+
+; Parameter Name ; Value ; Type                                    ;
++----------------+-------+-----------------------------------------+
+; N              ; 4     ; Signed Integer                          ;
++----------------+-------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: adder_nbits:adder ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; N              ; 4     ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: substractor_nbits:substractor ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; N              ; 4     ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: multiplicator_nbits:multiplicator ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; N              ; 4     ; Signed Integer                                        ;
++----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divider_nbits:divider ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; N              ; 4     ; Signed Integer                            ;
++----------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: moduler_nbits:moduler ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; N              ; 4     ; Signed Integer                            ;
++----------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: and_module:andmodule ;
++----------------+-------+------------------------------------------+
+; Parameter Name ; Value ; Type                                     ;
++----------------+-------+------------------------------------------+
+; N              ; 4     ; Signed Integer                           ;
++----------------+-------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: or_module:ormodule ;
++----------------+-------+----------------------------------------+
+; Parameter Name ; Value ; Type                                   ;
++----------------+-------+----------------------------------------+
+; N              ; 4     ; Signed Integer                         ;
++----------------+-------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: xor_module:xormodule ;
++----------------+-------+------------------------------------------+
+; Parameter Name ; Value ; Type                                     ;
++----------------+-------+------------------------------------------+
+; N              ; 4     ; Signed Integer                           ;
++----------------+-------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: shifter_nbits:shifter ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; N              ; 4     ; Signed Integer                            ;
++----------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux_10to1:mux_neg_flag ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; N              ; 4     ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux_10to1:mux_zr_flag ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; N              ; 4     ; Signed Integer                            ;
++----------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux_10to1:mux_cry_flag ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; N              ; 4     ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux_10to1:mux_of_flag ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; N              ; 4     ; Signed Integer                            ;
++----------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Elaboration Settings                                                                                           ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSXFC6D6F31C6     ;                    ;
+; Top-level entity name                                                           ; ALU                ; ALU                ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mux_10to1:mux_of_flag"                                                                                                                                                                           ;
++--------------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port               ; Type   ; Severity ; Details                                                                                                                                                                            ;
++--------------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; out                ; Output ; Warning  ; Output or bidir port (4 bits) is wider than the port expression (1 bits) it drives; bit(s) "out[3..1]" have no fanouts                                                             ;
+; out_suma           ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "out_suma[3..1]" will be connected to GND.                                   ;
+; out_rest           ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "out_rest[3..1]" will be connected to GND.                                   ;
+; out_and            ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (4 bits) it drives.  The 28 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; out_and[3..0]      ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; out_or             ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (4 bits) it drives.  The 28 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; out_or[3..0]       ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; out_xor            ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (4 bits) it drives.  The 28 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; out_xor[3..0]      ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; out_right_lo       ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (4 bits) it drives.  The 28 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; out_right_lo[3..0] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; out_left_lo        ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "out_left_lo[3..1]" will be connected to GND.                                ;
+; out_mult           ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "out_mult[3..1]" will be connected to GND.                                   ;
+; out_div            ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "out_div[3..1]" will be connected to GND.                                    ;
+; out_mod            ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "out_mod[3..1]" will be connected to GND.                                    ;
++--------------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mux_10to1:mux_cry_flag"                                                                                                                                                                          ;
++--------------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port               ; Type   ; Severity ; Details                                                                                                                                                                            ;
++--------------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; out                ; Output ; Warning  ; Output or bidir port (4 bits) is wider than the port expression (1 bits) it drives; bit(s) "out[3..1]" have no fanouts                                                             ;
+; out_suma           ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "out_suma[3..1]" will be connected to GND.                                   ;
+; out_rest           ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "out_rest[3..1]" will be connected to GND.                                   ;
+; out_and            ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (4 bits) it drives.  The 28 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; out_and[3..0]      ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; out_or             ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (4 bits) it drives.  The 28 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; out_or[3..0]       ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; out_xor            ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (4 bits) it drives.  The 28 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; out_xor[3..0]      ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; out_right_lo       ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (4 bits) it drives.  The 28 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; out_right_lo[3..0] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; out_left_lo        ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "out_left_lo[3..1]" will be connected to GND.                                ;
+; out_mult           ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "out_mult[3..1]" will be connected to GND.                                   ;
+; out_div            ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "out_div[3..1]" will be connected to GND.                                    ;
+; out_mod            ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "out_mod[3..1]" will be connected to GND.                                    ;
++--------------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mux_10to1:mux_zr_flag"                                                                                                                                                                           ;
++--------------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port               ; Type   ; Severity ; Details                                                                                                                                                                            ;
++--------------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; out                ; Output ; Warning  ; Output or bidir port (4 bits) is wider than the port expression (1 bits) it drives; bit(s) "out[3..1]" have no fanouts                                                             ;
+; out_suma           ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "out_suma[3..1]" will be connected to GND.                                   ;
+; out_rest           ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "out_rest[3..1]" will be connected to GND.                                   ;
+; out_and            ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (4 bits) it drives.  The 28 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; out_and[3..0]      ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; out_or             ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (4 bits) it drives.  The 28 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; out_or[3..0]       ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; out_xor            ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (4 bits) it drives.  The 28 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; out_xor[3..0]      ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; out_right_lo       ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (4 bits) it drives.  The 28 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; out_right_lo[3..0] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; out_left_lo        ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "out_left_lo[3..1]" will be connected to GND.                                ;
+; out_mult           ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "out_mult[3..1]" will be connected to GND.                                   ;
+; out_div            ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "out_div[3..1]" will be connected to GND.                                    ;
+; out_mod            ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "out_mod[3..1]" will be connected to GND.                                    ;
++--------------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mux_10to1:mux_neg_flag"                                                                                                                                                                          ;
++--------------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port               ; Type   ; Severity ; Details                                                                                                                                                                            ;
++--------------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; out                ; Output ; Warning  ; Output or bidir port (4 bits) is wider than the port expression (1 bits) it drives; bit(s) "out[3..1]" have no fanouts                                                             ;
+; out_suma           ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "out_suma[3..1]" will be connected to GND.                                   ;
+; out_rest           ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "out_rest[3..1]" will be connected to GND.                                   ;
+; out_and            ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (4 bits) it drives.  The 28 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; out_and[3..0]      ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; out_or             ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (4 bits) it drives.  The 28 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; out_or[3..0]       ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; out_xor            ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (4 bits) it drives.  The 28 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; out_xor[3..0]      ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; out_right_lo       ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (4 bits) it drives.  The 28 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; out_right_lo[3..0] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; out_left_lo        ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "out_left_lo[3..1]" will be connected to GND.                                ;
+; out_mult           ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "out_mult[3..1]" will be connected to GND.                                   ;
+; out_div            ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "out_div[3..1]" will be connected to GND.                                    ;
+; out_mod            ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "out_mod[3..1]" will be connected to GND.                                    ;
++--------------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "substractor_nbits:substractor|full_substractor:generate_N_bit_Adder[0].f"                                                                                                             ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                                                                                                                                                            ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; c_in     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; c_in[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_nbits:adder|full_adder:generate_N_bit_Adder[0].f"                                                                                                                               ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                                                                                                                                                            ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; c_in     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; c_in[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Elaboration
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Tue Aug 27 01:22:22 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALU -c ALU --analysis_and_elaboration
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file display_converter.sv
+    Info (12023): Found entity 1: display_converter File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/display_converter.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mux_10to1.sv
+    Info (12023): Found entity 1: mux_10to1 File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/mux_10to1.sv Line: 1
+Info (12021): Found 2 design units, including 2 entities, in source file xor_module.sv
+    Info (12023): Found entity 1: xor_module File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/xor_module.sv Line: 1
+    Info (12023): Found entity 2: xor_gate_single File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/xor_module.sv Line: 20
+Info (12021): Found 2 design units, including 2 entities, in source file or_module.sv
+    Info (12023): Found entity 1: or_module File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/or_module.sv Line: 1
+    Info (12023): Found entity 2: or_gate_single File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/or_module.sv Line: 20
+Info (12021): Found 2 design units, including 2 entities, in source file and_module.sv
+    Info (12023): Found entity 1: and_module File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/and_module.sv Line: 1
+    Info (12023): Found entity 2: and_gate_single File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/and_module.sv Line: 19
+Info (12021): Found 1 design units, including 1 entities, in source file deco_2_4.sv
+    Info (12023): Found entity 1: deco_2_3 File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/deco_2_4.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file adder_nbits.sv
+    Info (12023): Found entity 1: adder_nbits File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/adder_nbits.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file alu.sv
+    Info (12023): Found entity 1: ALU File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/ALU.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file full_adder.sv
+    Info (12023): Found entity 1: full_adder File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/full_adder.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file full_substractor.sv
+    Info (12023): Found entity 1: full_substractor File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/full_substractor.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file substractor_nbits.sv
+    Info (12023): Found entity 1: substractor_nbits File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/substractor_nbits.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file shifter_nbits.sv
+    Info (12023): Found entity 1: shifter_nbits File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/shifter_nbits.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file alu_tb.sv
+    Info (12023): Found entity 1: ALU_tb File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/ALU_tb.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file full_multiplicator.sv
+    Info (12023): Found entity 1: full_multiplicator File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/full_multiplicator.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file multiplicator_nbits.sv
+    Info (12023): Found entity 1: multiplicator_nbits File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/multiplicator_nbits.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file full_divider.sv
+    Info (12023): Found entity 1: full_divider File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/full_divider.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file divider_nbits.sv
+    Info (12023): Found entity 1: divider_nbits File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/divider_nbits.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file full_moduler.sv
+    Info (12023): Found entity 1: full_moduler File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/full_moduler.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file moduler_nbits.sv
+    Info (12023): Found entity 1: moduler_nbits File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/moduler_nbits.sv Line: 1
+Info (12127): Elaborating entity "ALU" for the top level hierarchy
+Info (12128): Elaborating entity "display_converter" for hierarchy "display_converter:hex_converter" File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/ALU.sv Line: 19
+Info (12128): Elaborating entity "mux_10to1" for hierarchy "mux_10to1:muxresult" File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/ALU.sv Line: 21
+Info (12128): Elaborating entity "adder_nbits" for hierarchy "adder_nbits:adder" File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/ALU.sv Line: 26
+Warning (10230): Verilog HDL assignment warning at adder_nbits.sv(28): truncated value with size 32 to match size of target (1) File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/adder_nbits.sv Line: 28
+Warning (10230): Verilog HDL assignment warning at adder_nbits.sv(31): truncated value with size 32 to match size of target (1) File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/adder_nbits.sv Line: 31
+Info (12128): Elaborating entity "full_adder" for hierarchy "adder_nbits:adder|full_adder:generate_N_bit_Adder[0].f" File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/adder_nbits.sv Line: 23
+Info (12128): Elaborating entity "substractor_nbits" for hierarchy "substractor_nbits:substractor" File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/ALU.sv Line: 27
+Warning (10230): Verilog HDL assignment warning at substractor_nbits.sv(28): truncated value with size 32 to match size of target (1) File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/substractor_nbits.sv Line: 28
+Warning (10230): Verilog HDL assignment warning at substractor_nbits.sv(31): truncated value with size 32 to match size of target (1) File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/substractor_nbits.sv Line: 31
+Info (12128): Elaborating entity "full_substractor" for hierarchy "substractor_nbits:substractor|full_substractor:generate_N_bit_Adder[0].f" File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/substractor_nbits.sv Line: 23
+Info (12128): Elaborating entity "multiplicator_nbits" for hierarchy "multiplicator_nbits:multiplicator" File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/ALU.sv Line: 28
+Warning (10230): Verilog HDL assignment warning at multiplicator_nbits.sv(26): truncated value with size 32 to match size of target (1) File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/multiplicator_nbits.sv Line: 26
+Info (12128): Elaborating entity "divider_nbits" for hierarchy "divider_nbits:divider" File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/ALU.sv Line: 29
+Warning (10036): Verilog HDL or VHDL warning at divider_nbits.sv(12): object "remainder" assigned a value but never read File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/divider_nbits.sv Line: 12
+Warning (10230): Verilog HDL assignment warning at divider_nbits.sv(15): truncated value with size 32 to match size of target (4) File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/divider_nbits.sv Line: 15
+Warning (10230): Verilog HDL assignment warning at divider_nbits.sv(16): truncated value with size 32 to match size of target (4) File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/divider_nbits.sv Line: 16
+Warning (10230): Verilog HDL assignment warning at divider_nbits.sv(20): truncated value with size 32 to match size of target (1) File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/divider_nbits.sv Line: 20
+Warning (10230): Verilog HDL assignment warning at divider_nbits.sv(23): truncated value with size 32 to match size of target (1) File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/divider_nbits.sv Line: 23
+Info (12128): Elaborating entity "moduler_nbits" for hierarchy "moduler_nbits:moduler" File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/ALU.sv Line: 30
+Warning (10230): Verilog HDL assignment warning at moduler_nbits.sv(14): truncated value with size 32 to match size of target (4) File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/moduler_nbits.sv Line: 14
+Warning (10230): Verilog HDL assignment warning at moduler_nbits.sv(18): truncated value with size 32 to match size of target (1) File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/moduler_nbits.sv Line: 18
+Warning (10230): Verilog HDL assignment warning at moduler_nbits.sv(21): truncated value with size 32 to match size of target (1) File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/moduler_nbits.sv Line: 21
+Info (12128): Elaborating entity "and_module" for hierarchy "and_module:andmodule" File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/ALU.sv Line: 32
+Info (12128): Elaborating entity "and_gate_single" for hierarchy "and_module:andmodule|and_gate_single:generate_bit_to_bit[0].gateand" File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/and_module.sv Line: 11
+Info (12128): Elaborating entity "or_module" for hierarchy "or_module:ormodule" File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/ALU.sv Line: 33
+Info (12128): Elaborating entity "or_gate_single" for hierarchy "or_module:ormodule|or_gate_single:generate_bit_to_bit[0].gateor" File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/or_module.sv Line: 11
+Info (12128): Elaborating entity "xor_module" for hierarchy "xor_module:xormodule" File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/ALU.sv Line: 34
+Info (12128): Elaborating entity "xor_gate_single" for hierarchy "xor_module:xormodule|xor_gate_single:generate_bit_to_bit[0].gatexor" File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/xor_module.sv Line: 11
+Info (12128): Elaborating entity "shifter_nbits" for hierarchy "shifter_nbits:shifter" File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/ALU.sv Line: 35
+Warning (10230): Verilog HDL assignment warning at shifter_nbits.sv(52): truncated value with size 32 to match size of target (1) File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/shifter_nbits.sv Line: 52
+Info (12128): Elaborating entity "deco_2_3" for hierarchy "shifter_nbits:shifter|deco_2_3:deco" File: C:/Users/jjsol.J1806/Desktop/Documents/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/laboratorio_2/Problema1/shifter_nbits.sv Line: 24
+Warning (12241): 6 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 16 warnings
+    Info: Peak virtual memory: 4776 megabytes
+    Info: Processing ended: Tue Aug 27 01:22:27 2024
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:06
+
+

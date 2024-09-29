@@ -1,0 +1,30 @@
+# Reading pref.tcl
+# do VGA_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/jjsol.J1806/Desktop/Copia {C:/Users/jjsol.J1806/Desktop/Copia/contadorXY.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:35:33 on Sep 28,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/jjsol.J1806/Desktop/Copia" C:/Users/jjsol.J1806/Desktop/Copia/contadorXY.sv 
+# -- Compiling module contadorXY
+# ** Error: C:/Users/jjsol.J1806/Desktop/Copia/contadorXY.sv(11): (vlog-2110) Illegal reference to net "cuentaX".
+# ** Error: C:/Users/jjsol.J1806/Desktop/Copia/contadorXY.sv(12): (vlog-2110) Illegal reference to net "cuentaY".
+# ** Error: C:/Users/jjsol.J1806/Desktop/Copia/contadorXY.sv(12): The '++' operator is only allowed on variable lvalue expressions.
+# ** Error: C:/Users/jjsol.J1806/Desktop/Copia/contadorXY.sv(15): (vlog-2110) Illegal reference to net "cuentaY".
+# ** Error: C:/Users/jjsol.J1806/Desktop/Copia/contadorXY.sv(18): (vlog-2110) Illegal reference to net "cuentaX".
+# ** Error: C:/Users/jjsol.J1806/Desktop/Copia/contadorXY.sv(18): The '++' operator is only allowed on variable lvalue expressions.
+# End time: 23:35:33 on Sep 28,2024, Elapsed time: 0:00:00
+# Errors: 6, Warnings: 0
+# ** Error: C:/intelFPGA/20.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./VGA_run_msim_rtl_verilog.do line 8
+# C:/intelFPGA/20.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -sv -work work +incdir+C:/Users/jjsol.J1806/Desktop/Copia {C:/Users/jjsol.J1806/Desktop/Copia/contadorXY.sv}"

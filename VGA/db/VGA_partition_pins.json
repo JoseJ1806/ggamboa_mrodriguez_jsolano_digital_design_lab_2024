@@ -4,23 +4,23 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "vgaclk",
+					"name" : "clk_25",
 					"strict" : false
 				},
 				{
-					"name" : "hsync",
+					"name" : "H_SYNC",
 					"strict" : false
 				},
 				{
-					"name" : "vsync",
+					"name" : "V_SYNC",
 					"strict" : false
 				},
 				{
-					"name" : "sync_b",
+					"name" : "SYNC_B",
 					"strict" : false
 				},
 				{
-					"name" : "blank_b",
+					"name" : "SYNC_BLANK",
 					"strict" : false
 				},
 				{
@@ -120,7 +120,23 @@
 					"strict" : false
 				},
 				{
+					"name" : "gano",
+					"strict" : false
+				},
+				{
 					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "boton3",
+					"strict" : false
+				},
+				{
+					"name" : "boton2",
+					"strict" : false
+				},
+				{
+					"name" : "boton",
 					"strict" : false
 				}
 			]

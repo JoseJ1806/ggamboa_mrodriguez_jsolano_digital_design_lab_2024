@@ -1,0 +1,963 @@
+Analysis & Synthesis report for VGA
+Sat Sep 28 23:44:18 2024
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |vga|controlTOP:control|Ganador2:ganador_|estadoActual
+  9. State Machine - |vga|controlTOP:control|Mover:move|estadoActual
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: controlTOP:control|buttonBouncer:bouncer_Sel
+ 14. Parameter Settings for User Entity Instance: controlTOP:control|buttonBouncer:bouncer_Casilla
+ 15. Parameter Settings for User Entity Instance: controlTOP:control|Turnos:turno|buttonBouncer:bouncer
+ 16. Port Connectivity Checks: "controlTOP:control|mux_9a1:comb_40"
+ 17. Port Connectivity Checks: "controlTOP:control|muxSeleccionadorGanador:texto_ganador"
+ 18. Port Connectivity Checks: "controlTOP:control|muxSeleccionador:casilla8"
+ 19. Port Connectivity Checks: "controlTOP:control|muxSeleccionador:casilla7"
+ 20. Port Connectivity Checks: "controlTOP:control|muxSeleccionador:casilla6"
+ 21. Port Connectivity Checks: "controlTOP:control|muxSeleccionador:casilla5"
+ 22. Port Connectivity Checks: "controlTOP:control|muxSeleccionador:casilla4"
+ 23. Port Connectivity Checks: "controlTOP:control|muxSeleccionador:casilla3"
+ 24. Port Connectivity Checks: "controlTOP:control|muxSeleccionador:casilla2"
+ 25. Port Connectivity Checks: "controlTOP:control|muxSeleccionador:casilla1"
+ 26. Port Connectivity Checks: "controlTOP:control|muxSeleccionador:casilla0"
+ 27. Port Connectivity Checks: "controlTOP:control|temporizador:tempo"
+ 28. Port Connectivity Checks: "controlTOP:control|rectgen:seleccionador"
+ 29. Port Connectivity Checks: "controlTOP:control|Turnos:turno|buttonBouncer:bouncer"
+ 30. Port Connectivity Checks: "controlTOP:control|Turnos:turno"
+ 31. Post-Synthesis Netlist Statistics for Top Partition
+ 32. Elapsed Time Per Partition
+ 33. Analysis & Synthesis Messages
+ 34. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Sat Sep 28 23:44:18 2024       ;
+; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                   ; VGA                                         ;
+; Top-level Entity Name           ; vga                                         ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 120                                         ;
+; Total pins                      ; 34                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSXFC6D6F31C6     ;                    ;
+; Top-level entity name                                                           ; vga                ; VGA                ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 20          ;
+; Maximum allowed            ; 12          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 12          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-12        ;   0.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                  ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                              ; Library ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------+---------+
+; contadorXY.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/contadorXY.sv              ;         ;
+; controladorVGA.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/controladorVGA.sv          ;         ;
+; rectgen.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/rectgen.sv                 ;         ;
+; vga.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/vga.sv                     ;         ;
+; divisorClk.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/divisorClk.sv              ;         ;
+; lineas.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/lineas.sv                  ;         ;
+; muxSeleccionador.sv              ; yes             ; User SystemVerilog HDL File  ; C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/muxSeleccionador.sv        ;         ;
+; regfile1x24b.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/regfile1x24b.sv            ;         ;
+; controlTOP.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/controlTOP.sv              ;         ;
+; mux_9a1.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/mux_9a1.sv                 ;         ;
+; spriteCircle.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/spriteCircle.sv            ;         ;
+; ROM_Circle.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/ROM_Circle.sv              ;         ;
+; spritePosition.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/spritePosition.sv          ;         ;
+; ROM_X.sv                         ; yes             ; User SystemVerilog HDL File  ; C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/ROM_X.sv                   ;         ;
+; sprite_X.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/sprite_X.sv                ;         ;
+; Turnos.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/Turnos.sv                  ;         ;
+; buttonBouncer.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/buttonBouncer.sv           ;         ;
+; Mover.sv                         ; yes             ; User SystemVerilog HDL File  ; C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/Mover.sv                   ;         ;
+; lineaGanadoraGen.sv              ; yes             ; User SystemVerilog HDL File  ; C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/lineaGanadoraGen.sv        ;         ;
+; muxSeleccionadorGanador.sv       ; yes             ; User SystemVerilog HDL File  ; C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/muxSeleccionadorGanador.sv ;         ;
+; sprite_X_Ganador.sv              ; yes             ; User SystemVerilog HDL File  ; C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/sprite_X_Ganador.sv        ;         ;
+; spritePosition_Ganador.sv        ; yes             ; User SystemVerilog HDL File  ; C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/spritePosition_Ganador.sv  ;         ;
+; ROM_X_Ganador.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/ROM_X_Ganador.sv           ;         ;
+; sprite_Circle_Ganador.sv         ; yes             ; User SystemVerilog HDL File  ; C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/sprite_Circle_Ganador.sv   ;         ;
+; ROM_Circle_Ganador.sv            ; yes             ; User SystemVerilog HDL File  ; C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/ROM_Circle_Ganador.sv      ;         ;
+; temporizador.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/temporizador.sv            ;         ;
+; LFSR.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/LFSR.sv                    ;         ;
+; sprite_Empate.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/sprite_Empate.sv           ;         ;
+; ROM_Empate.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/ROM_Empate.sv              ;         ;
+; spritePosition_Empate.sv         ; yes             ; User SystemVerilog HDL File  ; C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/spritePosition_Empate.sv   ;         ;
+; Ganador2.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/Ganador2.sv                ;         ;
+; always_ganador.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/always_ganador.sv          ;         ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------+---------+
+
+
++----------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                          ;
++---------------------------------------------+------------------------+
+; Resource                                    ; Usage                  ;
++---------------------------------------------+------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 481                    ;
+;                                             ;                        ;
+; Combinational ALUT usage for logic          ; 734                    ;
+;     -- 7 input functions                    ; 13                     ;
+;     -- 6 input functions                    ; 211                    ;
+;     -- 5 input functions                    ; 140                    ;
+;     -- 4 input functions                    ; 117                    ;
+;     -- <=3 input functions                  ; 253                    ;
+;                                             ;                        ;
+; Dedicated logic registers                   ; 120                    ;
+;                                             ;                        ;
+; I/O pins                                    ; 34                     ;
+;                                             ;                        ;
+; Total DSP Blocks                            ; 0                      ;
+;                                             ;                        ;
+; Maximum fan-out node                        ; divisorClk:dv|clock_25 ;
+; Maximum fan-out                             ; 119                    ;
+; Total fan-out                               ; 3617                   ;
+; Average fan-out                             ; 3.92                   ;
++---------------------------------------------+------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                            ;
++-----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------+-------------------------+--------------+
+; Compilation Hierarchy Node                    ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                          ; Entity Name             ; Library Name ;
++-----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------+-------------------------+--------------+
+; |vga                                          ; 734 (0)             ; 120 (0)                   ; 0                 ; 0          ; 34   ; 0            ; |vga                                                                                                                         ; vga                     ; work         ;
+;    |controlTOP:control|                       ; 701 (7)             ; 98 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control                                                                                                      ; controlTOP              ; work         ;
+;       |Ganador2:ganador_|                     ; 22 (2)              ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|Ganador2:ganador_                                                                                    ; Ganador2                ; work         ;
+;          |always_ganador:comb_3|              ; 20 (20)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|Ganador2:ganador_|always_ganador:comb_3                                                              ; always_ganador          ; work         ;
+;       |Mover:move|                            ; 5 (5)               ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|Mover:move                                                                                           ; Mover                   ; work         ;
+;       |Turnos:turno|                          ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|Turnos:turno                                                                                         ; Turnos                  ; work         ;
+;       |buttonBouncer:bouncer_Casilla|         ; 13 (13)             ; 15 (15)                   ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|buttonBouncer:bouncer_Casilla                                                                        ; buttonBouncer           ; work         ;
+;       |buttonBouncer:bouncer_Sel|             ; 13 (13)             ; 15 (15)                   ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|buttonBouncer:bouncer_Sel                                                                            ; buttonBouncer           ; work         ;
+;       |lineaGanadoraGen:lineaganadora|        ; 98 (98)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|lineaGanadoraGen:lineaganadora                                                                       ; lineaGanadoraGen        ; work         ;
+;       |lineas:CuatroLineas|                   ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|lineas:CuatroLineas                                                                                  ; lineas                  ; work         ;
+;       |muxSeleccionador:casilla0|             ; 148 (5)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla0                                                                            ; muxSeleccionador        ; work         ;
+;          |sprite_Circle:Jugador2|             ; 44 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla0|sprite_Circle:Jugador2                                                     ; sprite_Circle           ; work         ;
+;             |ROM_Circle:rom|                  ; 24 (24)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla0|sprite_Circle:Jugador2|ROM_Circle:rom                                      ; ROM_Circle              ; work         ;
+;             |spritePosition:position|         ; 20 (20)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla0|sprite_Circle:Jugador2|spritePosition:position                             ; spritePosition          ; work         ;
+;          |sprite_X:Jugador1|                  ; 99 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla0|sprite_X:Jugador1                                                          ; sprite_X                ; work         ;
+;             |ROM_X:rom|                       ; 54 (54)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla0|sprite_X:Jugador1|ROM_X:rom                                                ; ROM_X                   ; work         ;
+;             |spritePosition:position|         ; 45 (45)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla0|sprite_X:Jugador1|spritePosition:position                                  ; spritePosition          ; work         ;
+;       |muxSeleccionador:casilla1|             ; 16 (2)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla1                                                                            ; muxSeleccionador        ; work         ;
+;          |sprite_Circle:Jugador2|             ; 8 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla1|sprite_Circle:Jugador2                                                     ; sprite_Circle           ; work         ;
+;             |spritePosition:position|         ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla1|sprite_Circle:Jugador2|spritePosition:position                             ; spritePosition          ; work         ;
+;          |sprite_X:Jugador1|                  ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla1|sprite_X:Jugador1                                                          ; sprite_X                ; work         ;
+;             |spritePosition:position|         ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla1|sprite_X:Jugador1|spritePosition:position                                  ; spritePosition          ; work         ;
+;       |muxSeleccionador:casilla2|             ; 13 (2)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla2                                                                            ; muxSeleccionador        ; work         ;
+;          |sprite_Circle:Jugador2|             ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla2|sprite_Circle:Jugador2                                                     ; sprite_Circle           ; work         ;
+;             |spritePosition:position|         ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla2|sprite_Circle:Jugador2|spritePosition:position                             ; spritePosition          ; work         ;
+;          |sprite_X:Jugador1|                  ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla2|sprite_X:Jugador1                                                          ; sprite_X                ; work         ;
+;             |spritePosition:position|         ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla2|sprite_X:Jugador1|spritePosition:position                                  ; spritePosition          ; work         ;
+;       |muxSeleccionador:casilla3|             ; 57 (2)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla3                                                                            ; muxSeleccionador        ; work         ;
+;          |sprite_Circle:Jugador2|             ; 24 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla3|sprite_Circle:Jugador2                                                     ; sprite_Circle           ; work         ;
+;             |ROM_Circle:rom|                  ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla3|sprite_Circle:Jugador2|ROM_Circle:rom                                      ; ROM_Circle              ; work         ;
+;             |spritePosition:position|         ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla3|sprite_Circle:Jugador2|spritePosition:position                             ; spritePosition          ; work         ;
+;          |sprite_X:Jugador1|                  ; 31 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla3|sprite_X:Jugador1                                                          ; sprite_X                ; work         ;
+;             |ROM_X:rom|                       ; 25 (25)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla3|sprite_X:Jugador1|ROM_X:rom                                                ; ROM_X                   ; work         ;
+;             |spritePosition:position|         ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla3|sprite_X:Jugador1|spritePosition:position                                  ; spritePosition          ; work         ;
+;       |muxSeleccionador:casilla4|             ; 17 (3)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla4                                                                            ; muxSeleccionador        ; work         ;
+;          |sprite_Circle:Jugador2|             ; 9 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla4|sprite_Circle:Jugador2                                                     ; sprite_Circle           ; work         ;
+;             |spritePosition:position|         ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla4|sprite_Circle:Jugador2|spritePosition:position                             ; spritePosition          ; work         ;
+;          |sprite_X:Jugador1|                  ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla4|sprite_X:Jugador1                                                          ; sprite_X                ; work         ;
+;             |spritePosition:position|         ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla4|sprite_X:Jugador1|spritePosition:position                                  ; spritePosition          ; work         ;
+;       |muxSeleccionador:casilla5|             ; 7 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla5                                                                            ; muxSeleccionador        ; work         ;
+;          |sprite_Circle:Jugador2|             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla5|sprite_Circle:Jugador2                                                     ; sprite_Circle           ; work         ;
+;             |spritePosition:position|         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla5|sprite_Circle:Jugador2|spritePosition:position                             ; spritePosition          ; work         ;
+;          |sprite_X:Jugador1|                  ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla5|sprite_X:Jugador1                                                          ; sprite_X                ; work         ;
+;             |spritePosition:position|         ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla5|sprite_X:Jugador1|spritePosition:position                                  ; spritePosition          ; work         ;
+;       |muxSeleccionador:casilla6|             ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla6                                                                            ; muxSeleccionador        ; work         ;
+;       |muxSeleccionador:casilla7|             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla7                                                                            ; muxSeleccionador        ; work         ;
+;       |muxSeleccionador:casilla8|             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla8                                                                            ; muxSeleccionador        ; work         ;
+;       |muxSeleccionadorGanador:texto_ganador| ; 72 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionadorGanador:texto_ganador                                                                ; muxSeleccionadorGanador ; work         ;
+;          |sprite_Circle_Ganador:Jugador2|     ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_Circle_Ganador:Jugador2                                 ; sprite_Circle_Ganador   ; work         ;
+;             |ROM_Circle_Ganador:rom|          ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_Circle_Ganador:Jugador2|ROM_Circle_Ganador:rom          ; ROM_Circle_Ganador      ; work         ;
+;             |spritePosition_Ganador:position| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_Circle_Ganador:Jugador2|spritePosition_Ganador:position ; spritePosition_Ganador  ; work         ;
+;          |sprite_Empate:empatados|            ; 21 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_Empate:empatados                                        ; sprite_Empate           ; work         ;
+;             |ROM_Empate:rom|                  ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_Empate:empatados|ROM_Empate:rom                         ; ROM_Empate              ; work         ;
+;             |spritePosition_Empate:position|  ; 18 (18)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_Empate:empatados|spritePosition_Empate:position         ; spritePosition_Empate   ; work         ;
+;          |sprite_X_Ganador:Jugador1|          ; 37 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_X_Ganador:Jugador1                                      ; sprite_X_Ganador        ; work         ;
+;             |ROM_X_Ganador:rom|               ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_X_Ganador:Jugador1|ROM_X_Ganador:rom                    ; ROM_X_Ganador           ; work         ;
+;             |spritePosition_Ganador:position| ; 28 (28)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_X_Ganador:Jugador1|spritePosition_Ganador:position      ; spritePosition_Ganador  ; work         ;
+;       |mux_9a1:comb_40|                       ; 76 (76)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|mux_9a1:comb_40                                                                                      ; mux_9a1                 ; work         ;
+;       |rectgen:seleccionador|                 ; 31 (31)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|rectgen:seleccionador                                                                                ; rectgen                 ; work         ;
+;       |regfile1x24b:memoria_Casillas|         ; 50 (50)             ; 24 (24)                   ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|regfile1x24b:memoria_Casillas                                                                        ; regfile1x24b            ; work         ;
+;       |temporizador:tempo|                    ; 45 (45)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|temporizador:tempo                                                                                   ; temporizador            ; work         ;
+;    |controladorVGA:cntVGA|                    ; 32 (6)              ; 20 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |vga|controladorVGA:cntVGA                                                                                                   ; controladorVGA          ; work         ;
+;       |contadorXY:CXY|                        ; 26 (26)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |vga|controladorVGA:cntVGA|contadorXY:CXY                                                                                    ; contadorXY              ; work         ;
+;    |divisorClk:dv|                            ; 1 (1)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|divisorClk:dv                                                                                                           ; divisorClk              ; work         ;
++-----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------+-------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------+
+; State Machine - |vga|controlTOP:control|Ganador2:ganador_|estadoActual ;
++----------------+-------------------------------------------------------+
+; Name           ; estadoActual.1                                        ;
++----------------+-------------------------------------------------------+
+; estadoActual.0 ; 0                                                     ;
+; estadoActual.1 ; 1                                                     ;
++----------------+-------------------------------------------------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |vga|controlTOP:control|Mover:move|estadoActual                                                                                                                                       ;
++-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+
+; Name              ; estadoActual.0111 ; estadoActual.0110 ; estadoActual.0101 ; estadoActual.0100 ; estadoActual.0011 ; estadoActual.0010 ; estadoActual.0001 ; estadoActual.0000 ; estadoActual.1000 ;
++-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+
+; estadoActual.0000 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ;
+; estadoActual.0001 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 1                 ; 0                 ;
+; estadoActual.0010 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ; 1                 ; 0                 ;
+; estadoActual.0011 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ; 0                 ; 1                 ; 0                 ;
+; estadoActual.0100 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ;
+; estadoActual.0101 ; 0                 ; 0                 ; 1                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ;
+; estadoActual.0110 ; 0                 ; 1                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ;
+; estadoActual.0111 ; 1                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ;
+; estadoActual.1000 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 1                 ;
++-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+
+
+
++-------------------------------------------------------------------+
+; Registers Removed During Synthesis                                ;
++----------------------------------------------+--------------------+
+; Register name                                ; Reason for Removal ;
++----------------------------------------------+--------------------+
+; controlTOP:control|Mover:move|estadoActual~4 ; Lost fanout        ;
+; controlTOP:control|Mover:move|estadoActual~5 ; Lost fanout        ;
+; controlTOP:control|Mover:move|estadoActual~6 ; Lost fanout        ;
+; Total Number of Removed Registers = 3        ;                    ;
++----------------------------------------------+--------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 120   ;
+; Number of registers using Synchronous Clear  ; 74    ;
+; Number of registers using Synchronous Load   ; 22    ;
+; Number of registers using Asynchronous Clear ; 89    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 43    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |vga|controlTOP:control|regfile1x24b:memoria_Casillas|p[3]                                            ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |vga|controlTOP:control|temporizador:tempo|contador[21]                                               ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |vga|controlTOP:control|muxSeleccionador:casilla3|sprite_Circle:Jugador2|spritePosition:position|Mux0 ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |vga|controlTOP:control|muxSeleccionador:casilla3|sprite_Circle:Jugador2|spritePosition:position|Mux0 ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |vga|controlTOP:control|muxSeleccionador:casilla3|sprite_Circle:Jugador2|spritePosition:position|Mux0 ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |vga|controlTOP:control|muxSeleccionador:casilla0|sprite_X:Jugador1|spritePosition:position|Mux0      ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |vga|controlTOP:control|muxSeleccionador:casilla0|sprite_Circle:Jugador2|spritePosition:position|Mux0 ;
+; 4:1                ; 36 bits   ; 72 LEs        ; 72 LEs               ; 0 LEs                  ; No         ; |vga|controlTOP:control|muxSeleccionador:casilla0|sprite_Circle:Jugador2|spritePosition:position|Mux0 ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |vga|controlTOP:control|muxSeleccionador:casilla0|sprite_Circle:Jugador2|spritePosition:position|Mux0 ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |vga|controlTOP:control|muxSeleccionador:casilla3|sprite_Circle:Jugador2|spritePosition:position|Mux0 ;
+; 16:1               ; 2 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; No         ; |vga|controlTOP:control|regfile1x24b:memoria_Casillas|Mux0                                            ;
+; 16:1               ; 2 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; No         ; |vga|controlTOP:control|regfile1x24b:memoria_Casillas|Mux3                                            ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |vga|controlTOP:control|muxSeleccionador:casilla3|sprite_Circle:Jugador2|spritePosition:position|Mux0 ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |vga|controlTOP:control|Ganador2:ganador_|always_ganador:comb_3|linea_ganadora[2]                     ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |vga|controlTOP:control|muxSeleccionador:casilla2|sprite_Circle:Jugador2|spritePosition:position|Mux0 ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |vga|controlTOP:control|muxSeleccionador:casilla5|sprite_X:Jugador1|spritePosition:position|Mux0      ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |vga|controlTOP:control|muxSeleccionador:casilla3|sprite_X:Jugador1|spritePosition:position|Mux0      ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |vga|controlTOP:control|Ganador2:ganador_|always_ganador:comb_3|ganador[1]                            ;
+; 16:1               ; 2 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |vga|controlTOP:control|muxSeleccionador:casilla4|sprite_X:Jugador1|spritePosition:position|Mux0      ;
+; 12:1               ; 2 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |vga|controlTOP:control|mux_9a1:comb_40|Selector21                                                    ;
+; 12:1               ; 2 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |vga|controlTOP:control|mux_9a1:comb_40|Selector23                                                    ;
+; 20:1               ; 2 bits    ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; No         ; |vga|controlTOP:control|muxSeleccionador:casilla4|sprite_Circle:Jugador2|spritePosition:position|Mux0 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: controlTOP:control|buttonBouncer:bouncer_Sel ;
++----------------+-------+------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                             ;
++----------------+-------+------------------------------------------------------------------+
+; N              ; 11    ; Signed Integer                                                   ;
++----------------+-------+------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: controlTOP:control|buttonBouncer:bouncer_Casilla ;
++----------------+-------+----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                 ;
++----------------+-------+----------------------------------------------------------------------+
+; N              ; 11    ; Signed Integer                                                       ;
++----------------+-------+----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: controlTOP:control|Turnos:turno|buttonBouncer:bouncer ;
++----------------+-------+---------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                      ;
++----------------+-------+---------------------------------------------------------------------------+
+; N              ; 11    ; Signed Integer                                                            ;
++----------------+-------+---------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "controlTOP:control|mux_9a1:comb_40"                                                                                                               ;
++--------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                          ;
++--------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+; lineas ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (24 bits) it drives.  Extra input bit(s) "lineas[23..1]" will be connected to GND. ;
++--------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "controlTOP:control|muxSeleccionadorGanador:texto_ganador"                                                                                                                                ;
++------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                                                                                                                             ;
++------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; posX       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (10 bits) it drives.  The 22 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; posX[9..0] ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; posY       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (10 bits) it drives.  The 22 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; posY[3..0] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; posY[9..8] ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; posY[6..4] ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; posY[7]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
++------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "controlTOP:control|muxSeleccionador:casilla8"                                                                                                                                            ;
++------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                                                                                                                             ;
++------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; posX       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (10 bits) it drives.  The 22 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; posX[8..5] ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; posX[3..2] ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; posX[9]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; posX[4]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; posX[1]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; posX[0]    ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; posY       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (10 bits) it drives.  The 22 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; posY[8..7] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; posY[6..5] ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; posY[3..0] ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; posY[9]    ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; posY[4]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
++------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "controlTOP:control|muxSeleccionador:casilla7"                                                                                                                                            ;
++------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                                                                                                                             ;
++------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; posX       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (10 bits) it drives.  The 22 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; posX[5..1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; posX[7..6] ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; posX[9]    ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; posX[8]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; posX[0]    ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; posY       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (10 bits) it drives.  The 22 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; posY[8..7] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; posY[6..5] ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; posY[3..0] ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; posY[9]    ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; posY[4]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
++------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "controlTOP:control|muxSeleccionador:casilla6"                                                                                                                                            ;
++------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                                                                                                                             ;
++------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; posX       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (10 bits) it drives.  The 22 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; posX[6..5] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; posX[9..7] ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; posX[4]    ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; posX[3]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; posX[2]    ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; posX[1]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; posX[0]    ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; posY       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (10 bits) it drives.  The 22 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; posY[8..7] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; posY[6..5] ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; posY[3..0] ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; posY[9]    ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; posY[4]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
++------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "controlTOP:control|muxSeleccionador:casilla5"                                                                                                                                            ;
++------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                                                                                                                             ;
++------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; posX       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (10 bits) it drives.  The 22 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; posX[8..5] ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; posX[3..2] ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; posX[9]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; posX[4]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; posX[1]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; posX[0]    ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; posY       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (10 bits) it drives.  The 22 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; posY[7..4] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; posY[9..8] ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; posY[3..0] ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
++------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "controlTOP:control|muxSeleccionador:casilla4"                                                                                                                                            ;
++------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                                                                                                                             ;
++------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; posX       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (10 bits) it drives.  The 22 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; posX[5..1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; posX[7..6] ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; posX[9]    ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; posX[8]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; posX[0]    ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; posY       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (10 bits) it drives.  The 22 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; posY[7..4] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; posY[9..8] ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; posY[3..0] ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
++------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "controlTOP:control|muxSeleccionador:casilla3"                                                                                                                                            ;
++------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                                                                                                                             ;
++------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; posX       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (10 bits) it drives.  The 22 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; posX[6..5] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; posX[9..7] ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; posX[4]    ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; posX[3]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; posX[2]    ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; posX[1]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; posX[0]    ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; posY       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (10 bits) it drives.  The 22 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; posY[7..4] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; posY[9..8] ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; posY[3..0] ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
++------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "controlTOP:control|muxSeleccionador:casilla2"                                                                                                                                            ;
++------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                                                                                                                             ;
++------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; posX       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (10 bits) it drives.  The 22 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; posX[8..5] ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; posX[3..2] ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; posX[9]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; posX[4]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; posX[1]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; posX[0]    ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; posY       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (10 bits) it drives.  The 22 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; posY[9..7] ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; posY[3..0] ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; posY[6]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; posY[5]    ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; posY[4]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
++------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "controlTOP:control|muxSeleccionador:casilla1"                                                                                                                                            ;
++------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                                                                                                                             ;
++------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; posX       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (10 bits) it drives.  The 22 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; posX[5..1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; posX[7..6] ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; posX[9]    ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; posX[8]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; posX[0]    ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; posY       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (10 bits) it drives.  The 22 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; posY[9..7] ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; posY[3..0] ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; posY[6]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; posY[5]    ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; posY[4]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
++------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "controlTOP:control|muxSeleccionador:casilla0"                                                                                                                                            ;
++------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                                                                                                                             ;
++------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; posX       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (10 bits) it drives.  The 22 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; posX[6..5] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; posX[9..7] ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; posX[4]    ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; posX[3]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; posX[2]    ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; posX[1]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; posX[0]    ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; posY       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (10 bits) it drives.  The 22 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; posY[9..7] ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; posY[3..0] ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; posY[6]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; posY[5]    ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; posY[4]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
++------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "controlTOP:control|temporizador:tempo"                                                                                                ;
++-------------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                                                                        ;
++-------------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------+
+; posicion_ra ; Output ; Warning  ; Output or bidir port (8 bits) is wider than the port expression (1 bits) it drives; bit(s) "posicion_ra[7..1]" have no fanouts ;
+; posicion_ra ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                            ;
++-------------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "controlTOP:control|rectgen:seleccionador"                                                                                                                                                 ;
++-------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type  ; Severity ; Details                                                                                                                                                                             ;
++-------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; left        ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (10 bits) it drives.  The 22 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; left[9..0]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; top         ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (10 bits) it drives.  The 22 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; top[9..8]   ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; top[6..2]   ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; top[7]      ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; top[1]      ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; top[0]      ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; right       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (10 bits) it drives.  The 22 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; right[5..4] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; right[9..8] ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; right[1..0] ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; right[7]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; right[6]    ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; right[3]    ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; right[2]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; bot         ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (10 bits) it drives.  The 22 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; bot[3..2]   ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; bot[9..8]   ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; bot[6..4]   ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; bot[1..0]   ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; bot[7]      ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
++-------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "controlTOP:control|Turnos:turno|buttonBouncer:bouncer"                                   ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; level_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "controlTOP:control|Turnos:turno"                                                                                                                                        ;
++--------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                                                                                                               ;
++--------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; salida ; Output ; Warning  ; Output or bidir port (1 bits) is smaller than the port expression (2 bits) it drives.  The 1 most-significant bit(s) in the port expression will be connected to GND. ;
++--------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 120                         ;
+;     CLR               ; 8                           ;
+;     CLR SCLR          ; 32                          ;
+;     CLR SCLR SLD      ; 22                          ;
+;     ENA               ; 6                           ;
+;     ENA CLR           ; 27                          ;
+;     ENA SCLR          ; 10                          ;
+;     SCLR              ; 10                          ;
+;     plain             ; 5                           ;
+; arriav_lcell_comb     ; 736                         ;
+;     arith             ; 128                         ;
+;         0 data inputs ; 6                           ;
+;         1 data inputs ; 113                         ;
+;         2 data inputs ; 9                           ;
+;     extend            ; 13                          ;
+;         7 data inputs ; 13                          ;
+;     normal            ; 595                         ;
+;         1 data inputs ; 14                          ;
+;         2 data inputs ; 59                          ;
+;         3 data inputs ; 54                          ;
+;         4 data inputs ; 117                         ;
+;         5 data inputs ; 140                         ;
+;         6 data inputs ; 211                         ;
+; boundary_port         ; 34                          ;
+;                       ;                             ;
+; Max LUT depth         ; 13.00                       ;
+; Average LUT depth     ; 8.92                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:02     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Sat Sep 28 23:44:09 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off VGA -c VGA
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file contadorxy.sv
+    Info (12023): Found entity 1: contadorXY File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/contadorXY.sv Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file controladorvga.sv
+    Info (12023): Found entity 1: controladorVGA File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/controladorVGA.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file rectgen.sv
+    Info (12023): Found entity 1: rectgen File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/rectgen.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file vga.sv
+    Info (12023): Found entity 1: vga File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/vga.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file divisorclk.sv
+    Info (12023): Found entity 1: divisorClk File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/divisorClk.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file lineas.sv
+    Info (12023): Found entity 1: lineas File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/lineas.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file muxseleccionador.sv
+    Info (12023): Found entity 1: muxSeleccionador File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/muxSeleccionador.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file regfile1x24b.sv
+    Info (12023): Found entity 1: regfile1x24b File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/regfile1x24b.sv Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file controltop.sv
+    Info (12023): Found entity 1: controlTOP File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/controlTOP.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file mux_9a1.sv
+    Info (12023): Found entity 1: mux_9a1 File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/mux_9a1.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file spritecircle.sv
+    Info (12023): Found entity 1: sprite_Circle File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/spriteCircle.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file rom_circle.sv
+    Info (12023): Found entity 1: ROM_Circle File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/ROM_Circle.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file spriteposition.sv
+    Info (12023): Found entity 1: spritePosition File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/spritePosition.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file rom_x.sv
+    Info (12023): Found entity 1: ROM_X File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/ROM_X.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file sprite_x.sv
+    Info (12023): Found entity 1: sprite_X File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/sprite_X.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file turnos.sv
+    Info (12023): Found entity 1: Turnos File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/Turnos.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file buttonbouncer.sv
+    Info (12023): Found entity 1: buttonBouncer File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/buttonBouncer.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file mover.sv
+    Info (12023): Found entity 1: Mover File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/Mover.sv Line: 7
+Info (12021): Found 1 design units, including 1 entities, in source file ganador.sv
+    Info (12023): Found entity 1: Ganador File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/Ganador.sv Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file lineaganadoragen.sv
+    Info (12023): Found entity 1: lineaGanadoraGen File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/lineaGanadoraGen.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file muxseleccionadorganador.sv
+    Info (12023): Found entity 1: muxSeleccionadorGanador File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/muxSeleccionadorGanador.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file sprite_x_ganador.sv
+    Info (12023): Found entity 1: sprite_X_Ganador File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/sprite_X_Ganador.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file spriteposition_ganador.sv
+    Info (12023): Found entity 1: spritePosition_Ganador File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/spritePosition_Ganador.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file rom_x_ganador.sv
+    Info (12023): Found entity 1: ROM_X_Ganador File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/ROM_X_Ganador.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file sprite_circle_ganador.sv
+    Info (12023): Found entity 1: sprite_Circle_Ganador File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/sprite_Circle_Ganador.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file rom_circle_ganador.sv
+    Info (12023): Found entity 1: ROM_Circle_Ganador File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/ROM_Circle_Ganador.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file temporizador.sv
+    Info (12023): Found entity 1: temporizador File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/temporizador.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file lfsr.sv
+    Info (12023): Found entity 1: LFSR File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/LFSR.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file sprite_empate.sv
+    Info (12023): Found entity 1: sprite_Empate File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/sprite_Empate.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file rom_empate.sv
+    Info (12023): Found entity 1: ROM_Empate File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/ROM_Empate.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file spriteposition_empate.sv
+    Info (12023): Found entity 1: spritePosition_Empate File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/spritePosition_Empate.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file testgato.sv
+    Info (12023): Found entity 1: TestGato File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/TestGato.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file ganador2.sv
+    Info (12023): Found entity 1: Ganador2 File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/Ganador2.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file always_ganador.sv
+    Info (12023): Found entity 1: always_ganador File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/always_ganador.sv Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at controlTOP.sv(8): created implicit net for "boton_Sel_lo" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/controlTOP.sv Line: 8
+Warning (10236): Verilog HDL Implicit Net warning at controlTOP.sv(9): created implicit net for "boton_Casilla_lo" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/controlTOP.sv Line: 9
+Warning (10236): Verilog HDL Implicit Net warning at controlTOP.sv(22): created implicit net for "guardado" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/controlTOP.sv Line: 22
+Warning (10236): Verilog HDL Implicit Net warning at controlTOP.sv(26): created implicit net for "tiempo" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/controlTOP.sv Line: 26
+Warning (10236): Verilog HDL Implicit Net warning at controlTOP.sv(26): created implicit net for "posicion_ra" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/controlTOP.sv Line: 26
+Warning (10236): Verilog HDL Implicit Net warning at controlTOP.sv(85): created implicit net for "visblelineas" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/controlTOP.sv Line: 85
+Warning (10236): Verilog HDL Implicit Net warning at controlTOP.sv(104): created implicit net for "lineas" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/controlTOP.sv Line: 104
+Warning (10236): Verilog HDL Implicit Net warning at spritePosition.sv(10): created implicit net for "sq_on" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/spritePosition.sv Line: 10
+Warning (10236): Verilog HDL Implicit Net warning at Turnos.sv(3): created implicit net for "level_out" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/Turnos.sv Line: 3
+Warning (10236): Verilog HDL Implicit Net warning at spritePosition_Ganador.sv(9): created implicit net for "sq_on" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/spritePosition_Ganador.sv Line: 9
+Warning (10236): Verilog HDL Implicit Net warning at spritePosition_Empate.sv(9): created implicit net for "sq_on" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/spritePosition_Empate.sv Line: 9
+Critical Warning (10846): Verilog HDL Instantiation warning at Ganador2.sv(4): instance has no name File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/Ganador2.sv Line: 4
+Critical Warning (10846): Verilog HDL Instantiation warning at controlTOP.sv(106): instance has no name File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/controlTOP.sv Line: 106
+Info (12127): Elaborating entity "vga" for the top level hierarchy
+Info (12128): Elaborating entity "divisorClk" for hierarchy "divisorClk:dv" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/vga.sv Line: 15
+Info (12128): Elaborating entity "controladorVGA" for hierarchy "controladorVGA:cntVGA" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/vga.sv Line: 18
+Info (12128): Elaborating entity "contadorXY" for hierarchy "controladorVGA:cntVGA|contadorXY:CXY" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/controladorVGA.sv Line: 8
+Info (12128): Elaborating entity "controlTOP" for hierarchy "controlTOP:control" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/vga.sv Line: 22
+Info (12128): Elaborating entity "buttonBouncer" for hierarchy "controlTOP:control|buttonBouncer:bouncer_Sel" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/controlTOP.sv Line: 8
+Warning (10230): Verilog HDL assignment warning at buttonBouncer.sv(55): truncated value with size 32 to match size of target (11) File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/buttonBouncer.sv Line: 55
+Info (12128): Elaborating entity "Turnos" for hierarchy "controlTOP:control|Turnos:turno" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/controlTOP.sv Line: 22
+Info (12128): Elaborating entity "Mover" for hierarchy "controlTOP:control|Mover:move" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/controlTOP.sv Line: 23
+Info (12128): Elaborating entity "rectgen" for hierarchy "controlTOP:control|rectgen:seleccionador" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/controlTOP.sv Line: 25
+Warning (10230): Verilog HDL assignment warning at rectgen.sv(10): truncated value with size 32 to match size of target (1) File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/rectgen.sv Line: 10
+Warning (10230): Verilog HDL assignment warning at rectgen.sv(11): truncated value with size 32 to match size of target (1) File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/rectgen.sv Line: 11
+Warning (10230): Verilog HDL assignment warning at rectgen.sv(12): truncated value with size 32 to match size of target (1) File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/rectgen.sv Line: 12
+Warning (10230): Verilog HDL assignment warning at rectgen.sv(13): truncated value with size 32 to match size of target (1) File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/rectgen.sv Line: 13
+Warning (10230): Verilog HDL assignment warning at rectgen.sv(14): truncated value with size 32 to match size of target (1) File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/rectgen.sv Line: 14
+Warning (10230): Verilog HDL assignment warning at rectgen.sv(15): truncated value with size 32 to match size of target (1) File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/rectgen.sv Line: 15
+Warning (10230): Verilog HDL assignment warning at rectgen.sv(16): truncated value with size 32 to match size of target (1) File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/rectgen.sv Line: 16
+Warning (10230): Verilog HDL assignment warning at rectgen.sv(17): truncated value with size 32 to match size of target (1) File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/rectgen.sv Line: 17
+Warning (10230): Verilog HDL assignment warning at rectgen.sv(18): truncated value with size 32 to match size of target (1) File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/rectgen.sv Line: 18
+Warning (10230): Verilog HDL assignment warning at rectgen.sv(19): truncated value with size 32 to match size of target (1) File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/rectgen.sv Line: 19
+Info (12128): Elaborating entity "temporizador" for hierarchy "controlTOP:control|temporizador:tempo" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/controlTOP.sv Line: 26
+Info (12128): Elaborating entity "LFSR" for hierarchy "controlTOP:control|temporizador:tempo|LFSR:lfsr" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/temporizador.sv Line: 4
+Info (12128): Elaborating entity "regfile1x24b" for hierarchy "controlTOP:control|regfile1x24b:memoria_Casillas" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/controlTOP.sv Line: 28
+Warning (10230): Verilog HDL assignment warning at regfile1x24b.sv(20): truncated value with size 32 to match size of target (2) File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/regfile1x24b.sv Line: 20
+Warning (10230): Verilog HDL assignment warning at regfile1x24b.sv(29): truncated value with size 32 to match size of target (2) File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/regfile1x24b.sv Line: 29
+Warning (10230): Verilog HDL assignment warning at regfile1x24b.sv(37): truncated value with size 32 to match size of target (4) File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/regfile1x24b.sv Line: 37
+Info (12128): Elaborating entity "muxSeleccionador" for hierarchy "controlTOP:control|muxSeleccionador:casilla0" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/controlTOP.sv Line: 33
+Info (12128): Elaborating entity "sprite_X" for hierarchy "controlTOP:control|muxSeleccionador:casilla0|sprite_X:Jugador1" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/muxSeleccionador.sv Line: 11
+Info (12128): Elaborating entity "ROM_X" for hierarchy "controlTOP:control|muxSeleccionador:casilla0|sprite_X:Jugador1|ROM_X:rom" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/sprite_X.sv Line: 9
+Info (12128): Elaborating entity "spritePosition" for hierarchy "controlTOP:control|muxSeleccionador:casilla0|sprite_X:Jugador1|spritePosition:position" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/sprite_X.sv Line: 10
+Warning (10230): Verilog HDL assignment warning at spritePosition.sv(6): truncated value with size 32 to match size of target (10) File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/spritePosition.sv Line: 6
+Warning (10230): Verilog HDL assignment warning at spritePosition.sv(7): truncated value with size 32 to match size of target (10) File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/spritePosition.sv Line: 7
+Warning (10230): Verilog HDL assignment warning at spritePosition.sv(8): truncated value with size 32 to match size of target (10) File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/spritePosition.sv Line: 8
+Warning (10230): Verilog HDL assignment warning at spritePosition.sv(9): truncated value with size 32 to match size of target (10) File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/spritePosition.sv Line: 9
+Info (12128): Elaborating entity "sprite_Circle" for hierarchy "controlTOP:control|muxSeleccionador:casilla0|sprite_Circle:Jugador2" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/muxSeleccionador.sv Line: 13
+Info (12128): Elaborating entity "ROM_Circle" for hierarchy "controlTOP:control|muxSeleccionador:casilla0|sprite_Circle:Jugador2|ROM_Circle:rom" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/spriteCircle.sv Line: 9
+Info (12128): Elaborating entity "lineas" for hierarchy "controlTOP:control|lineas:CuatroLineas" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/controlTOP.sv Line: 85
+Warning (10230): Verilog HDL assignment warning at lineas.sv(5): truncated value with size 32 to match size of target (1) File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/lineas.sv Line: 5
+Info (12128): Elaborating entity "Ganador2" for hierarchy "controlTOP:control|Ganador2:ganador_" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/controlTOP.sv Line: 89
+Info (12128): Elaborating entity "always_ganador" for hierarchy "controlTOP:control|Ganador2:ganador_|always_ganador:comb_3" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/Ganador2.sv Line: 4
+Warning (10230): Verilog HDL assignment warning at always_ganador.sv(6): truncated value with size 4 to match size of target (3) File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/always_ganador.sv Line: 6
+Info (12128): Elaborating entity "lineaGanadoraGen" for hierarchy "controlTOP:control|lineaGanadoraGen:lineaganadora" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/controlTOP.sv Line: 93
+Info (12128): Elaborating entity "muxSeleccionadorGanador" for hierarchy "controlTOP:control|muxSeleccionadorGanador:texto_ganador" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/controlTOP.sv Line: 99
+Info (12128): Elaborating entity "sprite_X_Ganador" for hierarchy "controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_X_Ganador:Jugador1" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/muxSeleccionadorGanador.sv Line: 11
+Info (12128): Elaborating entity "ROM_X_Ganador" for hierarchy "controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_X_Ganador:Jugador1|ROM_X_Ganador:rom" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/sprite_X_Ganador.sv Line: 8
+Info (12128): Elaborating entity "spritePosition_Ganador" for hierarchy "controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_X_Ganador:Jugador1|spritePosition_Ganador:position" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/sprite_X_Ganador.sv Line: 9
+Warning (10230): Verilog HDL assignment warning at spritePosition_Ganador.sv(6): truncated value with size 32 to match size of target (10) File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/spritePosition_Ganador.sv Line: 6
+Warning (10230): Verilog HDL assignment warning at spritePosition_Ganador.sv(8): truncated value with size 32 to match size of target (10) File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/spritePosition_Ganador.sv Line: 8
+Warning (10230): Verilog HDL assignment warning at spritePosition_Ganador.sv(12): truncated value with size 10 to match size of target (4) File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/spritePosition_Ganador.sv Line: 12
+Warning (10230): Verilog HDL assignment warning at spritePosition_Ganador.sv(13): truncated value with size 10 to match size of target (7) File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/spritePosition_Ganador.sv Line: 13
+Info (12128): Elaborating entity "sprite_Circle_Ganador" for hierarchy "controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_Circle_Ganador:Jugador2" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/muxSeleccionadorGanador.sv Line: 13
+Info (12128): Elaborating entity "ROM_Circle_Ganador" for hierarchy "controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_Circle_Ganador:Jugador2|ROM_Circle_Ganador:rom" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/sprite_Circle_Ganador.sv Line: 8
+Info (12128): Elaborating entity "sprite_Empate" for hierarchy "controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_Empate:empatados" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/muxSeleccionadorGanador.sv Line: 15
+Info (12128): Elaborating entity "ROM_Empate" for hierarchy "controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_Empate:empatados|ROM_Empate:rom" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/sprite_Empate.sv Line: 8
+Info (12128): Elaborating entity "spritePosition_Empate" for hierarchy "controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_Empate:empatados|spritePosition_Empate:position" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/sprite_Empate.sv Line: 9
+Warning (10230): Verilog HDL assignment warning at spritePosition_Empate.sv(6): truncated value with size 32 to match size of target (10) File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/spritePosition_Empate.sv Line: 6
+Warning (10230): Verilog HDL assignment warning at spritePosition_Empate.sv(8): truncated value with size 32 to match size of target (10) File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/spritePosition_Empate.sv Line: 8
+Warning (10230): Verilog HDL assignment warning at spritePosition_Empate.sv(12): truncated value with size 10 to match size of target (4) File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/spritePosition_Empate.sv Line: 12
+Warning (10230): Verilog HDL assignment warning at spritePosition_Empate.sv(13): truncated value with size 10 to match size of target (8) File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/spritePosition_Empate.sv Line: 13
+Info (12128): Elaborating entity "mux_9a1" for hierarchy "controlTOP:control|mux_9a1:comb_40" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/controlTOP.sv Line: 106
+Warning (10235): Verilog HDL Always Construct warning at mux_9a1.sv(11): variable "visible_lineaganadora" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/mux_9a1.sv Line: 11
+Warning (10235): Verilog HDL Always Construct warning at mux_9a1.sv(11): variable "visible_texto" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/mux_9a1.sv Line: 11
+Warning (10235): Verilog HDL Always Construct warning at mux_9a1.sv(14): variable "rgb_texto" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/mux_9a1.sv Line: 14
+Warning (10235): Verilog HDL Always Construct warning at mux_9a1.sv(16): variable "rgb8" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/mux_9a1.sv Line: 16
+Warning (10235): Verilog HDL Always Construct warning at mux_9a1.sv(17): variable "rgb7" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/mux_9a1.sv Line: 17
+Warning (10235): Verilog HDL Always Construct warning at mux_9a1.sv(18): variable "rgb6" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/mux_9a1.sv Line: 18
+Warning (10235): Verilog HDL Always Construct warning at mux_9a1.sv(19): variable "rgb5" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/mux_9a1.sv Line: 19
+Warning (10235): Verilog HDL Always Construct warning at mux_9a1.sv(20): variable "rgb4" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/mux_9a1.sv Line: 20
+Warning (10235): Verilog HDL Always Construct warning at mux_9a1.sv(21): variable "rgb3" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/mux_9a1.sv Line: 21
+Warning (10235): Verilog HDL Always Construct warning at mux_9a1.sv(22): variable "rgb2" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/mux_9a1.sv Line: 22
+Warning (10235): Verilog HDL Always Construct warning at mux_9a1.sv(23): variable "rgb1" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/mux_9a1.sv Line: 23
+Warning (10235): Verilog HDL Always Construct warning at mux_9a1.sv(24): variable "rgb0" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/mux_9a1.sv Line: 24
+Warning (10235): Verilog HDL Always Construct warning at mux_9a1.sv(28): variable "rgb_texto" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/mux_9a1.sv Line: 28
+Info (276014): Found 18 instances of uninferred RAM logic
+    Info (276004): RAM logic "controlTOP:control|muxSeleccionador:casilla8|sprite_Circle:Jugador2|ROM_Circle:rom|Ram0" is uninferred due to inappropriate RAM size File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/ROM_Circle.sv Line: 4
+    Info (276004): RAM logic "controlTOP:control|muxSeleccionador:casilla8|sprite_X:Jugador1|ROM_X:rom|Ram0" is uninferred due to inappropriate RAM size File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/ROM_X.sv Line: 4
+    Info (276004): RAM logic "controlTOP:control|muxSeleccionador:casilla7|sprite_Circle:Jugador2|ROM_Circle:rom|Ram0" is uninferred due to inappropriate RAM size File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/ROM_Circle.sv Line: 4
+    Info (276004): RAM logic "controlTOP:control|muxSeleccionador:casilla7|sprite_X:Jugador1|ROM_X:rom|Ram0" is uninferred due to inappropriate RAM size File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/ROM_X.sv Line: 4
+    Info (276004): RAM logic "controlTOP:control|muxSeleccionador:casilla6|sprite_Circle:Jugador2|ROM_Circle:rom|Ram0" is uninferred due to inappropriate RAM size File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/ROM_Circle.sv Line: 4
+    Info (276004): RAM logic "controlTOP:control|muxSeleccionador:casilla6|sprite_X:Jugador1|ROM_X:rom|Ram0" is uninferred due to inappropriate RAM size File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/ROM_X.sv Line: 4
+    Info (276004): RAM logic "controlTOP:control|muxSeleccionador:casilla5|sprite_Circle:Jugador2|ROM_Circle:rom|Ram0" is uninferred due to inappropriate RAM size File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/ROM_Circle.sv Line: 4
+    Info (276004): RAM logic "controlTOP:control|muxSeleccionador:casilla5|sprite_X:Jugador1|ROM_X:rom|Ram0" is uninferred due to inappropriate RAM size File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/ROM_X.sv Line: 4
+    Info (276004): RAM logic "controlTOP:control|muxSeleccionador:casilla4|sprite_Circle:Jugador2|ROM_Circle:rom|Ram0" is uninferred due to inappropriate RAM size File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/ROM_Circle.sv Line: 4
+    Info (276004): RAM logic "controlTOP:control|muxSeleccionador:casilla4|sprite_X:Jugador1|ROM_X:rom|Ram0" is uninferred due to inappropriate RAM size File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/ROM_X.sv Line: 4
+    Info (276004): RAM logic "controlTOP:control|muxSeleccionador:casilla3|sprite_Circle:Jugador2|ROM_Circle:rom|Ram0" is uninferred due to inappropriate RAM size File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/ROM_Circle.sv Line: 4
+    Info (276004): RAM logic "controlTOP:control|muxSeleccionador:casilla3|sprite_X:Jugador1|ROM_X:rom|Ram0" is uninferred due to inappropriate RAM size File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/ROM_X.sv Line: 4
+    Info (276004): RAM logic "controlTOP:control|muxSeleccionador:casilla2|sprite_Circle:Jugador2|ROM_Circle:rom|Ram0" is uninferred due to inappropriate RAM size File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/ROM_Circle.sv Line: 4
+    Info (276004): RAM logic "controlTOP:control|muxSeleccionador:casilla2|sprite_X:Jugador1|ROM_X:rom|Ram0" is uninferred due to inappropriate RAM size File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/ROM_X.sv Line: 4
+    Info (276004): RAM logic "controlTOP:control|muxSeleccionador:casilla1|sprite_Circle:Jugador2|ROM_Circle:rom|Ram0" is uninferred due to inappropriate RAM size File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/ROM_Circle.sv Line: 4
+    Info (276004): RAM logic "controlTOP:control|muxSeleccionador:casilla1|sprite_X:Jugador1|ROM_X:rom|Ram0" is uninferred due to inappropriate RAM size File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/ROM_X.sv Line: 4
+    Info (276004): RAM logic "controlTOP:control|muxSeleccionador:casilla0|sprite_Circle:Jugador2|ROM_Circle:rom|Ram0" is uninferred due to inappropriate RAM size File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/ROM_Circle.sv Line: 4
+    Info (276004): RAM logic "controlTOP:control|muxSeleccionador:casilla0|sprite_X:Jugador1|ROM_X:rom|Ram0" is uninferred due to inappropriate RAM size File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/ROM_X.sv Line: 4
+Warning (12241): 14 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 3 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/output_files/VGA.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 833 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
+    Info (21059): Implemented 30 output pins
+    Info (21061): Implemented 799 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 56 warnings
+    Info: Peak virtual memory: 4893 megabytes
+    Info: Processing ended: Sat Sep 28 23:44:18 2024
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:05
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/output_files/VGA.map.smsg.
+
+

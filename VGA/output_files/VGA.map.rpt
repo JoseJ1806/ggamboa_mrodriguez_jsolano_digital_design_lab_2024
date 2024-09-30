@@ -1,5 +1,5 @@
 Analysis & Synthesis report for VGA
-Sat Sep 28 23:44:18 2024
+Mon Sep 30 03:15:39 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -13,33 +13,36 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |vga|controlTOP:control|Ganador2:ganador_|estadoActual
-  9. State Machine - |vga|controlTOP:control|Mover:move|estadoActual
+  8. State Machine - |VGA|controlTOP:control|Ganador2:ganador_|estadoActual
+  9. State Machine - |VGA|controlTOP:control|Mover:move|estadoActual
  10. Registers Removed During Synthesis
  11. General Register Statistics
  12. Multiplexer Restructuring Statistics (Restructuring Performed)
  13. Parameter Settings for User Entity Instance: controlTOP:control|buttonBouncer:bouncer_Sel
  14. Parameter Settings for User Entity Instance: controlTOP:control|buttonBouncer:bouncer_Casilla
  15. Parameter Settings for User Entity Instance: controlTOP:control|Turnos:turno|buttonBouncer:bouncer
- 16. Port Connectivity Checks: "controlTOP:control|mux_9a1:comb_40"
- 17. Port Connectivity Checks: "controlTOP:control|muxSeleccionadorGanador:texto_ganador"
- 18. Port Connectivity Checks: "controlTOP:control|muxSeleccionador:casilla8"
- 19. Port Connectivity Checks: "controlTOP:control|muxSeleccionador:casilla7"
- 20. Port Connectivity Checks: "controlTOP:control|muxSeleccionador:casilla6"
- 21. Port Connectivity Checks: "controlTOP:control|muxSeleccionador:casilla5"
- 22. Port Connectivity Checks: "controlTOP:control|muxSeleccionador:casilla4"
- 23. Port Connectivity Checks: "controlTOP:control|muxSeleccionador:casilla3"
- 24. Port Connectivity Checks: "controlTOP:control|muxSeleccionador:casilla2"
- 25. Port Connectivity Checks: "controlTOP:control|muxSeleccionador:casilla1"
- 26. Port Connectivity Checks: "controlTOP:control|muxSeleccionador:casilla0"
- 27. Port Connectivity Checks: "controlTOP:control|temporizador:tempo"
- 28. Port Connectivity Checks: "controlTOP:control|rectgen:seleccionador"
- 29. Port Connectivity Checks: "controlTOP:control|Turnos:turno|buttonBouncer:bouncer"
- 30. Port Connectivity Checks: "controlTOP:control|Turnos:turno"
- 31. Post-Synthesis Netlist Statistics for Top Partition
- 32. Elapsed Time Per Partition
- 33. Analysis & Synthesis Messages
- 34. Analysis & Synthesis Suppressed Messages
+ 16. Parameter Settings for Inferred Entity Instance: controlTOP:control|temporizador:tempo|lpm_divide:Div0
+ 17. Parameter Settings for Inferred Entity Instance: controlTOP:control|temporizador:tempo|lpm_divide:Mod0
+ 18. Parameter Settings for Inferred Entity Instance: controlTOP:control|temporizador:tempo|lpm_divide:Mod1
+ 19. Port Connectivity Checks: "controlTOP:control|mux_9a1:comb_40"
+ 20. Port Connectivity Checks: "controlTOP:control|muxSeleccionadorGanador:texto_ganador"
+ 21. Port Connectivity Checks: "controlTOP:control|muxSeleccionador:casilla8"
+ 22. Port Connectivity Checks: "controlTOP:control|muxSeleccionador:casilla7"
+ 23. Port Connectivity Checks: "controlTOP:control|muxSeleccionador:casilla6"
+ 24. Port Connectivity Checks: "controlTOP:control|muxSeleccionador:casilla5"
+ 25. Port Connectivity Checks: "controlTOP:control|muxSeleccionador:casilla4"
+ 26. Port Connectivity Checks: "controlTOP:control|muxSeleccionador:casilla3"
+ 27. Port Connectivity Checks: "controlTOP:control|muxSeleccionador:casilla2"
+ 28. Port Connectivity Checks: "controlTOP:control|muxSeleccionador:casilla1"
+ 29. Port Connectivity Checks: "controlTOP:control|muxSeleccionador:casilla0"
+ 30. Port Connectivity Checks: "controlTOP:control|temporizador:tempo"
+ 31. Port Connectivity Checks: "controlTOP:control|rectgen:seleccionador"
+ 32. Port Connectivity Checks: "controlTOP:control|Turnos:turno|buttonBouncer:bouncer"
+ 33. Port Connectivity Checks: "controlTOP:control|Turnos:turno"
+ 34. Post-Synthesis Netlist Statistics for Top Partition
+ 35. Elapsed Time Per Partition
+ 36. Analysis & Synthesis Messages
+ 37. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -66,14 +69,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sat Sep 28 23:44:18 2024       ;
+; Analysis & Synthesis Status     ; Successful - Mon Sep 30 03:15:39 2024       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; VGA                                         ;
-; Top-level Entity Name           ; vga                                         ;
+; Top-level Entity Name           ; VGA                                         ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 120                                         ;
-; Total pins                      ; 34                                          ;
+; Total registers                 ; 152                                         ;
+; Total pins                      ; 48                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -92,7 +95,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSXFC6D6F31C6     ;                    ;
-; Top-level entity name                                                           ; vga                ; VGA                ;
+; Top-level entity name                                                           ; VGA                ; VGA                ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -186,48 +189,60 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-12        ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
+;     Processor 5            ;   0.0%      ;
+;     Processors 6-12        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                  ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                              ; Library ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------+---------+
-; contadorXY.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/contadorXY.sv              ;         ;
-; controladorVGA.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/controladorVGA.sv          ;         ;
-; rectgen.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/rectgen.sv                 ;         ;
-; vga.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/vga.sv                     ;         ;
-; divisorClk.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/divisorClk.sv              ;         ;
-; lineas.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/lineas.sv                  ;         ;
-; muxSeleccionador.sv              ; yes             ; User SystemVerilog HDL File  ; C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/muxSeleccionador.sv        ;         ;
-; regfile1x24b.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/regfile1x24b.sv            ;         ;
-; controlTOP.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/controlTOP.sv              ;         ;
-; mux_9a1.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/mux_9a1.sv                 ;         ;
-; spriteCircle.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/spriteCircle.sv            ;         ;
-; ROM_Circle.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/ROM_Circle.sv              ;         ;
-; spritePosition.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/spritePosition.sv          ;         ;
-; ROM_X.sv                         ; yes             ; User SystemVerilog HDL File  ; C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/ROM_X.sv                   ;         ;
-; sprite_X.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/sprite_X.sv                ;         ;
-; Turnos.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/Turnos.sv                  ;         ;
-; buttonBouncer.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/buttonBouncer.sv           ;         ;
-; Mover.sv                         ; yes             ; User SystemVerilog HDL File  ; C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/Mover.sv                   ;         ;
-; lineaGanadoraGen.sv              ; yes             ; User SystemVerilog HDL File  ; C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/lineaGanadoraGen.sv        ;         ;
-; muxSeleccionadorGanador.sv       ; yes             ; User SystemVerilog HDL File  ; C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/muxSeleccionadorGanador.sv ;         ;
-; sprite_X_Ganador.sv              ; yes             ; User SystemVerilog HDL File  ; C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/sprite_X_Ganador.sv        ;         ;
-; spritePosition_Ganador.sv        ; yes             ; User SystemVerilog HDL File  ; C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/spritePosition_Ganador.sv  ;         ;
-; ROM_X_Ganador.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/ROM_X_Ganador.sv           ;         ;
-; sprite_Circle_Ganador.sv         ; yes             ; User SystemVerilog HDL File  ; C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/sprite_Circle_Ganador.sv   ;         ;
-; ROM_Circle_Ganador.sv            ; yes             ; User SystemVerilog HDL File  ; C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/ROM_Circle_Ganador.sv      ;         ;
-; temporizador.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/temporizador.sv            ;         ;
-; LFSR.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/LFSR.sv                    ;         ;
-; sprite_Empate.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/sprite_Empate.sv           ;         ;
-; ROM_Empate.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/ROM_Empate.sv              ;         ;
-; spritePosition_Empate.sv         ; yes             ; User SystemVerilog HDL File  ; C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/spritePosition_Empate.sv   ;         ;
-; Ganador2.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/Ganador2.sv                ;         ;
-; always_ganador.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/always_ganador.sv          ;         ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                         ;
++----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                               ; Library ;
++----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------+---------+
+; contadorXY.sv                    ; yes             ; User SystemVerilog HDL File        ; C:/Users/jjsol.J1806/Desktop/Pasar/contadorXY.sv                           ;         ;
+; controladorVGA.sv                ; yes             ; User SystemVerilog HDL File        ; C:/Users/jjsol.J1806/Desktop/Pasar/controladorVGA.sv                       ;         ;
+; rectgen.sv                       ; yes             ; User SystemVerilog HDL File        ; C:/Users/jjsol.J1806/Desktop/Pasar/rectgen.sv                              ;         ;
+; VGA.sv                           ; yes             ; User SystemVerilog HDL File        ; C:/Users/jjsol.J1806/Desktop/Pasar/VGA.sv                                  ;         ;
+; divisorClk.sv                    ; yes             ; User SystemVerilog HDL File        ; C:/Users/jjsol.J1806/Desktop/Pasar/divisorClk.sv                           ;         ;
+; lineas.sv                        ; yes             ; User SystemVerilog HDL File        ; C:/Users/jjsol.J1806/Desktop/Pasar/lineas.sv                               ;         ;
+; muxSeleccionador.sv              ; yes             ; User SystemVerilog HDL File        ; C:/Users/jjsol.J1806/Desktop/Pasar/muxSeleccionador.sv                     ;         ;
+; regfile1x24b.sv                  ; yes             ; User SystemVerilog HDL File        ; C:/Users/jjsol.J1806/Desktop/Pasar/regfile1x24b.sv                         ;         ;
+; controlTOP.sv                    ; yes             ; User SystemVerilog HDL File        ; C:/Users/jjsol.J1806/Desktop/Pasar/controlTOP.sv                           ;         ;
+; mux_9a1.sv                       ; yes             ; User SystemVerilog HDL File        ; C:/Users/jjsol.J1806/Desktop/Pasar/mux_9a1.sv                              ;         ;
+; ROM_Circle.sv                    ; yes             ; User SystemVerilog HDL File        ; C:/Users/jjsol.J1806/Desktop/Pasar/ROM_Circle.sv                           ;         ;
+; spritePosition.sv                ; yes             ; User SystemVerilog HDL File        ; C:/Users/jjsol.J1806/Desktop/Pasar/spritePosition.sv                       ;         ;
+; ROM_X.sv                         ; yes             ; User SystemVerilog HDL File        ; C:/Users/jjsol.J1806/Desktop/Pasar/ROM_X.sv                                ;         ;
+; sprite_X.sv                      ; yes             ; User SystemVerilog HDL File        ; C:/Users/jjsol.J1806/Desktop/Pasar/sprite_X.sv                             ;         ;
+; Turnos.sv                        ; yes             ; User SystemVerilog HDL File        ; C:/Users/jjsol.J1806/Desktop/Pasar/Turnos.sv                               ;         ;
+; buttonBouncer.sv                 ; yes             ; User SystemVerilog HDL File        ; C:/Users/jjsol.J1806/Desktop/Pasar/buttonBouncer.sv                        ;         ;
+; Mover.sv                         ; yes             ; User SystemVerilog HDL File        ; C:/Users/jjsol.J1806/Desktop/Pasar/Mover.sv                                ;         ;
+; lineaGanadoraGen.sv              ; yes             ; User SystemVerilog HDL File        ; C:/Users/jjsol.J1806/Desktop/Pasar/lineaGanadoraGen.sv                     ;         ;
+; muxSeleccionadorGanador.sv       ; yes             ; User SystemVerilog HDL File        ; C:/Users/jjsol.J1806/Desktop/Pasar/muxSeleccionadorGanador.sv              ;         ;
+; sprite_X_Ganador.sv              ; yes             ; User SystemVerilog HDL File        ; C:/Users/jjsol.J1806/Desktop/Pasar/sprite_X_Ganador.sv                     ;         ;
+; spritePosition_Ganador.sv        ; yes             ; User SystemVerilog HDL File        ; C:/Users/jjsol.J1806/Desktop/Pasar/spritePosition_Ganador.sv               ;         ;
+; ROM_X_Ganador.sv                 ; yes             ; User SystemVerilog HDL File        ; C:/Users/jjsol.J1806/Desktop/Pasar/ROM_X_Ganador.sv                        ;         ;
+; sprite_Circle_Ganador.sv         ; yes             ; User SystemVerilog HDL File        ; C:/Users/jjsol.J1806/Desktop/Pasar/sprite_Circle_Ganador.sv                ;         ;
+; ROM_Circle_Ganador.sv            ; yes             ; User SystemVerilog HDL File        ; C:/Users/jjsol.J1806/Desktop/Pasar/ROM_Circle_Ganador.sv                   ;         ;
+; temporizador.sv                  ; yes             ; User SystemVerilog HDL File        ; C:/Users/jjsol.J1806/Desktop/Pasar/temporizador.sv                         ;         ;
+; LFSR.sv                          ; yes             ; User SystemVerilog HDL File        ; C:/Users/jjsol.J1806/Desktop/Pasar/LFSR.sv                                 ;         ;
+; sprite_Empate.sv                 ; yes             ; User SystemVerilog HDL File        ; C:/Users/jjsol.J1806/Desktop/Pasar/sprite_Empate.sv                        ;         ;
+; ROM_Empate.sv                    ; yes             ; User SystemVerilog HDL File        ; C:/Users/jjsol.J1806/Desktop/Pasar/ROM_Empate.sv                           ;         ;
+; spritePosition_Empate.sv         ; yes             ; User SystemVerilog HDL File        ; C:/Users/jjsol.J1806/Desktop/Pasar/spritePosition_Empate.sv                ;         ;
+; Ganador2.sv                      ; yes             ; User SystemVerilog HDL File        ; C:/Users/jjsol.J1806/Desktop/Pasar/Ganador2.sv                             ;         ;
+; always_ganador.sv                ; yes             ; User SystemVerilog HDL File        ; C:/Users/jjsol.J1806/Desktop/Pasar/always_ganador.sv                       ;         ;
+; sprite_circle.sv                 ; yes             ; Auto-Found SystemVerilog HDL File  ; C:/Users/jjsol.J1806/Desktop/Pasar/sprite_circle.sv                        ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                       ; e:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                       ; e:/intelfpga_lite/20.1/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                       ; e:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
+; aglobal201.inc                   ; yes             ; Megafunction                       ; e:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc      ;         ;
+; db/lpm_divide_ibm.tdf            ; yes             ; Auto-Generated Megafunction        ; C:/Users/jjsol.J1806/Desktop/Pasar/db/lpm_divide_ibm.tdf                   ;         ;
+; db/sign_div_unsign_olh.tdf       ; yes             ; Auto-Generated Megafunction        ; C:/Users/jjsol.J1806/Desktop/Pasar/db/sign_div_unsign_olh.tdf              ;         ;
+; db/alt_u_div_mve.tdf             ; yes             ; Auto-Generated Megafunction        ; C:/Users/jjsol.J1806/Desktop/Pasar/db/alt_u_div_mve.tdf                    ;         ;
+; db/lpm_divide_l3m.tdf            ; yes             ; Auto-Generated Megafunction        ; C:/Users/jjsol.J1806/Desktop/Pasar/db/lpm_divide_l3m.tdf                   ;         ;
++----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------+---------+
 
 
 +----------------------------------------------------------------------+
@@ -235,104 +250,116 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+------------------------+
 ; Resource                                    ; Usage                  ;
 +---------------------------------------------+------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 481                    ;
+; Estimate of Logic utilization (ALMs needed) ; 1046                   ;
 ;                                             ;                        ;
-; Combinational ALUT usage for logic          ; 734                    ;
-;     -- 7 input functions                    ; 13                     ;
-;     -- 6 input functions                    ; 211                    ;
-;     -- 5 input functions                    ; 140                    ;
-;     -- 4 input functions                    ; 117                    ;
-;     -- <=3 input functions                  ; 253                    ;
+; Combinational ALUT usage for logic          ; 1798                   ;
+;     -- 7 input functions                    ; 16                     ;
+;     -- 6 input functions                    ; 274                    ;
+;     -- 5 input functions                    ; 128                    ;
+;     -- 4 input functions                    ; 205                    ;
+;     -- <=3 input functions                  ; 1175                   ;
 ;                                             ;                        ;
-; Dedicated logic registers                   ; 120                    ;
+; Dedicated logic registers                   ; 152                    ;
 ;                                             ;                        ;
-; I/O pins                                    ; 34                     ;
+; I/O pins                                    ; 48                     ;
 ;                                             ;                        ;
 ; Total DSP Blocks                            ; 0                      ;
 ;                                             ;                        ;
 ; Maximum fan-out node                        ; divisorClk:dv|clock_25 ;
-; Maximum fan-out                             ; 119                    ;
-; Total fan-out                               ; 3617                   ;
-; Average fan-out                             ; 3.92                   ;
+; Maximum fan-out                             ; 151                    ;
+; Total fan-out                               ; 6783                   ;
+; Average fan-out                             ; 3.32                   ;
 +---------------------------------------------+------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                            ;
-+-----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------+-------------------------+--------------+
-; Compilation Hierarchy Node                    ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                          ; Entity Name             ; Library Name ;
-+-----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------+-------------------------+--------------+
-; |vga                                          ; 734 (0)             ; 120 (0)                   ; 0                 ; 0          ; 34   ; 0            ; |vga                                                                                                                         ; vga                     ; work         ;
-;    |controlTOP:control|                       ; 701 (7)             ; 98 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control                                                                                                      ; controlTOP              ; work         ;
-;       |Ganador2:ganador_|                     ; 22 (2)              ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|Ganador2:ganador_                                                                                    ; Ganador2                ; work         ;
-;          |always_ganador:comb_3|              ; 20 (20)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|Ganador2:ganador_|always_ganador:comb_3                                                              ; always_ganador          ; work         ;
-;       |Mover:move|                            ; 5 (5)               ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|Mover:move                                                                                           ; Mover                   ; work         ;
-;       |Turnos:turno|                          ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|Turnos:turno                                                                                         ; Turnos                  ; work         ;
-;       |buttonBouncer:bouncer_Casilla|         ; 13 (13)             ; 15 (15)                   ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|buttonBouncer:bouncer_Casilla                                                                        ; buttonBouncer           ; work         ;
-;       |buttonBouncer:bouncer_Sel|             ; 13 (13)             ; 15 (15)                   ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|buttonBouncer:bouncer_Sel                                                                            ; buttonBouncer           ; work         ;
-;       |lineaGanadoraGen:lineaganadora|        ; 98 (98)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|lineaGanadoraGen:lineaganadora                                                                       ; lineaGanadoraGen        ; work         ;
-;       |lineas:CuatroLineas|                   ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|lineas:CuatroLineas                                                                                  ; lineas                  ; work         ;
-;       |muxSeleccionador:casilla0|             ; 148 (5)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla0                                                                            ; muxSeleccionador        ; work         ;
-;          |sprite_Circle:Jugador2|             ; 44 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla0|sprite_Circle:Jugador2                                                     ; sprite_Circle           ; work         ;
-;             |ROM_Circle:rom|                  ; 24 (24)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla0|sprite_Circle:Jugador2|ROM_Circle:rom                                      ; ROM_Circle              ; work         ;
-;             |spritePosition:position|         ; 20 (20)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla0|sprite_Circle:Jugador2|spritePosition:position                             ; spritePosition          ; work         ;
-;          |sprite_X:Jugador1|                  ; 99 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla0|sprite_X:Jugador1                                                          ; sprite_X                ; work         ;
-;             |ROM_X:rom|                       ; 54 (54)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla0|sprite_X:Jugador1|ROM_X:rom                                                ; ROM_X                   ; work         ;
-;             |spritePosition:position|         ; 45 (45)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla0|sprite_X:Jugador1|spritePosition:position                                  ; spritePosition          ; work         ;
-;       |muxSeleccionador:casilla1|             ; 16 (2)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla1                                                                            ; muxSeleccionador        ; work         ;
-;          |sprite_Circle:Jugador2|             ; 8 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla1|sprite_Circle:Jugador2                                                     ; sprite_Circle           ; work         ;
-;             |spritePosition:position|         ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla1|sprite_Circle:Jugador2|spritePosition:position                             ; spritePosition          ; work         ;
-;          |sprite_X:Jugador1|                  ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla1|sprite_X:Jugador1                                                          ; sprite_X                ; work         ;
-;             |spritePosition:position|         ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla1|sprite_X:Jugador1|spritePosition:position                                  ; spritePosition          ; work         ;
-;       |muxSeleccionador:casilla2|             ; 13 (2)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla2                                                                            ; muxSeleccionador        ; work         ;
-;          |sprite_Circle:Jugador2|             ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla2|sprite_Circle:Jugador2                                                     ; sprite_Circle           ; work         ;
-;             |spritePosition:position|         ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla2|sprite_Circle:Jugador2|spritePosition:position                             ; spritePosition          ; work         ;
-;          |sprite_X:Jugador1|                  ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla2|sprite_X:Jugador1                                                          ; sprite_X                ; work         ;
-;             |spritePosition:position|         ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla2|sprite_X:Jugador1|spritePosition:position                                  ; spritePosition          ; work         ;
-;       |muxSeleccionador:casilla3|             ; 57 (2)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla3                                                                            ; muxSeleccionador        ; work         ;
-;          |sprite_Circle:Jugador2|             ; 24 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla3|sprite_Circle:Jugador2                                                     ; sprite_Circle           ; work         ;
-;             |ROM_Circle:rom|                  ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla3|sprite_Circle:Jugador2|ROM_Circle:rom                                      ; ROM_Circle              ; work         ;
-;             |spritePosition:position|         ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla3|sprite_Circle:Jugador2|spritePosition:position                             ; spritePosition          ; work         ;
-;          |sprite_X:Jugador1|                  ; 31 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla3|sprite_X:Jugador1                                                          ; sprite_X                ; work         ;
-;             |ROM_X:rom|                       ; 25 (25)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla3|sprite_X:Jugador1|ROM_X:rom                                                ; ROM_X                   ; work         ;
-;             |spritePosition:position|         ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla3|sprite_X:Jugador1|spritePosition:position                                  ; spritePosition          ; work         ;
-;       |muxSeleccionador:casilla4|             ; 17 (3)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla4                                                                            ; muxSeleccionador        ; work         ;
-;          |sprite_Circle:Jugador2|             ; 9 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla4|sprite_Circle:Jugador2                                                     ; sprite_Circle           ; work         ;
-;             |spritePosition:position|         ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla4|sprite_Circle:Jugador2|spritePosition:position                             ; spritePosition          ; work         ;
-;          |sprite_X:Jugador1|                  ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla4|sprite_X:Jugador1                                                          ; sprite_X                ; work         ;
-;             |spritePosition:position|         ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla4|sprite_X:Jugador1|spritePosition:position                                  ; spritePosition          ; work         ;
-;       |muxSeleccionador:casilla5|             ; 7 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla5                                                                            ; muxSeleccionador        ; work         ;
-;          |sprite_Circle:Jugador2|             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla5|sprite_Circle:Jugador2                                                     ; sprite_Circle           ; work         ;
-;             |spritePosition:position|         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla5|sprite_Circle:Jugador2|spritePosition:position                             ; spritePosition          ; work         ;
-;          |sprite_X:Jugador1|                  ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla5|sprite_X:Jugador1                                                          ; sprite_X                ; work         ;
-;             |spritePosition:position|         ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla5|sprite_X:Jugador1|spritePosition:position                                  ; spritePosition          ; work         ;
-;       |muxSeleccionador:casilla6|             ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla6                                                                            ; muxSeleccionador        ; work         ;
-;       |muxSeleccionador:casilla7|             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla7                                                                            ; muxSeleccionador        ; work         ;
-;       |muxSeleccionador:casilla8|             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionador:casilla8                                                                            ; muxSeleccionador        ; work         ;
-;       |muxSeleccionadorGanador:texto_ganador| ; 72 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionadorGanador:texto_ganador                                                                ; muxSeleccionadorGanador ; work         ;
-;          |sprite_Circle_Ganador:Jugador2|     ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_Circle_Ganador:Jugador2                                 ; sprite_Circle_Ganador   ; work         ;
-;             |ROM_Circle_Ganador:rom|          ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_Circle_Ganador:Jugador2|ROM_Circle_Ganador:rom          ; ROM_Circle_Ganador      ; work         ;
-;             |spritePosition_Ganador:position| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_Circle_Ganador:Jugador2|spritePosition_Ganador:position ; spritePosition_Ganador  ; work         ;
-;          |sprite_Empate:empatados|            ; 21 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_Empate:empatados                                        ; sprite_Empate           ; work         ;
-;             |ROM_Empate:rom|                  ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_Empate:empatados|ROM_Empate:rom                         ; ROM_Empate              ; work         ;
-;             |spritePosition_Empate:position|  ; 18 (18)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_Empate:empatados|spritePosition_Empate:position         ; spritePosition_Empate   ; work         ;
-;          |sprite_X_Ganador:Jugador1|          ; 37 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_X_Ganador:Jugador1                                      ; sprite_X_Ganador        ; work         ;
-;             |ROM_X_Ganador:rom|               ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_X_Ganador:Jugador1|ROM_X_Ganador:rom                    ; ROM_X_Ganador           ; work         ;
-;             |spritePosition_Ganador:position| ; 28 (28)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_X_Ganador:Jugador1|spritePosition_Ganador:position      ; spritePosition_Ganador  ; work         ;
-;       |mux_9a1:comb_40|                       ; 76 (76)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|mux_9a1:comb_40                                                                                      ; mux_9a1                 ; work         ;
-;       |rectgen:seleccionador|                 ; 31 (31)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|rectgen:seleccionador                                                                                ; rectgen                 ; work         ;
-;       |regfile1x24b:memoria_Casillas|         ; 50 (50)             ; 24 (24)                   ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|regfile1x24b:memoria_Casillas                                                                        ; regfile1x24b            ; work         ;
-;       |temporizador:tempo|                    ; 45 (45)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |vga|controlTOP:control|temporizador:tempo                                                                                   ; temporizador            ; work         ;
-;    |controladorVGA:cntVGA|                    ; 32 (6)              ; 20 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |vga|controladorVGA:cntVGA                                                                                                   ; controladorVGA          ; work         ;
-;       |contadorXY:CXY|                        ; 26 (26)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |vga|controladorVGA:cntVGA|contadorXY:CXY                                                                                    ; contadorXY              ; work         ;
-;    |divisorClk:dv|                            ; 1 (1)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|divisorClk:dv                                                                                                           ; divisorClk              ; work         ;
-+-----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------+-------------------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                          ;
++-----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------+-------------------------+--------------+
+; Compilation Hierarchy Node                    ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                        ; Entity Name             ; Library Name ;
++-----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------+-------------------------+--------------+
+; |VGA                                          ; 1798 (0)            ; 152 (0)                   ; 0                 ; 0          ; 48   ; 0            ; |VGA                                                                                                                                       ; VGA                     ; work         ;
+;    |controlTOP:control|                       ; 1766 (7)            ; 130 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control                                                                                                                    ; controlTOP              ; work         ;
+;       |Ganador2:ganador_|                     ; 22 (2)              ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|Ganador2:ganador_                                                                                                  ; Ganador2                ; work         ;
+;          |always_ganador:comb_3|              ; 20 (20)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|Ganador2:ganador_|always_ganador:comb_3                                                                            ; always_ganador          ; work         ;
+;       |Mover:move|                            ; 5 (5)               ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|Mover:move                                                                                                         ; Mover                   ; work         ;
+;       |Turnos:turno|                          ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|Turnos:turno                                                                                                       ; Turnos                  ; work         ;
+;       |buttonBouncer:bouncer_Casilla|         ; 13 (13)             ; 15 (15)                   ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|buttonBouncer:bouncer_Casilla                                                                                      ; buttonBouncer           ; work         ;
+;       |buttonBouncer:bouncer_Sel|             ; 13 (13)             ; 15 (15)                   ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|buttonBouncer:bouncer_Sel                                                                                          ; buttonBouncer           ; work         ;
+;       |lineaGanadoraGen:lineaganadora|        ; 91 (91)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|lineaGanadoraGen:lineaganadora                                                                                     ; lineaGanadoraGen        ; work         ;
+;       |lineas:CuatroLineas|                   ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|lineas:CuatroLineas                                                                                                ; lineas                  ; work         ;
+;       |muxSeleccionador:casilla0|             ; 143 (2)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|muxSeleccionador:casilla0                                                                                          ; muxSeleccionador        ; work         ;
+;          |sprite_Circle:Jugador2|             ; 40 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|muxSeleccionador:casilla0|sprite_Circle:Jugador2                                                                   ; sprite_Circle           ; work         ;
+;             |ROM_Circle:rom|                  ; 19 (19)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|muxSeleccionador:casilla0|sprite_Circle:Jugador2|ROM_Circle:rom                                                    ; ROM_Circle              ; work         ;
+;             |spritePosition:position|         ; 21 (21)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|muxSeleccionador:casilla0|sprite_Circle:Jugador2|spritePosition:position                                           ; spritePosition          ; work         ;
+;          |sprite_X:Jugador1|                  ; 101 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|muxSeleccionador:casilla0|sprite_X:Jugador1                                                                        ; sprite_X                ; work         ;
+;             |ROM_X:rom|                       ; 54 (54)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|muxSeleccionador:casilla0|sprite_X:Jugador1|ROM_X:rom                                                              ; ROM_X                   ; work         ;
+;             |spritePosition:position|         ; 47 (47)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|muxSeleccionador:casilla0|sprite_X:Jugador1|spritePosition:position                                                ; spritePosition          ; work         ;
+;       |muxSeleccionador:casilla1|             ; 17 (2)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|muxSeleccionador:casilla1                                                                                          ; muxSeleccionador        ; work         ;
+;          |sprite_Circle:Jugador2|             ; 9 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|muxSeleccionador:casilla1|sprite_Circle:Jugador2                                                                   ; sprite_Circle           ; work         ;
+;             |spritePosition:position|         ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|muxSeleccionador:casilla1|sprite_Circle:Jugador2|spritePosition:position                                           ; spritePosition          ; work         ;
+;          |sprite_X:Jugador1|                  ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|muxSeleccionador:casilla1|sprite_X:Jugador1                                                                        ; sprite_X                ; work         ;
+;             |spritePosition:position|         ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|muxSeleccionador:casilla1|sprite_X:Jugador1|spritePosition:position                                                ; spritePosition          ; work         ;
+;       |muxSeleccionador:casilla2|             ; 13 (2)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|muxSeleccionador:casilla2                                                                                          ; muxSeleccionador        ; work         ;
+;          |sprite_Circle:Jugador2|             ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|muxSeleccionador:casilla2|sprite_Circle:Jugador2                                                                   ; sprite_Circle           ; work         ;
+;             |spritePosition:position|         ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|muxSeleccionador:casilla2|sprite_Circle:Jugador2|spritePosition:position                                           ; spritePosition          ; work         ;
+;          |sprite_X:Jugador1|                  ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|muxSeleccionador:casilla2|sprite_X:Jugador1                                                                        ; sprite_X                ; work         ;
+;             |spritePosition:position|         ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|muxSeleccionador:casilla2|sprite_X:Jugador1|spritePosition:position                                                ; spritePosition          ; work         ;
+;       |muxSeleccionador:casilla3|             ; 59 (3)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|muxSeleccionador:casilla3                                                                                          ; muxSeleccionador        ; work         ;
+;          |sprite_Circle:Jugador2|             ; 26 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|muxSeleccionador:casilla3|sprite_Circle:Jugador2                                                                   ; sprite_Circle           ; work         ;
+;             |ROM_Circle:rom|                  ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|muxSeleccionador:casilla3|sprite_Circle:Jugador2|ROM_Circle:rom                                                    ; ROM_Circle              ; work         ;
+;             |spritePosition:position|         ; 18 (18)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|muxSeleccionador:casilla3|sprite_Circle:Jugador2|spritePosition:position                                           ; spritePosition          ; work         ;
+;          |sprite_X:Jugador1|                  ; 30 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|muxSeleccionador:casilla3|sprite_X:Jugador1                                                                        ; sprite_X                ; work         ;
+;             |ROM_X:rom|                       ; 24 (24)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|muxSeleccionador:casilla3|sprite_X:Jugador1|ROM_X:rom                                                              ; ROM_X                   ; work         ;
+;             |spritePosition:position|         ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|muxSeleccionador:casilla3|sprite_X:Jugador1|spritePosition:position                                                ; spritePosition          ; work         ;
+;       |muxSeleccionador:casilla4|             ; 14 (1)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|muxSeleccionador:casilla4                                                                                          ; muxSeleccionador        ; work         ;
+;          |sprite_Circle:Jugador2|             ; 8 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|muxSeleccionador:casilla4|sprite_Circle:Jugador2                                                                   ; sprite_Circle           ; work         ;
+;             |spritePosition:position|         ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|muxSeleccionador:casilla4|sprite_Circle:Jugador2|spritePosition:position                                           ; spritePosition          ; work         ;
+;          |sprite_X:Jugador1|                  ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|muxSeleccionador:casilla4|sprite_X:Jugador1                                                                        ; sprite_X                ; work         ;
+;             |spritePosition:position|         ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|muxSeleccionador:casilla4|sprite_X:Jugador1|spritePosition:position                                                ; spritePosition          ; work         ;
+;       |muxSeleccionador:casilla5|             ; 7 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|muxSeleccionador:casilla5                                                                                          ; muxSeleccionador        ; work         ;
+;          |sprite_Circle:Jugador2|             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|muxSeleccionador:casilla5|sprite_Circle:Jugador2                                                                   ; sprite_Circle           ; work         ;
+;             |spritePosition:position|         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|muxSeleccionador:casilla5|sprite_Circle:Jugador2|spritePosition:position                                           ; spritePosition          ; work         ;
+;          |sprite_X:Jugador1|                  ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|muxSeleccionador:casilla5|sprite_X:Jugador1                                                                        ; sprite_X                ; work         ;
+;             |spritePosition:position|         ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|muxSeleccionador:casilla5|sprite_X:Jugador1|spritePosition:position                                                ; spritePosition          ; work         ;
+;       |muxSeleccionador:casilla6|             ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|muxSeleccionador:casilla6                                                                                          ; muxSeleccionador        ; work         ;
+;       |muxSeleccionador:casilla7|             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|muxSeleccionador:casilla7                                                                                          ; muxSeleccionador        ; work         ;
+;       |muxSeleccionador:casilla8|             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|muxSeleccionador:casilla8                                                                                          ; muxSeleccionador        ; work         ;
+;       |muxSeleccionadorGanador:texto_ganador| ; 71 (6)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|muxSeleccionadorGanador:texto_ganador                                                                              ; muxSeleccionadorGanador ; work         ;
+;          |sprite_Circle_Ganador:Jugador2|     ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_Circle_Ganador:Jugador2                                               ; sprite_Circle_Ganador   ; work         ;
+;             |ROM_Circle_Ganador:rom|          ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_Circle_Ganador:Jugador2|ROM_Circle_Ganador:rom                        ; ROM_Circle_Ganador      ; work         ;
+;             |spritePosition_Ganador:position| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_Circle_Ganador:Jugador2|spritePosition_Ganador:position               ; spritePosition_Ganador  ; work         ;
+;          |sprite_Empate:empatados|            ; 22 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_Empate:empatados                                                      ; sprite_Empate           ; work         ;
+;             |ROM_Empate:rom|                  ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_Empate:empatados|ROM_Empate:rom                                       ; ROM_Empate              ; work         ;
+;             |spritePosition_Empate:position|  ; 19 (19)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_Empate:empatados|spritePosition_Empate:position                       ; spritePosition_Empate   ; work         ;
+;          |sprite_X_Ganador:Jugador1|          ; 40 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_X_Ganador:Jugador1                                                    ; sprite_X_Ganador        ; work         ;
+;             |ROM_X_Ganador:rom|               ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_X_Ganador:Jugador1|ROM_X_Ganador:rom                                  ; ROM_X_Ganador           ; work         ;
+;             |spritePosition_Ganador:position| ; 30 (30)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_X_Ganador:Jugador1|spritePosition_Ganador:position                    ; spritePosition_Ganador  ; work         ;
+;       |mux_9a1:comb_40|                       ; 94 (94)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|mux_9a1:comb_40                                                                                                    ; mux_9a1                 ; work         ;
+;       |rectgen:seleccionador|                 ; 30 (30)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|rectgen:seleccionador                                                                                              ; rectgen                 ; work         ;
+;       |regfile1x24b:memoria_Casillas|         ; 50 (50)             ; 24 (24)                   ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|regfile1x24b:memoria_Casillas                                                                                      ; regfile1x24b            ; work         ;
+;       |temporizador:tempo|                    ; 1106 (182)          ; 65 (65)                   ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|temporizador:tempo                                                                                                 ; temporizador            ; work         ;
+;          |lpm_divide:Div0|                    ; 313 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|temporizador:tempo|lpm_divide:Div0                                                                                 ; lpm_divide              ; work         ;
+;             |lpm_divide_ibm:auto_generated|   ; 313 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|temporizador:tempo|lpm_divide:Div0|lpm_divide_ibm:auto_generated                                                   ; lpm_divide_ibm          ; work         ;
+;                |sign_div_unsign_olh:divider|  ; 313 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|temporizador:tempo|lpm_divide:Div0|lpm_divide_ibm:auto_generated|sign_div_unsign_olh:divider                       ; sign_div_unsign_olh     ; work         ;
+;                   |alt_u_div_mve:divider|     ; 313 (313)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|temporizador:tempo|lpm_divide:Div0|lpm_divide_ibm:auto_generated|sign_div_unsign_olh:divider|alt_u_div_mve:divider ; alt_u_div_mve           ; work         ;
+;          |lpm_divide:Mod0|                    ; 298 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|temporizador:tempo|lpm_divide:Mod0                                                                                 ; lpm_divide              ; work         ;
+;             |lpm_divide_l3m:auto_generated|   ; 298 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|temporizador:tempo|lpm_divide:Mod0|lpm_divide_l3m:auto_generated                                                   ; lpm_divide_l3m          ; work         ;
+;                |sign_div_unsign_olh:divider|  ; 298 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|temporizador:tempo|lpm_divide:Mod0|lpm_divide_l3m:auto_generated|sign_div_unsign_olh:divider                       ; sign_div_unsign_olh     ; work         ;
+;                   |alt_u_div_mve:divider|     ; 298 (298)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|temporizador:tempo|lpm_divide:Mod0|lpm_divide_l3m:auto_generated|sign_div_unsign_olh:divider|alt_u_div_mve:divider ; alt_u_div_mve           ; work         ;
+;          |lpm_divide:Mod1|                    ; 313 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|temporizador:tempo|lpm_divide:Mod1                                                                                 ; lpm_divide              ; work         ;
+;             |lpm_divide_l3m:auto_generated|   ; 313 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|temporizador:tempo|lpm_divide:Mod1|lpm_divide_l3m:auto_generated                                                   ; lpm_divide_l3m          ; work         ;
+;                |sign_div_unsign_olh:divider|  ; 313 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|temporizador:tempo|lpm_divide:Mod1|lpm_divide_l3m:auto_generated|sign_div_unsign_olh:divider                       ; sign_div_unsign_olh     ; work         ;
+;                   |alt_u_div_mve:divider|     ; 313 (313)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|controlTOP:control|temporizador:tempo|lpm_divide:Mod1|lpm_divide_l3m:auto_generated|sign_div_unsign_olh:divider|alt_u_div_mve:divider ; alt_u_div_mve           ; work         ;
+;    |controladorVGA:cntVGA|                    ; 31 (6)              ; 20 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |VGA|controladorVGA:cntVGA                                                                                                                 ; controladorVGA          ; work         ;
+;       |contadorXY:CXY|                        ; 25 (25)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |VGA|controladorVGA:cntVGA|contadorXY:CXY                                                                                                  ; contadorXY              ; work         ;
+;    |divisorClk:dv|                            ; 1 (1)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|divisorClk:dv                                                                                                                         ; divisorClk              ; work         ;
++-----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------+-------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 Encoding Type:  One-Hot
 +------------------------------------------------------------------------+
-; State Machine - |vga|controlTOP:control|Ganador2:ganador_|estadoActual ;
+; State Machine - |VGA|controlTOP:control|Ganador2:ganador_|estadoActual ;
 +----------------+-------------------------------------------------------+
 ; Name           ; estadoActual.1                                        ;
 +----------------+-------------------------------------------------------+
@@ -343,7 +370,7 @@ Encoding Type:  One-Hot
 
 Encoding Type:  One-Hot
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |vga|controlTOP:control|Mover:move|estadoActual                                                                                                                                       ;
+; State Machine - |VGA|controlTOP:control|Mover:move|estadoActual                                                                                                                                       ;
 +-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+
 ; Name              ; estadoActual.0111 ; estadoActual.0110 ; estadoActual.0101 ; estadoActual.0100 ; estadoActual.0011 ; estadoActual.0010 ; estadoActual.0001 ; estadoActual.0000 ; estadoActual.1000 ;
 +-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+
@@ -376,10 +403,10 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 120   ;
-; Number of registers using Synchronous Clear  ; 74    ;
+; Total registers                              ; 152   ;
+; Number of registers using Synchronous Clear  ; 106   ;
 ; Number of registers using Synchronous Load   ; 22    ;
-; Number of registers using Asynchronous Clear ; 89    ;
+; Number of registers using Asynchronous Clear ; 121   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 43    ;
 ; Number of registers using Preset             ; 0     ;
@@ -391,28 +418,29 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                            ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |vga|controlTOP:control|regfile1x24b:memoria_Casillas|p[3]                                            ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |vga|controlTOP:control|temporizador:tempo|contador[21]                                               ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |vga|controlTOP:control|muxSeleccionador:casilla3|sprite_Circle:Jugador2|spritePosition:position|Mux0 ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |vga|controlTOP:control|muxSeleccionador:casilla3|sprite_Circle:Jugador2|spritePosition:position|Mux0 ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |vga|controlTOP:control|muxSeleccionador:casilla3|sprite_Circle:Jugador2|spritePosition:position|Mux0 ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |vga|controlTOP:control|muxSeleccionador:casilla0|sprite_X:Jugador1|spritePosition:position|Mux0      ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |vga|controlTOP:control|muxSeleccionador:casilla0|sprite_Circle:Jugador2|spritePosition:position|Mux0 ;
-; 4:1                ; 36 bits   ; 72 LEs        ; 72 LEs               ; 0 LEs                  ; No         ; |vga|controlTOP:control|muxSeleccionador:casilla0|sprite_Circle:Jugador2|spritePosition:position|Mux0 ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |vga|controlTOP:control|muxSeleccionador:casilla0|sprite_Circle:Jugador2|spritePosition:position|Mux0 ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |vga|controlTOP:control|muxSeleccionador:casilla3|sprite_Circle:Jugador2|spritePosition:position|Mux0 ;
-; 16:1               ; 2 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; No         ; |vga|controlTOP:control|regfile1x24b:memoria_Casillas|Mux0                                            ;
-; 16:1               ; 2 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; No         ; |vga|controlTOP:control|regfile1x24b:memoria_Casillas|Mux3                                            ;
-; 8:1                ; 2 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |vga|controlTOP:control|muxSeleccionador:casilla3|sprite_Circle:Jugador2|spritePosition:position|Mux0 ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |vga|controlTOP:control|Ganador2:ganador_|always_ganador:comb_3|linea_ganadora[2]                     ;
-; 8:1                ; 2 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |vga|controlTOP:control|muxSeleccionador:casilla2|sprite_Circle:Jugador2|spritePosition:position|Mux0 ;
-; 10:1               ; 2 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |vga|controlTOP:control|muxSeleccionador:casilla5|sprite_X:Jugador1|spritePosition:position|Mux0      ;
-; 10:1               ; 2 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |vga|controlTOP:control|muxSeleccionador:casilla3|sprite_X:Jugador1|spritePosition:position|Mux0      ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |vga|controlTOP:control|Ganador2:ganador_|always_ganador:comb_3|ganador[1]                            ;
-; 16:1               ; 2 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |vga|controlTOP:control|muxSeleccionador:casilla4|sprite_X:Jugador1|spritePosition:position|Mux0      ;
-; 12:1               ; 2 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |vga|controlTOP:control|mux_9a1:comb_40|Selector21                                                    ;
-; 12:1               ; 2 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |vga|controlTOP:control|mux_9a1:comb_40|Selector23                                                    ;
-; 20:1               ; 2 bits    ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; No         ; |vga|controlTOP:control|muxSeleccionador:casilla4|sprite_Circle:Jugador2|spritePosition:position|Mux0 ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |VGA|controlTOP:control|temporizador:tempo|segundos[17]                                               ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |VGA|controlTOP:control|regfile1x24b:memoria_Casillas|p[2]                                            ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |VGA|controlTOP:control|temporizador:tempo|contador[15]                                               ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |VGA|controlTOP:control|muxSeleccionador:casilla3|sprite_X:Jugador1|spritePosition:position|Mux0      ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |VGA|controlTOP:control|muxSeleccionador:casilla0|sprite_Circle:Jugador2|spritePosition:position|Mux0 ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |VGA|controlTOP:control|muxSeleccionador:casilla0|sprite_Circle:Jugador2|spritePosition:position|Mux0 ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |VGA|controlTOP:control|muxSeleccionador:casilla0|sprite_X:Jugador1|spritePosition:position|Mux0      ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |VGA|controlTOP:control|muxSeleccionador:casilla3|sprite_Circle:Jugador2|spritePosition:position|Mux0 ;
+; 4:1                ; 36 bits   ; 72 LEs        ; 72 LEs               ; 0 LEs                  ; No         ; |VGA|controlTOP:control|muxSeleccionador:casilla0|sprite_X:Jugador1|spritePosition:position|Mux0      ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |VGA|controlTOP:control|muxSeleccionador:casilla3|sprite_Circle:Jugador2|spritePosition:position|Mux0 ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |VGA|controlTOP:control|muxSeleccionador:casilla3|sprite_Circle:Jugador2|spritePosition:position|Mux0 ;
+; 16:1               ; 2 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; No         ; |VGA|controlTOP:control|regfile1x24b:memoria_Casillas|Mux1                                            ;
+; 16:1               ; 2 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; No         ; |VGA|controlTOP:control|regfile1x24b:memoria_Casillas|Mux3                                            ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |VGA|controlTOP:control|muxSeleccionador:casilla3|sprite_Circle:Jugador2|spritePosition:position|Mux0 ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |VGA|controlTOP:control|Ganador2:ganador_|always_ganador:comb_3|linea_ganadora[2]                     ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |VGA|controlTOP:control|muxSeleccionador:casilla2|sprite_Circle:Jugador2|spritePosition:position|Mux0 ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |VGA|controlTOP:control|muxSeleccionador:casilla2|sprite_X:Jugador1|spritePosition:position|Mux0      ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |VGA|controlTOP:control|muxSeleccionador:casilla3|sprite_X:Jugador1|spritePosition:position|Mux0      ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |VGA|controlTOP:control|Ganador2:ganador_|always_ganador:comb_3|ganador[1]                            ;
+; 16:1               ; 2 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |VGA|controlTOP:control|muxSeleccionador:casilla4|sprite_X:Jugador1|spritePosition:position|Mux0      ;
+; 12:1               ; 2 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |VGA|controlTOP:control|mux_9a1:comb_40|Selector21                                                    ;
+; 12:1               ; 2 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |VGA|controlTOP:control|mux_9a1:comb_40|Selector5                                                     ;
+; 20:1               ; 2 bits    ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; No         ; |VGA|controlTOP:control|muxSeleccionador:casilla1|sprite_Circle:Jugador2|spritePosition:position|Mux0 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------+
 
 
@@ -443,6 +471,75 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+---------------------------------------------------------------------------+
 ; N              ; 11    ; Signed Integer                                                            ;
 +----------------+-------+---------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: controlTOP:control|temporizador:tempo|lpm_divide:Div0 ;
++------------------------+----------------+--------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                         ;
++------------------------+----------------+--------------------------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                                      ;
+; LPM_WIDTHD             ; 4              ; Untyped                                                      ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                      ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                      ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                      ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                      ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                      ;
+; CBXI_PARAMETER         ; lpm_divide_ibm ; Untyped                                                      ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                      ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                      ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                   ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                 ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                 ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                               ;
++------------------------+----------------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: controlTOP:control|temporizador:tempo|lpm_divide:Mod0 ;
++------------------------+----------------+--------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                         ;
++------------------------+----------------+--------------------------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                                      ;
+; LPM_WIDTHD             ; 4              ; Untyped                                                      ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                      ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                      ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                      ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                      ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                      ;
+; CBXI_PARAMETER         ; lpm_divide_l3m ; Untyped                                                      ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                      ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                      ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                   ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                 ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                 ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                               ;
++------------------------+----------------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: controlTOP:control|temporizador:tempo|lpm_divide:Mod1 ;
++------------------------+----------------+--------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                         ;
++------------------------+----------------+--------------------------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                                      ;
+; LPM_WIDTHD             ; 4              ; Untyped                                                      ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                      ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                      ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                      ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                      ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                      ;
+; CBXI_PARAMETER         ; lpm_divide_l3m ; Untyped                                                      ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                      ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                      ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                   ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                 ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                 ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                               ;
++------------------------+----------------+--------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -716,33 +813,38 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 120                         ;
+; arriav_ff             ; 152                         ;
 ;     CLR               ; 8                           ;
-;     CLR SCLR          ; 32                          ;
+;     CLR SCLR          ; 64                          ;
 ;     CLR SCLR SLD      ; 22                          ;
 ;     ENA               ; 6                           ;
 ;     ENA CLR           ; 27                          ;
 ;     ENA SCLR          ; 10                          ;
 ;     SCLR              ; 10                          ;
 ;     plain             ; 5                           ;
-; arriav_lcell_comb     ; 736                         ;
-;     arith             ; 128                         ;
-;         0 data inputs ; 6                           ;
-;         1 data inputs ; 113                         ;
-;         2 data inputs ; 9                           ;
-;     extend            ; 13                          ;
-;         7 data inputs ; 13                          ;
-;     normal            ; 595                         ;
-;         1 data inputs ; 14                          ;
-;         2 data inputs ; 59                          ;
-;         3 data inputs ; 54                          ;
-;         4 data inputs ; 117                         ;
-;         5 data inputs ; 140                         ;
-;         6 data inputs ; 211                         ;
-; boundary_port         ; 34                          ;
+; arriav_lcell_comb     ; 1802                        ;
+;     arith             ; 769                         ;
+;         0 data inputs ; 172                         ;
+;         1 data inputs ; 256                         ;
+;         2 data inputs ; 16                          ;
+;         3 data inputs ; 245                         ;
+;         4 data inputs ; 80                          ;
+;     extend            ; 16                          ;
+;         7 data inputs ; 16                          ;
+;     normal            ; 1002                        ;
+;         1 data inputs ; 16                          ;
+;         2 data inputs ; 248                         ;
+;         3 data inputs ; 211                         ;
+;         4 data inputs ; 125                         ;
+;         5 data inputs ; 128                         ;
+;         6 data inputs ; 274                         ;
+;     shared            ; 15                          ;
+;         0 data inputs ; 5                           ;
+;         1 data inputs ; 10                          ;
+; boundary_port         ; 48                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 13.00                       ;
-; Average LUT depth     ; 8.92                        ;
+; Max LUT depth         ; 50.20                       ;
+; Average LUT depth     ; 29.32                       ;
 +-----------------------+-----------------------------+
 
 
@@ -761,203 +863,232 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sat Sep 28 23:44:09 2024
+    Info: Processing started: Mon Sep 30 03:15:32 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off VGA -c VGA
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file contadorxy.sv
-    Info (12023): Found entity 1: contadorXY File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/contadorXY.sv Line: 4
+    Info (12023): Found entity 1: contadorXY File: C:/Users/jjsol.J1806/Desktop/Pasar/contadorXY.sv Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file controladorvga.sv
-    Info (12023): Found entity 1: controladorVGA File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/controladorVGA.sv Line: 2
+    Info (12023): Found entity 1: controladorVGA File: C:/Users/jjsol.J1806/Desktop/Pasar/controladorVGA.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file rectgen.sv
-    Info (12023): Found entity 1: rectgen File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/rectgen.sv Line: 2
+    Info (12023): Found entity 1: rectgen File: C:/Users/jjsol.J1806/Desktop/Pasar/rectgen.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file vga.sv
-    Info (12023): Found entity 1: vga File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/vga.sv Line: 2
+    Info (12023): Found entity 1: VGA File: C:/Users/jjsol.J1806/Desktop/Pasar/VGA.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file divisorclk.sv
-    Info (12023): Found entity 1: divisorClk File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/divisorClk.sv Line: 2
+    Info (12023): Found entity 1: divisorClk File: C:/Users/jjsol.J1806/Desktop/Pasar/divisorClk.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file lineas.sv
-    Info (12023): Found entity 1: lineas File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/lineas.sv Line: 2
+    Info (12023): Found entity 1: lineas File: C:/Users/jjsol.J1806/Desktop/Pasar/lineas.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file muxseleccionador.sv
-    Info (12023): Found entity 1: muxSeleccionador File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/muxSeleccionador.sv Line: 2
+    Info (12023): Found entity 1: muxSeleccionador File: C:/Users/jjsol.J1806/Desktop/Pasar/muxSeleccionador.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file regfile1x24b.sv
-    Info (12023): Found entity 1: regfile1x24b File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/regfile1x24b.sv Line: 4
+    Info (12023): Found entity 1: regfile1x24b File: C:/Users/jjsol.J1806/Desktop/Pasar/regfile1x24b.sv Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file controltop.sv
-    Info (12023): Found entity 1: controlTOP File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/controlTOP.sv Line: 2
+    Info (12023): Found entity 1: controlTOP File: C:/Users/jjsol.J1806/Desktop/Pasar/controlTOP.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file mux_9a1.sv
-    Info (12023): Found entity 1: mux_9a1 File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/mux_9a1.sv Line: 2
-Info (12021): Found 1 design units, including 1 entities, in source file spritecircle.sv
-    Info (12023): Found entity 1: sprite_Circle File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/spriteCircle.sv Line: 2
+    Info (12023): Found entity 1: mux_9a1 File: C:/Users/jjsol.J1806/Desktop/Pasar/mux_9a1.sv Line: 2
+Warning (12019): Can't analyze file -- file spriteCircle.sv is missing
 Info (12021): Found 1 design units, including 1 entities, in source file rom_circle.sv
-    Info (12023): Found entity 1: ROM_Circle File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/ROM_Circle.sv Line: 2
+    Info (12023): Found entity 1: ROM_Circle File: C:/Users/jjsol.J1806/Desktop/Pasar/ROM_Circle.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file spriteposition.sv
-    Info (12023): Found entity 1: spritePosition File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/spritePosition.sv Line: 2
+    Info (12023): Found entity 1: spritePosition File: C:/Users/jjsol.J1806/Desktop/Pasar/spritePosition.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file rom_x.sv
-    Info (12023): Found entity 1: ROM_X File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/ROM_X.sv Line: 2
+    Info (12023): Found entity 1: ROM_X File: C:/Users/jjsol.J1806/Desktop/Pasar/ROM_X.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file sprite_x.sv
-    Info (12023): Found entity 1: sprite_X File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/sprite_X.sv Line: 2
+    Info (12023): Found entity 1: sprite_X File: C:/Users/jjsol.J1806/Desktop/Pasar/sprite_X.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file turnos.sv
-    Info (12023): Found entity 1: Turnos File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/Turnos.sv Line: 2
+    Info (12023): Found entity 1: Turnos File: C:/Users/jjsol.J1806/Desktop/Pasar/Turnos.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file buttonbouncer.sv
-    Info (12023): Found entity 1: buttonBouncer File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/buttonBouncer.sv Line: 2
+    Info (12023): Found entity 1: buttonBouncer File: C:/Users/jjsol.J1806/Desktop/Pasar/buttonBouncer.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file mover.sv
-    Info (12023): Found entity 1: Mover File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/Mover.sv Line: 7
+    Info (12023): Found entity 1: Mover File: C:/Users/jjsol.J1806/Desktop/Pasar/Mover.sv Line: 7
 Info (12021): Found 1 design units, including 1 entities, in source file ganador.sv
-    Info (12023): Found entity 1: Ganador File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/Ganador.sv Line: 4
+    Info (12023): Found entity 1: Ganador File: C:/Users/jjsol.J1806/Desktop/Pasar/Ganador.sv Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file lineaganadoragen.sv
-    Info (12023): Found entity 1: lineaGanadoraGen File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/lineaGanadoraGen.sv Line: 2
+    Info (12023): Found entity 1: lineaGanadoraGen File: C:/Users/jjsol.J1806/Desktop/Pasar/lineaGanadoraGen.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file muxseleccionadorganador.sv
-    Info (12023): Found entity 1: muxSeleccionadorGanador File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/muxSeleccionadorGanador.sv Line: 2
+    Info (12023): Found entity 1: muxSeleccionadorGanador File: C:/Users/jjsol.J1806/Desktop/Pasar/muxSeleccionadorGanador.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file sprite_x_ganador.sv
-    Info (12023): Found entity 1: sprite_X_Ganador File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/sprite_X_Ganador.sv Line: 1
+    Info (12023): Found entity 1: sprite_X_Ganador File: C:/Users/jjsol.J1806/Desktop/Pasar/sprite_X_Ganador.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file spriteposition_ganador.sv
-    Info (12023): Found entity 1: spritePosition_Ganador File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/spritePosition_Ganador.sv Line: 1
+    Info (12023): Found entity 1: spritePosition_Ganador File: C:/Users/jjsol.J1806/Desktop/Pasar/spritePosition_Ganador.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file rom_x_ganador.sv
-    Info (12023): Found entity 1: ROM_X_Ganador File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/ROM_X_Ganador.sv Line: 1
+    Info (12023): Found entity 1: ROM_X_Ganador File: C:/Users/jjsol.J1806/Desktop/Pasar/ROM_X_Ganador.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sprite_circle_ganador.sv
-    Info (12023): Found entity 1: sprite_Circle_Ganador File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/sprite_Circle_Ganador.sv Line: 1
+    Info (12023): Found entity 1: sprite_Circle_Ganador File: C:/Users/jjsol.J1806/Desktop/Pasar/sprite_Circle_Ganador.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file rom_circle_ganador.sv
-    Info (12023): Found entity 1: ROM_Circle_Ganador File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/ROM_Circle_Ganador.sv Line: 1
+    Info (12023): Found entity 1: ROM_Circle_Ganador File: C:/Users/jjsol.J1806/Desktop/Pasar/ROM_Circle_Ganador.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file temporizador.sv
-    Info (12023): Found entity 1: temporizador File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/temporizador.sv Line: 1
+    Info (12023): Found entity 1: temporizador File: C:/Users/jjsol.J1806/Desktop/Pasar/temporizador.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file lfsr.sv
-    Info (12023): Found entity 1: LFSR File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/LFSR.sv Line: 1
+    Info (12023): Found entity 1: LFSR File: C:/Users/jjsol.J1806/Desktop/Pasar/LFSR.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sprite_empate.sv
-    Info (12023): Found entity 1: sprite_Empate File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/sprite_Empate.sv Line: 1
+    Info (12023): Found entity 1: sprite_Empate File: C:/Users/jjsol.J1806/Desktop/Pasar/sprite_Empate.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file rom_empate.sv
-    Info (12023): Found entity 1: ROM_Empate File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/ROM_Empate.sv Line: 1
+    Info (12023): Found entity 1: ROM_Empate File: C:/Users/jjsol.J1806/Desktop/Pasar/ROM_Empate.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file spriteposition_empate.sv
-    Info (12023): Found entity 1: spritePosition_Empate File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/spritePosition_Empate.sv Line: 1
+    Info (12023): Found entity 1: spritePosition_Empate File: C:/Users/jjsol.J1806/Desktop/Pasar/spritePosition_Empate.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file testgato.sv
-    Info (12023): Found entity 1: TestGato File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/TestGato.sv Line: 1
+    Info (12023): Found entity 1: TestGato File: C:/Users/jjsol.J1806/Desktop/Pasar/TestGato.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ganador2.sv
-    Info (12023): Found entity 1: Ganador2 File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/Ganador2.sv Line: 1
+    Info (12023): Found entity 1: Ganador2 File: C:/Users/jjsol.J1806/Desktop/Pasar/Ganador2.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file always_ganador.sv
-    Info (12023): Found entity 1: always_ganador File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/always_ganador.sv Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at controlTOP.sv(8): created implicit net for "boton_Sel_lo" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/controlTOP.sv Line: 8
-Warning (10236): Verilog HDL Implicit Net warning at controlTOP.sv(9): created implicit net for "boton_Casilla_lo" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/controlTOP.sv Line: 9
-Warning (10236): Verilog HDL Implicit Net warning at controlTOP.sv(22): created implicit net for "guardado" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/controlTOP.sv Line: 22
-Warning (10236): Verilog HDL Implicit Net warning at controlTOP.sv(26): created implicit net for "tiempo" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/controlTOP.sv Line: 26
-Warning (10236): Verilog HDL Implicit Net warning at controlTOP.sv(26): created implicit net for "posicion_ra" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/controlTOP.sv Line: 26
-Warning (10236): Verilog HDL Implicit Net warning at controlTOP.sv(85): created implicit net for "visblelineas" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/controlTOP.sv Line: 85
-Warning (10236): Verilog HDL Implicit Net warning at controlTOP.sv(104): created implicit net for "lineas" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/controlTOP.sv Line: 104
-Warning (10236): Verilog HDL Implicit Net warning at spritePosition.sv(10): created implicit net for "sq_on" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/spritePosition.sv Line: 10
-Warning (10236): Verilog HDL Implicit Net warning at Turnos.sv(3): created implicit net for "level_out" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/Turnos.sv Line: 3
-Warning (10236): Verilog HDL Implicit Net warning at spritePosition_Ganador.sv(9): created implicit net for "sq_on" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/spritePosition_Ganador.sv Line: 9
-Warning (10236): Verilog HDL Implicit Net warning at spritePosition_Empate.sv(9): created implicit net for "sq_on" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/spritePosition_Empate.sv Line: 9
-Critical Warning (10846): Verilog HDL Instantiation warning at Ganador2.sv(4): instance has no name File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/Ganador2.sv Line: 4
-Critical Warning (10846): Verilog HDL Instantiation warning at controlTOP.sv(106): instance has no name File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/controlTOP.sv Line: 106
-Info (12127): Elaborating entity "vga" for the top level hierarchy
-Info (12128): Elaborating entity "divisorClk" for hierarchy "divisorClk:dv" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/vga.sv Line: 15
-Info (12128): Elaborating entity "controladorVGA" for hierarchy "controladorVGA:cntVGA" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/vga.sv Line: 18
-Info (12128): Elaborating entity "contadorXY" for hierarchy "controladorVGA:cntVGA|contadorXY:CXY" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/controladorVGA.sv Line: 8
-Info (12128): Elaborating entity "controlTOP" for hierarchy "controlTOP:control" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/vga.sv Line: 22
-Info (12128): Elaborating entity "buttonBouncer" for hierarchy "controlTOP:control|buttonBouncer:bouncer_Sel" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/controlTOP.sv Line: 8
-Warning (10230): Verilog HDL assignment warning at buttonBouncer.sv(55): truncated value with size 32 to match size of target (11) File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/buttonBouncer.sv Line: 55
-Info (12128): Elaborating entity "Turnos" for hierarchy "controlTOP:control|Turnos:turno" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/controlTOP.sv Line: 22
-Info (12128): Elaborating entity "Mover" for hierarchy "controlTOP:control|Mover:move" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/controlTOP.sv Line: 23
-Info (12128): Elaborating entity "rectgen" for hierarchy "controlTOP:control|rectgen:seleccionador" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/controlTOP.sv Line: 25
-Warning (10230): Verilog HDL assignment warning at rectgen.sv(10): truncated value with size 32 to match size of target (1) File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/rectgen.sv Line: 10
-Warning (10230): Verilog HDL assignment warning at rectgen.sv(11): truncated value with size 32 to match size of target (1) File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/rectgen.sv Line: 11
-Warning (10230): Verilog HDL assignment warning at rectgen.sv(12): truncated value with size 32 to match size of target (1) File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/rectgen.sv Line: 12
-Warning (10230): Verilog HDL assignment warning at rectgen.sv(13): truncated value with size 32 to match size of target (1) File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/rectgen.sv Line: 13
-Warning (10230): Verilog HDL assignment warning at rectgen.sv(14): truncated value with size 32 to match size of target (1) File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/rectgen.sv Line: 14
-Warning (10230): Verilog HDL assignment warning at rectgen.sv(15): truncated value with size 32 to match size of target (1) File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/rectgen.sv Line: 15
-Warning (10230): Verilog HDL assignment warning at rectgen.sv(16): truncated value with size 32 to match size of target (1) File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/rectgen.sv Line: 16
-Warning (10230): Verilog HDL assignment warning at rectgen.sv(17): truncated value with size 32 to match size of target (1) File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/rectgen.sv Line: 17
-Warning (10230): Verilog HDL assignment warning at rectgen.sv(18): truncated value with size 32 to match size of target (1) File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/rectgen.sv Line: 18
-Warning (10230): Verilog HDL assignment warning at rectgen.sv(19): truncated value with size 32 to match size of target (1) File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/rectgen.sv Line: 19
-Info (12128): Elaborating entity "temporizador" for hierarchy "controlTOP:control|temporizador:tempo" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/controlTOP.sv Line: 26
-Info (12128): Elaborating entity "LFSR" for hierarchy "controlTOP:control|temporizador:tempo|LFSR:lfsr" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/temporizador.sv Line: 4
-Info (12128): Elaborating entity "regfile1x24b" for hierarchy "controlTOP:control|regfile1x24b:memoria_Casillas" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/controlTOP.sv Line: 28
-Warning (10230): Verilog HDL assignment warning at regfile1x24b.sv(20): truncated value with size 32 to match size of target (2) File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/regfile1x24b.sv Line: 20
-Warning (10230): Verilog HDL assignment warning at regfile1x24b.sv(29): truncated value with size 32 to match size of target (2) File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/regfile1x24b.sv Line: 29
-Warning (10230): Verilog HDL assignment warning at regfile1x24b.sv(37): truncated value with size 32 to match size of target (4) File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/regfile1x24b.sv Line: 37
-Info (12128): Elaborating entity "muxSeleccionador" for hierarchy "controlTOP:control|muxSeleccionador:casilla0" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/controlTOP.sv Line: 33
-Info (12128): Elaborating entity "sprite_X" for hierarchy "controlTOP:control|muxSeleccionador:casilla0|sprite_X:Jugador1" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/muxSeleccionador.sv Line: 11
-Info (12128): Elaborating entity "ROM_X" for hierarchy "controlTOP:control|muxSeleccionador:casilla0|sprite_X:Jugador1|ROM_X:rom" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/sprite_X.sv Line: 9
-Info (12128): Elaborating entity "spritePosition" for hierarchy "controlTOP:control|muxSeleccionador:casilla0|sprite_X:Jugador1|spritePosition:position" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/sprite_X.sv Line: 10
-Warning (10230): Verilog HDL assignment warning at spritePosition.sv(6): truncated value with size 32 to match size of target (10) File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/spritePosition.sv Line: 6
-Warning (10230): Verilog HDL assignment warning at spritePosition.sv(7): truncated value with size 32 to match size of target (10) File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/spritePosition.sv Line: 7
-Warning (10230): Verilog HDL assignment warning at spritePosition.sv(8): truncated value with size 32 to match size of target (10) File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/spritePosition.sv Line: 8
-Warning (10230): Verilog HDL assignment warning at spritePosition.sv(9): truncated value with size 32 to match size of target (10) File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/spritePosition.sv Line: 9
-Info (12128): Elaborating entity "sprite_Circle" for hierarchy "controlTOP:control|muxSeleccionador:casilla0|sprite_Circle:Jugador2" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/muxSeleccionador.sv Line: 13
-Info (12128): Elaborating entity "ROM_Circle" for hierarchy "controlTOP:control|muxSeleccionador:casilla0|sprite_Circle:Jugador2|ROM_Circle:rom" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/spriteCircle.sv Line: 9
-Info (12128): Elaborating entity "lineas" for hierarchy "controlTOP:control|lineas:CuatroLineas" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/controlTOP.sv Line: 85
-Warning (10230): Verilog HDL assignment warning at lineas.sv(5): truncated value with size 32 to match size of target (1) File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/lineas.sv Line: 5
-Info (12128): Elaborating entity "Ganador2" for hierarchy "controlTOP:control|Ganador2:ganador_" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/controlTOP.sv Line: 89
-Info (12128): Elaborating entity "always_ganador" for hierarchy "controlTOP:control|Ganador2:ganador_|always_ganador:comb_3" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/Ganador2.sv Line: 4
-Warning (10230): Verilog HDL assignment warning at always_ganador.sv(6): truncated value with size 4 to match size of target (3) File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/always_ganador.sv Line: 6
-Info (12128): Elaborating entity "lineaGanadoraGen" for hierarchy "controlTOP:control|lineaGanadoraGen:lineaganadora" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/controlTOP.sv Line: 93
-Info (12128): Elaborating entity "muxSeleccionadorGanador" for hierarchy "controlTOP:control|muxSeleccionadorGanador:texto_ganador" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/controlTOP.sv Line: 99
-Info (12128): Elaborating entity "sprite_X_Ganador" for hierarchy "controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_X_Ganador:Jugador1" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/muxSeleccionadorGanador.sv Line: 11
-Info (12128): Elaborating entity "ROM_X_Ganador" for hierarchy "controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_X_Ganador:Jugador1|ROM_X_Ganador:rom" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/sprite_X_Ganador.sv Line: 8
-Info (12128): Elaborating entity "spritePosition_Ganador" for hierarchy "controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_X_Ganador:Jugador1|spritePosition_Ganador:position" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/sprite_X_Ganador.sv Line: 9
-Warning (10230): Verilog HDL assignment warning at spritePosition_Ganador.sv(6): truncated value with size 32 to match size of target (10) File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/spritePosition_Ganador.sv Line: 6
-Warning (10230): Verilog HDL assignment warning at spritePosition_Ganador.sv(8): truncated value with size 32 to match size of target (10) File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/spritePosition_Ganador.sv Line: 8
-Warning (10230): Verilog HDL assignment warning at spritePosition_Ganador.sv(12): truncated value with size 10 to match size of target (4) File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/spritePosition_Ganador.sv Line: 12
-Warning (10230): Verilog HDL assignment warning at spritePosition_Ganador.sv(13): truncated value with size 10 to match size of target (7) File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/spritePosition_Ganador.sv Line: 13
-Info (12128): Elaborating entity "sprite_Circle_Ganador" for hierarchy "controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_Circle_Ganador:Jugador2" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/muxSeleccionadorGanador.sv Line: 13
-Info (12128): Elaborating entity "ROM_Circle_Ganador" for hierarchy "controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_Circle_Ganador:Jugador2|ROM_Circle_Ganador:rom" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/sprite_Circle_Ganador.sv Line: 8
-Info (12128): Elaborating entity "sprite_Empate" for hierarchy "controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_Empate:empatados" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/muxSeleccionadorGanador.sv Line: 15
-Info (12128): Elaborating entity "ROM_Empate" for hierarchy "controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_Empate:empatados|ROM_Empate:rom" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/sprite_Empate.sv Line: 8
-Info (12128): Elaborating entity "spritePosition_Empate" for hierarchy "controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_Empate:empatados|spritePosition_Empate:position" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/sprite_Empate.sv Line: 9
-Warning (10230): Verilog HDL assignment warning at spritePosition_Empate.sv(6): truncated value with size 32 to match size of target (10) File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/spritePosition_Empate.sv Line: 6
-Warning (10230): Verilog HDL assignment warning at spritePosition_Empate.sv(8): truncated value with size 32 to match size of target (10) File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/spritePosition_Empate.sv Line: 8
-Warning (10230): Verilog HDL assignment warning at spritePosition_Empate.sv(12): truncated value with size 10 to match size of target (4) File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/spritePosition_Empate.sv Line: 12
-Warning (10230): Verilog HDL assignment warning at spritePosition_Empate.sv(13): truncated value with size 10 to match size of target (8) File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/spritePosition_Empate.sv Line: 13
-Info (12128): Elaborating entity "mux_9a1" for hierarchy "controlTOP:control|mux_9a1:comb_40" File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/controlTOP.sv Line: 106
-Warning (10235): Verilog HDL Always Construct warning at mux_9a1.sv(11): variable "visible_lineaganadora" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/mux_9a1.sv Line: 11
-Warning (10235): Verilog HDL Always Construct warning at mux_9a1.sv(11): variable "visible_texto" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/mux_9a1.sv Line: 11
-Warning (10235): Verilog HDL Always Construct warning at mux_9a1.sv(14): variable "rgb_texto" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/mux_9a1.sv Line: 14
-Warning (10235): Verilog HDL Always Construct warning at mux_9a1.sv(16): variable "rgb8" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/mux_9a1.sv Line: 16
-Warning (10235): Verilog HDL Always Construct warning at mux_9a1.sv(17): variable "rgb7" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/mux_9a1.sv Line: 17
-Warning (10235): Verilog HDL Always Construct warning at mux_9a1.sv(18): variable "rgb6" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/mux_9a1.sv Line: 18
-Warning (10235): Verilog HDL Always Construct warning at mux_9a1.sv(19): variable "rgb5" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/mux_9a1.sv Line: 19
-Warning (10235): Verilog HDL Always Construct warning at mux_9a1.sv(20): variable "rgb4" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/mux_9a1.sv Line: 20
-Warning (10235): Verilog HDL Always Construct warning at mux_9a1.sv(21): variable "rgb3" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/mux_9a1.sv Line: 21
-Warning (10235): Verilog HDL Always Construct warning at mux_9a1.sv(22): variable "rgb2" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/mux_9a1.sv Line: 22
-Warning (10235): Verilog HDL Always Construct warning at mux_9a1.sv(23): variable "rgb1" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/mux_9a1.sv Line: 23
-Warning (10235): Verilog HDL Always Construct warning at mux_9a1.sv(24): variable "rgb0" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/mux_9a1.sv Line: 24
-Warning (10235): Verilog HDL Always Construct warning at mux_9a1.sv(28): variable "rgb_texto" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/mux_9a1.sv Line: 28
+    Info (12023): Found entity 1: always_ganador File: C:/Users/jjsol.J1806/Desktop/Pasar/always_ganador.sv Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at controlTOP.sv(8): created implicit net for "boton_Sel_lo" File: C:/Users/jjsol.J1806/Desktop/Pasar/controlTOP.sv Line: 8
+Warning (10236): Verilog HDL Implicit Net warning at controlTOP.sv(9): created implicit net for "boton_Casilla_lo" File: C:/Users/jjsol.J1806/Desktop/Pasar/controlTOP.sv Line: 9
+Warning (10236): Verilog HDL Implicit Net warning at controlTOP.sv(22): created implicit net for "guardado" File: C:/Users/jjsol.J1806/Desktop/Pasar/controlTOP.sv Line: 22
+Warning (10236): Verilog HDL Implicit Net warning at controlTOP.sv(26): created implicit net for "tiempo" File: C:/Users/jjsol.J1806/Desktop/Pasar/controlTOP.sv Line: 26
+Warning (10236): Verilog HDL Implicit Net warning at controlTOP.sv(26): created implicit net for "posicion_ra" File: C:/Users/jjsol.J1806/Desktop/Pasar/controlTOP.sv Line: 26
+Warning (10236): Verilog HDL Implicit Net warning at controlTOP.sv(85): created implicit net for "visblelineas" File: C:/Users/jjsol.J1806/Desktop/Pasar/controlTOP.sv Line: 85
+Warning (10236): Verilog HDL Implicit Net warning at controlTOP.sv(104): created implicit net for "lineas" File: C:/Users/jjsol.J1806/Desktop/Pasar/controlTOP.sv Line: 104
+Warning (10236): Verilog HDL Implicit Net warning at spritePosition.sv(10): created implicit net for "sq_on" File: C:/Users/jjsol.J1806/Desktop/Pasar/spritePosition.sv Line: 10
+Warning (10236): Verilog HDL Implicit Net warning at Turnos.sv(3): created implicit net for "level_out" File: C:/Users/jjsol.J1806/Desktop/Pasar/Turnos.sv Line: 3
+Warning (10236): Verilog HDL Implicit Net warning at spritePosition_Ganador.sv(9): created implicit net for "sq_on" File: C:/Users/jjsol.J1806/Desktop/Pasar/spritePosition_Ganador.sv Line: 9
+Warning (10236): Verilog HDL Implicit Net warning at spritePosition_Empate.sv(9): created implicit net for "sq_on" File: C:/Users/jjsol.J1806/Desktop/Pasar/spritePosition_Empate.sv Line: 9
+Critical Warning (10846): Verilog HDL Instantiation warning at Ganador2.sv(4): instance has no name File: C:/Users/jjsol.J1806/Desktop/Pasar/Ganador2.sv Line: 4
+Critical Warning (10846): Verilog HDL Instantiation warning at controlTOP.sv(106): instance has no name File: C:/Users/jjsol.J1806/Desktop/Pasar/controlTOP.sv Line: 106
+Info (12127): Elaborating entity "VGA" for the top level hierarchy
+Info (12128): Elaborating entity "divisorClk" for hierarchy "divisorClk:dv" File: C:/Users/jjsol.J1806/Desktop/Pasar/VGA.sv Line: 17
+Info (12128): Elaborating entity "controladorVGA" for hierarchy "controladorVGA:cntVGA" File: C:/Users/jjsol.J1806/Desktop/Pasar/VGA.sv Line: 20
+Info (12128): Elaborating entity "contadorXY" for hierarchy "controladorVGA:cntVGA|contadorXY:CXY" File: C:/Users/jjsol.J1806/Desktop/Pasar/controladorvga.sv Line: 8
+Info (12128): Elaborating entity "controlTOP" for hierarchy "controlTOP:control" File: C:/Users/jjsol.J1806/Desktop/Pasar/VGA.sv Line: 23
+Info (12128): Elaborating entity "buttonBouncer" for hierarchy "controlTOP:control|buttonBouncer:bouncer_Sel" File: C:/Users/jjsol.J1806/Desktop/Pasar/controltop.sv Line: 8
+Warning (10230): Verilog HDL assignment warning at buttonbouncer.sv(55): truncated value with size 32 to match size of target (11) File: C:/Users/jjsol.J1806/Desktop/Pasar/buttonbouncer.sv Line: 55
+Info (12128): Elaborating entity "Turnos" for hierarchy "controlTOP:control|Turnos:turno" File: C:/Users/jjsol.J1806/Desktop/Pasar/controltop.sv Line: 22
+Info (12128): Elaborating entity "Mover" for hierarchy "controlTOP:control|Mover:move" File: C:/Users/jjsol.J1806/Desktop/Pasar/controltop.sv Line: 23
+Info (12128): Elaborating entity "rectgen" for hierarchy "controlTOP:control|rectgen:seleccionador" File: C:/Users/jjsol.J1806/Desktop/Pasar/controltop.sv Line: 25
+Warning (10230): Verilog HDL assignment warning at rectgen.sv(10): truncated value with size 32 to match size of target (1) File: C:/Users/jjsol.J1806/Desktop/Pasar/rectgen.sv Line: 10
+Warning (10230): Verilog HDL assignment warning at rectgen.sv(11): truncated value with size 32 to match size of target (1) File: C:/Users/jjsol.J1806/Desktop/Pasar/rectgen.sv Line: 11
+Warning (10230): Verilog HDL assignment warning at rectgen.sv(12): truncated value with size 32 to match size of target (1) File: C:/Users/jjsol.J1806/Desktop/Pasar/rectgen.sv Line: 12
+Warning (10230): Verilog HDL assignment warning at rectgen.sv(13): truncated value with size 32 to match size of target (1) File: C:/Users/jjsol.J1806/Desktop/Pasar/rectgen.sv Line: 13
+Warning (10230): Verilog HDL assignment warning at rectgen.sv(14): truncated value with size 32 to match size of target (1) File: C:/Users/jjsol.J1806/Desktop/Pasar/rectgen.sv Line: 14
+Warning (10230): Verilog HDL assignment warning at rectgen.sv(15): truncated value with size 32 to match size of target (1) File: C:/Users/jjsol.J1806/Desktop/Pasar/rectgen.sv Line: 15
+Warning (10230): Verilog HDL assignment warning at rectgen.sv(16): truncated value with size 32 to match size of target (1) File: C:/Users/jjsol.J1806/Desktop/Pasar/rectgen.sv Line: 16
+Warning (10230): Verilog HDL assignment warning at rectgen.sv(17): truncated value with size 32 to match size of target (1) File: C:/Users/jjsol.J1806/Desktop/Pasar/rectgen.sv Line: 17
+Warning (10230): Verilog HDL assignment warning at rectgen.sv(18): truncated value with size 32 to match size of target (1) File: C:/Users/jjsol.J1806/Desktop/Pasar/rectgen.sv Line: 18
+Warning (10230): Verilog HDL assignment warning at rectgen.sv(19): truncated value with size 32 to match size of target (1) File: C:/Users/jjsol.J1806/Desktop/Pasar/rectgen.sv Line: 19
+Info (12128): Elaborating entity "temporizador" for hierarchy "controlTOP:control|temporizador:tempo" File: C:/Users/jjsol.J1806/Desktop/Pasar/controltop.sv Line: 26
+Warning (10230): Verilog HDL assignment warning at temporizador.sv(74): truncated value with size 32 to match size of target (4) File: C:/Users/jjsol.J1806/Desktop/Pasar/temporizador.sv Line: 74
+Warning (10230): Verilog HDL assignment warning at temporizador.sv(75): truncated value with size 32 to match size of target (4) File: C:/Users/jjsol.J1806/Desktop/Pasar/temporizador.sv Line: 75
+Info (12128): Elaborating entity "LFSR" for hierarchy "controlTOP:control|temporizador:tempo|LFSR:lfsr" File: C:/Users/jjsol.J1806/Desktop/Pasar/temporizador.sv Line: 18
+Info (12128): Elaborating entity "regfile1x24b" for hierarchy "controlTOP:control|regfile1x24b:memoria_Casillas" File: C:/Users/jjsol.J1806/Desktop/Pasar/controltop.sv Line: 28
+Warning (10230): Verilog HDL assignment warning at regfile1x24b.sv(20): truncated value with size 32 to match size of target (2) File: C:/Users/jjsol.J1806/Desktop/Pasar/regfile1x24b.sv Line: 20
+Warning (10230): Verilog HDL assignment warning at regfile1x24b.sv(29): truncated value with size 32 to match size of target (2) File: C:/Users/jjsol.J1806/Desktop/Pasar/regfile1x24b.sv Line: 29
+Warning (10230): Verilog HDL assignment warning at regfile1x24b.sv(37): truncated value with size 32 to match size of target (4) File: C:/Users/jjsol.J1806/Desktop/Pasar/regfile1x24b.sv Line: 37
+Info (12128): Elaborating entity "muxSeleccionador" for hierarchy "controlTOP:control|muxSeleccionador:casilla0" File: C:/Users/jjsol.J1806/Desktop/Pasar/controltop.sv Line: 33
+Info (12128): Elaborating entity "sprite_X" for hierarchy "controlTOP:control|muxSeleccionador:casilla0|sprite_X:Jugador1" File: C:/Users/jjsol.J1806/Desktop/Pasar/muxseleccionador.sv Line: 11
+Info (12128): Elaborating entity "ROM_X" for hierarchy "controlTOP:control|muxSeleccionador:casilla0|sprite_X:Jugador1|ROM_X:rom" File: C:/Users/jjsol.J1806/Desktop/Pasar/sprite_x.sv Line: 9
+Info (12128): Elaborating entity "spritePosition" for hierarchy "controlTOP:control|muxSeleccionador:casilla0|sprite_X:Jugador1|spritePosition:position" File: C:/Users/jjsol.J1806/Desktop/Pasar/sprite_x.sv Line: 10
+Warning (10230): Verilog HDL assignment warning at spriteposition.sv(6): truncated value with size 32 to match size of target (10) File: C:/Users/jjsol.J1806/Desktop/Pasar/spriteposition.sv Line: 6
+Warning (10230): Verilog HDL assignment warning at spriteposition.sv(7): truncated value with size 32 to match size of target (10) File: C:/Users/jjsol.J1806/Desktop/Pasar/spriteposition.sv Line: 7
+Warning (10230): Verilog HDL assignment warning at spriteposition.sv(8): truncated value with size 32 to match size of target (10) File: C:/Users/jjsol.J1806/Desktop/Pasar/spriteposition.sv Line: 8
+Warning (10230): Verilog HDL assignment warning at spriteposition.sv(9): truncated value with size 32 to match size of target (10) File: C:/Users/jjsol.J1806/Desktop/Pasar/spriteposition.sv Line: 9
+Warning (12125): Using design file sprite_circle.sv, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: sprite_Circle File: C:/Users/jjsol.J1806/Desktop/Pasar/sprite_circle.sv Line: 2
+Info (12128): Elaborating entity "sprite_Circle" for hierarchy "controlTOP:control|muxSeleccionador:casilla0|sprite_Circle:Jugador2" File: C:/Users/jjsol.J1806/Desktop/Pasar/muxseleccionador.sv Line: 13
+Info (12128): Elaborating entity "ROM_Circle" for hierarchy "controlTOP:control|muxSeleccionador:casilla0|sprite_Circle:Jugador2|ROM_Circle:rom" File: C:/Users/jjsol.J1806/Desktop/Pasar/sprite_circle.sv Line: 9
+Info (12128): Elaborating entity "lineas" for hierarchy "controlTOP:control|lineas:CuatroLineas" File: C:/Users/jjsol.J1806/Desktop/Pasar/controltop.sv Line: 85
+Warning (10230): Verilog HDL assignment warning at lineas.sv(5): truncated value with size 32 to match size of target (1) File: C:/Users/jjsol.J1806/Desktop/Pasar/lineas.sv Line: 5
+Info (12128): Elaborating entity "Ganador2" for hierarchy "controlTOP:control|Ganador2:ganador_" File: C:/Users/jjsol.J1806/Desktop/Pasar/controltop.sv Line: 89
+Info (12128): Elaborating entity "always_ganador" for hierarchy "controlTOP:control|Ganador2:ganador_|always_ganador:comb_3" File: C:/Users/jjsol.J1806/Desktop/Pasar/ganador2.sv Line: 4
+Warning (10230): Verilog HDL assignment warning at always_ganador.sv(6): truncated value with size 4 to match size of target (3) File: C:/Users/jjsol.J1806/Desktop/Pasar/always_ganador.sv Line: 6
+Info (12128): Elaborating entity "lineaGanadoraGen" for hierarchy "controlTOP:control|lineaGanadoraGen:lineaganadora" File: C:/Users/jjsol.J1806/Desktop/Pasar/controltop.sv Line: 93
+Info (12128): Elaborating entity "muxSeleccionadorGanador" for hierarchy "controlTOP:control|muxSeleccionadorGanador:texto_ganador" File: C:/Users/jjsol.J1806/Desktop/Pasar/controltop.sv Line: 99
+Info (12128): Elaborating entity "sprite_X_Ganador" for hierarchy "controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_X_Ganador:Jugador1" File: C:/Users/jjsol.J1806/Desktop/Pasar/muxseleccionadorganador.sv Line: 11
+Info (12128): Elaborating entity "ROM_X_Ganador" for hierarchy "controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_X_Ganador:Jugador1|ROM_X_Ganador:rom" File: C:/Users/jjsol.J1806/Desktop/Pasar/sprite_x_ganador.sv Line: 8
+Info (12128): Elaborating entity "spritePosition_Ganador" for hierarchy "controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_X_Ganador:Jugador1|spritePosition_Ganador:position" File: C:/Users/jjsol.J1806/Desktop/Pasar/sprite_x_ganador.sv Line: 9
+Warning (10230): Verilog HDL assignment warning at spriteposition_ganador.sv(6): truncated value with size 32 to match size of target (10) File: C:/Users/jjsol.J1806/Desktop/Pasar/spriteposition_ganador.sv Line: 6
+Warning (10230): Verilog HDL assignment warning at spriteposition_ganador.sv(8): truncated value with size 32 to match size of target (10) File: C:/Users/jjsol.J1806/Desktop/Pasar/spriteposition_ganador.sv Line: 8
+Warning (10230): Verilog HDL assignment warning at spriteposition_ganador.sv(12): truncated value with size 10 to match size of target (4) File: C:/Users/jjsol.J1806/Desktop/Pasar/spriteposition_ganador.sv Line: 12
+Warning (10230): Verilog HDL assignment warning at spriteposition_ganador.sv(13): truncated value with size 10 to match size of target (7) File: C:/Users/jjsol.J1806/Desktop/Pasar/spriteposition_ganador.sv Line: 13
+Info (12128): Elaborating entity "sprite_Circle_Ganador" for hierarchy "controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_Circle_Ganador:Jugador2" File: C:/Users/jjsol.J1806/Desktop/Pasar/muxseleccionadorganador.sv Line: 13
+Info (12128): Elaborating entity "ROM_Circle_Ganador" for hierarchy "controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_Circle_Ganador:Jugador2|ROM_Circle_Ganador:rom" File: C:/Users/jjsol.J1806/Desktop/Pasar/sprite_circle_ganador.sv Line: 8
+Info (12128): Elaborating entity "sprite_Empate" for hierarchy "controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_Empate:empatados" File: C:/Users/jjsol.J1806/Desktop/Pasar/muxseleccionadorganador.sv Line: 15
+Info (12128): Elaborating entity "ROM_Empate" for hierarchy "controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_Empate:empatados|ROM_Empate:rom" File: C:/Users/jjsol.J1806/Desktop/Pasar/sprite_empate.sv Line: 8
+Info (12128): Elaborating entity "spritePosition_Empate" for hierarchy "controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_Empate:empatados|spritePosition_Empate:position" File: C:/Users/jjsol.J1806/Desktop/Pasar/sprite_empate.sv Line: 9
+Warning (10230): Verilog HDL assignment warning at spriteposition_empate.sv(6): truncated value with size 32 to match size of target (10) File: C:/Users/jjsol.J1806/Desktop/Pasar/spriteposition_empate.sv Line: 6
+Warning (10230): Verilog HDL assignment warning at spriteposition_empate.sv(8): truncated value with size 32 to match size of target (10) File: C:/Users/jjsol.J1806/Desktop/Pasar/spriteposition_empate.sv Line: 8
+Warning (10230): Verilog HDL assignment warning at spriteposition_empate.sv(12): truncated value with size 10 to match size of target (4) File: C:/Users/jjsol.J1806/Desktop/Pasar/spriteposition_empate.sv Line: 12
+Warning (10230): Verilog HDL assignment warning at spriteposition_empate.sv(13): truncated value with size 10 to match size of target (8) File: C:/Users/jjsol.J1806/Desktop/Pasar/spriteposition_empate.sv Line: 13
+Info (12128): Elaborating entity "mux_9a1" for hierarchy "controlTOP:control|mux_9a1:comb_40" File: C:/Users/jjsol.J1806/Desktop/Pasar/controltop.sv Line: 106
+Warning (10235): Verilog HDL Always Construct warning at mux_9a1.sv(11): variable "visible_lineaganadora" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/jjsol.J1806/Desktop/Pasar/mux_9a1.sv Line: 11
+Warning (10235): Verilog HDL Always Construct warning at mux_9a1.sv(11): variable "visible_texto" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/jjsol.J1806/Desktop/Pasar/mux_9a1.sv Line: 11
+Warning (10235): Verilog HDL Always Construct warning at mux_9a1.sv(14): variable "rgb_texto" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/jjsol.J1806/Desktop/Pasar/mux_9a1.sv Line: 14
+Warning (10235): Verilog HDL Always Construct warning at mux_9a1.sv(16): variable "rgb8" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/jjsol.J1806/Desktop/Pasar/mux_9a1.sv Line: 16
+Warning (10235): Verilog HDL Always Construct warning at mux_9a1.sv(17): variable "rgb7" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/jjsol.J1806/Desktop/Pasar/mux_9a1.sv Line: 17
+Warning (10235): Verilog HDL Always Construct warning at mux_9a1.sv(18): variable "rgb6" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/jjsol.J1806/Desktop/Pasar/mux_9a1.sv Line: 18
+Warning (10235): Verilog HDL Always Construct warning at mux_9a1.sv(19): variable "rgb5" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/jjsol.J1806/Desktop/Pasar/mux_9a1.sv Line: 19
+Warning (10235): Verilog HDL Always Construct warning at mux_9a1.sv(20): variable "rgb4" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/jjsol.J1806/Desktop/Pasar/mux_9a1.sv Line: 20
+Warning (10235): Verilog HDL Always Construct warning at mux_9a1.sv(21): variable "rgb3" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/jjsol.J1806/Desktop/Pasar/mux_9a1.sv Line: 21
+Warning (10235): Verilog HDL Always Construct warning at mux_9a1.sv(22): variable "rgb2" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/jjsol.J1806/Desktop/Pasar/mux_9a1.sv Line: 22
+Warning (10235): Verilog HDL Always Construct warning at mux_9a1.sv(23): variable "rgb1" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/jjsol.J1806/Desktop/Pasar/mux_9a1.sv Line: 23
+Warning (10235): Verilog HDL Always Construct warning at mux_9a1.sv(24): variable "rgb0" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/jjsol.J1806/Desktop/Pasar/mux_9a1.sv Line: 24
+Warning (10235): Verilog HDL Always Construct warning at mux_9a1.sv(28): variable "rgb_texto" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/jjsol.J1806/Desktop/Pasar/mux_9a1.sv Line: 28
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "controlTOP:control|contador_seleccionador[1]" is missing source, defaulting to GND File: C:/Users/jjsol.J1806/Desktop/Pasar/controltop.sv Line: 17
 Info (276014): Found 18 instances of uninferred RAM logic
-    Info (276004): RAM logic "controlTOP:control|muxSeleccionador:casilla8|sprite_Circle:Jugador2|ROM_Circle:rom|Ram0" is uninferred due to inappropriate RAM size File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/ROM_Circle.sv Line: 4
-    Info (276004): RAM logic "controlTOP:control|muxSeleccionador:casilla8|sprite_X:Jugador1|ROM_X:rom|Ram0" is uninferred due to inappropriate RAM size File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/ROM_X.sv Line: 4
-    Info (276004): RAM logic "controlTOP:control|muxSeleccionador:casilla7|sprite_Circle:Jugador2|ROM_Circle:rom|Ram0" is uninferred due to inappropriate RAM size File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/ROM_Circle.sv Line: 4
-    Info (276004): RAM logic "controlTOP:control|muxSeleccionador:casilla7|sprite_X:Jugador1|ROM_X:rom|Ram0" is uninferred due to inappropriate RAM size File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/ROM_X.sv Line: 4
-    Info (276004): RAM logic "controlTOP:control|muxSeleccionador:casilla6|sprite_Circle:Jugador2|ROM_Circle:rom|Ram0" is uninferred due to inappropriate RAM size File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/ROM_Circle.sv Line: 4
-    Info (276004): RAM logic "controlTOP:control|muxSeleccionador:casilla6|sprite_X:Jugador1|ROM_X:rom|Ram0" is uninferred due to inappropriate RAM size File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/ROM_X.sv Line: 4
-    Info (276004): RAM logic "controlTOP:control|muxSeleccionador:casilla5|sprite_Circle:Jugador2|ROM_Circle:rom|Ram0" is uninferred due to inappropriate RAM size File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/ROM_Circle.sv Line: 4
-    Info (276004): RAM logic "controlTOP:control|muxSeleccionador:casilla5|sprite_X:Jugador1|ROM_X:rom|Ram0" is uninferred due to inappropriate RAM size File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/ROM_X.sv Line: 4
-    Info (276004): RAM logic "controlTOP:control|muxSeleccionador:casilla4|sprite_Circle:Jugador2|ROM_Circle:rom|Ram0" is uninferred due to inappropriate RAM size File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/ROM_Circle.sv Line: 4
-    Info (276004): RAM logic "controlTOP:control|muxSeleccionador:casilla4|sprite_X:Jugador1|ROM_X:rom|Ram0" is uninferred due to inappropriate RAM size File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/ROM_X.sv Line: 4
-    Info (276004): RAM logic "controlTOP:control|muxSeleccionador:casilla3|sprite_Circle:Jugador2|ROM_Circle:rom|Ram0" is uninferred due to inappropriate RAM size File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/ROM_Circle.sv Line: 4
-    Info (276004): RAM logic "controlTOP:control|muxSeleccionador:casilla3|sprite_X:Jugador1|ROM_X:rom|Ram0" is uninferred due to inappropriate RAM size File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/ROM_X.sv Line: 4
-    Info (276004): RAM logic "controlTOP:control|muxSeleccionador:casilla2|sprite_Circle:Jugador2|ROM_Circle:rom|Ram0" is uninferred due to inappropriate RAM size File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/ROM_Circle.sv Line: 4
-    Info (276004): RAM logic "controlTOP:control|muxSeleccionador:casilla2|sprite_X:Jugador1|ROM_X:rom|Ram0" is uninferred due to inappropriate RAM size File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/ROM_X.sv Line: 4
-    Info (276004): RAM logic "controlTOP:control|muxSeleccionador:casilla1|sprite_Circle:Jugador2|ROM_Circle:rom|Ram0" is uninferred due to inappropriate RAM size File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/ROM_Circle.sv Line: 4
-    Info (276004): RAM logic "controlTOP:control|muxSeleccionador:casilla1|sprite_X:Jugador1|ROM_X:rom|Ram0" is uninferred due to inappropriate RAM size File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/ROM_X.sv Line: 4
-    Info (276004): RAM logic "controlTOP:control|muxSeleccionador:casilla0|sprite_Circle:Jugador2|ROM_Circle:rom|Ram0" is uninferred due to inappropriate RAM size File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/ROM_Circle.sv Line: 4
-    Info (276004): RAM logic "controlTOP:control|muxSeleccionador:casilla0|sprite_X:Jugador1|ROM_X:rom|Ram0" is uninferred due to inappropriate RAM size File: C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/ROM_X.sv Line: 4
+    Info (276004): RAM logic "controlTOP:control|muxSeleccionador:casilla8|sprite_Circle:Jugador2|ROM_Circle:rom|Ram0" is uninferred due to inappropriate RAM size File: C:/Users/jjsol.J1806/Desktop/Pasar/rom_circle.sv Line: 4
+    Info (276004): RAM logic "controlTOP:control|muxSeleccionador:casilla8|sprite_X:Jugador1|ROM_X:rom|Ram0" is uninferred due to inappropriate RAM size File: C:/Users/jjsol.J1806/Desktop/Pasar/rom_x.sv Line: 4
+    Info (276004): RAM logic "controlTOP:control|muxSeleccionador:casilla7|sprite_Circle:Jugador2|ROM_Circle:rom|Ram0" is uninferred due to inappropriate RAM size File: C:/Users/jjsol.J1806/Desktop/Pasar/rom_circle.sv Line: 4
+    Info (276004): RAM logic "controlTOP:control|muxSeleccionador:casilla7|sprite_X:Jugador1|ROM_X:rom|Ram0" is uninferred due to inappropriate RAM size File: C:/Users/jjsol.J1806/Desktop/Pasar/rom_x.sv Line: 4
+    Info (276004): RAM logic "controlTOP:control|muxSeleccionador:casilla6|sprite_Circle:Jugador2|ROM_Circle:rom|Ram0" is uninferred due to inappropriate RAM size File: C:/Users/jjsol.J1806/Desktop/Pasar/rom_circle.sv Line: 4
+    Info (276004): RAM logic "controlTOP:control|muxSeleccionador:casilla6|sprite_X:Jugador1|ROM_X:rom|Ram0" is uninferred due to inappropriate RAM size File: C:/Users/jjsol.J1806/Desktop/Pasar/rom_x.sv Line: 4
+    Info (276004): RAM logic "controlTOP:control|muxSeleccionador:casilla5|sprite_Circle:Jugador2|ROM_Circle:rom|Ram0" is uninferred due to inappropriate RAM size File: C:/Users/jjsol.J1806/Desktop/Pasar/rom_circle.sv Line: 4
+    Info (276004): RAM logic "controlTOP:control|muxSeleccionador:casilla5|sprite_X:Jugador1|ROM_X:rom|Ram0" is uninferred due to inappropriate RAM size File: C:/Users/jjsol.J1806/Desktop/Pasar/rom_x.sv Line: 4
+    Info (276004): RAM logic "controlTOP:control|muxSeleccionador:casilla4|sprite_Circle:Jugador2|ROM_Circle:rom|Ram0" is uninferred due to inappropriate RAM size File: C:/Users/jjsol.J1806/Desktop/Pasar/rom_circle.sv Line: 4
+    Info (276004): RAM logic "controlTOP:control|muxSeleccionador:casilla4|sprite_X:Jugador1|ROM_X:rom|Ram0" is uninferred due to inappropriate RAM size File: C:/Users/jjsol.J1806/Desktop/Pasar/rom_x.sv Line: 4
+    Info (276004): RAM logic "controlTOP:control|muxSeleccionador:casilla3|sprite_Circle:Jugador2|ROM_Circle:rom|Ram0" is uninferred due to inappropriate RAM size File: C:/Users/jjsol.J1806/Desktop/Pasar/rom_circle.sv Line: 4
+    Info (276004): RAM logic "controlTOP:control|muxSeleccionador:casilla3|sprite_X:Jugador1|ROM_X:rom|Ram0" is uninferred due to inappropriate RAM size File: C:/Users/jjsol.J1806/Desktop/Pasar/rom_x.sv Line: 4
+    Info (276004): RAM logic "controlTOP:control|muxSeleccionador:casilla2|sprite_Circle:Jugador2|ROM_Circle:rom|Ram0" is uninferred due to inappropriate RAM size File: C:/Users/jjsol.J1806/Desktop/Pasar/rom_circle.sv Line: 4
+    Info (276004): RAM logic "controlTOP:control|muxSeleccionador:casilla2|sprite_X:Jugador1|ROM_X:rom|Ram0" is uninferred due to inappropriate RAM size File: C:/Users/jjsol.J1806/Desktop/Pasar/rom_x.sv Line: 4
+    Info (276004): RAM logic "controlTOP:control|muxSeleccionador:casilla1|sprite_Circle:Jugador2|ROM_Circle:rom|Ram0" is uninferred due to inappropriate RAM size File: C:/Users/jjsol.J1806/Desktop/Pasar/rom_circle.sv Line: 4
+    Info (276004): RAM logic "controlTOP:control|muxSeleccionador:casilla1|sprite_X:Jugador1|ROM_X:rom|Ram0" is uninferred due to inappropriate RAM size File: C:/Users/jjsol.J1806/Desktop/Pasar/rom_x.sv Line: 4
+    Info (276004): RAM logic "controlTOP:control|muxSeleccionador:casilla0|sprite_Circle:Jugador2|ROM_Circle:rom|Ram0" is uninferred due to inappropriate RAM size File: C:/Users/jjsol.J1806/Desktop/Pasar/rom_circle.sv Line: 4
+    Info (276004): RAM logic "controlTOP:control|muxSeleccionador:casilla0|sprite_X:Jugador1|ROM_X:rom|Ram0" is uninferred due to inappropriate RAM size File: C:/Users/jjsol.J1806/Desktop/Pasar/rom_x.sv Line: 4
+Info (278001): Inferred 3 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "controlTOP:control|temporizador:tempo|Div0" File: C:/Users/jjsol.J1806/Desktop/Pasar/temporizador.sv Line: 74
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "controlTOP:control|temporizador:tempo|Mod0" File: C:/Users/jjsol.J1806/Desktop/Pasar/temporizador.sv Line: 74
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "controlTOP:control|temporizador:tempo|Mod1" File: C:/Users/jjsol.J1806/Desktop/Pasar/temporizador.sv Line: 75
+Info (12130): Elaborated megafunction instantiation "controlTOP:control|temporizador:tempo|lpm_divide:Div0" File: C:/Users/jjsol.J1806/Desktop/Pasar/temporizador.sv Line: 74
+Info (12133): Instantiated megafunction "controlTOP:control|temporizador:tempo|lpm_divide:Div0" with the following parameter: File: C:/Users/jjsol.J1806/Desktop/Pasar/temporizador.sv Line: 74
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_ibm.tdf
+    Info (12023): Found entity 1: lpm_divide_ibm File: C:/Users/jjsol.J1806/Desktop/Pasar/db/lpm_divide_ibm.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_olh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_olh File: C:/Users/jjsol.J1806/Desktop/Pasar/db/sign_div_unsign_olh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_mve.tdf
+    Info (12023): Found entity 1: alt_u_div_mve File: C:/Users/jjsol.J1806/Desktop/Pasar/db/alt_u_div_mve.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "controlTOP:control|temporizador:tempo|lpm_divide:Mod0" File: C:/Users/jjsol.J1806/Desktop/Pasar/temporizador.sv Line: 74
+Info (12133): Instantiated megafunction "controlTOP:control|temporizador:tempo|lpm_divide:Mod0" with the following parameter: File: C:/Users/jjsol.J1806/Desktop/Pasar/temporizador.sv Line: 74
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_l3m.tdf
+    Info (12023): Found entity 1: lpm_divide_l3m File: C:/Users/jjsol.J1806/Desktop/Pasar/db/lpm_divide_l3m.tdf Line: 25
 Warning (12241): 14 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 3 registers lost all their fanouts during netlist optimizations.
-Info (144001): Generated suppressed messages file C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/output_files/VGA.map.smsg
+Info (144001): Generated suppressed messages file C:/Users/jjsol.J1806/Desktop/Pasar/output_files/VGA.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 833 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1927 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
-    Info (21059): Implemented 30 output pins
-    Info (21061): Implemented 799 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 56 warnings
-    Info: Peak virtual memory: 4893 megabytes
-    Info: Processing ended: Sat Sep 28 23:44:18 2024
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:05
+    Info (21059): Implemented 44 output pins
+    Info (21061): Implemented 1879 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 62 warnings
+    Info: Peak virtual memory: 4909 megabytes
+    Info: Processing ended: Mon Sep 30 03:15:39 2024
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:04
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/jjsol.J1806/Desktop/ArchivosDepurados/output_files/VGA.map.smsg.
+The suppressed messages can be found in C:/Users/jjsol.J1806/Desktop/Pasar/output_files/VGA.map.smsg.
 
 

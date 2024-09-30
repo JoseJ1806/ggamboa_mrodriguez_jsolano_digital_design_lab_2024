@@ -1,4 +1,4 @@
-|vga
+|VGA
 clk => clk.IN1
 boton => boton.IN1
 boton2 => boton2.IN1
@@ -33,15 +33,29 @@ b[5] << controlTOP:control.port8
 b[6] << controlTOP:control.port8
 b[7] << controlTOP:control.port8
 gano << controlTOP:control.port9
+display_decenas[0] << controlTOP:control.port10
+display_decenas[1] << controlTOP:control.port10
+display_decenas[2] << controlTOP:control.port10
+display_decenas[3] << controlTOP:control.port10
+display_decenas[4] << controlTOP:control.port10
+display_decenas[5] << controlTOP:control.port10
+display_decenas[6] << controlTOP:control.port10
+display_unidades[0] << controlTOP:control.port11
+display_unidades[1] << controlTOP:control.port11
+display_unidades[2] << controlTOP:control.port11
+display_unidades[3] << controlTOP:control.port11
+display_unidades[4] << controlTOP:control.port11
+display_unidades[5] << controlTOP:control.port11
+display_unidades[6] << controlTOP:control.port11
 
 
-|vga|divisorClk:dv
+|VGA|divisorClk:dv
 clock => cnt[15].CLK
 clock => clock_25~reg0.CLK
 clock_25 <= clock_25~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga|controladorVGA:cntVGA
+|VGA|controladorVGA:cntVGA
 clock_25 => clock_25.IN1
 H_SYNC <= H_SYNC.DB_MAX_OUTPUT_PORT_TYPE
 V_SYNC <= V_SYNC.DB_MAX_OUTPUT_PORT_TYPE
@@ -69,7 +83,7 @@ cuentaY[8] <= contadorXY:CXY.port2
 cuentaY[9] <= contadorXY:CXY.port2
 
 
-|vga|controladorVGA:cntVGA|contadorXY:CXY
+|VGA|controladorVGA:cntVGA|contadorXY:CXY
 clk_25 => cuentaY[0]~reg0.CLK
 clk_25 => cuentaY[1]~reg0.CLK
 clk_25 => cuentaY[2]~reg0.CLK
@@ -112,11 +126,11 @@ cuentaY[8] <= cuentaY[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 cuentaY[9] <= cuentaY[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga|controlTOP:control
+|VGA|controlTOP:control
 boton_Casilla => boton_Casilla.IN1
 boton_Sel => boton_Sel.IN1
-boton_rst => boton_rst.IN6
-clk => clk.IN16
+boton_rst => boton_rst.IN8
+clk => clk.IN18
 cuentaX[0] => cuentaX[0].IN13
 cuentaX[1] => cuentaX[1].IN13
 cuentaX[2] => cuentaX[2].IN13
@@ -162,9 +176,23 @@ b[5] <= mux_9a1:comb_40.port26
 b[6] <= mux_9a1:comb_40.port26
 b[7] <= mux_9a1:comb_40.port26
 gano <= gano.DB_MAX_OUTPUT_PORT_TYPE
+display_decenas[0] <= temporizador:tempo.port6
+display_decenas[1] <= temporizador:tempo.port6
+display_decenas[2] <= temporizador:tempo.port6
+display_decenas[3] <= temporizador:tempo.port6
+display_decenas[4] <= temporizador:tempo.port6
+display_decenas[5] <= temporizador:tempo.port6
+display_decenas[6] <= temporizador:tempo.port6
+display_unidades[0] <= temporizador:tempo.port7
+display_unidades[1] <= temporizador:tempo.port7
+display_unidades[2] <= temporizador:tempo.port7
+display_unidades[3] <= temporizador:tempo.port7
+display_unidades[4] <= temporizador:tempo.port7
+display_unidades[5] <= temporizador:tempo.port7
+display_unidades[6] <= temporizador:tempo.port7
 
 
-|vga|controlTOP:control|buttonBouncer:bouncer_Sel
+|VGA|controlTOP:control|buttonBouncer:bouncer_Sel
 clk => DB_out.CLK
 clk => delaycount_reg[0].CLK
 clk => delaycount_reg[1].CLK
@@ -198,7 +226,7 @@ jugado => DFF1.DATAIN
 level_out <= level_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga|controlTOP:control|buttonBouncer:bouncer_Casilla
+|VGA|controlTOP:control|buttonBouncer:bouncer_Casilla
 clk => DB_out.CLK
 clk => delaycount_reg[0].CLK
 clk => delaycount_reg[1].CLK
@@ -232,7 +260,7 @@ jugado => DFF1.DATAIN
 level_out <= level_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga|controlTOP:control|Turnos:turno
+|VGA|controlTOP:control|Turnos:turno
 clk => clk.IN1
 rst => rst.IN1
 jugado => jugado.IN1
@@ -241,7 +269,7 @@ guardado => estadoSiguiente.DATAB
 salida <= estadoActual.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga|controlTOP:control|Turnos:turno|buttonBouncer:bouncer
+|VGA|controlTOP:control|Turnos:turno|buttonBouncer:bouncer
 clk => DB_out.CLK
 clk => delaycount_reg[0].CLK
 clk => delaycount_reg[1].CLK
@@ -275,7 +303,7 @@ jugado => DFF1.DATAIN
 level_out <= level_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga|controlTOP:control|Mover:move
+|VGA|controlTOP:control|Mover:move
 clk => estadoActual~1.DATAIN
 rst => estadoActual~3.DATAIN
 entrada => Selector1.IN3
@@ -302,7 +330,7 @@ salida[2] <= WideOr9.DB_MAX_OUTPUT_PORT_TYPE
 salida[3] <= salida[3].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga|controlTOP:control|rectgen:seleccionador
+|VGA|controlTOP:control|rectgen:seleccionador
 clk => ~NO_FANOUT~
 boton_rst => ~NO_FANOUT~
 contador[0] => Mux0.IN19
@@ -552,91 +580,9 @@ bot[9] => LessThan11.IN11
 inrect <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga|controlTOP:control|temporizador:tempo
-clk => LFSR:lfsr.clk
-clk => tiempo~reg0.CLK
-clk => posicion_ra[0]~reg0.CLK
-clk => posicion_ra[1]~reg0.CLK
-clk => posicion_ra[2]~reg0.CLK
-clk => posicion_ra[3]~reg0.CLK
-clk => posicion_ra[4]~reg0.CLK
-clk => posicion_ra[5]~reg0.CLK
-clk => posicion_ra[6]~reg0.CLK
-clk => posicion_ra[7]~reg0.CLK
-clk => contador[0].CLK
-clk => contador[1].CLK
-clk => contador[2].CLK
-clk => contador[3].CLK
-clk => contador[4].CLK
-clk => contador[5].CLK
-clk => contador[6].CLK
-clk => contador[7].CLK
-clk => contador[8].CLK
-clk => contador[9].CLK
-clk => contador[10].CLK
-clk => contador[11].CLK
-clk => contador[12].CLK
-clk => contador[13].CLK
-clk => contador[14].CLK
-clk => contador[15].CLK
-clk => contador[16].CLK
-clk => contador[17].CLK
-clk => contador[18].CLK
-clk => contador[19].CLK
-clk => contador[20].CLK
-clk => contador[21].CLK
-clk => contador[22].CLK
-clk => contador[23].CLK
-clk => contador[24].CLK
-clk => contador[25].CLK
-clk => contador[26].CLK
-clk => contador[27].CLK
-clk => contador[28].CLK
-clk => contador[29].CLK
-clk => contador[30].CLK
-clk => contador[31].CLK
-rst => LFSR:lfsr.rst
-rst => contador[0].ACLR
-rst => contador[1].ACLR
-rst => contador[2].ACLR
-rst => contador[3].ACLR
-rst => contador[4].ACLR
-rst => contador[5].ACLR
-rst => contador[6].ACLR
-rst => contador[7].ACLR
-rst => contador[8].ACLR
-rst => contador[9].ACLR
-rst => contador[10].ACLR
-rst => contador[11].ACLR
-rst => contador[12].ACLR
-rst => contador[13].ACLR
-rst => contador[14].ACLR
-rst => contador[15].ACLR
-rst => contador[16].ACLR
-rst => contador[17].ACLR
-rst => contador[18].ACLR
-rst => contador[19].ACLR
-rst => contador[20].ACLR
-rst => contador[21].ACLR
-rst => contador[22].ACLR
-rst => contador[23].ACLR
-rst => contador[24].ACLR
-rst => contador[25].ACLR
-rst => contador[26].ACLR
-rst => contador[27].ACLR
-rst => contador[28].ACLR
-rst => contador[29].ACLR
-rst => contador[30].ACLR
-rst => contador[31].ACLR
-rst => tiempo~reg0.ENA
-rst => posicion_ra[7]~reg0.ENA
-rst => posicion_ra[6]~reg0.ENA
-rst => posicion_ra[5]~reg0.ENA
-rst => posicion_ra[4]~reg0.ENA
-rst => posicion_ra[3]~reg0.ENA
-rst => posicion_ra[2]~reg0.ENA
-rst => posicion_ra[1]~reg0.ENA
-rst => posicion_ra[0]~reg0.ENA
+|VGA|controlTOP:control|temporizador:tempo
+clk => clk.IN1
+rst => rst.IN1
 guardado => contador.OUTPUTSELECT
 guardado => contador.OUTPUTSELECT
 guardado => contador.OUTPUTSELECT
@@ -669,6 +615,38 @@ guardado => contador.OUTPUTSELECT
 guardado => contador.OUTPUTSELECT
 guardado => contador.OUTPUTSELECT
 guardado => contador.OUTPUTSELECT
+guardado => segundos.OUTPUTSELECT
+guardado => segundos.OUTPUTSELECT
+guardado => segundos.OUTPUTSELECT
+guardado => segundos.OUTPUTSELECT
+guardado => segundos.OUTPUTSELECT
+guardado => segundos.OUTPUTSELECT
+guardado => segundos.OUTPUTSELECT
+guardado => segundos.OUTPUTSELECT
+guardado => segundos.OUTPUTSELECT
+guardado => segundos.OUTPUTSELECT
+guardado => segundos.OUTPUTSELECT
+guardado => segundos.OUTPUTSELECT
+guardado => segundos.OUTPUTSELECT
+guardado => segundos.OUTPUTSELECT
+guardado => segundos.OUTPUTSELECT
+guardado => segundos.OUTPUTSELECT
+guardado => segundos.OUTPUTSELECT
+guardado => segundos.OUTPUTSELECT
+guardado => segundos.OUTPUTSELECT
+guardado => segundos.OUTPUTSELECT
+guardado => segundos.OUTPUTSELECT
+guardado => segundos.OUTPUTSELECT
+guardado => segundos.OUTPUTSELECT
+guardado => segundos.OUTPUTSELECT
+guardado => segundos.OUTPUTSELECT
+guardado => segundos.OUTPUTSELECT
+guardado => segundos.OUTPUTSELECT
+guardado => segundos.OUTPUTSELECT
+guardado => segundos.OUTPUTSELECT
+guardado => segundos.OUTPUTSELECT
+guardado => segundos.OUTPUTSELECT
+guardado => segundos.OUTPUTSELECT
 guardado => posicion_ra.OUTPUTSELECT
 guardado => posicion_ra.OUTPUTSELECT
 guardado => posicion_ra.OUTPUTSELECT
@@ -678,6 +656,14 @@ guardado => posicion_ra.OUTPUTSELECT
 guardado => posicion_ra.OUTPUTSELECT
 guardado => posicion_ra.OUTPUTSELECT
 guardado => tiempo.OUTPUTSELECT
+gano => decenas[3].OUTPUTSELECT
+gano => decenas[2].OUTPUTSELECT
+gano => decenas[1].OUTPUTSELECT
+gano => decenas[0].OUTPUTSELECT
+gano => unidades[3].OUTPUTSELECT
+gano => unidades[2].OUTPUTSELECT
+gano => unidades[1].OUTPUTSELECT
+gano => unidades[0].OUTPUTSELECT
 gano => tiempo.DATAB
 tiempo <= tiempo~reg0.DB_MAX_OUTPUT_PORT_TYPE
 posicion_ra[0] <= posicion_ra[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -688,9 +674,23 @@ posicion_ra[4] <= posicion_ra[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 posicion_ra[5] <= posicion_ra[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 posicion_ra[6] <= posicion_ra[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 posicion_ra[7] <= posicion_ra[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+display_decenas[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+display_decenas[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+display_decenas[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+display_decenas[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+display_decenas[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+display_decenas[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+display_decenas[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+display_unidades[0] <= WideOr13.DB_MAX_OUTPUT_PORT_TYPE
+display_unidades[1] <= WideOr12.DB_MAX_OUTPUT_PORT_TYPE
+display_unidades[2] <= WideOr11.DB_MAX_OUTPUT_PORT_TYPE
+display_unidades[3] <= WideOr10.DB_MAX_OUTPUT_PORT_TYPE
+display_unidades[4] <= WideOr9.DB_MAX_OUTPUT_PORT_TYPE
+display_unidades[5] <= WideOr8.DB_MAX_OUTPUT_PORT_TYPE
+display_unidades[6] <= WideOr7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga|controlTOP:control|temporizador:tempo|LFSR:lfsr
+|VGA|controlTOP:control|temporizador:tempo|LFSR:lfsr
 clk => rnd[0]~reg0.CLK
 clk => rnd[1]~reg0.CLK
 clk => rnd[2]~reg0.CLK
@@ -717,7 +717,7 @@ rnd[6] <= rnd[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 rnd[7] <= rnd[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga|controlTOP:control|regfile1x24b:memoria_Casillas
+|VGA|controlTOP:control|regfile1x24b:memoria_Casillas
 clk => guardado~reg0.CLK
 clk => regfile[0][0].CLK
 clk => regfile[0][1].CLK
@@ -826,7 +826,7 @@ rdData[8][1] <= regfile[8][1].DB_MAX_OUTPUT_PORT_TYPE
 guardado <= guardado~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga|controlTOP:control|muxSeleccionador:casilla0
+|VGA|controlTOP:control|muxSeleccionador:casilla0
 posX[0] => posX[0].IN2
 posX[1] => posX[1].IN2
 posX[2] => posX[2].IN2
@@ -945,7 +945,7 @@ rgb[22] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
 rgb[23] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga|controlTOP:control|muxSeleccionador:casilla0|sprite_X:Jugador1
+|VGA|controlTOP:control|muxSeleccionador:casilla0|sprite_X:Jugador1
 clk => ~NO_FANOUT~
 posx[0] => posx[0].IN1
 posx[1] => posx[1].IN1
@@ -1014,7 +1014,7 @@ RGB[23] <= <VCC>
 visible <= spritePosition:position.port6
 
 
-|vga|controlTOP:control|muxSeleccionador:casilla0|sprite_X:Jugador1|ROM_X:rom
+|VGA|controlTOP:control|muxSeleccionador:casilla0|sprite_X:Jugador1|ROM_X:rom
 rom_addr[0] => Ram0.RADDR
 rom_addr[1] => Ram0.RADDR1
 rom_addr[2] => Ram0.RADDR2
@@ -1087,7 +1087,7 @@ rom_data[62] <= Ram0.DATAOUT62
 rom_data[63] <= Ram0.DATAOUT63
 
 
-|vga|controlTOP:control|muxSeleccionador:casilla0|sprite_X:Jugador1|spritePosition:position
+|VGA|controlTOP:control|muxSeleccionador:casilla0|sprite_X:Jugador1|spritePosition:position
 posx[0] => LessThan0.IN10
 posx[0] => LessThan1.IN10
 posx[0] => Add5.IN12
@@ -1253,7 +1253,7 @@ rom_addr[5] <= Add4.DB_MAX_OUTPUT_PORT_TYPE
 visible <= visible.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga|controlTOP:control|muxSeleccionador:casilla0|sprite_Circle:Jugador2
+|VGA|controlTOP:control|muxSeleccionador:casilla0|sprite_Circle:Jugador2
 clk => ~NO_FANOUT~
 posx[0] => posx[0].IN1
 posx[1] => posx[1].IN1
@@ -1322,7 +1322,7 @@ RGB[23] <= <GND>
 visible <= spritePosition:position.port6
 
 
-|vga|controlTOP:control|muxSeleccionador:casilla0|sprite_Circle:Jugador2|ROM_Circle:rom
+|VGA|controlTOP:control|muxSeleccionador:casilla0|sprite_Circle:Jugador2|ROM_Circle:rom
 rom_addr[0] => Ram0.RADDR
 rom_addr[1] => Ram0.RADDR1
 rom_addr[2] => Ram0.RADDR2
@@ -1395,7 +1395,7 @@ rom_data[62] <= Ram0.DATAOUT62
 rom_data[63] <= Ram0.DATAOUT63
 
 
-|vga|controlTOP:control|muxSeleccionador:casilla0|sprite_Circle:Jugador2|spritePosition:position
+|VGA|controlTOP:control|muxSeleccionador:casilla0|sprite_Circle:Jugador2|spritePosition:position
 posx[0] => LessThan0.IN10
 posx[0] => LessThan1.IN10
 posx[0] => Add5.IN12
@@ -1561,7 +1561,7 @@ rom_addr[5] <= Add4.DB_MAX_OUTPUT_PORT_TYPE
 visible <= visible.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga|controlTOP:control|muxSeleccionador:casilla1
+|VGA|controlTOP:control|muxSeleccionador:casilla1
 posX[0] => posX[0].IN2
 posX[1] => posX[1].IN2
 posX[2] => posX[2].IN2
@@ -1680,7 +1680,7 @@ rgb[22] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
 rgb[23] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga|controlTOP:control|muxSeleccionador:casilla1|sprite_X:Jugador1
+|VGA|controlTOP:control|muxSeleccionador:casilla1|sprite_X:Jugador1
 clk => ~NO_FANOUT~
 posx[0] => posx[0].IN1
 posx[1] => posx[1].IN1
@@ -1749,7 +1749,7 @@ RGB[23] <= <VCC>
 visible <= spritePosition:position.port6
 
 
-|vga|controlTOP:control|muxSeleccionador:casilla1|sprite_X:Jugador1|ROM_X:rom
+|VGA|controlTOP:control|muxSeleccionador:casilla1|sprite_X:Jugador1|ROM_X:rom
 rom_addr[0] => Ram0.RADDR
 rom_addr[1] => Ram0.RADDR1
 rom_addr[2] => Ram0.RADDR2
@@ -1822,7 +1822,7 @@ rom_data[62] <= Ram0.DATAOUT62
 rom_data[63] <= Ram0.DATAOUT63
 
 
-|vga|controlTOP:control|muxSeleccionador:casilla1|sprite_X:Jugador1|spritePosition:position
+|VGA|controlTOP:control|muxSeleccionador:casilla1|sprite_X:Jugador1|spritePosition:position
 posx[0] => LessThan0.IN10
 posx[0] => LessThan1.IN10
 posx[0] => Add5.IN12
@@ -1988,7 +1988,7 @@ rom_addr[5] <= Add4.DB_MAX_OUTPUT_PORT_TYPE
 visible <= visible.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga|controlTOP:control|muxSeleccionador:casilla1|sprite_Circle:Jugador2
+|VGA|controlTOP:control|muxSeleccionador:casilla1|sprite_Circle:Jugador2
 clk => ~NO_FANOUT~
 posx[0] => posx[0].IN1
 posx[1] => posx[1].IN1
@@ -2057,7 +2057,7 @@ RGB[23] <= <GND>
 visible <= spritePosition:position.port6
 
 
-|vga|controlTOP:control|muxSeleccionador:casilla1|sprite_Circle:Jugador2|ROM_Circle:rom
+|VGA|controlTOP:control|muxSeleccionador:casilla1|sprite_Circle:Jugador2|ROM_Circle:rom
 rom_addr[0] => Ram0.RADDR
 rom_addr[1] => Ram0.RADDR1
 rom_addr[2] => Ram0.RADDR2
@@ -2130,7 +2130,7 @@ rom_data[62] <= Ram0.DATAOUT62
 rom_data[63] <= Ram0.DATAOUT63
 
 
-|vga|controlTOP:control|muxSeleccionador:casilla1|sprite_Circle:Jugador2|spritePosition:position
+|VGA|controlTOP:control|muxSeleccionador:casilla1|sprite_Circle:Jugador2|spritePosition:position
 posx[0] => LessThan0.IN10
 posx[0] => LessThan1.IN10
 posx[0] => Add5.IN12
@@ -2296,7 +2296,7 @@ rom_addr[5] <= Add4.DB_MAX_OUTPUT_PORT_TYPE
 visible <= visible.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga|controlTOP:control|muxSeleccionador:casilla2
+|VGA|controlTOP:control|muxSeleccionador:casilla2
 posX[0] => posX[0].IN2
 posX[1] => posX[1].IN2
 posX[2] => posX[2].IN2
@@ -2415,7 +2415,7 @@ rgb[22] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
 rgb[23] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga|controlTOP:control|muxSeleccionador:casilla2|sprite_X:Jugador1
+|VGA|controlTOP:control|muxSeleccionador:casilla2|sprite_X:Jugador1
 clk => ~NO_FANOUT~
 posx[0] => posx[0].IN1
 posx[1] => posx[1].IN1
@@ -2484,7 +2484,7 @@ RGB[23] <= <VCC>
 visible <= spritePosition:position.port6
 
 
-|vga|controlTOP:control|muxSeleccionador:casilla2|sprite_X:Jugador1|ROM_X:rom
+|VGA|controlTOP:control|muxSeleccionador:casilla2|sprite_X:Jugador1|ROM_X:rom
 rom_addr[0] => Ram0.RADDR
 rom_addr[1] => Ram0.RADDR1
 rom_addr[2] => Ram0.RADDR2
@@ -2557,7 +2557,7 @@ rom_data[62] <= Ram0.DATAOUT62
 rom_data[63] <= Ram0.DATAOUT63
 
 
-|vga|controlTOP:control|muxSeleccionador:casilla2|sprite_X:Jugador1|spritePosition:position
+|VGA|controlTOP:control|muxSeleccionador:casilla2|sprite_X:Jugador1|spritePosition:position
 posx[0] => LessThan0.IN10
 posx[0] => LessThan1.IN10
 posx[0] => Add5.IN12
@@ -2723,7 +2723,7 @@ rom_addr[5] <= Add4.DB_MAX_OUTPUT_PORT_TYPE
 visible <= visible.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga|controlTOP:control|muxSeleccionador:casilla2|sprite_Circle:Jugador2
+|VGA|controlTOP:control|muxSeleccionador:casilla2|sprite_Circle:Jugador2
 clk => ~NO_FANOUT~
 posx[0] => posx[0].IN1
 posx[1] => posx[1].IN1
@@ -2792,7 +2792,7 @@ RGB[23] <= <GND>
 visible <= spritePosition:position.port6
 
 
-|vga|controlTOP:control|muxSeleccionador:casilla2|sprite_Circle:Jugador2|ROM_Circle:rom
+|VGA|controlTOP:control|muxSeleccionador:casilla2|sprite_Circle:Jugador2|ROM_Circle:rom
 rom_addr[0] => Ram0.RADDR
 rom_addr[1] => Ram0.RADDR1
 rom_addr[2] => Ram0.RADDR2
@@ -2865,7 +2865,7 @@ rom_data[62] <= Ram0.DATAOUT62
 rom_data[63] <= Ram0.DATAOUT63
 
 
-|vga|controlTOP:control|muxSeleccionador:casilla2|sprite_Circle:Jugador2|spritePosition:position
+|VGA|controlTOP:control|muxSeleccionador:casilla2|sprite_Circle:Jugador2|spritePosition:position
 posx[0] => LessThan0.IN10
 posx[0] => LessThan1.IN10
 posx[0] => Add5.IN12
@@ -3031,7 +3031,7 @@ rom_addr[5] <= Add4.DB_MAX_OUTPUT_PORT_TYPE
 visible <= visible.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga|controlTOP:control|muxSeleccionador:casilla3
+|VGA|controlTOP:control|muxSeleccionador:casilla3
 posX[0] => posX[0].IN2
 posX[1] => posX[1].IN2
 posX[2] => posX[2].IN2
@@ -3150,7 +3150,7 @@ rgb[22] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
 rgb[23] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga|controlTOP:control|muxSeleccionador:casilla3|sprite_X:Jugador1
+|VGA|controlTOP:control|muxSeleccionador:casilla3|sprite_X:Jugador1
 clk => ~NO_FANOUT~
 posx[0] => posx[0].IN1
 posx[1] => posx[1].IN1
@@ -3219,7 +3219,7 @@ RGB[23] <= <VCC>
 visible <= spritePosition:position.port6
 
 
-|vga|controlTOP:control|muxSeleccionador:casilla3|sprite_X:Jugador1|ROM_X:rom
+|VGA|controlTOP:control|muxSeleccionador:casilla3|sprite_X:Jugador1|ROM_X:rom
 rom_addr[0] => Ram0.RADDR
 rom_addr[1] => Ram0.RADDR1
 rom_addr[2] => Ram0.RADDR2
@@ -3292,7 +3292,7 @@ rom_data[62] <= Ram0.DATAOUT62
 rom_data[63] <= Ram0.DATAOUT63
 
 
-|vga|controlTOP:control|muxSeleccionador:casilla3|sprite_X:Jugador1|spritePosition:position
+|VGA|controlTOP:control|muxSeleccionador:casilla3|sprite_X:Jugador1|spritePosition:position
 posx[0] => LessThan0.IN10
 posx[0] => LessThan1.IN10
 posx[0] => Add5.IN12
@@ -3458,7 +3458,7 @@ rom_addr[5] <= Add4.DB_MAX_OUTPUT_PORT_TYPE
 visible <= visible.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga|controlTOP:control|muxSeleccionador:casilla3|sprite_Circle:Jugador2
+|VGA|controlTOP:control|muxSeleccionador:casilla3|sprite_Circle:Jugador2
 clk => ~NO_FANOUT~
 posx[0] => posx[0].IN1
 posx[1] => posx[1].IN1
@@ -3527,7 +3527,7 @@ RGB[23] <= <GND>
 visible <= spritePosition:position.port6
 
 
-|vga|controlTOP:control|muxSeleccionador:casilla3|sprite_Circle:Jugador2|ROM_Circle:rom
+|VGA|controlTOP:control|muxSeleccionador:casilla3|sprite_Circle:Jugador2|ROM_Circle:rom
 rom_addr[0] => Ram0.RADDR
 rom_addr[1] => Ram0.RADDR1
 rom_addr[2] => Ram0.RADDR2
@@ -3600,7 +3600,7 @@ rom_data[62] <= Ram0.DATAOUT62
 rom_data[63] <= Ram0.DATAOUT63
 
 
-|vga|controlTOP:control|muxSeleccionador:casilla3|sprite_Circle:Jugador2|spritePosition:position
+|VGA|controlTOP:control|muxSeleccionador:casilla3|sprite_Circle:Jugador2|spritePosition:position
 posx[0] => LessThan0.IN10
 posx[0] => LessThan1.IN10
 posx[0] => Add5.IN12
@@ -3766,7 +3766,7 @@ rom_addr[5] <= Add4.DB_MAX_OUTPUT_PORT_TYPE
 visible <= visible.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga|controlTOP:control|muxSeleccionador:casilla4
+|VGA|controlTOP:control|muxSeleccionador:casilla4
 posX[0] => posX[0].IN2
 posX[1] => posX[1].IN2
 posX[2] => posX[2].IN2
@@ -3885,7 +3885,7 @@ rgb[22] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
 rgb[23] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga|controlTOP:control|muxSeleccionador:casilla4|sprite_X:Jugador1
+|VGA|controlTOP:control|muxSeleccionador:casilla4|sprite_X:Jugador1
 clk => ~NO_FANOUT~
 posx[0] => posx[0].IN1
 posx[1] => posx[1].IN1
@@ -3954,7 +3954,7 @@ RGB[23] <= <VCC>
 visible <= spritePosition:position.port6
 
 
-|vga|controlTOP:control|muxSeleccionador:casilla4|sprite_X:Jugador1|ROM_X:rom
+|VGA|controlTOP:control|muxSeleccionador:casilla4|sprite_X:Jugador1|ROM_X:rom
 rom_addr[0] => Ram0.RADDR
 rom_addr[1] => Ram0.RADDR1
 rom_addr[2] => Ram0.RADDR2
@@ -4027,7 +4027,7 @@ rom_data[62] <= Ram0.DATAOUT62
 rom_data[63] <= Ram0.DATAOUT63
 
 
-|vga|controlTOP:control|muxSeleccionador:casilla4|sprite_X:Jugador1|spritePosition:position
+|VGA|controlTOP:control|muxSeleccionador:casilla4|sprite_X:Jugador1|spritePosition:position
 posx[0] => LessThan0.IN10
 posx[0] => LessThan1.IN10
 posx[0] => Add5.IN12
@@ -4193,7 +4193,7 @@ rom_addr[5] <= Add4.DB_MAX_OUTPUT_PORT_TYPE
 visible <= visible.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga|controlTOP:control|muxSeleccionador:casilla4|sprite_Circle:Jugador2
+|VGA|controlTOP:control|muxSeleccionador:casilla4|sprite_Circle:Jugador2
 clk => ~NO_FANOUT~
 posx[0] => posx[0].IN1
 posx[1] => posx[1].IN1
@@ -4262,7 +4262,7 @@ RGB[23] <= <GND>
 visible <= spritePosition:position.port6
 
 
-|vga|controlTOP:control|muxSeleccionador:casilla4|sprite_Circle:Jugador2|ROM_Circle:rom
+|VGA|controlTOP:control|muxSeleccionador:casilla4|sprite_Circle:Jugador2|ROM_Circle:rom
 rom_addr[0] => Ram0.RADDR
 rom_addr[1] => Ram0.RADDR1
 rom_addr[2] => Ram0.RADDR2
@@ -4335,7 +4335,7 @@ rom_data[62] <= Ram0.DATAOUT62
 rom_data[63] <= Ram0.DATAOUT63
 
 
-|vga|controlTOP:control|muxSeleccionador:casilla4|sprite_Circle:Jugador2|spritePosition:position
+|VGA|controlTOP:control|muxSeleccionador:casilla4|sprite_Circle:Jugador2|spritePosition:position
 posx[0] => LessThan0.IN10
 posx[0] => LessThan1.IN10
 posx[0] => Add5.IN12
@@ -4501,7 +4501,7 @@ rom_addr[5] <= Add4.DB_MAX_OUTPUT_PORT_TYPE
 visible <= visible.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga|controlTOP:control|muxSeleccionador:casilla5
+|VGA|controlTOP:control|muxSeleccionador:casilla5
 posX[0] => posX[0].IN2
 posX[1] => posX[1].IN2
 posX[2] => posX[2].IN2
@@ -4620,7 +4620,7 @@ rgb[22] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
 rgb[23] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga|controlTOP:control|muxSeleccionador:casilla5|sprite_X:Jugador1
+|VGA|controlTOP:control|muxSeleccionador:casilla5|sprite_X:Jugador1
 clk => ~NO_FANOUT~
 posx[0] => posx[0].IN1
 posx[1] => posx[1].IN1
@@ -4689,7 +4689,7 @@ RGB[23] <= <VCC>
 visible <= spritePosition:position.port6
 
 
-|vga|controlTOP:control|muxSeleccionador:casilla5|sprite_X:Jugador1|ROM_X:rom
+|VGA|controlTOP:control|muxSeleccionador:casilla5|sprite_X:Jugador1|ROM_X:rom
 rom_addr[0] => Ram0.RADDR
 rom_addr[1] => Ram0.RADDR1
 rom_addr[2] => Ram0.RADDR2
@@ -4762,7 +4762,7 @@ rom_data[62] <= Ram0.DATAOUT62
 rom_data[63] <= Ram0.DATAOUT63
 
 
-|vga|controlTOP:control|muxSeleccionador:casilla5|sprite_X:Jugador1|spritePosition:position
+|VGA|controlTOP:control|muxSeleccionador:casilla5|sprite_X:Jugador1|spritePosition:position
 posx[0] => LessThan0.IN10
 posx[0] => LessThan1.IN10
 posx[0] => Add5.IN12
@@ -4928,7 +4928,7 @@ rom_addr[5] <= Add4.DB_MAX_OUTPUT_PORT_TYPE
 visible <= visible.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga|controlTOP:control|muxSeleccionador:casilla5|sprite_Circle:Jugador2
+|VGA|controlTOP:control|muxSeleccionador:casilla5|sprite_Circle:Jugador2
 clk => ~NO_FANOUT~
 posx[0] => posx[0].IN1
 posx[1] => posx[1].IN1
@@ -4997,7 +4997,7 @@ RGB[23] <= <GND>
 visible <= spritePosition:position.port6
 
 
-|vga|controlTOP:control|muxSeleccionador:casilla5|sprite_Circle:Jugador2|ROM_Circle:rom
+|VGA|controlTOP:control|muxSeleccionador:casilla5|sprite_Circle:Jugador2|ROM_Circle:rom
 rom_addr[0] => Ram0.RADDR
 rom_addr[1] => Ram0.RADDR1
 rom_addr[2] => Ram0.RADDR2
@@ -5070,7 +5070,7 @@ rom_data[62] <= Ram0.DATAOUT62
 rom_data[63] <= Ram0.DATAOUT63
 
 
-|vga|controlTOP:control|muxSeleccionador:casilla5|sprite_Circle:Jugador2|spritePosition:position
+|VGA|controlTOP:control|muxSeleccionador:casilla5|sprite_Circle:Jugador2|spritePosition:position
 posx[0] => LessThan0.IN10
 posx[0] => LessThan1.IN10
 posx[0] => Add5.IN12
@@ -5236,7 +5236,7 @@ rom_addr[5] <= Add4.DB_MAX_OUTPUT_PORT_TYPE
 visible <= visible.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga|controlTOP:control|muxSeleccionador:casilla6
+|VGA|controlTOP:control|muxSeleccionador:casilla6
 posX[0] => posX[0].IN2
 posX[1] => posX[1].IN2
 posX[2] => posX[2].IN2
@@ -5355,7 +5355,7 @@ rgb[22] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
 rgb[23] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga|controlTOP:control|muxSeleccionador:casilla6|sprite_X:Jugador1
+|VGA|controlTOP:control|muxSeleccionador:casilla6|sprite_X:Jugador1
 clk => ~NO_FANOUT~
 posx[0] => posx[0].IN1
 posx[1] => posx[1].IN1
@@ -5424,7 +5424,7 @@ RGB[23] <= <VCC>
 visible <= spritePosition:position.port6
 
 
-|vga|controlTOP:control|muxSeleccionador:casilla6|sprite_X:Jugador1|ROM_X:rom
+|VGA|controlTOP:control|muxSeleccionador:casilla6|sprite_X:Jugador1|ROM_X:rom
 rom_addr[0] => Ram0.RADDR
 rom_addr[1] => Ram0.RADDR1
 rom_addr[2] => Ram0.RADDR2
@@ -5497,7 +5497,7 @@ rom_data[62] <= Ram0.DATAOUT62
 rom_data[63] <= Ram0.DATAOUT63
 
 
-|vga|controlTOP:control|muxSeleccionador:casilla6|sprite_X:Jugador1|spritePosition:position
+|VGA|controlTOP:control|muxSeleccionador:casilla6|sprite_X:Jugador1|spritePosition:position
 posx[0] => LessThan0.IN10
 posx[0] => LessThan1.IN10
 posx[0] => Add5.IN12
@@ -5663,7 +5663,7 @@ rom_addr[5] <= Add4.DB_MAX_OUTPUT_PORT_TYPE
 visible <= visible.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga|controlTOP:control|muxSeleccionador:casilla6|sprite_Circle:Jugador2
+|VGA|controlTOP:control|muxSeleccionador:casilla6|sprite_Circle:Jugador2
 clk => ~NO_FANOUT~
 posx[0] => posx[0].IN1
 posx[1] => posx[1].IN1
@@ -5732,7 +5732,7 @@ RGB[23] <= <GND>
 visible <= spritePosition:position.port6
 
 
-|vga|controlTOP:control|muxSeleccionador:casilla6|sprite_Circle:Jugador2|ROM_Circle:rom
+|VGA|controlTOP:control|muxSeleccionador:casilla6|sprite_Circle:Jugador2|ROM_Circle:rom
 rom_addr[0] => Ram0.RADDR
 rom_addr[1] => Ram0.RADDR1
 rom_addr[2] => Ram0.RADDR2
@@ -5805,7 +5805,7 @@ rom_data[62] <= Ram0.DATAOUT62
 rom_data[63] <= Ram0.DATAOUT63
 
 
-|vga|controlTOP:control|muxSeleccionador:casilla6|sprite_Circle:Jugador2|spritePosition:position
+|VGA|controlTOP:control|muxSeleccionador:casilla6|sprite_Circle:Jugador2|spritePosition:position
 posx[0] => LessThan0.IN10
 posx[0] => LessThan1.IN10
 posx[0] => Add5.IN12
@@ -5971,7 +5971,7 @@ rom_addr[5] <= Add4.DB_MAX_OUTPUT_PORT_TYPE
 visible <= visible.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga|controlTOP:control|muxSeleccionador:casilla7
+|VGA|controlTOP:control|muxSeleccionador:casilla7
 posX[0] => posX[0].IN2
 posX[1] => posX[1].IN2
 posX[2] => posX[2].IN2
@@ -6090,7 +6090,7 @@ rgb[22] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
 rgb[23] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga|controlTOP:control|muxSeleccionador:casilla7|sprite_X:Jugador1
+|VGA|controlTOP:control|muxSeleccionador:casilla7|sprite_X:Jugador1
 clk => ~NO_FANOUT~
 posx[0] => posx[0].IN1
 posx[1] => posx[1].IN1
@@ -6159,7 +6159,7 @@ RGB[23] <= <VCC>
 visible <= spritePosition:position.port6
 
 
-|vga|controlTOP:control|muxSeleccionador:casilla7|sprite_X:Jugador1|ROM_X:rom
+|VGA|controlTOP:control|muxSeleccionador:casilla7|sprite_X:Jugador1|ROM_X:rom
 rom_addr[0] => Ram0.RADDR
 rom_addr[1] => Ram0.RADDR1
 rom_addr[2] => Ram0.RADDR2
@@ -6232,7 +6232,7 @@ rom_data[62] <= Ram0.DATAOUT62
 rom_data[63] <= Ram0.DATAOUT63
 
 
-|vga|controlTOP:control|muxSeleccionador:casilla7|sprite_X:Jugador1|spritePosition:position
+|VGA|controlTOP:control|muxSeleccionador:casilla7|sprite_X:Jugador1|spritePosition:position
 posx[0] => LessThan0.IN10
 posx[0] => LessThan1.IN10
 posx[0] => Add5.IN12
@@ -6398,7 +6398,7 @@ rom_addr[5] <= Add4.DB_MAX_OUTPUT_PORT_TYPE
 visible <= visible.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga|controlTOP:control|muxSeleccionador:casilla7|sprite_Circle:Jugador2
+|VGA|controlTOP:control|muxSeleccionador:casilla7|sprite_Circle:Jugador2
 clk => ~NO_FANOUT~
 posx[0] => posx[0].IN1
 posx[1] => posx[1].IN1
@@ -6467,7 +6467,7 @@ RGB[23] <= <GND>
 visible <= spritePosition:position.port6
 
 
-|vga|controlTOP:control|muxSeleccionador:casilla7|sprite_Circle:Jugador2|ROM_Circle:rom
+|VGA|controlTOP:control|muxSeleccionador:casilla7|sprite_Circle:Jugador2|ROM_Circle:rom
 rom_addr[0] => Ram0.RADDR
 rom_addr[1] => Ram0.RADDR1
 rom_addr[2] => Ram0.RADDR2
@@ -6540,7 +6540,7 @@ rom_data[62] <= Ram0.DATAOUT62
 rom_data[63] <= Ram0.DATAOUT63
 
 
-|vga|controlTOP:control|muxSeleccionador:casilla7|sprite_Circle:Jugador2|spritePosition:position
+|VGA|controlTOP:control|muxSeleccionador:casilla7|sprite_Circle:Jugador2|spritePosition:position
 posx[0] => LessThan0.IN10
 posx[0] => LessThan1.IN10
 posx[0] => Add5.IN12
@@ -6706,7 +6706,7 @@ rom_addr[5] <= Add4.DB_MAX_OUTPUT_PORT_TYPE
 visible <= visible.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga|controlTOP:control|muxSeleccionador:casilla8
+|VGA|controlTOP:control|muxSeleccionador:casilla8
 posX[0] => posX[0].IN2
 posX[1] => posX[1].IN2
 posX[2] => posX[2].IN2
@@ -6825,7 +6825,7 @@ rgb[22] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
 rgb[23] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga|controlTOP:control|muxSeleccionador:casilla8|sprite_X:Jugador1
+|VGA|controlTOP:control|muxSeleccionador:casilla8|sprite_X:Jugador1
 clk => ~NO_FANOUT~
 posx[0] => posx[0].IN1
 posx[1] => posx[1].IN1
@@ -6894,7 +6894,7 @@ RGB[23] <= <VCC>
 visible <= spritePosition:position.port6
 
 
-|vga|controlTOP:control|muxSeleccionador:casilla8|sprite_X:Jugador1|ROM_X:rom
+|VGA|controlTOP:control|muxSeleccionador:casilla8|sprite_X:Jugador1|ROM_X:rom
 rom_addr[0] => Ram0.RADDR
 rom_addr[1] => Ram0.RADDR1
 rom_addr[2] => Ram0.RADDR2
@@ -6967,7 +6967,7 @@ rom_data[62] <= Ram0.DATAOUT62
 rom_data[63] <= Ram0.DATAOUT63
 
 
-|vga|controlTOP:control|muxSeleccionador:casilla8|sprite_X:Jugador1|spritePosition:position
+|VGA|controlTOP:control|muxSeleccionador:casilla8|sprite_X:Jugador1|spritePosition:position
 posx[0] => LessThan0.IN10
 posx[0] => LessThan1.IN10
 posx[0] => Add5.IN12
@@ -7133,7 +7133,7 @@ rom_addr[5] <= Add4.DB_MAX_OUTPUT_PORT_TYPE
 visible <= visible.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga|controlTOP:control|muxSeleccionador:casilla8|sprite_Circle:Jugador2
+|VGA|controlTOP:control|muxSeleccionador:casilla8|sprite_Circle:Jugador2
 clk => ~NO_FANOUT~
 posx[0] => posx[0].IN1
 posx[1] => posx[1].IN1
@@ -7202,7 +7202,7 @@ RGB[23] <= <GND>
 visible <= spritePosition:position.port6
 
 
-|vga|controlTOP:control|muxSeleccionador:casilla8|sprite_Circle:Jugador2|ROM_Circle:rom
+|VGA|controlTOP:control|muxSeleccionador:casilla8|sprite_Circle:Jugador2|ROM_Circle:rom
 rom_addr[0] => Ram0.RADDR
 rom_addr[1] => Ram0.RADDR1
 rom_addr[2] => Ram0.RADDR2
@@ -7275,7 +7275,7 @@ rom_data[62] <= Ram0.DATAOUT62
 rom_data[63] <= Ram0.DATAOUT63
 
 
-|vga|controlTOP:control|muxSeleccionador:casilla8|sprite_Circle:Jugador2|spritePosition:position
+|VGA|controlTOP:control|muxSeleccionador:casilla8|sprite_Circle:Jugador2|spritePosition:position
 posx[0] => LessThan0.IN10
 posx[0] => LessThan1.IN10
 posx[0] => Add5.IN12
@@ -7441,7 +7441,7 @@ rom_addr[5] <= Add4.DB_MAX_OUTPUT_PORT_TYPE
 visible <= visible.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga|controlTOP:control|lineas:CuatroLineas
+|VGA|controlTOP:control|lineas:CuatroLineas
 cuentaX[0] => LessThan0.IN20
 cuentaX[0] => LessThan1.IN20
 cuentaX[0] => LessThan2.IN20
@@ -7525,36 +7525,36 @@ cuentaY[9] => LessThan7.IN11
 enable <= enable.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga|controlTOP:control|Ganador2:ganador_
+|VGA|controlTOP:control|Ganador2:ganador_
 clk => estadoActual~1.DATAIN
 rst => estadoActual~3.DATAIN
-matrizDeJuego[0][0] => always_ganador:comb_3.matrizDeJuego[0][0]
-matrizDeJuego[0][1] => always_ganador:comb_3.matrizDeJuego[0][1]
-matrizDeJuego[1][0] => always_ganador:comb_3.matrizDeJuego[1][0]
-matrizDeJuego[1][1] => always_ganador:comb_3.matrizDeJuego[1][1]
-matrizDeJuego[2][0] => always_ganador:comb_3.matrizDeJuego[2][0]
-matrizDeJuego[2][1] => always_ganador:comb_3.matrizDeJuego[2][1]
-matrizDeJuego[3][0] => always_ganador:comb_3.matrizDeJuego[3][0]
-matrizDeJuego[3][1] => always_ganador:comb_3.matrizDeJuego[3][1]
-matrizDeJuego[4][0] => always_ganador:comb_3.matrizDeJuego[4][0]
-matrizDeJuego[4][1] => always_ganador:comb_3.matrizDeJuego[4][1]
-matrizDeJuego[5][0] => always_ganador:comb_3.matrizDeJuego[5][0]
-matrizDeJuego[5][1] => always_ganador:comb_3.matrizDeJuego[5][1]
-matrizDeJuego[6][0] => always_ganador:comb_3.matrizDeJuego[6][0]
-matrizDeJuego[6][1] => always_ganador:comb_3.matrizDeJuego[6][1]
-matrizDeJuego[7][0] => always_ganador:comb_3.matrizDeJuego[7][0]
-matrizDeJuego[7][1] => always_ganador:comb_3.matrizDeJuego[7][1]
-matrizDeJuego[8][0] => always_ganador:comb_3.matrizDeJuego[8][0]
-matrizDeJuego[8][1] => always_ganador:comb_3.matrizDeJuego[8][1]
+matrizDeJuego[0][0] => matrizDeJuego[0][0].IN1
+matrizDeJuego[0][1] => matrizDeJuego[0][1].IN1
+matrizDeJuego[1][0] => matrizDeJuego[1][0].IN1
+matrizDeJuego[1][1] => matrizDeJuego[1][1].IN1
+matrizDeJuego[2][0] => matrizDeJuego[2][0].IN1
+matrizDeJuego[2][1] => matrizDeJuego[2][1].IN1
+matrizDeJuego[3][0] => matrizDeJuego[3][0].IN1
+matrizDeJuego[3][1] => matrizDeJuego[3][1].IN1
+matrizDeJuego[4][0] => matrizDeJuego[4][0].IN1
+matrizDeJuego[4][1] => matrizDeJuego[4][1].IN1
+matrizDeJuego[5][0] => matrizDeJuego[5][0].IN1
+matrizDeJuego[5][1] => matrizDeJuego[5][1].IN1
+matrizDeJuego[6][0] => matrizDeJuego[6][0].IN1
+matrizDeJuego[6][1] => matrizDeJuego[6][1].IN1
+matrizDeJuego[7][0] => matrizDeJuego[7][0].IN1
+matrizDeJuego[7][1] => matrizDeJuego[7][1].IN1
+matrizDeJuego[8][0] => matrizDeJuego[8][0].IN1
+matrizDeJuego[8][1] => matrizDeJuego[8][1].IN1
 win <= win.DB_MAX_OUTPUT_PORT_TYPE
-linea_ganadora[0] <= always_ganador:comb_3.linea_ganadora[0]
-linea_ganadora[1] <= always_ganador:comb_3.linea_ganadora[1]
-linea_ganadora[2] <= always_ganador:comb_3.linea_ganadora[2]
-ganador[0] <= always_ganador:comb_3.ganador[0]
-ganador[1] <= always_ganador:comb_3.ganador[1]
+linea_ganadora[0] <= always_ganador:comb_3.port2
+linea_ganadora[1] <= always_ganador:comb_3.port2
+linea_ganadora[2] <= always_ganador:comb_3.port2
+ganador[0] <= always_ganador:comb_3.port3
+ganador[1] <= always_ganador:comb_3.port3
 
 
-|vga|controlTOP:control|Ganador2:ganador_|always_ganador:comb_3
+|VGA|controlTOP:control|Ganador2:ganador_|always_ganador:comb_3
 matrizDeJuego[0][0] => Equal0.IN3
 matrizDeJuego[0][0] => Equal1.IN3
 matrizDeJuego[0][0] => Equal8.IN3
@@ -7653,7 +7653,7 @@ ganador[0] <= auxGanador.DB_MAX_OUTPUT_PORT_TYPE
 ganador[1] <= auxGanador.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga|controlTOP:control|lineaGanadoraGen:lineaganadora
+|VGA|controlTOP:control|lineaGanadoraGen:lineaganadora
 linea_ganadora[0] => Mux0.IN10
 linea_ganadora[1] => Mux0.IN9
 linea_ganadora[2] => Mux0.IN8
@@ -7830,7 +7830,7 @@ gano => temp.IN1
 inrect <= temp.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga|controlTOP:control|muxSeleccionadorGanador:texto_ganador
+|VGA|controlTOP:control|muxSeleccionadorGanador:texto_ganador
 posX[0] => posX[0].IN3
 posX[1] => posX[1].IN3
 posX[2] => posX[2].IN3
@@ -7951,7 +7951,7 @@ rgb[22] <= rgb.DB_MAX_OUTPUT_PORT_TYPE
 rgb[23] <= rgb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga|controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_X_Ganador:Jugador1
+|VGA|controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_X_Ganador:Jugador1
 clk => ~NO_FANOUT~
 gano => gano.IN1
 posx[0] => posx[0].IN1
@@ -8021,7 +8021,7 @@ RGB[23] <= <VCC>
 visible <= spritePosition_Ganador:position.port7
 
 
-|vga|controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_X_Ganador:Jugador1|ROM_X_Ganador:rom
+|VGA|controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_X_Ganador:Jugador1|ROM_X_Ganador:rom
 rom_addr[0] => Decoder1.IN3
 rom_addr[1] => Decoder0.IN2
 rom_addr[1] => Decoder1.IN2
@@ -8121,7 +8121,7 @@ rom_data[88] <= <VCC>
 rom_data[89] <= <GND>
 
 
-|vga|controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_X_Ganador:Jugador1|spritePosition_Ganador:position
+|VGA|controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_X_Ganador:Jugador1|spritePosition_Ganador:position
 posx[0] => LessThan0.IN10
 posx[0] => LessThan1.IN10
 posx[0] => Add3.IN10
@@ -8330,7 +8330,7 @@ rom_addr[3] <= Add2.DB_MAX_OUTPUT_PORT_TYPE
 visible <= visible.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga|controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_Circle_Ganador:Jugador2
+|VGA|controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_Circle_Ganador:Jugador2
 clk => ~NO_FANOUT~
 gano => gano.IN1
 posx[0] => posx[0].IN1
@@ -8400,7 +8400,7 @@ RGB[23] <= <GND>
 visible <= spritePosition_Ganador:position.port7
 
 
-|vga|controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_Circle_Ganador:Jugador2|ROM_Circle_Ganador:rom
+|VGA|controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_Circle_Ganador:Jugador2|ROM_Circle_Ganador:rom
 rom_addr[0] => Decoder1.IN3
 rom_addr[1] => Decoder0.IN2
 rom_addr[1] => Decoder1.IN2
@@ -8502,7 +8502,7 @@ rom_data[88] <= <VCC>
 rom_data[89] <= <GND>
 
 
-|vga|controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_Circle_Ganador:Jugador2|spritePosition_Ganador:position
+|VGA|controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_Circle_Ganador:Jugador2|spritePosition_Ganador:position
 posx[0] => LessThan0.IN10
 posx[0] => LessThan1.IN10
 posx[0] => Add3.IN10
@@ -8711,7 +8711,7 @@ rom_addr[3] <= Add2.DB_MAX_OUTPUT_PORT_TYPE
 visible <= visible.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga|controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_Empate:empatados
+|VGA|controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_Empate:empatados
 clk => ~NO_FANOUT~
 gano => gano.IN1
 posx[0] => posx[0].IN1
@@ -8781,7 +8781,7 @@ RGB[23] <= <VCC>
 visible <= spritePosition_Empate:position.port7
 
 
-|vga|controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_Empate:empatados|ROM_Empate:rom
+|VGA|controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_Empate:empatados|ROM_Empate:rom
 rom_addr[0] => Decoder0.IN3
 rom_addr[1] => Decoder0.IN2
 rom_addr[1] => Decoder1.IN2
@@ -8899,7 +8899,7 @@ rom_data[106] <= <VCC>
 rom_data[107] <= <GND>
 
 
-|vga|controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_Empate:empatados|spritePosition_Empate:position
+|VGA|controlTOP:control|muxSeleccionadorGanador:texto_ganador|sprite_Empate:empatados|spritePosition_Empate:position
 posx[0] => LessThan0.IN10
 posx[0] => LessThan1.IN10
 posx[0] => Add3.IN10
@@ -9126,7 +9126,7 @@ rom_addr[3] <= Add2.DB_MAX_OUTPUT_PORT_TYPE
 visible <= visible.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga|controlTOP:control|mux_9a1:comb_40
+|VGA|controlTOP:control|mux_9a1:comb_40
 rgb0[0] => Selector23.IN14
 rgb0[1] => Selector22.IN14
 rgb0[2] => Selector21.IN14

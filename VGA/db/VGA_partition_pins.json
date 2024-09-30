@@ -124,6 +124,62 @@
 					"strict" : false
 				},
 				{
+					"name" : "display_decenas[0]",
+					"strict" : false
+				},
+				{
+					"name" : "display_decenas[1]",
+					"strict" : false
+				},
+				{
+					"name" : "display_decenas[2]",
+					"strict" : false
+				},
+				{
+					"name" : "display_decenas[3]",
+					"strict" : false
+				},
+				{
+					"name" : "display_decenas[4]",
+					"strict" : false
+				},
+				{
+					"name" : "display_decenas[5]",
+					"strict" : false
+				},
+				{
+					"name" : "display_decenas[6]",
+					"strict" : false
+				},
+				{
+					"name" : "display_unidades[0]",
+					"strict" : false
+				},
+				{
+					"name" : "display_unidades[1]",
+					"strict" : false
+				},
+				{
+					"name" : "display_unidades[2]",
+					"strict" : false
+				},
+				{
+					"name" : "display_unidades[3]",
+					"strict" : false
+				},
+				{
+					"name" : "display_unidades[4]",
+					"strict" : false
+				},
+				{
+					"name" : "display_unidades[5]",
+					"strict" : false
+				},
+				{
+					"name" : "display_unidades[6]",
+					"strict" : false
+				},
+				{
 					"name" : "clk",
 					"strict" : false
 				},
@@ -132,11 +188,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "boton2",
+					"name" : "boton",
 					"strict" : false
 				},
 				{
-					"name" : "boton",
+					"name" : "boton2",
 					"strict" : false
 				}
 			]

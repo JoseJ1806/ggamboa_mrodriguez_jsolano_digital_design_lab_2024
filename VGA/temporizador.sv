@@ -12,8 +12,8 @@ module temporizador(
     reg [7:0] rnd = 1;
     reg [31:0] segundos = 0; // Registro para almacenar los segundos totales
     reg [31:0] tiempo_restante = 0; // Registro para almacenar el tiempo restante
-    wire [3:0] decenas;
-    wire [3:0] unidades;
+    reg [3:0] decenas;
+    reg [3:0] unidades;
     
     // LFSR module instance
     LFSR lfsr(clk, rst, rnd);

@@ -1,5 +1,5 @@
 //Modulo top, esta conformado por el divisor de clk, el controlador de la vga, la generacion de video y logica del juego
-module vga (input logic clk,
+module VGA (input logic clk,
 			   input logic boton,boton2,boton3,
             output logic clk_25,
 				output logic H_SYNC, V_SYNC,

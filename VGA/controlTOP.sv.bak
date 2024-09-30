@@ -1,7 +1,7 @@
 //Modulo que controla la generacion de video y logica del juego
 module controlTOP (input logic boton_Casilla, boton_Sel,boton_rst,clk,
 						input logic [9:0] cuentaX,cuentaY,
-						 output logic [7:0] r,g,b, output gano, output logic [6:0] display_decenas, output logic [6:0] display_unidades);
+						 output logic [7:0] r,g,b, output gano);
 			//Defnicion de variables para las MSF y distintos modulos
 			logic boton_Seleccionador, boton_Cuenta_Casilla;
 			
@@ -23,7 +23,7 @@ module controlTOP (input logic boton_Casilla, boton_Sel,boton_rst,clk,
 			 Mover move(clk, boton_rst, boton_Cuenta_Casilla, contador);
 			  
 			 rectgen seleccionador (clk, boton_rst,contador,cuentaX,cuentaY,0,130,180,140,visible_rectangulo);
-			 temporizador tempo(clk, boton_rst, guardado, termino, tiempo, posicion_ra,display_decenas, display_unidades);
+			 temporizador tempo(clk, boton_rst, guardado, termino, tiempo, posicion_ra);
 			 
 			 regfile1x24b memoria_Casillas(clk,boton_rst, boton_Seleccionador, tiempo, contador_seleccionador,contador, rdData, guardado); // Se guardó en memoria cual sprite va en esa casilla.
 			 

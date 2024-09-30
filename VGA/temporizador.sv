@@ -12,42 +12,44 @@ module temporizador(
     reg [7:0] rnd = 1;
     reg [31:0] segundos = 0; // Registro para almacenar los segundos totales
     reg [31:0] tiempo_restante = 0; // Registro para almacenar el tiempo restante
-    reg [3:0] decenas;
-    reg [3:0] unidades;
+    logic [3:0] decenas;
+    logic [3:0] unidades;
     
     // LFSR module instance
     LFSR lfsr(clk, rst, rnd);
-    
-    // Bloque secuencial para manejar el contador y los segundos
-    always @(posedge clk or negedge rst) begin
-        if (!rst) begin
-            contador <= 0;
-            segundos <= 0;
-        end else if (guardado) begin
-            contador <= 0;
-            segundos <= 0;
-        end else begin
-            contador <= contador + 1;
-            if (contador == 25000000) begin // Cada 1 segundo
-                segundos <= segundos + 1;
-            end
-            if (contador == 375000000) begin
-                if (rnd != 0) begin
-                    posicion_ra <= rnd;
-                    contador <= 0;
-                    tiempo <= !gano;
-                    segundos <= 0;
-                end else begin
-                    posicion_ra <= 1;
-                    contador <= 0;
-                    tiempo <= !gano;
-                    segundos <= 0;
-                end
-            end else begin
-                tiempo <= 0;
-            end
-        end
-    end
+	 always@(posedge clk or negedge rst) begin
+		if (!rst) begin
+			contador <= 0;
+			segundos <= 0;
+			tiempo <= 0;
+		end
+		else if(guardado) begin
+			contador <= 0;
+			segundos <= 0;
+			tiempo <= 0;
+		end
+		else begin
+			contador <= contador + 1;
+			
+			// Incremento de segundos cada 1 segundo
+			if (contador == 25000000) begin 
+				segundos <= segundos + 1;
+				contador <= 0;
+			end
+			
+			// Al llegar a los 15 segundos, asigna posición aleatoria
+			if (segundos == 15) begin
+				if (rnd != 0) begin
+					posicion_ra <= rnd;
+				end else begin
+					posicion_ra <= 1;
+				end
+				segundos <= 0; // Reiniciar el temporizador
+				tiempo <= !gano; // Actualiza el estado de tiempo
+			end
+		end
+	end
+
     
     // Bloque combinacional para calcular el tiempo restante
     always_comb begin
@@ -89,4 +91,4 @@ module temporizador(
         endcase
     end
 
-endmodule
+endmodule 

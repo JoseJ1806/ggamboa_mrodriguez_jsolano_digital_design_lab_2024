@@ -1,0 +1,3 @@
+Warning (10268): Verilog HDL information at contadorXY.sv(8): always construct contains both blocking and non-blocking assignments File: C:/Users/jjsol.J1806/Desktop/Pasar/contadorXY.sv Line: 8
+Warning (10268): Verilog HDL information at regfile1x24b.sv(14): always construct contains both blocking and non-blocking assignments File: C:/Users/jjsol.J1806/Desktop/Pasar/regfile1x24b.sv Line: 14
+Warning (10268): Verilog HDL information at temporizador.sv(21): always construct contains both blocking and non-blocking assignments File: C:/Users/jjsol.J1806/Desktop/Pasar/temporizador.sv Line: 21

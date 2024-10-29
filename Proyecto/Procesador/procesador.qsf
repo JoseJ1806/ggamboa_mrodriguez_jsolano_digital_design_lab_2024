@@ -60,3 +60,4 @@ set_global_assignment -name SYSTEMVERILOG_FILE flopenr.sv
 set_global_assignment -name SYSTEMVERILOG_FILE flopr.sv
 set_global_assignment -name SYSTEMVERILOG_FILE mux2.sv
 set_global_assignment -name SYSTEMVERILOG_FILE adder.sv
+set_global_assignment -name SYSTEMVERILOG_FILE condcheck.sv

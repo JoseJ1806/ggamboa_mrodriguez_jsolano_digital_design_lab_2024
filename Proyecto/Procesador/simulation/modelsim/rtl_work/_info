@@ -1,0 +1,247 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/simulation/modelsim
+vAlu
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+!s110 1730406799
+!i10b 1
+!s100 W7ZPOBCOea>AA?5L?aCWY3
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Iz0b81:SJ]8LJTS?0YNzD00
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+w1730406500
+8C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/Alu.sv
+FC:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/Alu.sv
+!i122 0
+L0 26 129
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1730406799.000000
+!s107 C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/Alu.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador|C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/Alu.sv|
+!i113 1
+Z5 o-sv -work work
+Z6 !s92 -sv -work work +incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador
+Z7 tCvgOpt 0
+n@alu
+vfull_adder
+R1
+Z8 !s110 1730406800
+!i10b 1
+!s100 7FJ6XP4R:Q^1YBHYa>D?F3
+R2
+Iik;@^HehS1m:Kn7UO>oI>1
+R3
+S1
+R0
+w1730406522
+8C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/full_adder.sv
+FC:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/full_adder.sv
+!i122 1
+L0 1 15
+R4
+r1
+!s85 0
+31
+Z9 !s108 1730406800.000000
+!s107 C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/full_adder.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador|C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/full_adder.sv|
+!i113 1
+R5
+R6
+R7
+vfull_subtractor
+R1
+R8
+!i10b 1
+!s100 BOXE>SoC46@0^^RZ0GQnn0
+R2
+IJ73PM^T`a1ae[NUnXSXOe1
+R3
+S1
+R0
+w1730406555
+8C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/full_subtractor.sv
+FC:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/full_subtractor.sv
+!i122 2
+Z10 L0 1 25
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/full_subtractor.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador|C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/full_subtractor.sv|
+!i113 1
+R5
+R6
+R7
+vn_bit_adder
+R1
+R8
+!i10b 1
+!s100 clbzcXN54aX<UJK=HMK3f2
+R2
+IDe>eGn;a>Hn>EzEJZRoLC3
+R3
+S1
+R0
+w1730406590
+8C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/n_bit_adder.sv
+FC:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/n_bit_adder.sv
+!i122 3
+Z11 L0 1 35
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/n_bit_adder.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador|C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/n_bit_adder.sv|
+!i113 1
+R5
+R6
+R7
+vn_bit_divider
+R1
+R8
+!i10b 1
+!s100 M?=:C042bm;<l>Z=G>LRU2
+R2
+IT@QLdUFE:OES6LEMOZF:H2
+R3
+S1
+R0
+w1730406607
+8C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/n_bit_divider.sv
+FC:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/n_bit_divider.sv
+!i122 4
+R10
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/n_bit_divider.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador|C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/n_bit_divider.sv|
+!i113 1
+R5
+R6
+R7
+vn_bit_modulus
+R1
+Z12 !s110 1730406801
+!i10b 1
+!s100 Y]N=E1kTD1MJE<T:8E58E2
+R2
+I?`VBZ=81f4ReV9fzhGO7W3
+R3
+S1
+R0
+w1730406626
+8C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/n_bit_modulus.sv
+FC:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/n_bit_modulus.sv
+!i122 5
+R10
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/n_bit_modulus.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador|C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/n_bit_modulus.sv|
+!i113 1
+R5
+R6
+R7
+vn_bit_multiplier
+R1
+R12
+!i10b 1
+!s100 [38zDaba[X1lQ]PHTSWcB2
+R2
+IN@73:1fb?abY]Ro7oH]:c3
+R3
+S1
+R0
+w1730406651
+8C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/n_bit_multiplier.sv
+FC:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/n_bit_multiplier.sv
+!i122 6
+L0 1 30
+R4
+r1
+!s85 0
+31
+Z13 !s108 1730406801.000000
+!s107 C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/n_bit_multiplier.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador|C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/n_bit_multiplier.sv|
+!i113 1
+R5
+R6
+R7
+vn_bit_subtractor
+R1
+R12
+!i10b 1
+!s100 WmEZ54_5<5zNJc<LZ`L_i0
+R2
+II:53JYiI>d_:kf=0iL;0D1
+R3
+S1
+R0
+w1730406670
+8C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/n_bit_subtractor.sv
+FC:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/n_bit_subtractor.sv
+!i122 7
+R11
+R4
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/n_bit_subtractor.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador|C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/n_bit_subtractor.sv|
+!i113 1
+R5
+R6
+R7
+vtb_Alu
+R1
+R12
+!i10b 1
+!s100 2Q6fTmmcQ49gPeWJ80=6=0
+R2
+IK01lelMdD;AaGCzH?m>cc3
+R3
+S1
+R0
+w1730406693
+8C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/tb_Alu.sv
+FC:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/tb_Alu.sv
+!i122 8
+L0 1 77
+R4
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/tb_Alu.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador|C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/tb_Alu.sv|
+!i113 1
+R5
+R6
+R7
+ntb_@alu

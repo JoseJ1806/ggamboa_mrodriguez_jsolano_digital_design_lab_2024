@@ -1,0 +1,145 @@
+# Reading pref.tcl
+# do procesador_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador {C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/Alu.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:33:19 on Oct 31,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador" C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/Alu.sv 
+# -- Compiling module Alu
+# 
+# Top level modules:
+# 	Alu
+# End time: 14:33:19 on Oct 31,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador {C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/full_adder.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:33:20 on Oct 31,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador" C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/full_adder.sv 
+# -- Compiling module full_adder
+# 
+# Top level modules:
+# 	full_adder
+# End time: 14:33:20 on Oct 31,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador {C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/full_subtractor.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:33:20 on Oct 31,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador" C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/full_subtractor.sv 
+# -- Compiling module full_subtractor
+# 
+# Top level modules:
+# 	full_subtractor
+# End time: 14:33:20 on Oct 31,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador {C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/n_bit_adder.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:33:20 on Oct 31,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador" C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/n_bit_adder.sv 
+# -- Compiling module n_bit_adder
+# 
+# Top level modules:
+# 	n_bit_adder
+# End time: 14:33:20 on Oct 31,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador {C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/n_bit_divider.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:33:20 on Oct 31,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador" C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/n_bit_divider.sv 
+# -- Compiling module n_bit_divider
+# 
+# Top level modules:
+# 	n_bit_divider
+# End time: 14:33:20 on Oct 31,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador {C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/n_bit_modulus.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:33:20 on Oct 31,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador" C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/n_bit_modulus.sv 
+# -- Compiling module n_bit_modulus
+# 
+# Top level modules:
+# 	n_bit_modulus
+# End time: 14:33:21 on Oct 31,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador {C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/n_bit_multiplier.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:33:21 on Oct 31,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador" C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/n_bit_multiplier.sv 
+# -- Compiling module n_bit_multiplier
+# 
+# Top level modules:
+# 	n_bit_multiplier
+# End time: 14:33:21 on Oct 31,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador {C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/n_bit_subtractor.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:33:21 on Oct 31,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador" C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/n_bit_subtractor.sv 
+# -- Compiling module n_bit_subtractor
+# 
+# Top level modules:
+# 	n_bit_subtractor
+# End time: 14:33:21 on Oct 31,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador {C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/tb_Alu.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:33:21 on Oct 31,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador" C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/tb_Alu.sv 
+# -- Compiling module tb_Alu
+# 
+# Top level modules:
+# 	tb_Alu
+# End time: 14:33:21 on Oct 31,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb_Alu
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb_Alu 
+# Start time: 14:33:22 on Oct 31,2024
+# Loading sv_std.std
+# Loading work.tb_Alu
+# Loading work.Alu
+# Loading work.n_bit_modulus
+# Loading work.n_bit_divider
+# Loading work.n_bit_subtractor
+# Loading work.n_bit_multiplier
+# Loading work.n_bit_adder
+# Loading work.full_subtractor
+# Loading work.full_adder
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'c_in'. The port definition is at: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/full_subtractor.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_Alu/uut/sub_op/generate_N_bit_Adder[0]/genblk1/f File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/n_bit_subtractor.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'cin'. The port definition is at: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/full_adder.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_Alu/uut/adder_op/generate_N_bit_Adder[0]/genblk1/f File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/n_bit_adder.sv Line: 23
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Iniciando pruebas de la ALU
+# ADD: A=0000, B=0000, ALU_Result=00000000, NFlag=0, ZFlag=1, CFlag=0, VFlag=0
+# SUB: A=0100, B=0100, ALU_Result=00000000, NFlag=0, ZFlag=1, CFlag=0, VFlag=0
+# MULT: A=0011, B=0000, ALU_Result=00000000, NFlag=0, ZFlag=1, CFlag=0, VFlag=0
+# DIV: A=0000, B=0010, ALU_Result=00000000, NFlag=0, ZFlag=1, CFlag=0, VFlag=0
+# Logical Shift Left: A=0101, ALU_Result=00010100, NFlag=0, ZFlag=0, CFlag=0, VFlag=0
+# Logical Shift Right: A=0101, ALU_Result=00000001, NFlag=0, ZFlag=0, CFlag=1, VFlag=0
+# MOD: A=0100, B=0010, ALU_Result=00000000, NFlag=0, ZFlag=1, CFlag=0, VFlag=0
+# AND: A=1100, B=1010, ALU_Result=00001000, NFlag=0, ZFlag=0, CFlag=0, VFlag=0
+# OR: A=1100, B=1010, ALU_Result=00001110, NFlag=0, ZFlag=0, CFlag=0, VFlag=0
+# XOR: A=1100, B=1010, ALU_Result=00000110, NFlag=0, ZFlag=0, CFlag=0, VFlag=0
+# Pruebas completadas
+# ** Note: $stop    : C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/tb_Alu.sv(75)
+#    Time: 100 ps  Iteration: 0  Instance: /tb_Alu
+# Break in Module tb_Alu at C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/tb_Alu.sv line 75
+# End time: 14:34:53 on Oct 31,2024, Elapsed time: 0:01:31
+# Errors: 0, Warnings: 2

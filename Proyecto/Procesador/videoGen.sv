@@ -1,64 +1,47 @@
 module videoGen(
     input logic [9:0] x, y,
-	 input logic clk,
     output logic [7:0] r, g, b,
-    output logic [8:0] address,
-    input logic [31:0] data
+    output logic [15:0] address,  // Dirección de 16 bits para cubrir hasta 200x200/4 bloques
+    input logic [31:0] data // Bloque de 4 píxeles, cada uno de 8 bits en RGB
 );
 
-    // Character dimensions
-    localparam CHAR_WIDTH = 8;
-    localparam CHAR_HEIGHT = 16;
-    localparam CHARS_PER_LINE = 640 / CHAR_WIDTH; // 80 characters
-    localparam LINES_PER_SCREEN = 480 / CHAR_HEIGHT; // 30 lines
+    // Definir el área de visualización en 640x480
+    localparam IMG_WIDTH = 200;
+    localparam IMG_HEIGHT = 200;
+    localparam X_START = (640 - IMG_WIDTH) / 2;  // Centrar en el eje X
+    localparam Y_START = (480 - IMG_HEIGHT) / 2; // Centrar en el eje Y
 
-    // Declare char_x and char_y as variables
-    int char_x;
-    int char_y;
-	 logic [2:0] xoff; // 3 bits for x offset
-	 logic [2:0] yoff; // 3 bits for y offset
+    // Coordenadas dentro de la imagen
+    logic [9:0] img_x, img_y;
+    logic [1:0] pixel_offset;  // Para seleccionar un píxel dentro del bloque de 4 píxeles
 
-    // Calculate character position based on pixel coordinates
     always_comb begin
-        char_x = x / CHAR_WIDTH;
-        char_y = y / CHAR_HEIGHT;
-		  xoff = x % CHAR_WIDTH;
-		  yoff = y % CHAR_HEIGHT;
+        if (x >= X_START && x < X_START + IMG_WIDTH && y >= Y_START && y < Y_START + IMG_HEIGHT) begin
+            // Coordenadas dentro del área de la imagen
+            img_x = x - X_START;
+            img_y = y - Y_START;
+
+            // Calcular dirección en la memoria
+            address = (img_y * IMG_WIDTH + img_x) >> 2; // Dividir por 4 para acceder a bloques de 32 bits
+
+            // Seleccionar el píxel dentro del bloque de 32 bits (4 píxeles)
+            pixel_offset = img_x[1:0];  // Los dos bits menos significativos de img_x
+
+            // Extraer el color según el offset
+            case (pixel_offset)
+                2'b00: {r, g, b} = data[31:24]; // Primer píxel en el bloque
+                2'b01: {r, g, b} = data[23:16]; // Segundo píxel en el bloque
+                2'b10: {r, g, b} = data[15:8];  // Tercer píxel en el bloque
+                2'b11: {r, g, b} = data[7:0];   // Cuarto píxel en el bloque
+                default: {r, g, b} = 24'h000000;      // Negro por defecto
+            endcase
+        end else begin
+            // Fuera del área de imagen, mostrar negro
+            r = 8'h00;
+            g = 8'h00;
+            b = 8'h00;
+            address = 16'h0; // Dirección inválida fuera del área de imagen
+        end
     end
 
-    // Calculate RAM address based on character position
-    // Assuming each address in RAM holds 4 characters (32 bits)
-    always_comb begin
-        address = char_y * (CHARS_PER_LINE / 4) + (char_x / 4);
-    end
-
-    // Extract the character to display from the 32-bit word
-    // Each character is 8 bits, so we need to select the correct 8 bits based on the x coordinate
-    logic [7:0] character;
-    always_comb begin
-        case (x % 32)
-            0: character = data[31:24];
-            8: character = data[23:16];
-            16: character = data[15:8];
-            24: character = data[7:0];
-            default: character = 8'h20; // Space character for padding
-        endcase
-    end
-
-    // Instantiate the character generator ROM module for the current character
-
-	 logic pixel;      // 1 bit for pixel
-    chargenrom char_gen_rom(
-			.clk(clk),
-        .ch(character),
-        .xoff(xoff),
-        .yoff(yoff),
-        .pixel(pixel)
-    );
-
-    // Output
-    assign r = pixel ? 8'hFF : 8'h00;
-    assign g = pixel ? 8'hFF : 8'h00;
-    assign b = pixel ? 8'hFF : 8'h00;
-
-endmodule 
+endmodule

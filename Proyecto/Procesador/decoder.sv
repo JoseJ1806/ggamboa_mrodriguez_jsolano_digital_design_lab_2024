@@ -12,10 +12,10 @@
  //MainDecoder
  always_comb
 	 casex(Op)
-		//Data-processingimmediate
+		//Data-processing immediate
 		 2'b00:if(Funct[5]) controls = 10'b0000101001;
 		 
-		 //Data-processingregister
+		 //Data-processing register
 			else controls=10'b0000001001;
 		 //LDR
 		 2'b01:if(Funct[0]) controls=10'b0001111000;

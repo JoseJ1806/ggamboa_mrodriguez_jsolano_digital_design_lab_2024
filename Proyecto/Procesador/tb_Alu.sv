@@ -1,77 +1,76 @@
 module tb_Alu;
-  parameter N = 4;  // Definimos el tamaño de las entradas
-  logic [N-1:0] A, B;  // Entradas de la ALU
-  logic [3:0] ALU_Sel; // Selector de operación
-  logic [2*N-1:0] ALU_Result; // Resultado de la ALU
-  logic NFlag, ZFlag, CFlag, VFlag; // Banderas de la ALU
 
-  // Instanciamos el módulo ALU con el parámetro de 4 bits
-  Alu #(N) uut (
+  // Parámetros de la ALU
+  parameter N = 4;
+
+  // Entradas de la ALU
+  logic [N-1:0] A, B;
+  logic [1:0] ALU_Sel;
+
+  // Salidas de la ALU
+  logic [N-1:0] ALU_Result;
+  logic [3:0] ALU_Flags;
+
+  // Instancia del módulo ALU
+  Alu #(.N(N)) alu_inst (
     .A(A),
     .B(B),
     .ALU_Sel(ALU_Sel),
     .ALU_Result(ALU_Result),
-    .NFlag(NFlag),
-    .ZFlag(ZFlag),
-    .CFlag(CFlag),
-    .VFlag(VFlag)
+    .ALU_Flags(ALU_Flags)
   );
 
-  // Procedimiento inicial para realizar las pruebas
+  // Tarea para imprimir resultados
+  task print_results;
+    input [1:0] operation;
+    input [N-1:0] expected_result;
+    input [3:0] expected_flags;
+
+    begin
+      $display("A = %b, B = %b, ALU_Sel = %b", A, B, operation);
+      $display("ALU_Result = %b, Expected Result = %b", ALU_Result, expected_result);
+      $display("ALU_Flags = %b, Expected Flags = %b\n", ALU_Flags, expected_flags);
+    end
+  endtask
+
+  // Estímulos
   initial begin
-    $display("Iniciando pruebas de la ALU");
-    
-    // Prueba de la operación ADD
-    A = 4'b0000; B = 4'b0000; ALU_Sel = 4'b0000;
+    // Prueba de operación ADD
+    A = 4'b0011;  // 3
+    B = 4'b0001;  // 1
+    ALU_Sel = 2'b00;
     #10;
-    $display("ADD: A=%b, B=%b, ALU_Result=%b, NFlag=%b, ZFlag=%b, CFlag=%b, VFlag=%b", A, B, ALU_Result, NFlag, ZFlag, CFlag, VFlag);
-    
-    // Prueba de la operación SUB
-    A = 4'b0100; B = 4'b0100; ALU_Sel = 4'b0001;
-    #10;
-    $display("SUB: A=%b, B=%b, ALU_Result=%b, NFlag=%b, ZFlag=%b, CFlag=%b, VFlag=%b", A, B, ALU_Result, NFlag, ZFlag, CFlag, VFlag);
-    
-    // Prueba de la operación MULT
-    A = 4'b0011; B = 4'b0000; ALU_Sel = 4'b0010;
-    #10;
-    $display("MULT: A=%b, B=%b, ALU_Result=%b, NFlag=%b, ZFlag=%b, CFlag=%b, VFlag=%b", A, B, ALU_Result, NFlag, ZFlag, CFlag, VFlag);
-    
-    // Prueba de la operación DIV
-    A = 4'b0000; B = 4'b0010; ALU_Sel = 4'b0011;
-    #10;
-    $display("DIV: A=%b, B=%b, ALU_Result=%b, NFlag=%b, ZFlag=%b, CFlag=%b, VFlag=%b", A, B, ALU_Result, NFlag, ZFlag, CFlag, VFlag);
+    print_results(ALU_Sel, 4'b0100, 4'b0000); // Espera Resultado 4, Flags = 0
 
-    // Prueba de la operación Logical shift left
-    A = 4'b0101; ALU_Sel = 4'b0100;
+    // Prueba de operación SUB
+    A = 4'b0001;  // 3
+    B = 4'b0011;  // 1
+    ALU_Sel = 2'b01;
     #10;
-    $display("Logical Shift Left: A=%b, ALU_Result=%b, NFlag=%b, ZFlag=%b, CFlag=%b, VFlag=%b", A, ALU_Result, NFlag, ZFlag, CFlag, VFlag);
+    print_results(ALU_Sel, 4'b0010, 4'b0000); // Espera Resultado 2, Flags = 0
 
-    // Prueba de la operación Logical shift right
-    A = 4'b0101; ALU_Sel = 4'b0101;
+    // Prueba de operación AND
+    A = 4'b0011;  // 3
+    B = 4'b0001;  // 1
+    ALU_Sel = 2'b10;
     #10;
-    $display("Logical Shift Right: A=%b, ALU_Result=%b, NFlag=%b, ZFlag=%b, CFlag=%b, VFlag=%b", A, ALU_Result, NFlag, ZFlag, CFlag, VFlag);
+    print_results(ALU_Sel, 4'b0001, 4'b0000); // Espera Resultado 1, Flags = 0
 
-    // Prueba de la operación Module
-    A = 4'b0100; B = 4'b0010; ALU_Sel = 4'b0110;
+    // Prueba de operación OR
+    A = 4'b0010;  // 2
+    B = 4'b0001;  // 1
+    ALU_Sel = 2'b11;
     #10;
-    $display("MOD: A=%b, B=%b, ALU_Result=%b, NFlag=%b, ZFlag=%b, CFlag=%b, VFlag=%b", A, B, ALU_Result, NFlag, ZFlag, CFlag, VFlag);
+    print_results(ALU_Sel, 4'b0011, 4'b0000); // Espera Resultado 3, Flags = 0
 
-    // Prueba de la operación Logical AND
-    A = 4'b1100; B = 4'b1010; ALU_Sel = 4'b0111;
+    // Prueba de bandera Zero (Z)
+    A = 4'b0000;
+    B = 4'b0000;
+    ALU_Sel = 2'b00;
     #10;
-    $display("AND: A=%b, B=%b, ALU_Result=%b, NFlag=%b, ZFlag=%b, CFlag=%b, VFlag=%b", A, B, ALU_Result, NFlag, ZFlag, CFlag, VFlag);
+    print_results(ALU_Sel, 4'b0000, 4'b0100); // Espera Resultado 0, Flag Z = 1
 
-    // Prueba de la operación Logical OR
-    A = 4'b1100; B = 4'b1010; ALU_Sel = 4'b1000;
-    #10;
-    $display("OR: A=%b, B=%b, ALU_Result=%b, NFlag=%b, ZFlag=%b, CFlag=%b, VFlag=%b", A, B, ALU_Result, NFlag, ZFlag, CFlag, VFlag);
-
-    // Prueba de la operación Logical XOR
-    A = 4'b1100; B = 4'b1010; ALU_Sel = 4'b1001;
-    #10;
-    $display("XOR: A=%b, B=%b, ALU_Result=%b, NFlag=%b, ZFlag=%b, CFlag=%b, VFlag=%b", A, B, ALU_Result, NFlag, ZFlag, CFlag, VFlag);
-
-    $display("Pruebas completadas");
     $stop;
   end
+
 endmodule

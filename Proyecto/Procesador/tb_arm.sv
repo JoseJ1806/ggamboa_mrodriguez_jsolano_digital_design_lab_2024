@@ -1,46 +1,55 @@
 module tb_arm;
-  // Entradas y salidas para el procesador
-  logic clk, reset;
-  logic [31:0] Instr, ReadData;
-  logic [31:0] PC, ALUResult, WriteData;
-  logic MemWrite;
 
-  // Instancia del procesador
-  arm uut (
+  // Inputs
+  logic clk = 0;
+  logic reset = 1;
+  logic [31:0] Instr;
+  logic [31:0] ReadData;
+
+  // Outputs
+  logic MemWrite;
+  logic [31:0] PC;
+  logic [31:0] ALUResult;
+  logic [31:0] WriteData;
+
+  // Instantiate the arm module
+  arm u_arm (
     .clk(clk),
     .reset(reset),
-    .PC(PC),
     .Instr(Instr),
+    .ReadData(ReadData),
     .MemWrite(MemWrite),
+    .PC(PC),
     .ALUResult(ALUResult),
-    .WriteData(WriteData),
-    .ReadData(ReadData)
+    .WriteData(WriteData)
   );
 
-  // Generación de reloj
+  // Clock generation
   always #5 clk = ~clk;
 
+  // Stimulus generation
   initial begin
-    // Inicializa señales
-    clk = 0;
-    reset = 1;
-    Instr = 0;
-    ReadData = 0;
+  reset = 1'b1; // Activa el reset al principio
 
-    // Libera reset después de algunos ciclos
-    #10 reset = 0;
+  #100; // Espera un poco
 
-    // Ejemplo de estímulo para probar ADD y STR
-    // Setea la instrucción y el valor de datos de lectura para STR
-    #10 Instr = 32'hE0800001; // ADD R0, R0, R1
-    #10 Instr = 32'hE5803004; // STR R3, [R0, #4]
+  reset = 1'b0; // Desactiva el reset para comenzar la operación normal
 
-    // Aquí puedes cambiar el valor de ReadData si quieres simular datos leídos de memoria
-    #10 ReadData = 32'h00000010;
+  // Configura Instr y ReadData con los valores deseados para la prueba
+  Instr = 32'b11010010000000000000000100100010; // Ejemplo de instrucción
+  ReadData = 32'hAABBCCDD; // Ejemplo de datos de lectura
 
-    // Finaliza la simulación después de varios ciclos para observar el comportamiento
-    #100 $finish;
-  end
+  // Espera suficiente tiempo para que el módulo procese las entradas
+  #1000;
+
+  // Muestra los resultados
+  $display("MemWrite = %b", MemWrite);
+  $display("PC = %h", PC);
+  $display("ALUResult = %h", ALUResult);
+  $display("WriteData = %h", WriteData);
+
+  $finish; // Finaliza la simulación
+end
+
+
 endmodule
-
-

@@ -1,9 +1,139 @@
-|top
-clk => clk.IN2
+|CPU
+clk => clk.IN3
 reset => reset.IN1
+enable => ~NO_FANOUT~
+WriteData[0] << WriteData[0].DB_MAX_OUTPUT_PORT_TYPE
+WriteData[1] << WriteData[1].DB_MAX_OUTPUT_PORT_TYPE
+WriteData[2] << WriteData[2].DB_MAX_OUTPUT_PORT_TYPE
+WriteData[3] << WriteData[3].DB_MAX_OUTPUT_PORT_TYPE
+WriteData[4] << WriteData[4].DB_MAX_OUTPUT_PORT_TYPE
+WriteData[5] << WriteData[5].DB_MAX_OUTPUT_PORT_TYPE
+WriteData[6] << WriteData[6].DB_MAX_OUTPUT_PORT_TYPE
+WriteData[7] << WriteData[7].DB_MAX_OUTPUT_PORT_TYPE
+WriteData[8] << WriteData[8].DB_MAX_OUTPUT_PORT_TYPE
+WriteData[9] << WriteData[9].DB_MAX_OUTPUT_PORT_TYPE
+WriteData[10] << WriteData[10].DB_MAX_OUTPUT_PORT_TYPE
+WriteData[11] << WriteData[11].DB_MAX_OUTPUT_PORT_TYPE
+WriteData[12] << WriteData[12].DB_MAX_OUTPUT_PORT_TYPE
+WriteData[13] << WriteData[13].DB_MAX_OUTPUT_PORT_TYPE
+WriteData[14] << WriteData[14].DB_MAX_OUTPUT_PORT_TYPE
+WriteData[15] << WriteData[15].DB_MAX_OUTPUT_PORT_TYPE
+WriteData[16] << WriteData[16].DB_MAX_OUTPUT_PORT_TYPE
+WriteData[17] << WriteData[17].DB_MAX_OUTPUT_PORT_TYPE
+WriteData[18] << WriteData[18].DB_MAX_OUTPUT_PORT_TYPE
+WriteData[19] << WriteData[19].DB_MAX_OUTPUT_PORT_TYPE
+WriteData[20] << WriteData[20].DB_MAX_OUTPUT_PORT_TYPE
+WriteData[21] << WriteData[21].DB_MAX_OUTPUT_PORT_TYPE
+WriteData[22] << WriteData[22].DB_MAX_OUTPUT_PORT_TYPE
+WriteData[23] << WriteData[23].DB_MAX_OUTPUT_PORT_TYPE
+WriteData[24] << WriteData[24].DB_MAX_OUTPUT_PORT_TYPE
+WriteData[25] << WriteData[25].DB_MAX_OUTPUT_PORT_TYPE
+WriteData[26] << WriteData[26].DB_MAX_OUTPUT_PORT_TYPE
+WriteData[27] << WriteData[27].DB_MAX_OUTPUT_PORT_TYPE
+WriteData[28] << WriteData[28].DB_MAX_OUTPUT_PORT_TYPE
+WriteData[29] << WriteData[29].DB_MAX_OUTPUT_PORT_TYPE
+WriteData[30] << WriteData[30].DB_MAX_OUTPUT_PORT_TYPE
+WriteData[31] << WriteData[31].DB_MAX_OUTPUT_PORT_TYPE
+DataAdr[0] << DataAdr[0].DB_MAX_OUTPUT_PORT_TYPE
+DataAdr[1] << DataAdr[1].DB_MAX_OUTPUT_PORT_TYPE
+DataAdr[2] << DataAdr[2].DB_MAX_OUTPUT_PORT_TYPE
+DataAdr[3] << DataAdr[3].DB_MAX_OUTPUT_PORT_TYPE
+DataAdr[4] << DataAdr[4].DB_MAX_OUTPUT_PORT_TYPE
+DataAdr[5] << DataAdr[5].DB_MAX_OUTPUT_PORT_TYPE
+DataAdr[6] << DataAdr[6].DB_MAX_OUTPUT_PORT_TYPE
+DataAdr[7] << DataAdr[7].DB_MAX_OUTPUT_PORT_TYPE
+DataAdr[8] << DataAdr[8].DB_MAX_OUTPUT_PORT_TYPE
+DataAdr[9] << DataAdr[9].DB_MAX_OUTPUT_PORT_TYPE
+DataAdr[10] << DataAdr[10].DB_MAX_OUTPUT_PORT_TYPE
+DataAdr[11] << DataAdr[11].DB_MAX_OUTPUT_PORT_TYPE
+DataAdr[12] << DataAdr[12].DB_MAX_OUTPUT_PORT_TYPE
+DataAdr[13] << DataAdr[13].DB_MAX_OUTPUT_PORT_TYPE
+DataAdr[14] << DataAdr[14].DB_MAX_OUTPUT_PORT_TYPE
+DataAdr[15] << DataAdr[15].DB_MAX_OUTPUT_PORT_TYPE
+DataAdr[16] << arm:arm.port5
+DataAdr[17] << arm:arm.port5
+DataAdr[18] << arm:arm.port5
+DataAdr[19] << arm:arm.port5
+DataAdr[20] << arm:arm.port5
+DataAdr[21] << arm:arm.port5
+DataAdr[22] << arm:arm.port5
+DataAdr[23] << arm:arm.port5
+DataAdr[24] << arm:arm.port5
+DataAdr[25] << arm:arm.port5
+DataAdr[26] << arm:arm.port5
+DataAdr[27] << arm:arm.port5
+DataAdr[28] << arm:arm.port5
+DataAdr[29] << arm:arm.port5
+DataAdr[30] << arm:arm.port5
+DataAdr[31] << arm:arm.port5
+ReadData[0] << ReadData[0].DB_MAX_OUTPUT_PORT_TYPE
+ReadData[1] << ReadData[1].DB_MAX_OUTPUT_PORT_TYPE
+ReadData[2] << ReadData[2].DB_MAX_OUTPUT_PORT_TYPE
+ReadData[3] << ReadData[3].DB_MAX_OUTPUT_PORT_TYPE
+ReadData[4] << ReadData[4].DB_MAX_OUTPUT_PORT_TYPE
+ReadData[5] << ReadData[5].DB_MAX_OUTPUT_PORT_TYPE
+ReadData[6] << ReadData[6].DB_MAX_OUTPUT_PORT_TYPE
+ReadData[7] << ReadData[7].DB_MAX_OUTPUT_PORT_TYPE
+ReadData[8] << ReadData[8].DB_MAX_OUTPUT_PORT_TYPE
+ReadData[9] << ReadData[9].DB_MAX_OUTPUT_PORT_TYPE
+ReadData[10] << ReadData[10].DB_MAX_OUTPUT_PORT_TYPE
+ReadData[11] << ReadData[11].DB_MAX_OUTPUT_PORT_TYPE
+ReadData[12] << ReadData[12].DB_MAX_OUTPUT_PORT_TYPE
+ReadData[13] << ReadData[13].DB_MAX_OUTPUT_PORT_TYPE
+ReadData[14] << ReadData[14].DB_MAX_OUTPUT_PORT_TYPE
+ReadData[15] << ReadData[15].DB_MAX_OUTPUT_PORT_TYPE
+ReadData[16] << ReadData[16].DB_MAX_OUTPUT_PORT_TYPE
+ReadData[17] << ReadData[17].DB_MAX_OUTPUT_PORT_TYPE
+ReadData[18] << ReadData[18].DB_MAX_OUTPUT_PORT_TYPE
+ReadData[19] << ReadData[19].DB_MAX_OUTPUT_PORT_TYPE
+ReadData[20] << ReadData[20].DB_MAX_OUTPUT_PORT_TYPE
+ReadData[21] << ReadData[21].DB_MAX_OUTPUT_PORT_TYPE
+ReadData[22] << ReadData[22].DB_MAX_OUTPUT_PORT_TYPE
+ReadData[23] << ReadData[23].DB_MAX_OUTPUT_PORT_TYPE
+ReadData[24] << ReadData[24].DB_MAX_OUTPUT_PORT_TYPE
+ReadData[25] << ReadData[25].DB_MAX_OUTPUT_PORT_TYPE
+ReadData[26] << ReadData[26].DB_MAX_OUTPUT_PORT_TYPE
+ReadData[27] << ReadData[27].DB_MAX_OUTPUT_PORT_TYPE
+ReadData[28] << ReadData[28].DB_MAX_OUTPUT_PORT_TYPE
+ReadData[29] << ReadData[29].DB_MAX_OUTPUT_PORT_TYPE
+ReadData[30] << ReadData[30].DB_MAX_OUTPUT_PORT_TYPE
+ReadData[31] << ReadData[31].DB_MAX_OUTPUT_PORT_TYPE
+MemWrite << MemWrite.DB_MAX_OUTPUT_PORT_TYPE
+ins[0] << ins[0].DB_MAX_OUTPUT_PORT_TYPE
+ins[1] << ins[1].DB_MAX_OUTPUT_PORT_TYPE
+ins[2] << ins[2].DB_MAX_OUTPUT_PORT_TYPE
+ins[3] << ins[3].DB_MAX_OUTPUT_PORT_TYPE
+ins[4] << ins[4].DB_MAX_OUTPUT_PORT_TYPE
+ins[5] << ins[5].DB_MAX_OUTPUT_PORT_TYPE
+ins[6] << ins[6].DB_MAX_OUTPUT_PORT_TYPE
+ins[7] << ins[7].DB_MAX_OUTPUT_PORT_TYPE
+ins[8] << ins[8].DB_MAX_OUTPUT_PORT_TYPE
+ins[9] << ins[9].DB_MAX_OUTPUT_PORT_TYPE
+ins[10] << ins[10].DB_MAX_OUTPUT_PORT_TYPE
+ins[11] << ins[11].DB_MAX_OUTPUT_PORT_TYPE
+ins[12] << ins[12].DB_MAX_OUTPUT_PORT_TYPE
+ins[13] << ins[13].DB_MAX_OUTPUT_PORT_TYPE
+ins[14] << ins[14].DB_MAX_OUTPUT_PORT_TYPE
+ins[15] << ins[15].DB_MAX_OUTPUT_PORT_TYPE
+ins[16] << ins[16].DB_MAX_OUTPUT_PORT_TYPE
+ins[17] << ins[17].DB_MAX_OUTPUT_PORT_TYPE
+ins[18] << ins[18].DB_MAX_OUTPUT_PORT_TYPE
+ins[19] << ins[19].DB_MAX_OUTPUT_PORT_TYPE
+ins[20] << ins[20].DB_MAX_OUTPUT_PORT_TYPE
+ins[21] << ins[21].DB_MAX_OUTPUT_PORT_TYPE
+ins[22] << ins[22].DB_MAX_OUTPUT_PORT_TYPE
+ins[23] << ins[23].DB_MAX_OUTPUT_PORT_TYPE
+ins[24] << ins[24].DB_MAX_OUTPUT_PORT_TYPE
+ins[25] << ins[25].DB_MAX_OUTPUT_PORT_TYPE
+ins[26] << ins[26].DB_MAX_OUTPUT_PORT_TYPE
+ins[27] << ins[27].DB_MAX_OUTPUT_PORT_TYPE
+ins[28] << ins[28].DB_MAX_OUTPUT_PORT_TYPE
+ins[29] << ins[29].DB_MAX_OUTPUT_PORT_TYPE
+ins[30] << ins[30].DB_MAX_OUTPUT_PORT_TYPE
+ins[31] << ins[31].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor
+|CPU|arm:arm
 clk => clk.IN2
 reset => reset.IN2
 PC[0] <= datapath:dp.port10
@@ -169,7 +299,7 @@ ReadData[30] => ReadData[30].IN1
 ReadData[31] => ReadData[31].IN1
 
 
-|top|arm:processor|controller:c
+|CPU|arm:arm|controller:c
 clk => clk.IN1
 reset => reset.IN1
 Instr[12] => Instr[12].IN1
@@ -209,7 +339,7 @@ MemtoReg <= decoder:dec.port7
 PCSrc <= condlogic:cl.port8
 
 
-|top|arm:processor|controller:c|decoder:dec
+|CPU|arm:arm|controller:c|decoder:dec
 Op[0] => controls.OUTPUTSELECT
 Op[0] => Mux0.IN4
 Op[0] => Mux1.IN4
@@ -254,7 +384,7 @@ ALUControl[0] <= ALUControl.DB_MAX_OUTPUT_PORT_TYPE
 ALUControl[1] <= ALUControl.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|controller:c|condlogic:cl
+|CPU|arm:arm|controller:c|condlogic:cl
 clk => clk.IN2
 reset => reset.IN2
 Cond[0] => Cond[0].IN1
@@ -275,7 +405,7 @@ RegWrite <= RegWrite.DB_MAX_OUTPUT_PORT_TYPE
 MemWrite <= MemWrite.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|controller:c|condlogic:cl|flopenr:flagreg1
+|CPU|arm:arm|controller:c|condlogic:cl|flopenr:flagreg1
 clk => q[0]~reg0.CLK
 clk => q[1]~reg0.CLK
 reset => q[0]~reg0.ACLR
@@ -288,7 +418,7 @@ q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q[1] <= q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|controller:c|condlogic:cl|flopenr:flagreg0
+|CPU|arm:arm|controller:c|condlogic:cl|flopenr:flagreg0
 clk => q[0]~reg0.CLK
 clk => q[1]~reg0.CLK
 reset => q[0]~reg0.ACLR
@@ -301,7 +431,7 @@ q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q[1] <= q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|controller:c|condlogic:cl|condcheck:cc
+|CPU|arm:arm|controller:c|condlogic:cl|condcheck:cc
 Cond[0] => Mux0.IN14
 Cond[1] => Mux0.IN13
 Cond[2] => Mux0.IN12
@@ -322,7 +452,7 @@ Flags[3] => Mux0.IN4
 CondEx <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp
+|CPU|arm:arm|datapath:dp
 clk => clk.IN2
 reset => reset.IN1
 RegSrc[0] => RegSrc[0].IN1
@@ -501,7 +631,7 @@ ReadData[30] => ReadData[30].IN1
 ReadData[31] => ReadData[31].IN1
 
 
-|top|arm:processor|datapath:dp|mux2:pcmux
+|CPU|arm:arm|datapath:dp|mux2:pcmux
 d0[0] => y.DATAA
 d0[1] => y.DATAA
 d0[2] => y.DATAA
@@ -632,7 +762,7 @@ y[30] <= y.DB_MAX_OUTPUT_PORT_TYPE
 y[31] <= y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|flopr:pcreg
+|CPU|arm:arm|datapath:dp|flopr:pcreg
 clk => q[0]~reg0.CLK
 clk => q[1]~reg0.CLK
 clk => q[2]~reg0.CLK
@@ -763,7 +893,7 @@ q[30] <= q[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q[31] <= q[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|adder:pcadd1
+|CPU|arm:arm|datapath:dp|adder:pcadd1
 a[0] => Add0.IN32
 a[1] => Add0.IN31
 a[2] => Add0.IN30
@@ -862,7 +992,7 @@ y[30] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 y[31] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|adder:pcadd2
+|CPU|arm:arm|datapath:dp|adder:pcadd2
 a[0] => Add0.IN32
 a[1] => Add0.IN31
 a[2] => Add0.IN30
@@ -961,7 +1091,7 @@ y[30] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 y[31] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|mux2:ra1mux
+|CPU|arm:arm|datapath:dp|mux2:ra1mux
 d0[0] => y.DATAA
 d0[1] => y.DATAA
 d0[2] => y.DATAA
@@ -980,7 +1110,7 @@ y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
 y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|mux2:ra2mux
+|CPU|arm:arm|datapath:dp|mux2:ra2mux
 d0[0] => y.DATAA
 d0[1] => y.DATAA
 d0[2] => y.DATAA
@@ -999,7 +1129,7 @@ y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
 y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|regfile:rf
+|CPU|arm:arm|datapath:dp|regfile:rf
 clk => rf.we_a.CLK
 clk => rf.waddr_a[3].CLK
 clk => rf.waddr_a[2].CLK
@@ -1258,7 +1388,7 @@ rd2[30] <= rd2.DB_MAX_OUTPUT_PORT_TYPE
 rd2[31] <= rd2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|mux2:resmux
+|CPU|arm:arm|datapath:dp|mux2:resmux
 d0[0] => y.DATAA
 d0[1] => y.DATAA
 d0[2] => y.DATAA
@@ -1389,7 +1519,7 @@ y[30] <= y.DB_MAX_OUTPUT_PORT_TYPE
 y[31] <= y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|extend:ext
+|CPU|arm:arm|datapath:dp|extend:ext
 Instr[0] => ExtImm.DATAB
 Instr[0] => ExtImm.DATAA
 Instr[1] => ExtImm.DATAB
@@ -1502,7 +1632,7 @@ ExtImm[30] <= ExtImm.DB_MAX_OUTPUT_PORT_TYPE
 ExtImm[31] <= ExtImm.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|mux2:srcbmux
+|CPU|arm:arm|datapath:dp|mux2:srcbmux
 d0[0] => y.DATAA
 d0[1] => y.DATAA
 d0[2] => y.DATAA
@@ -1633,7 +1763,7 @@ y[30] <= y.DB_MAX_OUTPUT_PORT_TYPE
 y[31] <= y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|Alu:alu
+|CPU|arm:arm|datapath:dp|Alu:alu
 A[0] => A[0].IN2
 A[1] => A[1].IN2
 A[2] => A[2].IN2
@@ -1808,7 +1938,7 @@ ALU_Flags[2] <= Mux33.DB_MAX_OUTPUT_PORT_TYPE
 ALU_Flags[3] <= Mux32.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|Alu:alu|n_bit_subtractor:sub_op
+|CPU|arm:arm|datapath:dp|Alu:alu|n_bit_subtractor:sub_op
 a[0] => a[0].IN1
 a[1] => a[1].IN1
 a[2] => a[2].IN1
@@ -1911,7 +2041,7 @@ of_flag <= of_flag.DB_MAX_OUTPUT_PORT_TYPE
 neg_flag <= full_subtractor:generate_N_bit_Adder[31].f.port3
 
 
-|top|arm:processor|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[0].f
+|CPU|arm:arm|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[0].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -1922,7 +2052,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[1].f
+|CPU|arm:arm|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[1].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -1933,7 +2063,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[2].f
+|CPU|arm:arm|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[2].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -1944,7 +2074,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[3].f
+|CPU|arm:arm|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[3].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -1955,7 +2085,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[4].f
+|CPU|arm:arm|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[4].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -1966,7 +2096,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[5].f
+|CPU|arm:arm|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[5].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -1977,7 +2107,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[6].f
+|CPU|arm:arm|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[6].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -1988,7 +2118,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[7].f
+|CPU|arm:arm|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[7].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -1999,7 +2129,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[8].f
+|CPU|arm:arm|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[8].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -2010,7 +2140,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[9].f
+|CPU|arm:arm|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[9].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -2021,7 +2151,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[10].f
+|CPU|arm:arm|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[10].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -2032,7 +2162,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[11].f
+|CPU|arm:arm|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[11].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -2043,7 +2173,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[12].f
+|CPU|arm:arm|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[12].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -2054,7 +2184,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[13].f
+|CPU|arm:arm|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[13].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -2065,7 +2195,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[14].f
+|CPU|arm:arm|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[14].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -2076,7 +2206,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[15].f
+|CPU|arm:arm|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[15].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -2087,7 +2217,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[16].f
+|CPU|arm:arm|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[16].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -2098,7 +2228,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[17].f
+|CPU|arm:arm|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[17].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -2109,7 +2239,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[18].f
+|CPU|arm:arm|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[18].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -2120,7 +2250,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[19].f
+|CPU|arm:arm|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[19].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -2131,7 +2261,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[20].f
+|CPU|arm:arm|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[20].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -2142,7 +2272,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[21].f
+|CPU|arm:arm|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[21].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -2153,7 +2283,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[22].f
+|CPU|arm:arm|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[22].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -2164,7 +2294,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[23].f
+|CPU|arm:arm|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[23].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -2175,7 +2305,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[24].f
+|CPU|arm:arm|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[24].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -2186,7 +2316,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[25].f
+|CPU|arm:arm|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[25].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -2197,7 +2327,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[26].f
+|CPU|arm:arm|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[26].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -2208,7 +2338,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[27].f
+|CPU|arm:arm|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[27].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -2219,7 +2349,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[28].f
+|CPU|arm:arm|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[28].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -2230,7 +2360,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[29].f
+|CPU|arm:arm|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[29].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -2241,7 +2371,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[30].f
+|CPU|arm:arm|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[30].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -2252,7 +2382,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[31].f
+|CPU|arm:arm|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[31].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -2263,7 +2393,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|Alu:alu|n_bit_adder:adder_op
+|CPU|arm:arm|datapath:dp|Alu:alu|n_bit_adder:adder_op
 a[0] => a[0].IN1
 a[1] => a[1].IN1
 a[2] => a[2].IN1
@@ -2366,7 +2496,7 @@ of_flag <= of_flag.DB_MAX_OUTPUT_PORT_TYPE
 cry_flag <= full_adder:generate_N_bit_Adder[31].f.port4
 
 
-|top|arm:processor|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[0].f
+|CPU|arm:arm|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[0].f
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -2377,7 +2507,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[1].f
+|CPU|arm:arm|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[1].f
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -2388,7 +2518,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[2].f
+|CPU|arm:arm|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[2].f
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -2399,7 +2529,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[3].f
+|CPU|arm:arm|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[3].f
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -2410,7 +2540,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[4].f
+|CPU|arm:arm|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[4].f
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -2421,7 +2551,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[5].f
+|CPU|arm:arm|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[5].f
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -2432,7 +2562,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[6].f
+|CPU|arm:arm|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[6].f
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -2443,7 +2573,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[7].f
+|CPU|arm:arm|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[7].f
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -2454,7 +2584,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[8].f
+|CPU|arm:arm|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[8].f
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -2465,7 +2595,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[9].f
+|CPU|arm:arm|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[9].f
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -2476,7 +2606,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[10].f
+|CPU|arm:arm|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[10].f
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -2487,7 +2617,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[11].f
+|CPU|arm:arm|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[11].f
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -2498,7 +2628,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[12].f
+|CPU|arm:arm|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[12].f
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -2509,7 +2639,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[13].f
+|CPU|arm:arm|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[13].f
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -2520,7 +2650,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[14].f
+|CPU|arm:arm|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[14].f
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -2531,7 +2661,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[15].f
+|CPU|arm:arm|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[15].f
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -2542,7 +2672,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[16].f
+|CPU|arm:arm|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[16].f
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -2553,7 +2683,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[17].f
+|CPU|arm:arm|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[17].f
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -2564,7 +2694,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[18].f
+|CPU|arm:arm|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[18].f
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -2575,7 +2705,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[19].f
+|CPU|arm:arm|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[19].f
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -2586,7 +2716,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[20].f
+|CPU|arm:arm|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[20].f
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -2597,7 +2727,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[21].f
+|CPU|arm:arm|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[21].f
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -2608,7 +2738,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[22].f
+|CPU|arm:arm|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[22].f
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -2619,7 +2749,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[23].f
+|CPU|arm:arm|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[23].f
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -2630,7 +2760,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[24].f
+|CPU|arm:arm|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[24].f
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -2641,7 +2771,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[25].f
+|CPU|arm:arm|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[25].f
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -2652,7 +2782,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[26].f
+|CPU|arm:arm|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[26].f
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -2663,7 +2793,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[27].f
+|CPU|arm:arm|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[27].f
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -2674,7 +2804,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[28].f
+|CPU|arm:arm|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[28].f
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -2685,7 +2815,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[29].f
+|CPU|arm:arm|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[29].f
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -2696,7 +2826,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[30].f
+|CPU|arm:arm|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[30].f
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -2707,7 +2837,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|arm:processor|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[31].f
+|CPU|arm:arm|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[31].f
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -2718,7 +2848,471 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|ram_dummy:ram
+|CPU|rom:rom
+address[0] => address[0].IN1
+address[1] => address[1].IN1
+address[2] => address[2].IN1
+address[3] => address[3].IN1
+address[4] => address[4].IN1
+address[5] => address[5].IN1
+address[6] => address[6].IN1
+address[7] => address[7].IN1
+clock => clock.IN1
+q[0] <= altsyncram:altsyncram_component.q_a
+q[1] <= altsyncram:altsyncram_component.q_a
+q[2] <= altsyncram:altsyncram_component.q_a
+q[3] <= altsyncram:altsyncram_component.q_a
+q[4] <= altsyncram:altsyncram_component.q_a
+q[5] <= altsyncram:altsyncram_component.q_a
+q[6] <= altsyncram:altsyncram_component.q_a
+q[7] <= altsyncram:altsyncram_component.q_a
+q[8] <= altsyncram:altsyncram_component.q_a
+q[9] <= altsyncram:altsyncram_component.q_a
+q[10] <= altsyncram:altsyncram_component.q_a
+q[11] <= altsyncram:altsyncram_component.q_a
+q[12] <= altsyncram:altsyncram_component.q_a
+q[13] <= altsyncram:altsyncram_component.q_a
+q[14] <= altsyncram:altsyncram_component.q_a
+q[15] <= altsyncram:altsyncram_component.q_a
+q[16] <= altsyncram:altsyncram_component.q_a
+q[17] <= altsyncram:altsyncram_component.q_a
+q[18] <= altsyncram:altsyncram_component.q_a
+q[19] <= altsyncram:altsyncram_component.q_a
+q[20] <= altsyncram:altsyncram_component.q_a
+q[21] <= altsyncram:altsyncram_component.q_a
+q[22] <= altsyncram:altsyncram_component.q_a
+q[23] <= altsyncram:altsyncram_component.q_a
+q[24] <= altsyncram:altsyncram_component.q_a
+q[25] <= altsyncram:altsyncram_component.q_a
+q[26] <= altsyncram:altsyncram_component.q_a
+q[27] <= altsyncram:altsyncram_component.q_a
+q[28] <= altsyncram:altsyncram_component.q_a
+q[29] <= altsyncram:altsyncram_component.q_a
+q[30] <= altsyncram:altsyncram_component.q_a
+q[31] <= altsyncram:altsyncram_component.q_a
+
+
+|CPU|rom:rom|altsyncram:altsyncram_component
+wren_a => ~NO_FANOUT~
+rden_a => ~NO_FANOUT~
+wren_b => ~NO_FANOUT~
+rden_b => ~NO_FANOUT~
+data_a[0] => ~NO_FANOUT~
+data_a[1] => ~NO_FANOUT~
+data_a[2] => ~NO_FANOUT~
+data_a[3] => ~NO_FANOUT~
+data_a[4] => ~NO_FANOUT~
+data_a[5] => ~NO_FANOUT~
+data_a[6] => ~NO_FANOUT~
+data_a[7] => ~NO_FANOUT~
+data_a[8] => ~NO_FANOUT~
+data_a[9] => ~NO_FANOUT~
+data_a[10] => ~NO_FANOUT~
+data_a[11] => ~NO_FANOUT~
+data_a[12] => ~NO_FANOUT~
+data_a[13] => ~NO_FANOUT~
+data_a[14] => ~NO_FANOUT~
+data_a[15] => ~NO_FANOUT~
+data_a[16] => ~NO_FANOUT~
+data_a[17] => ~NO_FANOUT~
+data_a[18] => ~NO_FANOUT~
+data_a[19] => ~NO_FANOUT~
+data_a[20] => ~NO_FANOUT~
+data_a[21] => ~NO_FANOUT~
+data_a[22] => ~NO_FANOUT~
+data_a[23] => ~NO_FANOUT~
+data_a[24] => ~NO_FANOUT~
+data_a[25] => ~NO_FANOUT~
+data_a[26] => ~NO_FANOUT~
+data_a[27] => ~NO_FANOUT~
+data_a[28] => ~NO_FANOUT~
+data_a[29] => ~NO_FANOUT~
+data_a[30] => ~NO_FANOUT~
+data_a[31] => ~NO_FANOUT~
+data_b[0] => ~NO_FANOUT~
+address_a[0] => altsyncram_0tf1:auto_generated.address_a[0]
+address_a[1] => altsyncram_0tf1:auto_generated.address_a[1]
+address_a[2] => altsyncram_0tf1:auto_generated.address_a[2]
+address_a[3] => altsyncram_0tf1:auto_generated.address_a[3]
+address_a[4] => altsyncram_0tf1:auto_generated.address_a[4]
+address_a[5] => altsyncram_0tf1:auto_generated.address_a[5]
+address_a[6] => altsyncram_0tf1:auto_generated.address_a[6]
+address_a[7] => altsyncram_0tf1:auto_generated.address_a[7]
+address_b[0] => ~NO_FANOUT~
+addressstall_a => ~NO_FANOUT~
+addressstall_b => ~NO_FANOUT~
+clock0 => altsyncram_0tf1:auto_generated.clock0
+clock1 => ~NO_FANOUT~
+clocken0 => ~NO_FANOUT~
+clocken1 => ~NO_FANOUT~
+clocken2 => ~NO_FANOUT~
+clocken3 => ~NO_FANOUT~
+aclr0 => ~NO_FANOUT~
+aclr1 => ~NO_FANOUT~
+byteena_a[0] => ~NO_FANOUT~
+byteena_b[0] => ~NO_FANOUT~
+q_a[0] <= altsyncram_0tf1:auto_generated.q_a[0]
+q_a[1] <= altsyncram_0tf1:auto_generated.q_a[1]
+q_a[2] <= altsyncram_0tf1:auto_generated.q_a[2]
+q_a[3] <= altsyncram_0tf1:auto_generated.q_a[3]
+q_a[4] <= altsyncram_0tf1:auto_generated.q_a[4]
+q_a[5] <= altsyncram_0tf1:auto_generated.q_a[5]
+q_a[6] <= altsyncram_0tf1:auto_generated.q_a[6]
+q_a[7] <= altsyncram_0tf1:auto_generated.q_a[7]
+q_a[8] <= altsyncram_0tf1:auto_generated.q_a[8]
+q_a[9] <= altsyncram_0tf1:auto_generated.q_a[9]
+q_a[10] <= altsyncram_0tf1:auto_generated.q_a[10]
+q_a[11] <= altsyncram_0tf1:auto_generated.q_a[11]
+q_a[12] <= altsyncram_0tf1:auto_generated.q_a[12]
+q_a[13] <= altsyncram_0tf1:auto_generated.q_a[13]
+q_a[14] <= altsyncram_0tf1:auto_generated.q_a[14]
+q_a[15] <= altsyncram_0tf1:auto_generated.q_a[15]
+q_a[16] <= altsyncram_0tf1:auto_generated.q_a[16]
+q_a[17] <= altsyncram_0tf1:auto_generated.q_a[17]
+q_a[18] <= altsyncram_0tf1:auto_generated.q_a[18]
+q_a[19] <= altsyncram_0tf1:auto_generated.q_a[19]
+q_a[20] <= altsyncram_0tf1:auto_generated.q_a[20]
+q_a[21] <= altsyncram_0tf1:auto_generated.q_a[21]
+q_a[22] <= altsyncram_0tf1:auto_generated.q_a[22]
+q_a[23] <= altsyncram_0tf1:auto_generated.q_a[23]
+q_a[24] <= altsyncram_0tf1:auto_generated.q_a[24]
+q_a[25] <= altsyncram_0tf1:auto_generated.q_a[25]
+q_a[26] <= altsyncram_0tf1:auto_generated.q_a[26]
+q_a[27] <= altsyncram_0tf1:auto_generated.q_a[27]
+q_a[28] <= altsyncram_0tf1:auto_generated.q_a[28]
+q_a[29] <= altsyncram_0tf1:auto_generated.q_a[29]
+q_a[30] <= altsyncram_0tf1:auto_generated.q_a[30]
+q_a[31] <= altsyncram_0tf1:auto_generated.q_a[31]
+q_b[0] <= <GND>
+eccstatus[0] <= <GND>
+eccstatus[1] <= <GND>
+eccstatus[2] <= <GND>
+
+
+|CPU|rom:rom|altsyncram:altsyncram_component|altsyncram_0tf1:auto_generated
+address_a[0] => ram_block1a0.PORTAADDR
+address_a[0] => ram_block1a1.PORTAADDR
+address_a[0] => ram_block1a2.PORTAADDR
+address_a[0] => ram_block1a3.PORTAADDR
+address_a[0] => ram_block1a4.PORTAADDR
+address_a[0] => ram_block1a5.PORTAADDR
+address_a[0] => ram_block1a6.PORTAADDR
+address_a[0] => ram_block1a7.PORTAADDR
+address_a[0] => ram_block1a8.PORTAADDR
+address_a[0] => ram_block1a9.PORTAADDR
+address_a[0] => ram_block1a10.PORTAADDR
+address_a[0] => ram_block1a11.PORTAADDR
+address_a[0] => ram_block1a12.PORTAADDR
+address_a[0] => ram_block1a13.PORTAADDR
+address_a[0] => ram_block1a14.PORTAADDR
+address_a[0] => ram_block1a15.PORTAADDR
+address_a[0] => ram_block1a16.PORTAADDR
+address_a[0] => ram_block1a17.PORTAADDR
+address_a[0] => ram_block1a18.PORTAADDR
+address_a[0] => ram_block1a19.PORTAADDR
+address_a[0] => ram_block1a20.PORTAADDR
+address_a[0] => ram_block1a21.PORTAADDR
+address_a[0] => ram_block1a22.PORTAADDR
+address_a[0] => ram_block1a23.PORTAADDR
+address_a[0] => ram_block1a24.PORTAADDR
+address_a[0] => ram_block1a25.PORTAADDR
+address_a[0] => ram_block1a26.PORTAADDR
+address_a[0] => ram_block1a27.PORTAADDR
+address_a[0] => ram_block1a28.PORTAADDR
+address_a[0] => ram_block1a29.PORTAADDR
+address_a[0] => ram_block1a30.PORTAADDR
+address_a[0] => ram_block1a31.PORTAADDR
+address_a[1] => ram_block1a0.PORTAADDR1
+address_a[1] => ram_block1a1.PORTAADDR1
+address_a[1] => ram_block1a2.PORTAADDR1
+address_a[1] => ram_block1a3.PORTAADDR1
+address_a[1] => ram_block1a4.PORTAADDR1
+address_a[1] => ram_block1a5.PORTAADDR1
+address_a[1] => ram_block1a6.PORTAADDR1
+address_a[1] => ram_block1a7.PORTAADDR1
+address_a[1] => ram_block1a8.PORTAADDR1
+address_a[1] => ram_block1a9.PORTAADDR1
+address_a[1] => ram_block1a10.PORTAADDR1
+address_a[1] => ram_block1a11.PORTAADDR1
+address_a[1] => ram_block1a12.PORTAADDR1
+address_a[1] => ram_block1a13.PORTAADDR1
+address_a[1] => ram_block1a14.PORTAADDR1
+address_a[1] => ram_block1a15.PORTAADDR1
+address_a[1] => ram_block1a16.PORTAADDR1
+address_a[1] => ram_block1a17.PORTAADDR1
+address_a[1] => ram_block1a18.PORTAADDR1
+address_a[1] => ram_block1a19.PORTAADDR1
+address_a[1] => ram_block1a20.PORTAADDR1
+address_a[1] => ram_block1a21.PORTAADDR1
+address_a[1] => ram_block1a22.PORTAADDR1
+address_a[1] => ram_block1a23.PORTAADDR1
+address_a[1] => ram_block1a24.PORTAADDR1
+address_a[1] => ram_block1a25.PORTAADDR1
+address_a[1] => ram_block1a26.PORTAADDR1
+address_a[1] => ram_block1a27.PORTAADDR1
+address_a[1] => ram_block1a28.PORTAADDR1
+address_a[1] => ram_block1a29.PORTAADDR1
+address_a[1] => ram_block1a30.PORTAADDR1
+address_a[1] => ram_block1a31.PORTAADDR1
+address_a[2] => ram_block1a0.PORTAADDR2
+address_a[2] => ram_block1a1.PORTAADDR2
+address_a[2] => ram_block1a2.PORTAADDR2
+address_a[2] => ram_block1a3.PORTAADDR2
+address_a[2] => ram_block1a4.PORTAADDR2
+address_a[2] => ram_block1a5.PORTAADDR2
+address_a[2] => ram_block1a6.PORTAADDR2
+address_a[2] => ram_block1a7.PORTAADDR2
+address_a[2] => ram_block1a8.PORTAADDR2
+address_a[2] => ram_block1a9.PORTAADDR2
+address_a[2] => ram_block1a10.PORTAADDR2
+address_a[2] => ram_block1a11.PORTAADDR2
+address_a[2] => ram_block1a12.PORTAADDR2
+address_a[2] => ram_block1a13.PORTAADDR2
+address_a[2] => ram_block1a14.PORTAADDR2
+address_a[2] => ram_block1a15.PORTAADDR2
+address_a[2] => ram_block1a16.PORTAADDR2
+address_a[2] => ram_block1a17.PORTAADDR2
+address_a[2] => ram_block1a18.PORTAADDR2
+address_a[2] => ram_block1a19.PORTAADDR2
+address_a[2] => ram_block1a20.PORTAADDR2
+address_a[2] => ram_block1a21.PORTAADDR2
+address_a[2] => ram_block1a22.PORTAADDR2
+address_a[2] => ram_block1a23.PORTAADDR2
+address_a[2] => ram_block1a24.PORTAADDR2
+address_a[2] => ram_block1a25.PORTAADDR2
+address_a[2] => ram_block1a26.PORTAADDR2
+address_a[2] => ram_block1a27.PORTAADDR2
+address_a[2] => ram_block1a28.PORTAADDR2
+address_a[2] => ram_block1a29.PORTAADDR2
+address_a[2] => ram_block1a30.PORTAADDR2
+address_a[2] => ram_block1a31.PORTAADDR2
+address_a[3] => ram_block1a0.PORTAADDR3
+address_a[3] => ram_block1a1.PORTAADDR3
+address_a[3] => ram_block1a2.PORTAADDR3
+address_a[3] => ram_block1a3.PORTAADDR3
+address_a[3] => ram_block1a4.PORTAADDR3
+address_a[3] => ram_block1a5.PORTAADDR3
+address_a[3] => ram_block1a6.PORTAADDR3
+address_a[3] => ram_block1a7.PORTAADDR3
+address_a[3] => ram_block1a8.PORTAADDR3
+address_a[3] => ram_block1a9.PORTAADDR3
+address_a[3] => ram_block1a10.PORTAADDR3
+address_a[3] => ram_block1a11.PORTAADDR3
+address_a[3] => ram_block1a12.PORTAADDR3
+address_a[3] => ram_block1a13.PORTAADDR3
+address_a[3] => ram_block1a14.PORTAADDR3
+address_a[3] => ram_block1a15.PORTAADDR3
+address_a[3] => ram_block1a16.PORTAADDR3
+address_a[3] => ram_block1a17.PORTAADDR3
+address_a[3] => ram_block1a18.PORTAADDR3
+address_a[3] => ram_block1a19.PORTAADDR3
+address_a[3] => ram_block1a20.PORTAADDR3
+address_a[3] => ram_block1a21.PORTAADDR3
+address_a[3] => ram_block1a22.PORTAADDR3
+address_a[3] => ram_block1a23.PORTAADDR3
+address_a[3] => ram_block1a24.PORTAADDR3
+address_a[3] => ram_block1a25.PORTAADDR3
+address_a[3] => ram_block1a26.PORTAADDR3
+address_a[3] => ram_block1a27.PORTAADDR3
+address_a[3] => ram_block1a28.PORTAADDR3
+address_a[3] => ram_block1a29.PORTAADDR3
+address_a[3] => ram_block1a30.PORTAADDR3
+address_a[3] => ram_block1a31.PORTAADDR3
+address_a[4] => ram_block1a0.PORTAADDR4
+address_a[4] => ram_block1a1.PORTAADDR4
+address_a[4] => ram_block1a2.PORTAADDR4
+address_a[4] => ram_block1a3.PORTAADDR4
+address_a[4] => ram_block1a4.PORTAADDR4
+address_a[4] => ram_block1a5.PORTAADDR4
+address_a[4] => ram_block1a6.PORTAADDR4
+address_a[4] => ram_block1a7.PORTAADDR4
+address_a[4] => ram_block1a8.PORTAADDR4
+address_a[4] => ram_block1a9.PORTAADDR4
+address_a[4] => ram_block1a10.PORTAADDR4
+address_a[4] => ram_block1a11.PORTAADDR4
+address_a[4] => ram_block1a12.PORTAADDR4
+address_a[4] => ram_block1a13.PORTAADDR4
+address_a[4] => ram_block1a14.PORTAADDR4
+address_a[4] => ram_block1a15.PORTAADDR4
+address_a[4] => ram_block1a16.PORTAADDR4
+address_a[4] => ram_block1a17.PORTAADDR4
+address_a[4] => ram_block1a18.PORTAADDR4
+address_a[4] => ram_block1a19.PORTAADDR4
+address_a[4] => ram_block1a20.PORTAADDR4
+address_a[4] => ram_block1a21.PORTAADDR4
+address_a[4] => ram_block1a22.PORTAADDR4
+address_a[4] => ram_block1a23.PORTAADDR4
+address_a[4] => ram_block1a24.PORTAADDR4
+address_a[4] => ram_block1a25.PORTAADDR4
+address_a[4] => ram_block1a26.PORTAADDR4
+address_a[4] => ram_block1a27.PORTAADDR4
+address_a[4] => ram_block1a28.PORTAADDR4
+address_a[4] => ram_block1a29.PORTAADDR4
+address_a[4] => ram_block1a30.PORTAADDR4
+address_a[4] => ram_block1a31.PORTAADDR4
+address_a[5] => ram_block1a0.PORTAADDR5
+address_a[5] => ram_block1a1.PORTAADDR5
+address_a[5] => ram_block1a2.PORTAADDR5
+address_a[5] => ram_block1a3.PORTAADDR5
+address_a[5] => ram_block1a4.PORTAADDR5
+address_a[5] => ram_block1a5.PORTAADDR5
+address_a[5] => ram_block1a6.PORTAADDR5
+address_a[5] => ram_block1a7.PORTAADDR5
+address_a[5] => ram_block1a8.PORTAADDR5
+address_a[5] => ram_block1a9.PORTAADDR5
+address_a[5] => ram_block1a10.PORTAADDR5
+address_a[5] => ram_block1a11.PORTAADDR5
+address_a[5] => ram_block1a12.PORTAADDR5
+address_a[5] => ram_block1a13.PORTAADDR5
+address_a[5] => ram_block1a14.PORTAADDR5
+address_a[5] => ram_block1a15.PORTAADDR5
+address_a[5] => ram_block1a16.PORTAADDR5
+address_a[5] => ram_block1a17.PORTAADDR5
+address_a[5] => ram_block1a18.PORTAADDR5
+address_a[5] => ram_block1a19.PORTAADDR5
+address_a[5] => ram_block1a20.PORTAADDR5
+address_a[5] => ram_block1a21.PORTAADDR5
+address_a[5] => ram_block1a22.PORTAADDR5
+address_a[5] => ram_block1a23.PORTAADDR5
+address_a[5] => ram_block1a24.PORTAADDR5
+address_a[5] => ram_block1a25.PORTAADDR5
+address_a[5] => ram_block1a26.PORTAADDR5
+address_a[5] => ram_block1a27.PORTAADDR5
+address_a[5] => ram_block1a28.PORTAADDR5
+address_a[5] => ram_block1a29.PORTAADDR5
+address_a[5] => ram_block1a30.PORTAADDR5
+address_a[5] => ram_block1a31.PORTAADDR5
+address_a[6] => ram_block1a0.PORTAADDR6
+address_a[6] => ram_block1a1.PORTAADDR6
+address_a[6] => ram_block1a2.PORTAADDR6
+address_a[6] => ram_block1a3.PORTAADDR6
+address_a[6] => ram_block1a4.PORTAADDR6
+address_a[6] => ram_block1a5.PORTAADDR6
+address_a[6] => ram_block1a6.PORTAADDR6
+address_a[6] => ram_block1a7.PORTAADDR6
+address_a[6] => ram_block1a8.PORTAADDR6
+address_a[6] => ram_block1a9.PORTAADDR6
+address_a[6] => ram_block1a10.PORTAADDR6
+address_a[6] => ram_block1a11.PORTAADDR6
+address_a[6] => ram_block1a12.PORTAADDR6
+address_a[6] => ram_block1a13.PORTAADDR6
+address_a[6] => ram_block1a14.PORTAADDR6
+address_a[6] => ram_block1a15.PORTAADDR6
+address_a[6] => ram_block1a16.PORTAADDR6
+address_a[6] => ram_block1a17.PORTAADDR6
+address_a[6] => ram_block1a18.PORTAADDR6
+address_a[6] => ram_block1a19.PORTAADDR6
+address_a[6] => ram_block1a20.PORTAADDR6
+address_a[6] => ram_block1a21.PORTAADDR6
+address_a[6] => ram_block1a22.PORTAADDR6
+address_a[6] => ram_block1a23.PORTAADDR6
+address_a[6] => ram_block1a24.PORTAADDR6
+address_a[6] => ram_block1a25.PORTAADDR6
+address_a[6] => ram_block1a26.PORTAADDR6
+address_a[6] => ram_block1a27.PORTAADDR6
+address_a[6] => ram_block1a28.PORTAADDR6
+address_a[6] => ram_block1a29.PORTAADDR6
+address_a[6] => ram_block1a30.PORTAADDR6
+address_a[6] => ram_block1a31.PORTAADDR6
+address_a[7] => ram_block1a0.PORTAADDR7
+address_a[7] => ram_block1a1.PORTAADDR7
+address_a[7] => ram_block1a2.PORTAADDR7
+address_a[7] => ram_block1a3.PORTAADDR7
+address_a[7] => ram_block1a4.PORTAADDR7
+address_a[7] => ram_block1a5.PORTAADDR7
+address_a[7] => ram_block1a6.PORTAADDR7
+address_a[7] => ram_block1a7.PORTAADDR7
+address_a[7] => ram_block1a8.PORTAADDR7
+address_a[7] => ram_block1a9.PORTAADDR7
+address_a[7] => ram_block1a10.PORTAADDR7
+address_a[7] => ram_block1a11.PORTAADDR7
+address_a[7] => ram_block1a12.PORTAADDR7
+address_a[7] => ram_block1a13.PORTAADDR7
+address_a[7] => ram_block1a14.PORTAADDR7
+address_a[7] => ram_block1a15.PORTAADDR7
+address_a[7] => ram_block1a16.PORTAADDR7
+address_a[7] => ram_block1a17.PORTAADDR7
+address_a[7] => ram_block1a18.PORTAADDR7
+address_a[7] => ram_block1a19.PORTAADDR7
+address_a[7] => ram_block1a20.PORTAADDR7
+address_a[7] => ram_block1a21.PORTAADDR7
+address_a[7] => ram_block1a22.PORTAADDR7
+address_a[7] => ram_block1a23.PORTAADDR7
+address_a[7] => ram_block1a24.PORTAADDR7
+address_a[7] => ram_block1a25.PORTAADDR7
+address_a[7] => ram_block1a26.PORTAADDR7
+address_a[7] => ram_block1a27.PORTAADDR7
+address_a[7] => ram_block1a28.PORTAADDR7
+address_a[7] => ram_block1a29.PORTAADDR7
+address_a[7] => ram_block1a30.PORTAADDR7
+address_a[7] => ram_block1a31.PORTAADDR7
+clock0 => ram_block1a0.CLK0
+clock0 => ram_block1a1.CLK0
+clock0 => ram_block1a2.CLK0
+clock0 => ram_block1a3.CLK0
+clock0 => ram_block1a4.CLK0
+clock0 => ram_block1a5.CLK0
+clock0 => ram_block1a6.CLK0
+clock0 => ram_block1a7.CLK0
+clock0 => ram_block1a8.CLK0
+clock0 => ram_block1a9.CLK0
+clock0 => ram_block1a10.CLK0
+clock0 => ram_block1a11.CLK0
+clock0 => ram_block1a12.CLK0
+clock0 => ram_block1a13.CLK0
+clock0 => ram_block1a14.CLK0
+clock0 => ram_block1a15.CLK0
+clock0 => ram_block1a16.CLK0
+clock0 => ram_block1a17.CLK0
+clock0 => ram_block1a18.CLK0
+clock0 => ram_block1a19.CLK0
+clock0 => ram_block1a20.CLK0
+clock0 => ram_block1a21.CLK0
+clock0 => ram_block1a22.CLK0
+clock0 => ram_block1a23.CLK0
+clock0 => ram_block1a24.CLK0
+clock0 => ram_block1a25.CLK0
+clock0 => ram_block1a26.CLK0
+clock0 => ram_block1a27.CLK0
+clock0 => ram_block1a28.CLK0
+clock0 => ram_block1a29.CLK0
+clock0 => ram_block1a30.CLK0
+clock0 => ram_block1a31.CLK0
+q_a[0] <= ram_block1a0.PORTADATAOUT
+q_a[1] <= ram_block1a1.PORTADATAOUT
+q_a[2] <= ram_block1a2.PORTADATAOUT
+q_a[3] <= ram_block1a3.PORTADATAOUT
+q_a[4] <= ram_block1a4.PORTADATAOUT
+q_a[5] <= ram_block1a5.PORTADATAOUT
+q_a[6] <= ram_block1a6.PORTADATAOUT
+q_a[7] <= ram_block1a7.PORTADATAOUT
+q_a[8] <= ram_block1a8.PORTADATAOUT
+q_a[9] <= ram_block1a9.PORTADATAOUT
+q_a[10] <= ram_block1a10.PORTADATAOUT
+q_a[11] <= ram_block1a11.PORTADATAOUT
+q_a[12] <= ram_block1a12.PORTADATAOUT
+q_a[13] <= ram_block1a13.PORTADATAOUT
+q_a[14] <= ram_block1a14.PORTADATAOUT
+q_a[15] <= ram_block1a15.PORTADATAOUT
+q_a[16] <= ram_block1a16.PORTADATAOUT
+q_a[17] <= ram_block1a17.PORTADATAOUT
+q_a[18] <= ram_block1a18.PORTADATAOUT
+q_a[19] <= ram_block1a19.PORTADATAOUT
+q_a[20] <= ram_block1a20.PORTADATAOUT
+q_a[21] <= ram_block1a21.PORTADATAOUT
+q_a[22] <= ram_block1a22.PORTADATAOUT
+q_a[23] <= ram_block1a23.PORTADATAOUT
+q_a[24] <= ram_block1a24.PORTADATAOUT
+q_a[25] <= ram_block1a25.PORTADATAOUT
+q_a[26] <= ram_block1a26.PORTADATAOUT
+q_a[27] <= ram_block1a27.PORTADATAOUT
+q_a[28] <= ram_block1a28.PORTADATAOUT
+q_a[29] <= ram_block1a29.PORTADATAOUT
+q_a[30] <= ram_block1a30.PORTADATAOUT
+q_a[31] <= ram_block1a31.PORTADATAOUT
+
+
+|CPU|ram1:ram1
 address[0] => address[0].IN1
 address[1] => address[1].IN1
 address[2] => address[2].IN1
@@ -2795,56 +3389,56 @@ q[30] <= altsyncram:altsyncram_component.q_a
 q[31] <= altsyncram:altsyncram_component.q_a
 
 
-|top|ram_dummy:ram|altsyncram:altsyncram_component
-wren_a => altsyncram_69p1:auto_generated.wren_a
+|CPU|ram1:ram1|altsyncram:altsyncram_component
+wren_a => altsyncram_j6o1:auto_generated.wren_a
 rden_a => ~NO_FANOUT~
 wren_b => ~NO_FANOUT~
 rden_b => ~NO_FANOUT~
-data_a[0] => altsyncram_69p1:auto_generated.data_a[0]
-data_a[1] => altsyncram_69p1:auto_generated.data_a[1]
-data_a[2] => altsyncram_69p1:auto_generated.data_a[2]
-data_a[3] => altsyncram_69p1:auto_generated.data_a[3]
-data_a[4] => altsyncram_69p1:auto_generated.data_a[4]
-data_a[5] => altsyncram_69p1:auto_generated.data_a[5]
-data_a[6] => altsyncram_69p1:auto_generated.data_a[6]
-data_a[7] => altsyncram_69p1:auto_generated.data_a[7]
-data_a[8] => altsyncram_69p1:auto_generated.data_a[8]
-data_a[9] => altsyncram_69p1:auto_generated.data_a[9]
-data_a[10] => altsyncram_69p1:auto_generated.data_a[10]
-data_a[11] => altsyncram_69p1:auto_generated.data_a[11]
-data_a[12] => altsyncram_69p1:auto_generated.data_a[12]
-data_a[13] => altsyncram_69p1:auto_generated.data_a[13]
-data_a[14] => altsyncram_69p1:auto_generated.data_a[14]
-data_a[15] => altsyncram_69p1:auto_generated.data_a[15]
-data_a[16] => altsyncram_69p1:auto_generated.data_a[16]
-data_a[17] => altsyncram_69p1:auto_generated.data_a[17]
-data_a[18] => altsyncram_69p1:auto_generated.data_a[18]
-data_a[19] => altsyncram_69p1:auto_generated.data_a[19]
-data_a[20] => altsyncram_69p1:auto_generated.data_a[20]
-data_a[21] => altsyncram_69p1:auto_generated.data_a[21]
-data_a[22] => altsyncram_69p1:auto_generated.data_a[22]
-data_a[23] => altsyncram_69p1:auto_generated.data_a[23]
-data_a[24] => altsyncram_69p1:auto_generated.data_a[24]
-data_a[25] => altsyncram_69p1:auto_generated.data_a[25]
-data_a[26] => altsyncram_69p1:auto_generated.data_a[26]
-data_a[27] => altsyncram_69p1:auto_generated.data_a[27]
-data_a[28] => altsyncram_69p1:auto_generated.data_a[28]
-data_a[29] => altsyncram_69p1:auto_generated.data_a[29]
-data_a[30] => altsyncram_69p1:auto_generated.data_a[30]
-data_a[31] => altsyncram_69p1:auto_generated.data_a[31]
+data_a[0] => altsyncram_j6o1:auto_generated.data_a[0]
+data_a[1] => altsyncram_j6o1:auto_generated.data_a[1]
+data_a[2] => altsyncram_j6o1:auto_generated.data_a[2]
+data_a[3] => altsyncram_j6o1:auto_generated.data_a[3]
+data_a[4] => altsyncram_j6o1:auto_generated.data_a[4]
+data_a[5] => altsyncram_j6o1:auto_generated.data_a[5]
+data_a[6] => altsyncram_j6o1:auto_generated.data_a[6]
+data_a[7] => altsyncram_j6o1:auto_generated.data_a[7]
+data_a[8] => altsyncram_j6o1:auto_generated.data_a[8]
+data_a[9] => altsyncram_j6o1:auto_generated.data_a[9]
+data_a[10] => altsyncram_j6o1:auto_generated.data_a[10]
+data_a[11] => altsyncram_j6o1:auto_generated.data_a[11]
+data_a[12] => altsyncram_j6o1:auto_generated.data_a[12]
+data_a[13] => altsyncram_j6o1:auto_generated.data_a[13]
+data_a[14] => altsyncram_j6o1:auto_generated.data_a[14]
+data_a[15] => altsyncram_j6o1:auto_generated.data_a[15]
+data_a[16] => altsyncram_j6o1:auto_generated.data_a[16]
+data_a[17] => altsyncram_j6o1:auto_generated.data_a[17]
+data_a[18] => altsyncram_j6o1:auto_generated.data_a[18]
+data_a[19] => altsyncram_j6o1:auto_generated.data_a[19]
+data_a[20] => altsyncram_j6o1:auto_generated.data_a[20]
+data_a[21] => altsyncram_j6o1:auto_generated.data_a[21]
+data_a[22] => altsyncram_j6o1:auto_generated.data_a[22]
+data_a[23] => altsyncram_j6o1:auto_generated.data_a[23]
+data_a[24] => altsyncram_j6o1:auto_generated.data_a[24]
+data_a[25] => altsyncram_j6o1:auto_generated.data_a[25]
+data_a[26] => altsyncram_j6o1:auto_generated.data_a[26]
+data_a[27] => altsyncram_j6o1:auto_generated.data_a[27]
+data_a[28] => altsyncram_j6o1:auto_generated.data_a[28]
+data_a[29] => altsyncram_j6o1:auto_generated.data_a[29]
+data_a[30] => altsyncram_j6o1:auto_generated.data_a[30]
+data_a[31] => altsyncram_j6o1:auto_generated.data_a[31]
 data_b[0] => ~NO_FANOUT~
-address_a[0] => altsyncram_69p1:auto_generated.address_a[0]
-address_a[1] => altsyncram_69p1:auto_generated.address_a[1]
-address_a[2] => altsyncram_69p1:auto_generated.address_a[2]
-address_a[3] => altsyncram_69p1:auto_generated.address_a[3]
-address_a[4] => altsyncram_69p1:auto_generated.address_a[4]
-address_a[5] => altsyncram_69p1:auto_generated.address_a[5]
-address_a[6] => altsyncram_69p1:auto_generated.address_a[6]
-address_a[7] => altsyncram_69p1:auto_generated.address_a[7]
+address_a[0] => altsyncram_j6o1:auto_generated.address_a[0]
+address_a[1] => altsyncram_j6o1:auto_generated.address_a[1]
+address_a[2] => altsyncram_j6o1:auto_generated.address_a[2]
+address_a[3] => altsyncram_j6o1:auto_generated.address_a[3]
+address_a[4] => altsyncram_j6o1:auto_generated.address_a[4]
+address_a[5] => altsyncram_j6o1:auto_generated.address_a[5]
+address_a[6] => altsyncram_j6o1:auto_generated.address_a[6]
+address_a[7] => altsyncram_j6o1:auto_generated.address_a[7]
 address_b[0] => ~NO_FANOUT~
 addressstall_a => ~NO_FANOUT~
 addressstall_b => ~NO_FANOUT~
-clock0 => altsyncram_69p1:auto_generated.clock0
+clock0 => altsyncram_j6o1:auto_generated.clock0
 clock1 => ~NO_FANOUT~
 clocken0 => ~NO_FANOUT~
 clocken1 => ~NO_FANOUT~
@@ -2854,45 +3448,45 @@ aclr0 => ~NO_FANOUT~
 aclr1 => ~NO_FANOUT~
 byteena_a[0] => ~NO_FANOUT~
 byteena_b[0] => ~NO_FANOUT~
-q_a[0] <= altsyncram_69p1:auto_generated.q_a[0]
-q_a[1] <= altsyncram_69p1:auto_generated.q_a[1]
-q_a[2] <= altsyncram_69p1:auto_generated.q_a[2]
-q_a[3] <= altsyncram_69p1:auto_generated.q_a[3]
-q_a[4] <= altsyncram_69p1:auto_generated.q_a[4]
-q_a[5] <= altsyncram_69p1:auto_generated.q_a[5]
-q_a[6] <= altsyncram_69p1:auto_generated.q_a[6]
-q_a[7] <= altsyncram_69p1:auto_generated.q_a[7]
-q_a[8] <= altsyncram_69p1:auto_generated.q_a[8]
-q_a[9] <= altsyncram_69p1:auto_generated.q_a[9]
-q_a[10] <= altsyncram_69p1:auto_generated.q_a[10]
-q_a[11] <= altsyncram_69p1:auto_generated.q_a[11]
-q_a[12] <= altsyncram_69p1:auto_generated.q_a[12]
-q_a[13] <= altsyncram_69p1:auto_generated.q_a[13]
-q_a[14] <= altsyncram_69p1:auto_generated.q_a[14]
-q_a[15] <= altsyncram_69p1:auto_generated.q_a[15]
-q_a[16] <= altsyncram_69p1:auto_generated.q_a[16]
-q_a[17] <= altsyncram_69p1:auto_generated.q_a[17]
-q_a[18] <= altsyncram_69p1:auto_generated.q_a[18]
-q_a[19] <= altsyncram_69p1:auto_generated.q_a[19]
-q_a[20] <= altsyncram_69p1:auto_generated.q_a[20]
-q_a[21] <= altsyncram_69p1:auto_generated.q_a[21]
-q_a[22] <= altsyncram_69p1:auto_generated.q_a[22]
-q_a[23] <= altsyncram_69p1:auto_generated.q_a[23]
-q_a[24] <= altsyncram_69p1:auto_generated.q_a[24]
-q_a[25] <= altsyncram_69p1:auto_generated.q_a[25]
-q_a[26] <= altsyncram_69p1:auto_generated.q_a[26]
-q_a[27] <= altsyncram_69p1:auto_generated.q_a[27]
-q_a[28] <= altsyncram_69p1:auto_generated.q_a[28]
-q_a[29] <= altsyncram_69p1:auto_generated.q_a[29]
-q_a[30] <= altsyncram_69p1:auto_generated.q_a[30]
-q_a[31] <= altsyncram_69p1:auto_generated.q_a[31]
+q_a[0] <= altsyncram_j6o1:auto_generated.q_a[0]
+q_a[1] <= altsyncram_j6o1:auto_generated.q_a[1]
+q_a[2] <= altsyncram_j6o1:auto_generated.q_a[2]
+q_a[3] <= altsyncram_j6o1:auto_generated.q_a[3]
+q_a[4] <= altsyncram_j6o1:auto_generated.q_a[4]
+q_a[5] <= altsyncram_j6o1:auto_generated.q_a[5]
+q_a[6] <= altsyncram_j6o1:auto_generated.q_a[6]
+q_a[7] <= altsyncram_j6o1:auto_generated.q_a[7]
+q_a[8] <= altsyncram_j6o1:auto_generated.q_a[8]
+q_a[9] <= altsyncram_j6o1:auto_generated.q_a[9]
+q_a[10] <= altsyncram_j6o1:auto_generated.q_a[10]
+q_a[11] <= altsyncram_j6o1:auto_generated.q_a[11]
+q_a[12] <= altsyncram_j6o1:auto_generated.q_a[12]
+q_a[13] <= altsyncram_j6o1:auto_generated.q_a[13]
+q_a[14] <= altsyncram_j6o1:auto_generated.q_a[14]
+q_a[15] <= altsyncram_j6o1:auto_generated.q_a[15]
+q_a[16] <= altsyncram_j6o1:auto_generated.q_a[16]
+q_a[17] <= altsyncram_j6o1:auto_generated.q_a[17]
+q_a[18] <= altsyncram_j6o1:auto_generated.q_a[18]
+q_a[19] <= altsyncram_j6o1:auto_generated.q_a[19]
+q_a[20] <= altsyncram_j6o1:auto_generated.q_a[20]
+q_a[21] <= altsyncram_j6o1:auto_generated.q_a[21]
+q_a[22] <= altsyncram_j6o1:auto_generated.q_a[22]
+q_a[23] <= altsyncram_j6o1:auto_generated.q_a[23]
+q_a[24] <= altsyncram_j6o1:auto_generated.q_a[24]
+q_a[25] <= altsyncram_j6o1:auto_generated.q_a[25]
+q_a[26] <= altsyncram_j6o1:auto_generated.q_a[26]
+q_a[27] <= altsyncram_j6o1:auto_generated.q_a[27]
+q_a[28] <= altsyncram_j6o1:auto_generated.q_a[28]
+q_a[29] <= altsyncram_j6o1:auto_generated.q_a[29]
+q_a[30] <= altsyncram_j6o1:auto_generated.q_a[30]
+q_a[31] <= altsyncram_j6o1:auto_generated.q_a[31]
 q_b[0] <= <GND>
 eccstatus[0] <= <GND>
 eccstatus[1] <= <GND>
 eccstatus[2] <= <GND>
 
 
-|top|ram_dummy:ram|altsyncram:altsyncram_component|altsyncram_69p1:auto_generated
+|CPU|ram1:ram1|altsyncram:altsyncram_component|altsyncram_j6o1:auto_generated
 address_a[0] => ram_block1a0.PORTAADDR
 address_a[0] => ram_block1a1.PORTAADDR
 address_a[0] => ram_block1a2.PORTAADDR

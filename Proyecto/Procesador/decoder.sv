@@ -32,7 +32,7 @@ assign{RegSrc,ImmSrc,ALUSrc,MemtoReg,
 	 
  //ALUDecoder
  always_comb
-	 if(ALUOp)begin //whichDPInstr?
+	 if(ALUOp)begin //which DP Instr?
 	 case(Funct[4:1])
 		 4'b0100: ALUControl=2'b00; //ADD
 		 4'b0010: ALUControl=2'b01; //SUB

@@ -1,14 +1,14 @@
 module vga(
-	 input logic [7:0] pixel,
     input logic clk,
     output logic vgaclk, // 25.175 MHz VGA clock
     output logic hsync, vsync,
     output logic sync_b, blank_b, // To monitor & DAC
     output logic [7:0] r, g, b, // To video DAC,
-    output logic [9:0] x,
-	 output logic [9:0] y
+    output logic [8:0] address,
+    input logic [31:0] data
 );
 
+    logic [9:0] x,y;
 
     // Use a PLL to create the 25.175 MHz VGA pixel clock
     // 25.175 MHz clk period = 39.772 ns
@@ -20,6 +20,14 @@ module vga(
     vgaController vgaCont(vgaclk, hsync, vsync, sync_b, blank_b, x, y);
 
     // Instantiate videoGen module
-    generate_graphic gen_grid(x, y, pixel[7:0], r, g, b);
+    videoGen videoGen_inst (
+        .x(x),
+        .y(y),
+        .r(r),
+        .g(g),
+        .b(b),
+        .address(address),
+        .data(data)
+    );
 
 endmodule 

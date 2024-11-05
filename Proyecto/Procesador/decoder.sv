@@ -40,13 +40,12 @@ assign{RegSrc,ImmSrc,ALUSrc,MemtoReg,
 		 4'b1100: ALUControl=2'b11; //ORR
 		 default: ALUControl=2'bx; //unimplemented
 	 endcase
-	 //update flags if Sbitisset(C&Vonlyforarith)
+	 //update flags if S bit is set(C & V only for arith)
 	 FlagW[1] =Funct[0];
-	 FlagW[0] =Funct[0]&
-	 (ALUControl==2'b00|ALUControl==2'b01);
+	 FlagW[0] = Funct[0] & (ALUControl == 2'b00 | ALUControl == 2'b01);
 	 end else begin
-	 ALUControl=2'b00; //addfornon-DPinstructions
-	 FlagW =2'b00; //don'tupdateFlags
+	 ALUControl = 2'b00; //addfornon-DPinstructions
+	 FlagW = 2'b00; //don'tupdateFlags
 	end
 	
  //PCLogic

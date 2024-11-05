@@ -13,6 +13,7 @@ module arm(input logic clk,reset,
  controller c(clk,reset,Instr[31:12],ALUFlags,
 				 RegSrc,RegWrite,ImmSrc,ALUSrc,ALUControl,
              MemWrite,MemtoReg,PCSrc);
+				 
  datapath dp(clk,reset,
 				RegSrc,RegWrite,ImmSrc,
 				ALUSrc,ALUControl,

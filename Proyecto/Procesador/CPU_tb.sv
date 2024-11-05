@@ -5,68 +5,48 @@ module CPU_tb();
 	logic reset = 1;
 	logic [31:0] WriteData, DataAdr, ReadData;
 	logic MemWrite;
-	logic [31:0] ins;
+	logic [31:0] ins,pc;
 	
-	
-	
-	
-	CPU CPU_inst(.clk(clk), 
-					 .reset(reset), 
-					 .WriteData(WriteData), 
-					 .DataAdr(DataAdr), 
-					 .ReadData(ReadData), 
-					 .MemWrite(MemWrite),
-					 .ins(ins)
+	CPU CPU_inst(
+		.clk(clk), 
+		.reset(reset), 
+		.WriteData(WriteData), 
+		.DataAdr(DataAdr), 
+		.ReadData(ReadData), 
+		.MemWrite(MemWrite),
+		.ins(ins),
+		.PC(pc)
 	);
 	
 	
-	always
-	begin
+	// Clock generation
+	always begin
 		clk <= ~clk; 
-		# 5;
-		
+		#5;
 	end
 	
-	
-	always @(negedge clk)
-	begin
+	// Continuous display
+	always @(negedge clk) begin
 		reset = 0;
-		
-		#10
-		$display("----------------------------------------------------   1");
+		$display("----------------------------------------------------");
 		$display("WriteData = %d", WriteData);
 		$display("DataAdr = %d", DataAdr);
 		$display("MemWrite = %d", MemWrite);
 		$display("ReadData = %d", ReadData);
 		$display("ins = %b", ins);
-		$display("-------------------------------------------------------");
-		
-		#10
-		
-		$display("----------------------------------------------------   2");
-		$display("WriteData = %d", WriteData);
-		$display("DataAdr = %d", DataAdr);
-		$display("MemWrite = %d", MemWrite);
-		$display("ReadData = %d", ReadData);
-		$display("ins = %b", ins);
-		$display("-------------------------------------------------------");
+		$display("pc = %b", pc);
+		$display("----------------------------------------------------");
+	end
 	
-		#10
-		
-		$display("----------------------------------------------------   2");
-		$display("WriteData = %d", WriteData);
-		$display("DataAdr = %d", DataAdr);
-		$display("MemWrite = %d", MemWrite);
-		$display("ReadData = %d", ReadData);
-		$display("ins = %b", ins);
-		$display("-------------------------------------------------------");
-	
-		#10
-				
-		
-		$finish;
+	initial begin
+		// Terminate simulation after a certain time
+		#90 $finish;  // Ajusta el tiempo total según tus necesidades
 	end
 endmodule
+
+	
+	
+	
 	
 	
 	

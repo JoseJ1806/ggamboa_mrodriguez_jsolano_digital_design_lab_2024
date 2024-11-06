@@ -5,13 +5,14 @@ module CPU(input logic clk, reset, enable,
 );
 
 	//logic [31:0] Instr, PC;
-		
+	
 		
 	//instantiate processor and memories
 	arm arm(clk,reset,PC,ins,MemWrite,DataAdr,
 			  WriteData,ReadData);
 	rom rom(PC[7:0],clk,ins);
-	//ram1 ram1(DataAdr[15:0],clk,WriteData,MemWrite,ReadData);
+	//dmem dmem(clk,MemWrite,DataAdr,WriteData,ReadData);
+	ram1 ram1(DataAdr[7:0],clk,WriteData,MemWrite,ReadData);
 	
 	
 	

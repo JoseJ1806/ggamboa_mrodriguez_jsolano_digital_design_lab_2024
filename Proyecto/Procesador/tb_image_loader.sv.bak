@@ -1,0 +1,40 @@
+module tb_image_loader;
+
+    // Parámetros
+    parameter IMAGE_WIDTH = 200;
+    parameter IMAGE_HEIGHT = 200;
+
+    // Señales de prueba
+    logic [9:0] x;
+    logic [9:0] y;
+    logic [7:0] pixel_data;
+
+    // Instancia del módulo a probar
+    image_loader uut (
+        .x(x),
+        .y(y),
+        .pixel_data(pixel_data)
+    );
+
+    // Inicialización del testbench
+    initial begin
+        // Inicializar las coordenadas
+        x = 0;
+        y = 0;
+
+        // Esperar un tiempo para que se carguen los datos
+        #10;
+
+        // Probar diferentes coordenadas (x, y)
+        for (y = 0; y < IMAGE_HEIGHT; y++) begin
+            for (x = 0; x < IMAGE_WIDTH; x++) begin
+                #5; // Esperar un ciclo de simulación
+                $display("Coordenadas (x=%0d, y=%0d) -> Pixel Data: %h", x, y, pixel_data);
+            end
+        end
+
+        // Finalizar la simulación
+        $finish;
+    end
+
+endmodule 

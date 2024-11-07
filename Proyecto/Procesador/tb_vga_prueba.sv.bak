@@ -1,0 +1,58 @@
+module tb_vga_prueba;
+
+    // Parámetros
+    parameter CLK_PERIOD = 40; // Periodo de reloj en ns (25 MHz)
+
+    // Señales de prueba
+    logic clk;
+    logic [7:0] pixel;
+    logic vgaclk;
+    logic hsync, vsync;
+    logic sync_b, blank_b;
+    logic [7:0] r, g, b;
+    logic [9:0] x, y;
+
+    // Instancia del módulo a probar
+    vga_prueba uut (
+        .clk(clk),
+        .pixel(pixel),
+        .vgaclk(vgaclk),
+        .hsync(hsync),
+        .vsync(vsync),
+        .sync_b(sync_b),
+        .blank_b(blank_b),
+        .r(r),
+        .g(g),
+        .b(b),
+        .x(x),
+        .y(y)
+    );
+
+    // Generación del reloj
+    initial begin
+        clk = 0;
+        forever #(CLK_PERIOD / 2) clk = ~clk; // Toggle clock every half period
+    end
+
+    // Inicialización del testbench
+    initial begin
+        // Inicializar la señal de píxel
+        pixel = 8'hFF; // Color blanco
+
+        // Esperar un tiempo para permitir la inicialización del sistema
+        #100;
+
+        // Simular por un tiempo suficiente para observar la salida
+        for (int i = 0; i < 640 * 480; i++) begin // Simular por toda la resolución VGA
+            #CLK_PERIOD; // Esperar un ciclo de reloj
+            
+            pixel = (i % 256); // Cambiar el color del píxel (ejemplo de patrón)
+            $display("Time: %0t | Pixel: %h | X: %0d | Y: %0d | R: %h | G: %h | B: %h | HSync: %b | VSync: %b", 
+                     $time, pixel, x, y, r, g, b, hsync, vsync);
+        end
+
+        // Finalizar la simulación
+        $finish;
+    end
+
+endmodule

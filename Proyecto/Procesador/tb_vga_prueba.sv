@@ -9,6 +9,7 @@ module tb_vga_prueba;
     logic sync_b, blank_b;
     logic [7:0] r, g, b;
     logic [9:0] x, y;
+	 logic [15:0] memAddress;
 
     // Instancia del módulo a probar
     vga_prueba uut (
@@ -23,7 +24,8 @@ module tb_vga_prueba;
         .g(g),
         .b(b),
         .x(x),
-        .y(y)
+        .y(y),
+		  .memAddress(memAddress)
     );
 
     // Procedimiento de prueba
@@ -38,6 +40,7 @@ module tb_vga_prueba;
 		 $display("r = %d", r);
 		 $display("g = %d", g);
 		 $display("b = %d", b);
+		 $display("MemAddress = %d", memAddress);
 		 $display("---------------------------------------------");
 		 $display("---------------------------------------------");
 		 $display("---------------------------------------------");

@@ -1,5 +1,5 @@
-Analysis & Synthesis report for procesador
-Thu Nov 07 00:30:21 2024
+Analysis & Elaboration report for procesador
+Thu Nov 07 02:33:42 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -7,28 +7,18 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Synthesis Summary
-  3. Analysis & Synthesis Settings
-  4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. Analysis & Synthesis RAM Summary
-  9. Analysis & Synthesis IP Cores Summary
- 10. General Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Source assignments for image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated
- 13. Parameter Settings for User Entity Instance: vgaController:vgaCont
- 14. Parameter Settings for User Entity Instance: image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component
- 15. altsyncram Parameter Settings by Entity Instance
- 16. Port Connectivity Checks: "image_loader:image|ram_rgb:ram"
- 17. Port Connectivity Checks: "image_loader:image"
- 18. Port Connectivity Checks: "generate_graphic:gen_grid|generate_rectangle:rectImage"
- 19. Port Connectivity Checks: "generate_graphic:gen_grid"
- 20. Post-Synthesis Netlist Statistics for Top Partition
- 21. Elapsed Time Per Partition
- 22. Analysis & Synthesis Messages
- 23. Analysis & Synthesis Suppressed Messages
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Analysis & Elaboration IP Cores Summary
+  5. Source assignments for image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated
+  6. Parameter Settings for User Entity Instance: vgaController:vgaCont
+  7. Parameter Settings for User Entity Instance: image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component
+  8. altsyncram Parameter Settings by Entity Instance
+  9. Analysis & Elaboration Settings
+ 10. Port Connectivity Checks: "image_loader:image|ram_rgb:ram"
+ 11. Port Connectivity Checks: "generate_rectangle:rectImage"
+ 12. Analysis & Elaboration Messages
+ 13. Analysis & Elaboration Suppressed Messages
 
 
 
@@ -52,114 +42,22 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+-------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                  ;
-+---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Nov 07 00:30:21 2024       ;
-; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
-; Revision Name                   ; procesador                                  ;
-; Top-level Entity Name           ; vga_prueba                                  ;
-; Family                          ; Cyclone V                                   ;
-; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 40                                          ;
-; Total pins                      ; 51                                          ;
-; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 65,536                                      ;
-; Total DSP Blocks                ; 0                                           ;
-; Total HSSI RX PCSs              ; 0                                           ;
-; Total HSSI PMA RX Deserializers ; 0                                           ;
-; Total HSSI TX PCSs              ; 0                                           ;
-; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0                                           ;
-; Total DLLs                      ; 0                                           ;
-+---------------------------------+---------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                             ;
-+---------------------------------------------------------------------------------+--------------------+--------------------+
-; Option                                                                          ; Setting            ; Default Value      ;
-+---------------------------------------------------------------------------------+--------------------+--------------------+
-; Device                                                                          ; 5CSXFC6D6F31C6     ;                    ;
-; Top-level entity name                                                           ; vga_prueba         ; procesador         ;
-; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
-; Use smart compilation                                                           ; Off                ; Off                ;
-; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
-; Enable compact report table                                                     ; Off                ; Off                ;
-; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
-; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
-; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
-; Preserve fewer node names                                                       ; On                 ; On                 ;
-; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
-; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
-; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
-; State Machine Processing                                                        ; Auto               ; Auto               ;
-; Safe State Machine                                                              ; Off                ; Off                ;
-; Extract Verilog State Machines                                                  ; On                 ; On                 ;
-; Extract VHDL State Machines                                                     ; On                 ; On                 ;
-; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
-; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
-; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
-; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
-; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
-; Parallel Synthesis                                                              ; On                 ; On                 ;
-; DSP Block Balancing                                                             ; Auto               ; Auto               ;
-; NOT Gate Push-Back                                                              ; On                 ; On                 ;
-; Power-Up Don't Care                                                             ; On                 ; On                 ;
-; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
-; Remove Duplicate Registers                                                      ; On                 ; On                 ;
-; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
-; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
-; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
-; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
-; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
-; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
-; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
-; Optimization Technique                                                          ; Balanced           ; Balanced           ;
-; Carry Chain Length                                                              ; 70                 ; 70                 ;
-; Auto Carry Chains                                                               ; On                 ; On                 ;
-; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
-; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
-; Auto ROM Replacement                                                            ; On                 ; On                 ;
-; Auto RAM Replacement                                                            ; On                 ; On                 ;
-; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
-; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
-; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
-; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
-; Strict RAM Replacement                                                          ; Off                ; Off                ;
-; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
-; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
-; Auto Resource Sharing                                                           ; Off                ; Off                ;
-; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
-; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
-; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
-; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
-; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
-; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
-; Report Parameter Settings                                                       ; On                 ; On                 ;
-; Report Source Assignments                                                       ; On                 ; On                 ;
-; Report Connectivity Checks                                                      ; On                 ; On                 ;
-; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
-; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
-; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
-; HDL message level                                                               ; Level2             ; Level2             ;
-; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
-; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
-; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
-; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
-; Clock MUX Protection                                                            ; On                 ; On                 ;
-; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
-; Block Design Naming                                                             ; Auto               ; Auto               ;
-; SDC constraint protection                                                       ; Off                ; Off                ;
-; Synthesis Effort                                                                ; Auto               ; Auto               ;
-; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
-; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
-; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
-; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
-; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
-; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
-; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
-+---------------------------------------------------------------------------------+--------------------+--------------------+
++-----------------------------------------------------------------------------+
+; Analysis & Elaboration Summary                                              ;
++-------------------------------+---------------------------------------------+
+; Analysis & Elaboration Status ; Successful - Thu Nov 07 02:33:42 2024       ;
+; Quartus Prime Version         ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                 ; procesador                                  ;
+; Top-level Entity Name         ; vga_prueba                                  ;
+; Family                        ; Cyclone V                                   ;
+; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
+; Total registers               ; N/A until Partition Merge                   ;
+; Total pins                    ; N/A until Partition Merge                   ;
+; Total virtual pins            ; N/A until Partition Merge                   ;
+; Total block memory bits       ; N/A until Partition Merge                   ;
+; Total PLLs                    ; N/A until Partition Merge                   ;
+; Total DLLs                    ; N/A until Partition Merge                   ;
++-------------------------------+---------------------------------------------+
 
 
 +------------------------------------------+
@@ -167,137 +65,24 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
+; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                      ;
-+----------------------------------+-----------------+----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                        ; File Name with Absolute Path                                                                                                                                              ; Library ;
-+----------------------------------+-----------------+----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; image_loader.sv                  ; yes             ; User SystemVerilog HDL File      ; C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/image_loader.sv        ;         ;
-; pixeles_rgb.mif                  ; yes             ; User Memory Initialization File  ; C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/pixeles_rgb.mif        ;         ;
-; vgaController.sv                 ; yes             ; User SystemVerilog HDL File      ; C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/vgaController.sv       ;         ;
-; pll.sv                           ; yes             ; User SystemVerilog HDL File      ; C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/pll.sv                 ;         ;
-; generate_graphic.sv              ; yes             ; User SystemVerilog HDL File      ; C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/generate_graphic.sv    ;         ;
-; generate_rectangle.sv            ; yes             ; User SystemVerilog HDL File      ; C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/generate_rectangle.sv  ;         ;
-; vga_prueba.sv                    ; yes             ; User SystemVerilog HDL File      ; C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/vga_prueba.sv          ;         ;
-; ram_rgb.v                        ; yes             ; User Wizard-Generated File       ; C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/ram_rgb.v              ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                     ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf                                                                                                     ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                     ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                                                                              ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                     ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mux.inc                                                                                                        ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                     ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_decode.inc                                                                                                     ;         ;
-; aglobal201.inc                   ; yes             ; Megafunction                     ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                                                                                                     ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                     ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_rdenreg.inc                                                                                                      ;         ;
-; altrom.inc                       ; yes             ; Megafunction                     ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altrom.inc                                                                                                         ;         ;
-; altram.inc                       ; yes             ; Megafunction                     ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altram.inc                                                                                                         ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                     ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altdpram.inc                                                                                                       ;         ;
-; db/altsyncram_43p1.tdf           ; yes             ; Auto-Generated Megafunction      ; C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/altsyncram_43p1.tdf ;         ;
-; db/decode_dla.tdf                ; yes             ; Auto-Generated Megafunction      ; C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/decode_dla.tdf      ;         ;
-; db/decode_61a.tdf                ; yes             ; Auto-Generated Megafunction      ; C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/decode_61a.tdf      ;         ;
-; db/mux_tfb.tdf                   ; yes             ; Auto-Generated Megafunction      ; C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/mux_tfb.tdf         ;         ;
-+----------------------------------+-----------------+----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-
-
-+-----------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                     ;
-+---------------------------------------------+-------------------+
-; Resource                                    ; Usage             ;
-+---------------------------------------------+-------------------+
-; Estimate of Logic utilization (ALMs needed) ; 38                ;
-;                                             ;                   ;
-; Combinational ALUT usage for logic          ; 68                ;
-;     -- 7 input functions                    ; 2                 ;
-;     -- 6 input functions                    ; 5                 ;
-;     -- 5 input functions                    ; 6                 ;
-;     -- 4 input functions                    ; 6                 ;
-;     -- <=3 input functions                  ; 49                ;
-;                                             ;                   ;
-; Dedicated logic registers                   ; 40                ;
-;                                             ;                   ;
-; I/O pins                                    ; 51                ;
-; Total MLAB memory bits                      ; 0                 ;
-; Total block memory bits                     ; 65536             ;
-;                                             ;                   ;
-; Total DSP Blocks                            ; 0                 ;
-;                                             ;                   ;
-; Maximum fan-out node                        ; pll:vgapll|toggle ;
-; Maximum fan-out                             ; 38                ;
-; Total fan-out                               ; 559               ;
-; Average fan-out                             ; 2.56              ;
-+---------------------------------------------+-------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                          ;
-+----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------+
-; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                              ; Entity Name        ; Library Name ;
-+----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------+
-; |vga_prueba                                  ; 68 (1)              ; 40 (0)                    ; 65536             ; 0          ; 51   ; 0            ; |vga_prueba                                                                                                                      ; vga_prueba         ; work         ;
-;    |generate_graphic:gen_grid|               ; 5 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_prueba|generate_graphic:gen_grid                                                                                            ; generate_graphic   ; work         ;
-;       |generate_rectangle:rectImage|         ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_prueba|generate_graphic:gen_grid|generate_rectangle:rectImage                                                               ; generate_rectangle ; work         ;
-;    |image_loader:image|                      ; 31 (21)             ; 19 (16)                   ; 65536             ; 0          ; 0    ; 0            ; |vga_prueba|image_loader:image                                                                                                   ; image_loader       ; work         ;
-;       |ram_rgb:ram|                          ; 10 (0)              ; 3 (0)                     ; 65536             ; 0          ; 0    ; 0            ; |vga_prueba|image_loader:image|ram_rgb:ram                                                                                       ; ram_rgb            ; work         ;
-;          |altsyncram:altsyncram_component|   ; 10 (0)              ; 3 (0)                     ; 65536             ; 0          ; 0    ; 0            ; |vga_prueba|image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component                                                       ; altsyncram         ; work         ;
-;             |altsyncram_43p1:auto_generated| ; 10 (0)              ; 3 (3)                     ; 65536             ; 0          ; 0    ; 0            ; |vga_prueba|image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated                        ; altsyncram_43p1    ; work         ;
-;                |decode_61a:rden_decode|      ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_prueba|image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated|decode_61a:rden_decode ; decode_61a         ; work         ;
-;                |mux_tfb:mux2|                ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_prueba|image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated|mux_tfb:mux2           ; mux_tfb            ; work         ;
-;    |pll:vgapll|                              ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_prueba|pll:vgapll                                                                                                           ; pll                ; work         ;
-;    |vgaController:vgaCont|                   ; 30 (30)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |vga_prueba|vgaController:vgaCont                                                                                                ; vgaController      ; work         ;
-+----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                                                     ;
-+----------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+--------+-----------------+
-; Name                                                                                                     ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size   ; MIF             ;
-+----------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+--------+-----------------+
-; image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; 65536        ; 8            ; --           ; --           ; 524288 ; pixeles_rgb.mif ;
-+----------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+--------+-----------------+
-
-
 +------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis IP Cores Summary                                                                                        ;
+; Analysis & Elaboration IP Cores Summary                                                                                      ;
 +--------+--------------+---------+--------------+--------------+--------------------------------------------+-----------------+
 ; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                            ; IP Include File ;
 +--------+--------------+---------+--------------+--------------+--------------------------------------------+-----------------+
 ; Altera ; RAM: 1-PORT  ; 20.1    ; N/A          ; N/A          ; |vga_prueba|image_loader:image|ram_rgb:ram ; ram_rgb.v       ;
 +--------+--------------+---------+--------------+--------------+--------------------------------------------+-----------------+
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 40    ;
-; Number of registers using Synchronous Clear  ; 36    ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 26    ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
-; 4:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |vga_prueba|image_loader:image|memAddress[12] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------+
@@ -409,6 +194,93 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+----------------------------------------------------------------+
 
 
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Elaboration Settings                                                                                           ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSXFC6D6F31C6     ;                    ;
+; Top-level entity name                                                           ; vga_prueba         ; procesador         ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
 +------------------------------------------------------------+
 ; Port Connectivity Checks: "image_loader:image|ram_rgb:ram" ;
 +------+-------+----------+----------------------------------+
@@ -419,17 +291,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+----------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "image_loader:image"                                                                                                       ;
-+-------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
-; Port  ; Type   ; Severity ; Details                                                                                                                  ;
-+-------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
-; pixel ; Output ; Warning  ; Output or bidir port (8 bits) is wider than the port expression (1 bits) it drives; bit(s) "pixel[7..1]" have no fanouts ;
-+-------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
-
-
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "generate_graphic:gen_grid|generate_rectangle:rectImage"                                                                                                                                    ;
+; Port Connectivity Checks: "generate_rectangle:rectImage"                                                                                                                                                              ;
 +--------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port         ; Type  ; Severity ; Details                                                                                                                                                                             ;
 +--------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -450,151 +313,107 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "generate_graphic:gen_grid"                                                                                                                          ;
-+----------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port     ; Type  ; Severity ; Details                                                                                                                                          ;
-+----------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
-; ReadData ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (8 bits) it drives.  Extra input bit(s) "ReadData[7..1]" will be connected to GND. ;
-+----------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; arriav_ff             ; 40                          ;
-;     ENA SCLR          ; 26                          ;
-;     SCLR              ; 10                          ;
-;     plain             ; 4                           ;
-; arriav_lcell_comb     ; 69                          ;
-;     arith             ; 36                          ;
-;         1 data inputs ; 36                          ;
-;     extend            ; 2                           ;
-;         7 data inputs ; 2                           ;
-;     normal            ; 31                          ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 2                           ;
-;         3 data inputs ; 11                          ;
-;         4 data inputs ; 6                           ;
-;         5 data inputs ; 6                           ;
-;         6 data inputs ; 5                           ;
-; boundary_port         ; 51                          ;
-; stratixv_ram_block    ; 8                           ;
-;                       ;                             ;
-; Max LUT depth         ; 3.40                        ;
-; Average LUT depth     ; 2.56                        ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:00     ;
-+----------------+--------------+
-
-
-+-------------------------------+
-; Analysis & Synthesis Messages ;
-+-------------------------------+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Synthesis
+Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Nov 07 00:30:06 2024
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off procesador -c procesador
+    Info: Processing started: Thu Nov 07 02:33:26 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off procesador -c procesador --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file tb_image_loader.sv
+    Info (12023): Found entity 1: tb_image_loader File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/tb_image_loader.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file image_loader.sv
-    Info (12023): Found entity 1: image_loader File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/image_loader.sv Line: 1
+    Info (12023): Found entity 1: image_loader File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/image_loader.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file arm.sv
-    Info (12023): Found entity 1: arm File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/arm.sv Line: 1
+    Info (12023): Found entity 1: arm File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/arm.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file controller.sv
-    Info (12023): Found entity 1: controller File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/controller.sv Line: 1
+    Info (12023): Found entity 1: controller File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/controller.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file decoder.sv
-    Info (12023): Found entity 1: decoder File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/decoder.sv Line: 1
+    Info (12023): Found entity 1: decoder File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/decoder.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file condlogic.sv
-    Info (12023): Found entity 1: condlogic File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/condlogic.sv Line: 1
+    Info (12023): Found entity 1: condlogic File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/condlogic.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file datapath.sv
-    Info (12023): Found entity 1: datapath File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/datapath.sv Line: 1
+    Info (12023): Found entity 1: datapath File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/datapath.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file regfile.sv
-    Info (12023): Found entity 1: regfile File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/regfile.sv Line: 1
+    Info (12023): Found entity 1: regfile File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/regfile.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file extend.sv
-    Info (12023): Found entity 1: extend File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/extend.sv Line: 1
+    Info (12023): Found entity 1: extend File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/extend.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file flopenr.sv
-    Info (12023): Found entity 1: flopenr File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/flopenr.sv Line: 1
+    Info (12023): Found entity 1: flopenr File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/flopenr.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file flopr.sv
-    Info (12023): Found entity 1: flopr File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/flopr.sv Line: 1
+    Info (12023): Found entity 1: flopr File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/flopr.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux2.sv
-    Info (12023): Found entity 1: mux2 File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/mux2.sv Line: 1
+    Info (12023): Found entity 1: mux2 File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/mux2.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file adder.sv
-    Info (12023): Found entity 1: adder File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/adder.sv Line: 1
+    Info (12023): Found entity 1: adder File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/adder.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu.sv
-    Info (12023): Found entity 1: Alu File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/Alu.sv Line: 14
+    Info (12023): Found entity 1: Alu File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/Alu.sv Line: 14
 Info (12021): Found 1 design units, including 1 entities, in source file full_adder.sv
-    Info (12023): Found entity 1: full_adder File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/full_adder.sv Line: 1
+    Info (12023): Found entity 1: full_adder File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/full_adder.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file full_subtractor.sv
-    Info (12023): Found entity 1: full_subtractor File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/full_subtractor.sv Line: 1
+    Info (12023): Found entity 1: full_subtractor File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/full_subtractor.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file n_bit_adder.sv
-    Info (12023): Found entity 1: n_bit_adder File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/n_bit_adder.sv Line: 1
+    Info (12023): Found entity 1: n_bit_adder File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/n_bit_adder.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file n_bit_subtractor.sv
-    Info (12023): Found entity 1: n_bit_subtractor File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/n_bit_subtractor.sv Line: 1
+    Info (12023): Found entity 1: n_bit_subtractor File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/n_bit_subtractor.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file tb_alu.sv
-    Info (12023): Found entity 1: tb_Alu File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/tb_Alu.sv Line: 1
+    Info (12023): Found entity 1: tb_Alu File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/tb_Alu.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file vga.sv
-    Info (12023): Found entity 1: vga File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/vga.sv Line: 1
+    Info (12023): Found entity 1: vga File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/vga.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file vgacontroller.sv
-    Info (12023): Found entity 1: vgaController File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/vgaController.sv Line: 1
+    Info (12023): Found entity 1: vgaController File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/vgaController.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file pll.sv
-    Info (12023): Found entity 1: pll File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/pll.sv Line: 1
+    Info (12023): Found entity 1: pll File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/pll.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file tb_arm.sv
-    Info (12023): Found entity 1: tb_arm File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/tb_arm.sv Line: 1
+    Info (12023): Found entity 1: tb_arm File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/tb_arm.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file condcheck.sv
-    Info (12023): Found entity 1: condcheck File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/condcheck.sv Line: 1
+    Info (12023): Found entity 1: condcheck File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/condcheck.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file imem.sv
-    Info (12023): Found entity 1: imem File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/imem.sv Line: 1
+    Info (12023): Found entity 1: imem File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/imem.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ram1.v
-    Info (12023): Found entity 1: ram1 File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/ram1.v Line: 40
+    Info (12023): Found entity 1: ram1 File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/ram1.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file ram_tb.sv
-    Info (12023): Found entity 1: ram_tb File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/ram_tb.sv Line: 1
+    Info (12023): Found entity 1: ram_tb File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/ram_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file cpu.sv
-    Info (12023): Found entity 1: CPU File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/CPU.sv Line: 1
+    Info (12023): Found entity 1: CPU File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/CPU.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file cpu_tb.sv
-    Info (12023): Found entity 1: CPU_tb File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/CPU_tb.sv Line: 3
+    Info (12023): Found entity 1: CPU_tb File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/CPU_tb.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file rom.v
-    Info (12023): Found entity 1: rom File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/rom.v Line: 40
+    Info (12023): Found entity 1: rom File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/rom.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file generate_graphic.sv
-    Info (12023): Found entity 1: generate_graphic File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/generate_graphic.sv Line: 1
+    Info (12023): Found entity 1: generate_graphic File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/generate_graphic.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file generate_rectangle.sv
-    Info (12023): Found entity 1: generate_rectangle File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/generate_rectangle.sv Line: 1
+    Info (12023): Found entity 1: generate_rectangle File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/generate_rectangle.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file decoder_tb.sv
-    Info (12023): Found entity 1: decoder_tb File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/decoder_tb.sv Line: 1
+    Info (12023): Found entity 1: decoder_tb File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/decoder_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file dmem.sv
-    Info (12023): Found entity 1: dmem File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/dmem.sv Line: 1
+    Info (12023): Found entity 1: dmem File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/dmem.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file top.sv
-    Info (12023): Found entity 1: top File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/top.sv Line: 1
+    Info (12023): Found entity 1: top File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/top.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file testbench.sv
-    Info (12023): Found entity 1: testbench File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/testbench.sv Line: 1
+    Info (12023): Found entity 1: testbench File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/testbench.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file vga_prueba.sv
-    Info (12023): Found entity 1: vga_prueba File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/vga_prueba.sv Line: 1
+    Info (12023): Found entity 1: vga_prueba File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/vga_prueba.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file tb_vga_prueba.sv
-    Info (12023): Found entity 1: tb_vga_prueba File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/tb_vga_prueba.sv Line: 3
+    Info (12023): Found entity 1: tb_vga_prueba File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/tb_vga_prueba.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file ram_rgb.v
-    Info (12023): Found entity 1: ram_rgb File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/ram_rgb.v Line: 40
-Warning (10236): Verilog HDL Implicit Net warning at vga_prueba.sv(22): created implicit net for "pixel_data" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/vga_prueba.sv Line: 22
+    Info (12023): Found entity 1: ram_rgb File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/ram_rgb.v Line: 40
+Warning (10236): Verilog HDL Implicit Net warning at vga_prueba.sv(21): created implicit net for "inrectImage" File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/vga_prueba.sv Line: 21
 Info (12127): Elaborating entity "vga_prueba" for the top level hierarchy
-Info (12128): Elaborating entity "pll" for hierarchy "pll:vgapll" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/vga_prueba.sv Line: 19
-Info (12128): Elaborating entity "vgaController" for hierarchy "vgaController:vgaCont" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/vga_prueba.sv Line: 21
-Info (12128): Elaborating entity "generate_graphic" for hierarchy "generate_graphic:gen_grid" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/vga_prueba.sv Line: 22
-Info (12128): Elaborating entity "generate_rectangle" for hierarchy "generate_graphic:gen_grid|generate_rectangle:rectImage" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/generate_graphic.sv Line: 12
-Info (12128): Elaborating entity "image_loader" for hierarchy "image_loader:image" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/vga_prueba.sv Line: 23
-Warning (10230): Verilog HDL assignment warning at image_loader.sv(23): truncated value with size 32 to match size of target (16) File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/image_loader.sv Line: 23
-Info (12128): Elaborating entity "ram_rgb" for hierarchy "image_loader:image|ram_rgb:ram" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/image_loader.sv Line: 15
-Info (12128): Elaborating entity "altsyncram" for hierarchy "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/ram_rgb.v Line: 86
-Info (12130): Elaborated megafunction instantiation "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/ram_rgb.v Line: 86
-Info (12133): Instantiated megafunction "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/ram_rgb.v Line: 86
+Warning (10036): Verilog HDL or VHDL warning at vga_prueba.sv(12): object "enable" assigned a value but never read File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/vga_prueba.sv Line: 12
+Info (12128): Elaborating entity "pll" for hierarchy "pll:vgapll" File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/vga_prueba.sv Line: 20
+Info (12128): Elaborating entity "generate_rectangle" for hierarchy "generate_rectangle:rectImage" File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/vga_prueba.sv Line: 21
+Info (12128): Elaborating entity "vgaController" for hierarchy "vgaController:vgaCont" File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/vga_prueba.sv Line: 22
+Info (12128): Elaborating entity "image_loader" for hierarchy "image_loader:image" File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/vga_prueba.sv Line: 24
+Warning (10230): Verilog HDL assignment warning at image_loader.sv(13): truncated value with size 32 to match size of target (16) File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/image_loader.sv Line: 13
+Warning (10230): Verilog HDL assignment warning at image_loader.sv(34): truncated value with size 32 to match size of target (2) File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/image_loader.sv Line: 34
+Info (12128): Elaborating entity "ram_rgb" for hierarchy "image_loader:image|ram_rgb:ram" File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/image_loader.sv Line: 22
+Info (12128): Elaborating entity "altsyncram" for hierarchy "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component" File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/ram_rgb.v Line: 86
+Info (12130): Elaborated megafunction instantiation "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component" File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/ram_rgb.v Line: 86
+Info (12133): Instantiated megafunction "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/ram_rgb.v Line: 86
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
     Info (12134): Parameter "init_file" = "pixeles_rgb.mif"
@@ -611,108 +430,29 @@ Info (12133): Instantiated megafunction "image_loader:image|ram_rgb:ram|altsyncr
     Info (12134): Parameter "width_a" = "8"
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_43p1.tdf
-    Info (12023): Found entity 1: altsyncram_43p1 File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/altsyncram_43p1.tdf Line: 34
+    Info (12023): Found entity 1: altsyncram_43p1 File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/altsyncram_43p1.tdf Line: 34
 Info (12128): Elaborating entity "altsyncram_43p1" for hierarchy "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_dla.tdf
-    Info (12023): Found entity 1: decode_dla File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/decode_dla.tdf Line: 23
-Info (12128): Elaborating entity "decode_dla" for hierarchy "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated|decode_dla:decode3" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/altsyncram_43p1.tdf Line: 44
+    Info (12023): Found entity 1: decode_dla File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/decode_dla.tdf Line: 23
+Info (12128): Elaborating entity "decode_dla" for hierarchy "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated|decode_dla:decode3" File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/altsyncram_43p1.tdf Line: 44
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_61a.tdf
-    Info (12023): Found entity 1: decode_61a File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/decode_61a.tdf Line: 23
-Info (12128): Elaborating entity "decode_61a" for hierarchy "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated|decode_61a:rden_decode" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/altsyncram_43p1.tdf Line: 45
+    Info (12023): Found entity 1: decode_61a File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/decode_61a.tdf Line: 23
+Info (12128): Elaborating entity "decode_61a" for hierarchy "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated|decode_61a:rden_decode" File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/altsyncram_43p1.tdf Line: 45
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_tfb.tdf
-    Info (12023): Found entity 1: mux_tfb File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/mux_tfb.tdf Line: 23
-Info (12128): Elaborating entity "mux_tfb" for hierarchy "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated|mux_tfb:mux2" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/altsyncram_43p1.tdf Line: 46
-Warning (14284): Synthesized away the following node(s):
-    Warning (14285): Synthesized away the following RAM node(s):
-        Warning (14320): Synthesized away node "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated|ram_block1a1" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/altsyncram_43p1.tdf Line: 71
-        Warning (14320): Synthesized away node "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated|ram_block1a2" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/altsyncram_43p1.tdf Line: 95
-        Warning (14320): Synthesized away node "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated|ram_block1a3" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/altsyncram_43p1.tdf Line: 119
-        Warning (14320): Synthesized away node "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated|ram_block1a4" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/altsyncram_43p1.tdf Line: 143
-        Warning (14320): Synthesized away node "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated|ram_block1a5" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/altsyncram_43p1.tdf Line: 167
-        Warning (14320): Synthesized away node "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated|ram_block1a6" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/altsyncram_43p1.tdf Line: 191
-        Warning (14320): Synthesized away node "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated|ram_block1a7" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/altsyncram_43p1.tdf Line: 215
-        Warning (14320): Synthesized away node "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated|ram_block1a9" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/altsyncram_43p1.tdf Line: 263
-        Warning (14320): Synthesized away node "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated|ram_block1a10" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/altsyncram_43p1.tdf Line: 287
-        Warning (14320): Synthesized away node "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated|ram_block1a11" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/altsyncram_43p1.tdf Line: 311
-        Warning (14320): Synthesized away node "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated|ram_block1a12" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/altsyncram_43p1.tdf Line: 335
-        Warning (14320): Synthesized away node "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated|ram_block1a13" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/altsyncram_43p1.tdf Line: 359
-        Warning (14320): Synthesized away node "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated|ram_block1a14" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/altsyncram_43p1.tdf Line: 383
-        Warning (14320): Synthesized away node "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated|ram_block1a15" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/altsyncram_43p1.tdf Line: 407
-        Warning (14320): Synthesized away node "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated|ram_block1a17" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/altsyncram_43p1.tdf Line: 455
-        Warning (14320): Synthesized away node "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated|ram_block1a18" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/altsyncram_43p1.tdf Line: 479
-        Warning (14320): Synthesized away node "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated|ram_block1a19" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/altsyncram_43p1.tdf Line: 503
-        Warning (14320): Synthesized away node "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated|ram_block1a20" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/altsyncram_43p1.tdf Line: 527
-        Warning (14320): Synthesized away node "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated|ram_block1a21" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/altsyncram_43p1.tdf Line: 551
-        Warning (14320): Synthesized away node "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated|ram_block1a22" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/altsyncram_43p1.tdf Line: 575
-        Warning (14320): Synthesized away node "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated|ram_block1a23" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/altsyncram_43p1.tdf Line: 599
-        Warning (14320): Synthesized away node "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated|ram_block1a25" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/altsyncram_43p1.tdf Line: 647
-        Warning (14320): Synthesized away node "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated|ram_block1a26" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/altsyncram_43p1.tdf Line: 671
-        Warning (14320): Synthesized away node "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated|ram_block1a27" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/altsyncram_43p1.tdf Line: 695
-        Warning (14320): Synthesized away node "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated|ram_block1a28" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/altsyncram_43p1.tdf Line: 719
-        Warning (14320): Synthesized away node "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated|ram_block1a29" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/altsyncram_43p1.tdf Line: 743
-        Warning (14320): Synthesized away node "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated|ram_block1a30" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/altsyncram_43p1.tdf Line: 767
-        Warning (14320): Synthesized away node "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated|ram_block1a31" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/altsyncram_43p1.tdf Line: 791
-        Warning (14320): Synthesized away node "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated|ram_block1a33" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/altsyncram_43p1.tdf Line: 839
-        Warning (14320): Synthesized away node "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated|ram_block1a34" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/altsyncram_43p1.tdf Line: 863
-        Warning (14320): Synthesized away node "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated|ram_block1a35" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/altsyncram_43p1.tdf Line: 887
-        Warning (14320): Synthesized away node "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated|ram_block1a36" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/altsyncram_43p1.tdf Line: 911
-        Warning (14320): Synthesized away node "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated|ram_block1a37" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/altsyncram_43p1.tdf Line: 935
-        Warning (14320): Synthesized away node "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated|ram_block1a38" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/altsyncram_43p1.tdf Line: 959
-        Warning (14320): Synthesized away node "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated|ram_block1a39" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/altsyncram_43p1.tdf Line: 983
-        Warning (14320): Synthesized away node "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated|ram_block1a41" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/altsyncram_43p1.tdf Line: 1031
-        Warning (14320): Synthesized away node "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated|ram_block1a42" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/altsyncram_43p1.tdf Line: 1055
-        Warning (14320): Synthesized away node "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated|ram_block1a43" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/altsyncram_43p1.tdf Line: 1079
-        Warning (14320): Synthesized away node "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated|ram_block1a44" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/altsyncram_43p1.tdf Line: 1103
-        Warning (14320): Synthesized away node "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated|ram_block1a45" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/altsyncram_43p1.tdf Line: 1127
-        Warning (14320): Synthesized away node "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated|ram_block1a46" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/altsyncram_43p1.tdf Line: 1151
-        Warning (14320): Synthesized away node "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated|ram_block1a47" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/altsyncram_43p1.tdf Line: 1175
-        Warning (14320): Synthesized away node "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated|ram_block1a49" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/altsyncram_43p1.tdf Line: 1223
-        Warning (14320): Synthesized away node "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated|ram_block1a50" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/altsyncram_43p1.tdf Line: 1247
-        Warning (14320): Synthesized away node "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated|ram_block1a51" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/altsyncram_43p1.tdf Line: 1271
-        Warning (14320): Synthesized away node "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated|ram_block1a52" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/altsyncram_43p1.tdf Line: 1295
-        Warning (14320): Synthesized away node "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated|ram_block1a53" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/altsyncram_43p1.tdf Line: 1319
-        Warning (14320): Synthesized away node "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated|ram_block1a54" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/altsyncram_43p1.tdf Line: 1343
-        Warning (14320): Synthesized away node "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated|ram_block1a55" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/altsyncram_43p1.tdf Line: 1367
-        Warning (14320): Synthesized away node "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated|ram_block1a57" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/altsyncram_43p1.tdf Line: 1415
-        Warning (14320): Synthesized away node "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated|ram_block1a58" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/altsyncram_43p1.tdf Line: 1439
-        Warning (14320): Synthesized away node "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated|ram_block1a59" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/altsyncram_43p1.tdf Line: 1463
-        Warning (14320): Synthesized away node "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated|ram_block1a60" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/altsyncram_43p1.tdf Line: 1487
-        Warning (14320): Synthesized away node "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated|ram_block1a61" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/altsyncram_43p1.tdf Line: 1511
-        Warning (14320): Synthesized away node "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated|ram_block1a62" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/altsyncram_43p1.tdf Line: 1535
-        Warning (14320): Synthesized away node "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated|ram_block1a63" File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/altsyncram_43p1.tdf Line: 1559
-Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "r[1]" is stuck at GND File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/vga_prueba.sv Line: 7
-    Warning (13410): Pin "r[3]" is stuck at GND File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/vga_prueba.sv Line: 7
-    Warning (13410): Pin "r[5]" is stuck at GND File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/vga_prueba.sv Line: 7
-    Warning (13410): Pin "r[7]" is stuck at GND File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/vga_prueba.sv Line: 7
-    Warning (13410): Pin "g[1]" is stuck at GND File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/vga_prueba.sv Line: 7
-    Warning (13410): Pin "g[3]" is stuck at GND File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/vga_prueba.sv Line: 7
-    Warning (13410): Pin "g[5]" is stuck at GND File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/vga_prueba.sv Line: 7
-    Warning (13410): Pin "g[7]" is stuck at GND File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/vga_prueba.sv Line: 7
-    Warning (13410): Pin "b[1]" is stuck at GND File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/vga_prueba.sv Line: 7
-    Warning (13410): Pin "b[3]" is stuck at GND File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/vga_prueba.sv Line: 7
-    Warning (13410): Pin "b[5]" is stuck at GND File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/vga_prueba.sv Line: 7
-    Warning (13410): Pin "b[7]" is stuck at GND File: C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/vga_prueba.sv Line: 7
-Info (286030): Timing-Driven Synthesis is running
-Info (144001): Generated suppressed messages file C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/output_files/procesador.map.smsg
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 150 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 2 input pins
-    Info (21059): Implemented 49 output pins
-    Info (21061): Implemented 91 logic cells
-    Info (21064): Implemented 8 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 75 warnings
-    Info: Peak virtual memory: 4835 megabytes
-    Info: Processing ended: Thu Nov 07 00:30:21 2024
-    Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:19
+    Info (12023): Found entity 1: mux_tfb File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/mux_tfb.tdf Line: 23
+Info (12128): Elaborating entity "mux_tfb" for hierarchy "image_loader:image|ram_rgb:ram|altsyncram:altsyncram_component|altsyncram_43p1:auto_generated|mux_tfb:mux2" File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/db/altsyncram_43p1.tdf Line: 46
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (144001): Generated suppressed messages file C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/output_files/procesador.map.smsg
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 4788 megabytes
+    Info: Processing ended: Thu Nov 07 02:33:42 2024
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:39
 
 
-+------------------------------------------+
-; Analysis & Synthesis Suppressed Messages ;
-+------------------------------------------+
-The suppressed messages can be found in C:/Users/jjsol/OneDrive/Escritorio/Documentos/TEC/IIS-2024/TDD/Repositorios/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/output_files/procesador.map.smsg.
++--------------------------------------------+
+; Analysis & Elaboration Suppressed Messages ;
++--------------------------------------------+
+The suppressed messages can be found in C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/output_files/procesador.map.smsg.
 
 

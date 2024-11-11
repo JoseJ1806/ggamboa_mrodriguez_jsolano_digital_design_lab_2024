@@ -43,8 +43,8 @@ module tb_Alu;
     print_results(ALU_Sel, 4'b0100, 4'b0000); // Espera Resultado 4, Flags = 0
 
     // Prueba de operación SUB
-    A = 4'b0001;  // 3
-    B = 4'b0011;  // 1
+    A = 4'b0011;  // 3
+    B = 4'b0001;  // 1
     ALU_Sel = 2'b01;
     #10;
     print_results(ALU_Sel, 4'b0010, 4'b0000); // Espera Resultado 2, Flags = 0

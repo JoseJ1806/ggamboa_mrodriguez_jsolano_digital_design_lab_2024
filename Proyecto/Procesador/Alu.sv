@@ -12,7 +12,7 @@
 ----------------------------------------------------------------------*/
 
 module Alu 
-#(parameter N = 2)
+#(parameter N = 32)
 (
   input logic [N-1:0] A, B,             // Entrada de la ALU
   input logic [1:0] ALU_Sel,            // Selector de la ALU

@@ -61,7 +61,7 @@ module Alu
 
       2'b10: begin // AND
         ALU_Result = A & B;
-        Neg = 1'b0; // No aplica para AND
+        Neg = ALU_Result[N-1:0];
         Z = (ALU_Result == '0);
         C = 1'b0; // No aplica para AND
         V = 1'b0; // No aplica para AND
@@ -69,7 +69,7 @@ module Alu
 
       2'b11: begin // ORR
         ALU_Result = A | B;
-        Neg = 1'b0; // No aplica para OR
+        Neg = ALU_Result[N-1:0];
         Z = (ALU_Result == '0);
         C = 1'b0; // No aplica para OR
         V = 1'b0; // No aplica para OR

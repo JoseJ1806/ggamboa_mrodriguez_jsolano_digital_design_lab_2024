@@ -1,119 +1,119 @@
 |vga_prueba
 clk => clk.IN2
 rst => rst.IN1
-vgaclk << vgaclk.DB_MAX_OUTPUT_PORT_TYPE
-hsync << vgaController:vgaCont.port1
-vsync << vgaController:vgaCont.port2
-sync_b << vgaController:vgaCont.port3
-blank_b << vgaController:vgaCont.port4
-r[0] << generate_graphic:gen_grid.port3
-r[1] << generate_graphic:gen_grid.port3
-r[2] << generate_graphic:gen_grid.port3
-r[3] << generate_graphic:gen_grid.port3
-r[4] << generate_graphic:gen_grid.port3
-r[5] << generate_graphic:gen_grid.port3
-r[6] << generate_graphic:gen_grid.port3
-r[7] << generate_graphic:gen_grid.port3
-g[0] << generate_graphic:gen_grid.port4
-g[1] << generate_graphic:gen_grid.port4
-g[2] << generate_graphic:gen_grid.port4
-g[3] << generate_graphic:gen_grid.port4
-g[4] << generate_graphic:gen_grid.port4
-g[5] << generate_graphic:gen_grid.port4
-g[6] << generate_graphic:gen_grid.port4
-g[7] << generate_graphic:gen_grid.port4
-b[0] << generate_graphic:gen_grid.port5
-b[1] << generate_graphic:gen_grid.port5
-b[2] << generate_graphic:gen_grid.port5
-b[3] << generate_graphic:gen_grid.port5
-b[4] << generate_graphic:gen_grid.port5
-b[5] << generate_graphic:gen_grid.port5
-b[6] << generate_graphic:gen_grid.port5
-b[7] << generate_graphic:gen_grid.port5
-x[0] << x[0].DB_MAX_OUTPUT_PORT_TYPE
-x[1] << x[1].DB_MAX_OUTPUT_PORT_TYPE
-x[2] << x[2].DB_MAX_OUTPUT_PORT_TYPE
-x[3] << x[3].DB_MAX_OUTPUT_PORT_TYPE
-x[4] << x[4].DB_MAX_OUTPUT_PORT_TYPE
-x[5] << x[5].DB_MAX_OUTPUT_PORT_TYPE
-x[6] << x[6].DB_MAX_OUTPUT_PORT_TYPE
-x[7] << x[7].DB_MAX_OUTPUT_PORT_TYPE
-x[8] << x[8].DB_MAX_OUTPUT_PORT_TYPE
-x[9] << x[9].DB_MAX_OUTPUT_PORT_TYPE
-y[0] << y[0].DB_MAX_OUTPUT_PORT_TYPE
-y[1] << y[1].DB_MAX_OUTPUT_PORT_TYPE
-y[2] << y[2].DB_MAX_OUTPUT_PORT_TYPE
-y[3] << y[3].DB_MAX_OUTPUT_PORT_TYPE
-y[4] << y[4].DB_MAX_OUTPUT_PORT_TYPE
-y[5] << y[5].DB_MAX_OUTPUT_PORT_TYPE
-y[6] << y[6].DB_MAX_OUTPUT_PORT_TYPE
-y[7] << y[7].DB_MAX_OUTPUT_PORT_TYPE
-y[8] << y[8].DB_MAX_OUTPUT_PORT_TYPE
-y[9] << y[9].DB_MAX_OUTPUT_PORT_TYPE
-memAddress[0] << CPU:CPU_inst.x
-memAddress[1] << CPU:CPU_inst.x
-memAddress[2] << CPU:CPU_inst.x
-memAddress[3] << CPU:CPU_inst.x
-memAddress[4] << CPU:CPU_inst.x
-memAddress[5] << CPU:CPU_inst.x
-memAddress[6] << CPU:CPU_inst.x
-memAddress[7] << CPU:CPU_inst.x
-memAddress[8] << CPU:CPU_inst.x
-memAddress[9] << CPU:CPU_inst.x
-memAddress[10] << CPU:CPU_inst.x
-memAddress[11] << CPU:CPU_inst.x
-memAddress[12] << CPU:CPU_inst.x
-memAddress[13] << CPU:CPU_inst.x
-memAddress[14] << CPU:CPU_inst.x
-memAddress[15] << CPU:CPU_inst.x
-memAddress[16] << CPU:CPU_inst.x
-memAddress[17] << CPU:CPU_inst.x
-memAddress[18] << CPU:CPU_inst.x
-memAddress[19] << CPU:CPU_inst.x
-memAddress[20] << CPU:CPU_inst.x
-memAddress[21] << CPU:CPU_inst.x
-memAddress[22] << CPU:CPU_inst.x
-memAddress[23] << CPU:CPU_inst.x
-memAddress[24] << CPU:CPU_inst.x
-memAddress[25] << CPU:CPU_inst.x
-memAddress[26] << CPU:CPU_inst.x
-memAddress[27] << CPU:CPU_inst.x
-memAddress[28] << CPU:CPU_inst.x
-memAddress[29] << CPU:CPU_inst.x
-memAddress[30] << CPU:CPU_inst.x
-memAddress[31] << CPU:CPU_inst.x
-pixel[0] << pixel[0].DB_MAX_OUTPUT_PORT_TYPE
-pixel[1] << pixel[1].DB_MAX_OUTPUT_PORT_TYPE
-pixel[2] << pixel[2].DB_MAX_OUTPUT_PORT_TYPE
-pixel[3] << pixel[3].DB_MAX_OUTPUT_PORT_TYPE
-pixel[4] << pixel[4].DB_MAX_OUTPUT_PORT_TYPE
-pixel[5] << pixel[5].DB_MAX_OUTPUT_PORT_TYPE
-pixel[6] << pixel[6].DB_MAX_OUTPUT_PORT_TYPE
-pixel[7] << pixel[7].DB_MAX_OUTPUT_PORT_TYPE
-pixel[8] << pixel[8].DB_MAX_OUTPUT_PORT_TYPE
-pixel[9] << pixel[9].DB_MAX_OUTPUT_PORT_TYPE
-pixel[10] << pixel[10].DB_MAX_OUTPUT_PORT_TYPE
-pixel[11] << pixel[11].DB_MAX_OUTPUT_PORT_TYPE
-pixel[12] << pixel[12].DB_MAX_OUTPUT_PORT_TYPE
-pixel[13] << pixel[13].DB_MAX_OUTPUT_PORT_TYPE
-pixel[14] << pixel[14].DB_MAX_OUTPUT_PORT_TYPE
-pixel[15] << pixel[15].DB_MAX_OUTPUT_PORT_TYPE
-pixel[16] << pixel[16].DB_MAX_OUTPUT_PORT_TYPE
-pixel[17] << pixel[17].DB_MAX_OUTPUT_PORT_TYPE
-pixel[18] << pixel[18].DB_MAX_OUTPUT_PORT_TYPE
-pixel[19] << pixel[19].DB_MAX_OUTPUT_PORT_TYPE
-pixel[20] << pixel[20].DB_MAX_OUTPUT_PORT_TYPE
-pixel[21] << pixel[21].DB_MAX_OUTPUT_PORT_TYPE
-pixel[22] << pixel[22].DB_MAX_OUTPUT_PORT_TYPE
-pixel[23] << pixel[23].DB_MAX_OUTPUT_PORT_TYPE
-pixel[24] << pixel[24].DB_MAX_OUTPUT_PORT_TYPE
-pixel[25] << pixel[25].DB_MAX_OUTPUT_PORT_TYPE
-pixel[26] << pixel[26].DB_MAX_OUTPUT_PORT_TYPE
-pixel[27] << pixel[27].DB_MAX_OUTPUT_PORT_TYPE
-pixel[28] << pixel[28].DB_MAX_OUTPUT_PORT_TYPE
-pixel[29] << pixel[29].DB_MAX_OUTPUT_PORT_TYPE
-pixel[30] << pixel[30].DB_MAX_OUTPUT_PORT_TYPE
-pixel[31] << pixel[31].DB_MAX_OUTPUT_PORT_TYPE
+vgaclk <= vgaclk.DB_MAX_OUTPUT_PORT_TYPE
+hsync <= vgaController:vgaCont.port1
+vsync <= vgaController:vgaCont.port2
+sync_b <= vgaController:vgaCont.port3
+blank_b <= vgaController:vgaCont.port4
+r[0] <= generate_graphic:gen_grid.port3
+r[1] <= generate_graphic:gen_grid.port3
+r[2] <= generate_graphic:gen_grid.port3
+r[3] <= generate_graphic:gen_grid.port3
+r[4] <= generate_graphic:gen_grid.port3
+r[5] <= generate_graphic:gen_grid.port3
+r[6] <= generate_graphic:gen_grid.port3
+r[7] <= generate_graphic:gen_grid.port3
+g[0] <= generate_graphic:gen_grid.port4
+g[1] <= generate_graphic:gen_grid.port4
+g[2] <= generate_graphic:gen_grid.port4
+g[3] <= generate_graphic:gen_grid.port4
+g[4] <= generate_graphic:gen_grid.port4
+g[5] <= generate_graphic:gen_grid.port4
+g[6] <= generate_graphic:gen_grid.port4
+g[7] <= generate_graphic:gen_grid.port4
+b[0] <= generate_graphic:gen_grid.port5
+b[1] <= generate_graphic:gen_grid.port5
+b[2] <= generate_graphic:gen_grid.port5
+b[3] <= generate_graphic:gen_grid.port5
+b[4] <= generate_graphic:gen_grid.port5
+b[5] <= generate_graphic:gen_grid.port5
+b[6] <= generate_graphic:gen_grid.port5
+b[7] <= generate_graphic:gen_grid.port5
+x[0] <= x[0].DB_MAX_OUTPUT_PORT_TYPE
+x[1] <= x[1].DB_MAX_OUTPUT_PORT_TYPE
+x[2] <= x[2].DB_MAX_OUTPUT_PORT_TYPE
+x[3] <= x[3].DB_MAX_OUTPUT_PORT_TYPE
+x[4] <= x[4].DB_MAX_OUTPUT_PORT_TYPE
+x[5] <= x[5].DB_MAX_OUTPUT_PORT_TYPE
+x[6] <= x[6].DB_MAX_OUTPUT_PORT_TYPE
+x[7] <= x[7].DB_MAX_OUTPUT_PORT_TYPE
+x[8] <= x[8].DB_MAX_OUTPUT_PORT_TYPE
+x[9] <= x[9].DB_MAX_OUTPUT_PORT_TYPE
+y[0] <= y[0].DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y[1].DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y[2].DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y[3].DB_MAX_OUTPUT_PORT_TYPE
+y[4] <= y[4].DB_MAX_OUTPUT_PORT_TYPE
+y[5] <= y[5].DB_MAX_OUTPUT_PORT_TYPE
+y[6] <= y[6].DB_MAX_OUTPUT_PORT_TYPE
+y[7] <= y[7].DB_MAX_OUTPUT_PORT_TYPE
+y[8] <= y[8].DB_MAX_OUTPUT_PORT_TYPE
+y[9] <= y[9].DB_MAX_OUTPUT_PORT_TYPE
+memAddress[0] <= memAddress[0].DB_MAX_OUTPUT_PORT_TYPE
+memAddress[1] <= memAddress[1].DB_MAX_OUTPUT_PORT_TYPE
+memAddress[2] <= memAddress[2].DB_MAX_OUTPUT_PORT_TYPE
+memAddress[3] <= memAddress[3].DB_MAX_OUTPUT_PORT_TYPE
+memAddress[4] <= memAddress[4].DB_MAX_OUTPUT_PORT_TYPE
+memAddress[5] <= memAddress[5].DB_MAX_OUTPUT_PORT_TYPE
+memAddress[6] <= memAddress[6].DB_MAX_OUTPUT_PORT_TYPE
+memAddress[7] <= memAddress[7].DB_MAX_OUTPUT_PORT_TYPE
+memAddress[8] <= memAddress[8].DB_MAX_OUTPUT_PORT_TYPE
+memAddress[9] <= memAddress[9].DB_MAX_OUTPUT_PORT_TYPE
+memAddress[10] <= memAddress[10].DB_MAX_OUTPUT_PORT_TYPE
+memAddress[11] <= memAddress[11].DB_MAX_OUTPUT_PORT_TYPE
+memAddress[12] <= memAddress[12].DB_MAX_OUTPUT_PORT_TYPE
+memAddress[13] <= memAddress[13].DB_MAX_OUTPUT_PORT_TYPE
+memAddress[14] <= memAddress[14].DB_MAX_OUTPUT_PORT_TYPE
+memAddress[15] <= memAddress[15].DB_MAX_OUTPUT_PORT_TYPE
+memAddress[16] <= memAddress[16].DB_MAX_OUTPUT_PORT_TYPE
+memAddress[17] <= memAddress[17].DB_MAX_OUTPUT_PORT_TYPE
+memAddress[18] <= memAddress[18].DB_MAX_OUTPUT_PORT_TYPE
+memAddress[19] <= memAddress[19].DB_MAX_OUTPUT_PORT_TYPE
+memAddress[20] <= memAddress[20].DB_MAX_OUTPUT_PORT_TYPE
+memAddress[21] <= memAddress[21].DB_MAX_OUTPUT_PORT_TYPE
+memAddress[22] <= memAddress[22].DB_MAX_OUTPUT_PORT_TYPE
+memAddress[23] <= memAddress[23].DB_MAX_OUTPUT_PORT_TYPE
+memAddress[24] <= memAddress[24].DB_MAX_OUTPUT_PORT_TYPE
+memAddress[25] <= memAddress[25].DB_MAX_OUTPUT_PORT_TYPE
+memAddress[26] <= memAddress[26].DB_MAX_OUTPUT_PORT_TYPE
+memAddress[27] <= memAddress[27].DB_MAX_OUTPUT_PORT_TYPE
+memAddress[28] <= memAddress[28].DB_MAX_OUTPUT_PORT_TYPE
+memAddress[29] <= memAddress[29].DB_MAX_OUTPUT_PORT_TYPE
+memAddress[30] <= memAddress[30].DB_MAX_OUTPUT_PORT_TYPE
+memAddress[31] <= memAddress[31].DB_MAX_OUTPUT_PORT_TYPE
+pixel[0] <= pixel[0].DB_MAX_OUTPUT_PORT_TYPE
+pixel[1] <= pixel[1].DB_MAX_OUTPUT_PORT_TYPE
+pixel[2] <= pixel[2].DB_MAX_OUTPUT_PORT_TYPE
+pixel[3] <= pixel[3].DB_MAX_OUTPUT_PORT_TYPE
+pixel[4] <= pixel[4].DB_MAX_OUTPUT_PORT_TYPE
+pixel[5] <= pixel[5].DB_MAX_OUTPUT_PORT_TYPE
+pixel[6] <= pixel[6].DB_MAX_OUTPUT_PORT_TYPE
+pixel[7] <= pixel[7].DB_MAX_OUTPUT_PORT_TYPE
+pixel[8] <= pixel[8].DB_MAX_OUTPUT_PORT_TYPE
+pixel[9] <= pixel[9].DB_MAX_OUTPUT_PORT_TYPE
+pixel[10] <= pixel[10].DB_MAX_OUTPUT_PORT_TYPE
+pixel[11] <= pixel[11].DB_MAX_OUTPUT_PORT_TYPE
+pixel[12] <= pixel[12].DB_MAX_OUTPUT_PORT_TYPE
+pixel[13] <= pixel[13].DB_MAX_OUTPUT_PORT_TYPE
+pixel[14] <= pixel[14].DB_MAX_OUTPUT_PORT_TYPE
+pixel[15] <= pixel[15].DB_MAX_OUTPUT_PORT_TYPE
+pixel[16] <= pixel[16].DB_MAX_OUTPUT_PORT_TYPE
+pixel[17] <= pixel[17].DB_MAX_OUTPUT_PORT_TYPE
+pixel[18] <= pixel[18].DB_MAX_OUTPUT_PORT_TYPE
+pixel[19] <= pixel[19].DB_MAX_OUTPUT_PORT_TYPE
+pixel[20] <= pixel[20].DB_MAX_OUTPUT_PORT_TYPE
+pixel[21] <= pixel[21].DB_MAX_OUTPUT_PORT_TYPE
+pixel[22] <= pixel[22].DB_MAX_OUTPUT_PORT_TYPE
+pixel[23] <= pixel[23].DB_MAX_OUTPUT_PORT_TYPE
+pixel[24] <= pixel[24].DB_MAX_OUTPUT_PORT_TYPE
+pixel[25] <= pixel[25].DB_MAX_OUTPUT_PORT_TYPE
+pixel[26] <= pixel[26].DB_MAX_OUTPUT_PORT_TYPE
+pixel[27] <= pixel[27].DB_MAX_OUTPUT_PORT_TYPE
+pixel[28] <= pixel[28].DB_MAX_OUTPUT_PORT_TYPE
+pixel[29] <= pixel[29].DB_MAX_OUTPUT_PORT_TYPE
+pixel[30] <= pixel[30].DB_MAX_OUTPUT_PORT_TYPE
+pixel[31] <= pixel[31].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |vga_prueba|pll:vgapll
@@ -332,402 +332,75 @@ in_rectangle <= in_rectangle.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |vga_prueba|CPU:CPU_inst
-clk => clk.IN2
-vga_clk => memAddress[0].CLK
-vga_clk => memAddress[1].CLK
-vga_clk => memAddress[2].CLK
-vga_clk => memAddress[3].CLK
-vga_clk => memAddress[4].CLK
-vga_clk => memAddress[5].CLK
-vga_clk => memAddress[6].CLK
-vga_clk => memAddress[7].CLK
-vga_clk => memAddress[8].CLK
-vga_clk => memAddress[9].CLK
-vga_clk => memAddress[10].CLK
-vga_clk => memAddress[11].CLK
-vga_clk => memAddress[12].CLK
-vga_clk => memAddress[13].CLK
-vga_clk => memAddress[14].CLK
-vga_clk => memAddress[15].CLK
-vga_clk => memAddress[16].CLK
-vga_clk => memAddress[17].CLK
-vga_clk => memAddress[18].CLK
-vga_clk => memAddress[19].CLK
-vga_clk => memAddress[20].CLK
-vga_clk => memAddress[21].CLK
-vga_clk => memAddress[22].CLK
-vga_clk => memAddress[23].CLK
-vga_clk => memAddress[24].CLK
-vga_clk => memAddress[25].CLK
-vga_clk => memAddress[26].CLK
-vga_clk => memAddress[27].CLK
-vga_clk => memAddress[28].CLK
-vga_clk => memAddress[29].CLK
-vga_clk => memAddress[30].CLK
-vga_clk => memAddress[31].CLK
-reset => reset.IN1
-enable => memAddress.OUTPUTSELECT
-enable => memAddress.OUTPUTSELECT
-enable => memAddress.OUTPUTSELECT
-enable => memAddress.OUTPUTSELECT
-enable => memAddress.OUTPUTSELECT
-enable => memAddress.OUTPUTSELECT
-enable => memAddress.OUTPUTSELECT
-enable => memAddress.OUTPUTSELECT
-enable => memAddress.OUTPUTSELECT
-enable => memAddress.OUTPUTSELECT
-enable => memAddress.OUTPUTSELECT
-enable => memAddress.OUTPUTSELECT
-enable => memAddress.OUTPUTSELECT
-enable => memAddress.OUTPUTSELECT
-enable => memAddress.OUTPUTSELECT
-enable => memAddress.OUTPUTSELECT
-enable => memAddress.OUTPUTSELECT
-enable => memAddress.OUTPUTSELECT
-enable => memAddress.OUTPUTSELECT
-enable => memAddress.OUTPUTSELECT
-enable => memAddress.OUTPUTSELECT
-enable => memAddress.OUTPUTSELECT
-enable => memAddress.OUTPUTSELECT
-enable => memAddress.OUTPUTSELECT
-enable => memAddress.OUTPUTSELECT
-enable => memAddress.OUTPUTSELECT
-enable => memAddress.OUTPUTSELECT
-enable => memAddress.OUTPUTSELECT
-enable => memAddress.OUTPUTSELECT
-enable => memAddress.OUTPUTSELECT
-enable => memAddress.OUTPUTSELECT
-enable => memAddress.OUTPUTSELECT
-WriteData[0] <= arm:arm.port6
-WriteData[1] <= arm:arm.port6
-WriteData[2] <= arm:arm.port6
-WriteData[3] <= arm:arm.port6
-WriteData[4] <= arm:arm.port6
-WriteData[5] <= arm:arm.port6
-WriteData[6] <= arm:arm.port6
-WriteData[7] <= arm:arm.port6
-WriteData[8] <= arm:arm.port6
-WriteData[9] <= arm:arm.port6
-WriteData[10] <= arm:arm.port6
-WriteData[11] <= arm:arm.port6
-WriteData[12] <= arm:arm.port6
-WriteData[13] <= arm:arm.port6
-WriteData[14] <= arm:arm.port6
-WriteData[15] <= arm:arm.port6
-WriteData[16] <= arm:arm.port6
-WriteData[17] <= arm:arm.port6
-WriteData[18] <= arm:arm.port6
-WriteData[19] <= arm:arm.port6
-WriteData[20] <= arm:arm.port6
-WriteData[21] <= arm:arm.port6
-WriteData[22] <= arm:arm.port6
-WriteData[23] <= arm:arm.port6
-WriteData[24] <= arm:arm.port6
-WriteData[25] <= arm:arm.port6
-WriteData[26] <= arm:arm.port6
-WriteData[27] <= arm:arm.port6
-WriteData[28] <= arm:arm.port6
-WriteData[29] <= arm:arm.port6
-WriteData[30] <= arm:arm.port6
-WriteData[31] <= arm:arm.port6
-DataAdr[0] <= arm:arm.port5
-DataAdr[1] <= arm:arm.port5
-DataAdr[2] <= arm:arm.port5
-DataAdr[3] <= arm:arm.port5
-DataAdr[4] <= arm:arm.port5
-DataAdr[5] <= arm:arm.port5
-DataAdr[6] <= arm:arm.port5
-DataAdr[7] <= arm:arm.port5
-DataAdr[8] <= arm:arm.port5
-DataAdr[9] <= arm:arm.port5
-DataAdr[10] <= arm:arm.port5
-DataAdr[11] <= arm:arm.port5
-DataAdr[12] <= arm:arm.port5
-DataAdr[13] <= arm:arm.port5
-DataAdr[14] <= arm:arm.port5
-DataAdr[15] <= arm:arm.port5
-DataAdr[16] <= arm:arm.port5
-DataAdr[17] <= arm:arm.port5
-DataAdr[18] <= arm:arm.port5
-DataAdr[19] <= arm:arm.port5
-DataAdr[20] <= arm:arm.port5
-DataAdr[21] <= arm:arm.port5
-DataAdr[22] <= arm:arm.port5
-DataAdr[23] <= arm:arm.port5
-DataAdr[24] <= arm:arm.port5
-DataAdr[25] <= arm:arm.port5
-DataAdr[26] <= arm:arm.port5
-DataAdr[27] <= arm:arm.port5
-DataAdr[28] <= arm:arm.port5
-DataAdr[29] <= arm:arm.port5
-DataAdr[30] <= arm:arm.port5
-DataAdr[31] <= arm:arm.port5
-ReadData[0] <= ReadData[0].DB_MAX_OUTPUT_PORT_TYPE
-ReadData[1] <= ReadData[1].DB_MAX_OUTPUT_PORT_TYPE
-ReadData[2] <= ReadData[2].DB_MAX_OUTPUT_PORT_TYPE
-ReadData[3] <= ReadData[3].DB_MAX_OUTPUT_PORT_TYPE
-ReadData[4] <= ReadData[4].DB_MAX_OUTPUT_PORT_TYPE
-ReadData[5] <= ReadData[5].DB_MAX_OUTPUT_PORT_TYPE
-ReadData[6] <= ReadData[6].DB_MAX_OUTPUT_PORT_TYPE
-ReadData[7] <= ReadData[7].DB_MAX_OUTPUT_PORT_TYPE
-ReadData[8] <= ReadData[8].DB_MAX_OUTPUT_PORT_TYPE
-ReadData[9] <= ReadData[9].DB_MAX_OUTPUT_PORT_TYPE
-ReadData[10] <= ReadData[10].DB_MAX_OUTPUT_PORT_TYPE
-ReadData[11] <= ReadData[11].DB_MAX_OUTPUT_PORT_TYPE
-ReadData[12] <= ReadData[12].DB_MAX_OUTPUT_PORT_TYPE
-ReadData[13] <= ReadData[13].DB_MAX_OUTPUT_PORT_TYPE
-ReadData[14] <= ReadData[14].DB_MAX_OUTPUT_PORT_TYPE
-ReadData[15] <= ReadData[15].DB_MAX_OUTPUT_PORT_TYPE
-ReadData[16] <= ReadData[16].DB_MAX_OUTPUT_PORT_TYPE
-ReadData[17] <= ReadData[17].DB_MAX_OUTPUT_PORT_TYPE
-ReadData[18] <= ReadData[18].DB_MAX_OUTPUT_PORT_TYPE
-ReadData[19] <= ReadData[19].DB_MAX_OUTPUT_PORT_TYPE
-ReadData[20] <= ReadData[20].DB_MAX_OUTPUT_PORT_TYPE
-ReadData[21] <= ReadData[21].DB_MAX_OUTPUT_PORT_TYPE
-ReadData[22] <= ReadData[22].DB_MAX_OUTPUT_PORT_TYPE
-ReadData[23] <= ReadData[23].DB_MAX_OUTPUT_PORT_TYPE
-ReadData[24] <= ReadData[24].DB_MAX_OUTPUT_PORT_TYPE
-ReadData[25] <= ReadData[25].DB_MAX_OUTPUT_PORT_TYPE
-ReadData[26] <= ReadData[26].DB_MAX_OUTPUT_PORT_TYPE
-ReadData[27] <= ReadData[27].DB_MAX_OUTPUT_PORT_TYPE
-ReadData[28] <= ReadData[28].DB_MAX_OUTPUT_PORT_TYPE
-ReadData[29] <= ReadData[29].DB_MAX_OUTPUT_PORT_TYPE
-ReadData[30] <= ReadData[30].DB_MAX_OUTPUT_PORT_TYPE
-ReadData[31] <= ReadData[31].DB_MAX_OUTPUT_PORT_TYPE
-MemWrite <= arm:arm.port4
-pixel[0] <= ram1:ram.q_b[0]
-pixel[1] <= ram1:ram.q_b[1]
-pixel[2] <= ram1:ram.q_b[2]
-pixel[3] <= ram1:ram.q_b[3]
-pixel[4] <= ram1:ram.q_b[4]
-pixel[5] <= ram1:ram.q_b[5]
-pixel[6] <= ram1:ram.q_b[6]
-pixel[7] <= ram1:ram.q_b[7]
-pixel[8] <= ram1:ram.q_b[8]
-pixel[9] <= ram1:ram.q_b[9]
-pixel[10] <= ram1:ram.q_b[10]
-pixel[11] <= ram1:ram.q_b[11]
-pixel[12] <= ram1:ram.q_b[12]
-pixel[13] <= ram1:ram.q_b[13]
-pixel[14] <= ram1:ram.q_b[14]
-pixel[15] <= ram1:ram.q_b[15]
-pixel[16] <= ram1:ram.q_b[16]
-pixel[17] <= ram1:ram.q_b[17]
-pixel[18] <= ram1:ram.q_b[18]
-pixel[19] <= ram1:ram.q_b[19]
-pixel[20] <= ram1:ram.q_b[20]
-pixel[21] <= ram1:ram.q_b[21]
-pixel[22] <= ram1:ram.q_b[22]
-pixel[23] <= ram1:ram.q_b[23]
-pixel[24] <= ram1:ram.q_b[24]
-pixel[25] <= ram1:ram.q_b[25]
-pixel[26] <= ram1:ram.q_b[26]
-pixel[27] <= ram1:ram.q_b[27]
-pixel[28] <= ram1:ram.q_b[28]
-pixel[29] <= ram1:ram.q_b[29]
-pixel[30] <= ram1:ram.q_b[30]
-pixel[31] <= ram1:ram.q_b[31]
-x[0] <= memAddress[0].DB_MAX_OUTPUT_PORT_TYPE
-x[1] <= memAddress[1].DB_MAX_OUTPUT_PORT_TYPE
-x[2] <= memAddress[2].DB_MAX_OUTPUT_PORT_TYPE
-x[3] <= memAddress[3].DB_MAX_OUTPUT_PORT_TYPE
-x[4] <= memAddress[4].DB_MAX_OUTPUT_PORT_TYPE
-x[5] <= memAddress[5].DB_MAX_OUTPUT_PORT_TYPE
-x[6] <= memAddress[6].DB_MAX_OUTPUT_PORT_TYPE
-x[7] <= memAddress[7].DB_MAX_OUTPUT_PORT_TYPE
-x[8] <= memAddress[8].DB_MAX_OUTPUT_PORT_TYPE
-x[9] <= memAddress[9].DB_MAX_OUTPUT_PORT_TYPE
-x[10] <= memAddress[10].DB_MAX_OUTPUT_PORT_TYPE
-x[11] <= memAddress[11].DB_MAX_OUTPUT_PORT_TYPE
-x[12] <= memAddress[12].DB_MAX_OUTPUT_PORT_TYPE
-x[13] <= memAddress[13].DB_MAX_OUTPUT_PORT_TYPE
-x[14] <= memAddress[14].DB_MAX_OUTPUT_PORT_TYPE
-x[15] <= memAddress[15].DB_MAX_OUTPUT_PORT_TYPE
-x[16] <= memAddress[16].DB_MAX_OUTPUT_PORT_TYPE
-x[17] <= memAddress[17].DB_MAX_OUTPUT_PORT_TYPE
-x[18] <= memAddress[18].DB_MAX_OUTPUT_PORT_TYPE
-x[19] <= memAddress[19].DB_MAX_OUTPUT_PORT_TYPE
-x[20] <= memAddress[20].DB_MAX_OUTPUT_PORT_TYPE
-x[21] <= memAddress[21].DB_MAX_OUTPUT_PORT_TYPE
-x[22] <= memAddress[22].DB_MAX_OUTPUT_PORT_TYPE
-x[23] <= memAddress[23].DB_MAX_OUTPUT_PORT_TYPE
-x[24] <= memAddress[24].DB_MAX_OUTPUT_PORT_TYPE
-x[25] <= memAddress[25].DB_MAX_OUTPUT_PORT_TYPE
-x[26] <= memAddress[26].DB_MAX_OUTPUT_PORT_TYPE
-x[27] <= memAddress[27].DB_MAX_OUTPUT_PORT_TYPE
-x[28] <= memAddress[28].DB_MAX_OUTPUT_PORT_TYPE
-x[29] <= memAddress[29].DB_MAX_OUTPUT_PORT_TYPE
-x[30] <= memAddress[30].DB_MAX_OUTPUT_PORT_TYPE
-x[31] <= memAddress[31].DB_MAX_OUTPUT_PORT_TYPE
-
-
-|vga_prueba|CPU:CPU_inst|arm:arm
-clk => clk.IN2
+clk => clk.IN4
 reset => reset.IN2
-PC[0] <= datapath:dp.port10
-PC[1] <= datapath:dp.port10
-PC[2] <= datapath:dp.port10
-PC[3] <= datapath:dp.port10
-PC[4] <= datapath:dp.port10
-PC[5] <= datapath:dp.port10
-PC[6] <= datapath:dp.port10
-PC[7] <= datapath:dp.port10
-PC[8] <= datapath:dp.port10
-PC[9] <= datapath:dp.port10
-PC[10] <= datapath:dp.port10
-PC[11] <= datapath:dp.port10
-PC[12] <= datapath:dp.port10
-PC[13] <= datapath:dp.port10
-PC[14] <= datapath:dp.port10
-PC[15] <= datapath:dp.port10
-PC[16] <= datapath:dp.port10
-PC[17] <= datapath:dp.port10
-PC[18] <= datapath:dp.port10
-PC[19] <= datapath:dp.port10
-PC[20] <= datapath:dp.port10
-PC[21] <= datapath:dp.port10
-PC[22] <= datapath:dp.port10
-PC[23] <= datapath:dp.port10
-PC[24] <= datapath:dp.port10
-PC[25] <= datapath:dp.port10
-PC[26] <= datapath:dp.port10
-PC[27] <= datapath:dp.port10
-PC[28] <= datapath:dp.port10
-PC[29] <= datapath:dp.port10
-PC[30] <= datapath:dp.port10
-PC[31] <= datapath:dp.port10
-Instr[0] => Instr[0].IN1
-Instr[1] => Instr[1].IN1
-Instr[2] => Instr[2].IN1
-Instr[3] => Instr[3].IN1
-Instr[4] => Instr[4].IN1
-Instr[5] => Instr[5].IN1
-Instr[6] => Instr[6].IN1
-Instr[7] => Instr[7].IN1
-Instr[8] => Instr[8].IN1
-Instr[9] => Instr[9].IN1
-Instr[10] => Instr[10].IN1
-Instr[11] => Instr[11].IN1
-Instr[12] => Instr[12].IN2
-Instr[13] => Instr[13].IN2
-Instr[14] => Instr[14].IN2
-Instr[15] => Instr[15].IN2
-Instr[16] => Instr[16].IN2
-Instr[17] => Instr[17].IN2
-Instr[18] => Instr[18].IN2
-Instr[19] => Instr[19].IN2
-Instr[20] => Instr[20].IN2
-Instr[21] => Instr[21].IN2
-Instr[22] => Instr[22].IN2
-Instr[23] => Instr[23].IN2
-Instr[24] => Instr[24].IN2
-Instr[25] => Instr[25].IN2
-Instr[26] => Instr[26].IN2
-Instr[27] => Instr[27].IN2
-Instr[28] => Instr[28].IN2
-Instr[29] => Instr[29].IN2
-Instr[30] => Instr[30].IN2
-Instr[31] => Instr[31].IN2
-MemWrite <= controller:c.port9
-ALUResult[0] <= datapath:dp.port12
-ALUResult[1] <= datapath:dp.port12
-ALUResult[2] <= datapath:dp.port12
-ALUResult[3] <= datapath:dp.port12
-ALUResult[4] <= datapath:dp.port12
-ALUResult[5] <= datapath:dp.port12
-ALUResult[6] <= datapath:dp.port12
-ALUResult[7] <= datapath:dp.port12
-ALUResult[8] <= datapath:dp.port12
-ALUResult[9] <= datapath:dp.port12
-ALUResult[10] <= datapath:dp.port12
-ALUResult[11] <= datapath:dp.port12
-ALUResult[12] <= datapath:dp.port12
-ALUResult[13] <= datapath:dp.port12
-ALUResult[14] <= datapath:dp.port12
-ALUResult[15] <= datapath:dp.port12
-ALUResult[16] <= datapath:dp.port12
-ALUResult[17] <= datapath:dp.port12
-ALUResult[18] <= datapath:dp.port12
-ALUResult[19] <= datapath:dp.port12
-ALUResult[20] <= datapath:dp.port12
-ALUResult[21] <= datapath:dp.port12
-ALUResult[22] <= datapath:dp.port12
-ALUResult[23] <= datapath:dp.port12
-ALUResult[24] <= datapath:dp.port12
-ALUResult[25] <= datapath:dp.port12
-ALUResult[26] <= datapath:dp.port12
-ALUResult[27] <= datapath:dp.port12
-ALUResult[28] <= datapath:dp.port12
-ALUResult[29] <= datapath:dp.port12
-ALUResult[30] <= datapath:dp.port12
-ALUResult[31] <= datapath:dp.port12
-WriteData[0] <= datapath:dp.port13
-WriteData[1] <= datapath:dp.port13
-WriteData[2] <= datapath:dp.port13
-WriteData[3] <= datapath:dp.port13
-WriteData[4] <= datapath:dp.port13
-WriteData[5] <= datapath:dp.port13
-WriteData[6] <= datapath:dp.port13
-WriteData[7] <= datapath:dp.port13
-WriteData[8] <= datapath:dp.port13
-WriteData[9] <= datapath:dp.port13
-WriteData[10] <= datapath:dp.port13
-WriteData[11] <= datapath:dp.port13
-WriteData[12] <= datapath:dp.port13
-WriteData[13] <= datapath:dp.port13
-WriteData[14] <= datapath:dp.port13
-WriteData[15] <= datapath:dp.port13
-WriteData[16] <= datapath:dp.port13
-WriteData[17] <= datapath:dp.port13
-WriteData[18] <= datapath:dp.port13
-WriteData[19] <= datapath:dp.port13
-WriteData[20] <= datapath:dp.port13
-WriteData[21] <= datapath:dp.port13
-WriteData[22] <= datapath:dp.port13
-WriteData[23] <= datapath:dp.port13
-WriteData[24] <= datapath:dp.port13
-WriteData[25] <= datapath:dp.port13
-WriteData[26] <= datapath:dp.port13
-WriteData[27] <= datapath:dp.port13
-WriteData[28] <= datapath:dp.port13
-WriteData[29] <= datapath:dp.port13
-WriteData[30] <= datapath:dp.port13
-WriteData[31] <= datapath:dp.port13
-ReadData[0] => ReadData[0].IN1
-ReadData[1] => ReadData[1].IN1
-ReadData[2] => ReadData[2].IN1
-ReadData[3] => ReadData[3].IN1
-ReadData[4] => ReadData[4].IN1
-ReadData[5] => ReadData[5].IN1
-ReadData[6] => ReadData[6].IN1
-ReadData[7] => ReadData[7].IN1
-ReadData[8] => ReadData[8].IN1
-ReadData[9] => ReadData[9].IN1
-ReadData[10] => ReadData[10].IN1
-ReadData[11] => ReadData[11].IN1
-ReadData[12] => ReadData[12].IN1
-ReadData[13] => ReadData[13].IN1
-ReadData[14] => ReadData[14].IN1
-ReadData[15] => ReadData[15].IN1
-ReadData[16] => ReadData[16].IN1
-ReadData[17] => ReadData[17].IN1
-ReadData[18] => ReadData[18].IN1
-ReadData[19] => ReadData[19].IN1
-ReadData[20] => ReadData[20].IN1
-ReadData[21] => ReadData[21].IN1
-ReadData[22] => ReadData[22].IN1
-ReadData[23] => ReadData[23].IN1
-ReadData[24] => ReadData[24].IN1
-ReadData[25] => ReadData[25].IN1
-ReadData[26] => ReadData[26].IN1
-ReadData[27] => ReadData[27].IN1
-ReadData[28] => ReadData[28].IN1
-ReadData[29] => ReadData[29].IN1
-ReadData[30] => ReadData[30].IN1
-ReadData[31] => ReadData[31].IN1
+address[0] => address[0].IN1
+address[1] => address[1].IN1
+address[2] => address[2].IN1
+address[3] => address[3].IN1
+address[4] => address[4].IN1
+address[5] => address[5].IN1
+address[6] => address[6].IN1
+address[7] => address[7].IN1
+address[8] => address[8].IN1
+address[9] => address[9].IN1
+address[10] => address[10].IN1
+address[11] => address[11].IN1
+address[12] => address[12].IN1
+address[13] => address[13].IN1
+address[14] => address[14].IN1
+address[15] => address[15].IN1
+address[16] => address[16].IN1
+address[17] => address[17].IN1
+address[18] => address[18].IN1
+address[19] => address[19].IN1
+address[20] => address[20].IN1
+address[21] => address[21].IN1
+address[22] => address[22].IN1
+address[23] => address[23].IN1
+address[24] => address[24].IN1
+address[25] => address[25].IN1
+address[26] => address[26].IN1
+address[27] => address[27].IN1
+address[28] => address[28].IN1
+address[29] => address[29].IN1
+address[30] => address[30].IN1
+address[31] => address[31].IN1
+q_b[0] <= ram1:ram.q_b
+q_b[1] <= ram1:ram.q_b
+q_b[2] <= ram1:ram.q_b
+q_b[3] <= ram1:ram.q_b
+q_b[4] <= ram1:ram.q_b
+q_b[5] <= ram1:ram.q_b
+q_b[6] <= ram1:ram.q_b
+q_b[7] <= ram1:ram.q_b
+q_b[8] <= ram1:ram.q_b
+q_b[9] <= ram1:ram.q_b
+q_b[10] <= ram1:ram.q_b
+q_b[11] <= ram1:ram.q_b
+q_b[12] <= ram1:ram.q_b
+q_b[13] <= ram1:ram.q_b
+q_b[14] <= ram1:ram.q_b
+q_b[15] <= ram1:ram.q_b
+q_b[16] <= ram1:ram.q_b
+q_b[17] <= ram1:ram.q_b
+q_b[18] <= ram1:ram.q_b
+q_b[19] <= ram1:ram.q_b
+q_b[20] <= ram1:ram.q_b
+q_b[21] <= ram1:ram.q_b
+q_b[22] <= ram1:ram.q_b
+q_b[23] <= ram1:ram.q_b
+q_b[24] <= ram1:ram.q_b
+q_b[25] <= ram1:ram.q_b
+q_b[26] <= ram1:ram.q_b
+q_b[27] <= ram1:ram.q_b
+q_b[28] <= ram1:ram.q_b
+q_b[29] <= ram1:ram.q_b
+q_b[30] <= ram1:ram.q_b
+q_b[31] <= ram1:ram.q_b
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|controller:c
+|vga_prueba|CPU:CPU_inst|controller:c
 clk => clk.IN1
 reset => reset.IN1
 Instr[12] => Instr[12].IN1
@@ -767,7 +440,7 @@ MemtoReg <= decoder:dec.port7
 PCSrc <= condlogic:cl.port8
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|controller:c|decoder:dec
+|vga_prueba|CPU:CPU_inst|controller:c|decoder:dec
 Op[0] => controls.OUTPUTSELECT
 Op[0] => Mux0.IN4
 Op[0] => Mux1.IN4
@@ -812,7 +485,7 @@ ALUControl[0] <= ALUControl.DB_MAX_OUTPUT_PORT_TYPE
 ALUControl[1] <= ALUControl.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|controller:c|condlogic:cl
+|vga_prueba|CPU:CPU_inst|controller:c|condlogic:cl
 clk => clk.IN2
 reset => reset.IN2
 Cond[0] => Cond[0].IN1
@@ -833,7 +506,7 @@ RegWrite <= RegWrite.DB_MAX_OUTPUT_PORT_TYPE
 MemWrite <= MemWrite.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|controller:c|condlogic:cl|flopenr:flagreg1
+|vga_prueba|CPU:CPU_inst|controller:c|condlogic:cl|flopenr:flagreg1
 clk => q[0]~reg0.CLK
 clk => q[1]~reg0.CLK
 reset => q[0]~reg0.ACLR
@@ -846,7 +519,7 @@ q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q[1] <= q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|controller:c|condlogic:cl|flopenr:flagreg0
+|vga_prueba|CPU:CPU_inst|controller:c|condlogic:cl|flopenr:flagreg0
 clk => q[0]~reg0.CLK
 clk => q[1]~reg0.CLK
 reset => q[0]~reg0.ACLR
@@ -859,7 +532,7 @@ q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q[1] <= q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|controller:c|condlogic:cl|condcheck:cc
+|vga_prueba|CPU:CPU_inst|controller:c|condlogic:cl|condcheck:cc
 Cond[0] => Mux0.IN14
 Cond[1] => Mux0.IN13
 Cond[2] => Mux0.IN12
@@ -880,7 +553,7 @@ Flags[3] => Mux0.IN4
 CondEx <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp
+|vga_prueba|CPU:CPU_inst|datapath:dp
 clk => clk.IN2
 reset => reset.IN1
 RegSrc[0] => RegSrc[0].IN1
@@ -1059,7 +732,7 @@ ReadData[30] => ReadData[30].IN1
 ReadData[31] => ReadData[31].IN1
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|mux2:pcmux
+|vga_prueba|CPU:CPU_inst|datapath:dp|mux2:pcmux
 d0[0] => y.DATAA
 d0[1] => y.DATAA
 d0[2] => y.DATAA
@@ -1190,7 +863,7 @@ y[30] <= y.DB_MAX_OUTPUT_PORT_TYPE
 y[31] <= y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|flopr:pcreg
+|vga_prueba|CPU:CPU_inst|datapath:dp|flopr:pcreg
 clk => q[0]~reg0.CLK
 clk => q[1]~reg0.CLK
 clk => q[2]~reg0.CLK
@@ -1321,7 +994,7 @@ q[30] <= q[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q[31] <= q[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|adder:pcadd1
+|vga_prueba|CPU:CPU_inst|datapath:dp|adder:pcadd1
 a[0] => Add0.IN32
 a[1] => Add0.IN31
 a[2] => Add0.IN30
@@ -1420,7 +1093,7 @@ y[30] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 y[31] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|adder:pcadd2
+|vga_prueba|CPU:CPU_inst|datapath:dp|adder:pcadd2
 a[0] => Add0.IN32
 a[1] => Add0.IN31
 a[2] => Add0.IN30
@@ -1519,7 +1192,7 @@ y[30] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 y[31] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|mux2:ra1mux
+|vga_prueba|CPU:CPU_inst|datapath:dp|mux2:ra1mux
 d0[0] => y.DATAA
 d0[1] => y.DATAA
 d0[2] => y.DATAA
@@ -1538,7 +1211,7 @@ y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
 y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|mux2:ra2mux
+|vga_prueba|CPU:CPU_inst|datapath:dp|mux2:ra2mux
 d0[0] => y.DATAA
 d0[1] => y.DATAA
 d0[2] => y.DATAA
@@ -1557,7 +1230,7 @@ y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
 y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|regfile:rf
+|vga_prueba|CPU:CPU_inst|datapath:dp|regfile:rf
 clk => rf.we_a.CLK
 clk => rf.waddr_a[3].CLK
 clk => rf.waddr_a[2].CLK
@@ -1816,7 +1489,7 @@ rd2[30] <= rd2.DB_MAX_OUTPUT_PORT_TYPE
 rd2[31] <= rd2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|mux2:resmux
+|vga_prueba|CPU:CPU_inst|datapath:dp|mux2:resmux
 d0[0] => y.DATAA
 d0[1] => y.DATAA
 d0[2] => y.DATAA
@@ -1947,7 +1620,7 @@ y[30] <= y.DB_MAX_OUTPUT_PORT_TYPE
 y[31] <= y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|extend:ext
+|vga_prueba|CPU:CPU_inst|datapath:dp|extend:ext
 Instr[0] => ExtImm.DATAB
 Instr[0] => ExtImm.DATAA
 Instr[1] => ExtImm.DATAB
@@ -2060,7 +1733,7 @@ ExtImm[30] <= ExtImm.DB_MAX_OUTPUT_PORT_TYPE
 ExtImm[31] <= ExtImm.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|mux2:srcbmux
+|vga_prueba|CPU:CPU_inst|datapath:dp|mux2:srcbmux
 d0[0] => y.DATAA
 d0[1] => y.DATAA
 d0[2] => y.DATAA
@@ -2191,7 +1864,7 @@ y[30] <= y.DB_MAX_OUTPUT_PORT_TYPE
 y[31] <= y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu
 A[0] => A[0].IN2
 A[1] => A[1].IN2
 A[2] => A[2].IN2
@@ -2366,7 +2039,7 @@ ALU_Flags[2] <= Mux33.DB_MAX_OUTPUT_PORT_TYPE
 ALU_Flags[3] <= Mux32.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu|n_bit_subtractor:sub_op
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu|n_bit_subtractor:sub_op
 a[0] => a[0].IN1
 a[1] => a[1].IN1
 a[2] => a[2].IN1
@@ -2469,7 +2142,7 @@ of_flag <= of_flag.DB_MAX_OUTPUT_PORT_TYPE
 neg_flag <= full_subtractor:generate_N_bit_Adder[31].f.port3
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[0].f
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[0].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -2480,7 +2153,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[1].f
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[1].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -2491,7 +2164,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[2].f
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[2].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -2502,7 +2175,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[3].f
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[3].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -2513,7 +2186,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[4].f
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[4].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -2524,7 +2197,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[5].f
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[5].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -2535,7 +2208,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[6].f
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[6].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -2546,7 +2219,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[7].f
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[7].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -2557,7 +2230,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[8].f
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[8].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -2568,7 +2241,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[9].f
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[9].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -2579,7 +2252,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[10].f
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[10].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -2590,7 +2263,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[11].f
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[11].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -2601,7 +2274,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[12].f
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[12].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -2612,7 +2285,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[13].f
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[13].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -2623,7 +2296,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[14].f
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[14].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -2634,7 +2307,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[15].f
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[15].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -2645,7 +2318,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[16].f
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[16].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -2656,7 +2329,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[17].f
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[17].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -2667,7 +2340,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[18].f
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[18].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -2678,7 +2351,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[19].f
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[19].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -2689,7 +2362,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[20].f
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[20].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -2700,7 +2373,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[21].f
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[21].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -2711,7 +2384,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[22].f
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[22].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -2722,7 +2395,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[23].f
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[23].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -2733,7 +2406,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[24].f
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[24].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -2744,7 +2417,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[25].f
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[25].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -2755,7 +2428,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[26].f
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[26].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -2766,7 +2439,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[27].f
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[27].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -2777,7 +2450,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[28].f
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[28].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -2788,7 +2461,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[29].f
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[29].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -2799,7 +2472,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[30].f
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[30].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -2810,7 +2483,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[31].f
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[31].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -2821,7 +2494,7 @@ result <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu|n_bit_adder:adder_op
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu|n_bit_adder:adder_op
 a[0] => a[0].IN1
 a[1] => a[1].IN1
 a[2] => a[2].IN1
@@ -2924,7 +2597,7 @@ of_flag <= of_flag.DB_MAX_OUTPUT_PORT_TYPE
 cry_flag <= full_adder:generate_N_bit_Adder[31].f.port4
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[0].f
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[0].f
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -2935,7 +2608,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[1].f
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[1].f
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -2946,7 +2619,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[2].f
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[2].f
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -2957,7 +2630,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[3].f
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[3].f
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -2968,7 +2641,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[4].f
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[4].f
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -2979,7 +2652,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[5].f
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[5].f
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -2990,7 +2663,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[6].f
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[6].f
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -3001,7 +2674,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[7].f
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[7].f
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -3012,7 +2685,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[8].f
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[8].f
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -3023,7 +2696,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[9].f
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[9].f
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -3034,7 +2707,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[10].f
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[10].f
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -3045,7 +2718,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[11].f
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[11].f
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -3056,7 +2729,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[12].f
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[12].f
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -3067,7 +2740,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[13].f
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[13].f
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -3078,7 +2751,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[14].f
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[14].f
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -3089,7 +2762,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[15].f
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[15].f
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -3100,7 +2773,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[16].f
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[16].f
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -3111,7 +2784,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[17].f
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[17].f
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -3122,7 +2795,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[18].f
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[18].f
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -3133,7 +2806,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[19].f
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[19].f
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -3144,7 +2817,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[20].f
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[20].f
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -3155,7 +2828,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[21].f
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[21].f
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -3166,7 +2839,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[22].f
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[22].f
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -3177,7 +2850,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[23].f
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[23].f
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -3188,7 +2861,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[24].f
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[24].f
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -3199,7 +2872,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[25].f
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[25].f
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -3210,7 +2883,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[26].f
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[26].f
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -3221,7 +2894,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[27].f
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[27].f
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -3232,7 +2905,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[28].f
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[28].f
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -3243,7 +2916,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[29].f
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[29].f
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -3254,7 +2927,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[30].f
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[30].f
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -3265,7 +2938,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga_prueba|CPU:CPU_inst|arm:arm|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[31].f
+|vga_prueba|CPU:CPU_inst|datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[31].f
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1

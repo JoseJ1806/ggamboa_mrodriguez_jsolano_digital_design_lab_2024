@@ -1,46 +1,31 @@
-`timescale 1 ps / 1 ps
+`timescale 1ps / 1ps
 
 module CPU_tb();
-
-	logic clk = 0;
-	logic vga_clk = 0;
-	logic reset = 1;
-	logic enable = 1;
-	logic [31:0] WriteData, DataAdr, ReadData;
-	logic MemWrite;
-	logic [31:0] pixel;
-	logic [31:0] memAddress = 0;
-
-			  	
-	CPU CPU_inst(.clk(clk), 
-					 .vga_clk(vga_clk),
-					 .reset(reset), 
-					 .enable(enable),
-					 .WriteData(WriteData), 
-					 .DataAdr(DataAdr), 
-					 .ReadData(ReadData), 
-					 .MemWrite(MemWrite),
-					 .pixel(pixel),
-					 .x(memAddress)
-	);	
+	logic clk;
+	logic rst;
+	logic [31:0] address;
+	logic [31:0] q_b;
 	
-		
+	CPU uft(
+		.clk(clk),
+		.reset(rst),
+		.address(address),
+		.q_b(q_b)
+		);
 	
-	
-	 
-	always_ff @(posedge vga_clk) begin
-		$display("memAddress = %d", memAddress);
-		$display("pixel = %d", pixel);
+	always begin
+		#20 clk = ~clk;
 	end
-
-	always #5 clk = ~clk;
-	always #10 vga_clk = ~vga_clk;
-	 
+		
 	initial begin
-		reset = 1;
-		#10 reset = 0;
-
-		#1000 $finish;
+		rst = 1;
+		clk = 0;
+		address = 32'd96;
+		#32;
+		rst =0;
+		
+		#400;
+		$stop;
 	end
 
 endmodule

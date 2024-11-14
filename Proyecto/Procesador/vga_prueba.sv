@@ -10,8 +10,6 @@ module vga_prueba(
 );
 
 	logic enable;
-	logic [31:0] WriteData, DataAdr, ReadData;
-	logic MemWrite;
 	
 	assign enable = (x < 200 & x >= 0) & (y < 200 & y >= 0);
 	
@@ -23,19 +21,19 @@ module vga_prueba(
 	 pll vgapll(.inclk0(clk), .c0(vgaclk));
 	 vgaController vgaCont(vgaclk, hsync, vsync, sync_b, blank_b, x, y);
 	 generate_graphic gen_grid(x, y, pixel, r, g, b);
-	 
-	 
-	  CPU CPU_inst(.clk(clk), 
-					 .vga_clk(vgaclk),
-					 .reset(rst), 
-					 .enable(enable),
-					 .WriteData(WriteData), 
-					 .DataAdr(DataAdr), 
-					 .ReadData(ReadData), 
-					 .MemWrite(MemWrite),
-					 .pixel(pixel),
-					 .x(memAddress)
-	);
+	 CPU CPU_inst(clk,rst,memAddress,pixel);
+	
+	always_ff @(posedge vgaclk) begin
+		if (rst) begin
+			memAddress <= 0;
+		end else if (memAddress >= 40000) begin
+			memAddress <= 0;
+		end else if (enable) begin
+			if (memAddress < 40000) begin
+				memAddress <= memAddress + 1;
+			end
+		end
+	end
 	 
 
 endmodule 

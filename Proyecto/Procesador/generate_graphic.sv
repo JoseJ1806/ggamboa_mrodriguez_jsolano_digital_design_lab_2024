@@ -9,7 +9,7 @@ module generate_graphic (
   logic inrectImage;
 	 
   
-  generate_rectangle rectImage(x, y, 0, 0, 10'd200, 10'd200, inrectImage);
+  generate_rectangle rectImage(x, y, 10'd120, 0, 10'd320, 10'd200, inrectImage);
   
   always_comb begin
     red   = (inrectImage ? ReadData[23:16] : 8'b01010101);

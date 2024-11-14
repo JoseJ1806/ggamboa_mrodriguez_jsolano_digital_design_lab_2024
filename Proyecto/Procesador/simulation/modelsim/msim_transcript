@@ -12,269 +12,259 @@
 # 
 # vlog -vlog01compat -work work +incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador {C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/rom.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:24:58 on Nov 11,2024
+# Start time: 22:06:05 on Nov 13,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador" C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/rom.v 
 # -- Compiling module rom
 # 
 # Top level modules:
 # 	rom
-# End time: 17:24:59 on Nov 11,2024, Elapsed time: 0:00:01
+# End time: 22:06:05 on Nov 13,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador {C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/ram1.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:24:59 on Nov 11,2024
+# Start time: 22:06:06 on Nov 13,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador" C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/ram1.v 
 # -- Compiling module ram1
 # 
 # Top level modules:
 # 	ram1
-# End time: 17:24:59 on Nov 11,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador {C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/arm.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:24:59 on Nov 11,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador" C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/arm.sv 
-# -- Compiling module arm
-# 
-# Top level modules:
-# 	arm
-# End time: 17:24:59 on Nov 11,2024, Elapsed time: 0:00:00
+# End time: 22:06:06 on Nov 13,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador {C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/controller.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:24:59 on Nov 11,2024
+# Start time: 22:06:06 on Nov 13,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador" C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/controller.sv 
 # -- Compiling module controller
 # 
 # Top level modules:
 # 	controller
-# End time: 17:25:00 on Nov 11,2024, Elapsed time: 0:00:01
+# End time: 22:06:06 on Nov 13,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador {C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/decoder.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:25:00 on Nov 11,2024
+# Start time: 22:06:06 on Nov 13,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador" C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/decoder.sv 
 # -- Compiling module decoder
 # 
 # Top level modules:
 # 	decoder
-# End time: 17:25:00 on Nov 11,2024, Elapsed time: 0:00:00
+# End time: 22:06:06 on Nov 13,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador {C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/condlogic.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:25:00 on Nov 11,2024
+# Start time: 22:06:06 on Nov 13,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador" C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/condlogic.sv 
 # -- Compiling module condlogic
 # 
 # Top level modules:
 # 	condlogic
-# End time: 17:25:00 on Nov 11,2024, Elapsed time: 0:00:00
+# End time: 22:06:06 on Nov 13,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador {C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/datapath.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:25:00 on Nov 11,2024
+# Start time: 22:06:07 on Nov 13,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador" C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/datapath.sv 
 # -- Compiling module datapath
 # 
 # Top level modules:
 # 	datapath
-# End time: 17:25:00 on Nov 11,2024, Elapsed time: 0:00:00
+# End time: 22:06:07 on Nov 13,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador {C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/regfile.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:25:00 on Nov 11,2024
+# Start time: 22:06:07 on Nov 13,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador" C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/regfile.sv 
 # -- Compiling module regfile
 # 
 # Top level modules:
 # 	regfile
-# End time: 17:25:00 on Nov 11,2024, Elapsed time: 0:00:00
+# End time: 22:06:07 on Nov 13,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador {C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/extend.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:25:00 on Nov 11,2024
+# Start time: 22:06:07 on Nov 13,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador" C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/extend.sv 
 # -- Compiling module extend
 # 
 # Top level modules:
 # 	extend
-# End time: 17:25:01 on Nov 11,2024, Elapsed time: 0:00:01
+# End time: 22:06:07 on Nov 13,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador {C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/flopenr.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:25:01 on Nov 11,2024
+# Start time: 22:06:07 on Nov 13,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador" C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/flopenr.sv 
 # -- Compiling module flopenr
 # 
 # Top level modules:
 # 	flopenr
-# End time: 17:25:01 on Nov 11,2024, Elapsed time: 0:00:00
+# End time: 22:06:07 on Nov 13,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador {C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/flopr.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:25:01 on Nov 11,2024
+# Start time: 22:06:07 on Nov 13,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador" C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/flopr.sv 
 # -- Compiling module flopr
 # 
 # Top level modules:
 # 	flopr
-# End time: 17:25:01 on Nov 11,2024, Elapsed time: 0:00:00
+# End time: 22:06:08 on Nov 13,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador {C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/mux2.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:25:01 on Nov 11,2024
+# Start time: 22:06:08 on Nov 13,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador" C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/mux2.sv 
 # -- Compiling module mux2
 # 
 # Top level modules:
 # 	mux2
-# End time: 17:25:01 on Nov 11,2024, Elapsed time: 0:00:00
+# End time: 22:06:08 on Nov 13,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador {C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/adder.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:25:01 on Nov 11,2024
+# Start time: 22:06:08 on Nov 13,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador" C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/adder.sv 
 # -- Compiling module adder
 # 
 # Top level modules:
 # 	adder
-# End time: 17:25:01 on Nov 11,2024, Elapsed time: 0:00:00
+# End time: 22:06:08 on Nov 13,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador {C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/Alu.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:25:01 on Nov 11,2024
+# Start time: 22:06:08 on Nov 13,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador" C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/Alu.sv 
 # -- Compiling module Alu
 # 
 # Top level modules:
 # 	Alu
-# End time: 17:25:01 on Nov 11,2024, Elapsed time: 0:00:00
+# End time: 22:06:08 on Nov 13,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador {C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/full_adder.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:25:02 on Nov 11,2024
+# Start time: 22:06:08 on Nov 13,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador" C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/full_adder.sv 
 # -- Compiling module full_adder
 # 
 # Top level modules:
 # 	full_adder
-# End time: 17:25:02 on Nov 11,2024, Elapsed time: 0:00:00
+# End time: 22:06:08 on Nov 13,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador {C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/full_subtractor.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:25:02 on Nov 11,2024
+# Start time: 22:06:08 on Nov 13,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador" C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/full_subtractor.sv 
 # -- Compiling module full_subtractor
 # 
 # Top level modules:
 # 	full_subtractor
-# End time: 17:25:02 on Nov 11,2024, Elapsed time: 0:00:00
+# End time: 22:06:09 on Nov 13,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador {C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/n_bit_adder.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:25:02 on Nov 11,2024
+# Start time: 22:06:09 on Nov 13,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador" C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/n_bit_adder.sv 
 # -- Compiling module n_bit_adder
 # 
 # Top level modules:
 # 	n_bit_adder
-# End time: 17:25:02 on Nov 11,2024, Elapsed time: 0:00:00
+# End time: 22:06:09 on Nov 13,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador {C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/n_bit_subtractor.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:25:02 on Nov 11,2024
+# Start time: 22:06:09 on Nov 13,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador" C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/n_bit_subtractor.sv 
 # -- Compiling module n_bit_subtractor
 # 
 # Top level modules:
 # 	n_bit_subtractor
-# End time: 17:25:02 on Nov 11,2024, Elapsed time: 0:00:00
+# End time: 22:06:10 on Nov 13,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador {C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/vgaController.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:25:02 on Nov 11,2024
+# Start time: 22:06:10 on Nov 13,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador" C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/vgaController.sv 
 # -- Compiling module vgaController
 # 
 # Top level modules:
 # 	vgaController
-# End time: 17:25:03 on Nov 11,2024, Elapsed time: 0:00:01
+# End time: 22:06:11 on Nov 13,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador {C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/pll.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:25:03 on Nov 11,2024
+# Start time: 22:06:11 on Nov 13,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador" C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/pll.sv 
 # -- Compiling module pll
 # 
 # Top level modules:
 # 	pll
-# End time: 17:25:03 on Nov 11,2024, Elapsed time: 0:00:00
+# End time: 22:06:11 on Nov 13,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador {C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/condcheck.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:25:03 on Nov 11,2024
+# Start time: 22:06:11 on Nov 13,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador" C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/condcheck.sv 
 # -- Compiling module condcheck
 # 
 # Top level modules:
 # 	condcheck
-# End time: 17:25:03 on Nov 11,2024, Elapsed time: 0:00:00
+# End time: 22:06:11 on Nov 13,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador {C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/CPU.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:25:03 on Nov 11,2024
+# Start time: 22:06:12 on Nov 13,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador" C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/CPU.sv 
 # -- Compiling module CPU
 # 
 # Top level modules:
 # 	CPU
-# End time: 17:25:03 on Nov 11,2024, Elapsed time: 0:00:00
+# End time: 22:06:12 on Nov 13,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador {C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/generate_graphic.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:25:03 on Nov 11,2024
+# Start time: 22:06:12 on Nov 13,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador" C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/generate_graphic.sv 
 # -- Compiling module generate_graphic
 # 
 # Top level modules:
 # 	generate_graphic
-# End time: 17:25:03 on Nov 11,2024, Elapsed time: 0:00:00
+# End time: 22:06:12 on Nov 13,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador {C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/generate_rectangle.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:25:04 on Nov 11,2024
+# Start time: 22:06:12 on Nov 13,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador" C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/generate_rectangle.sv 
 # -- Compiling module generate_rectangle
 # 
 # Top level modules:
 # 	generate_rectangle
-# End time: 17:25:04 on Nov 11,2024, Elapsed time: 0:00:00
+# End time: 22:06:12 on Nov 13,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador {C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/vga_prueba.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:25:04 on Nov 11,2024
+# Start time: 22:06:12 on Nov 13,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador" C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/vga_prueba.sv 
 # -- Compiling module vga_prueba
 # 
 # Top level modules:
 # 	vga_prueba
-# End time: 17:25:04 on Nov 11,2024, Elapsed time: 0:00:00
+# End time: 22:06:14 on Nov 13,2024, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 0
 # 
 # vlog -sv -work work +incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador {C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/tb_vga_prueba.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:25:04 on Nov 11,2024
+# Start time: 22:06:14 on Nov 13,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador" C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/tb_vga_prueba.sv 
 # -- Compiling module tb_vga_prueba
 # 
 # Top level modules:
 # 	tb_vga_prueba
-# End time: 17:25:04 on Nov 11,2024, Elapsed time: 0:00:00
+# End time: 22:06:16 on Nov 13,2024, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb_vga_prueba
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb_vga_prueba 
-# Start time: 17:25:05 on Nov 11,2024
+# Start time: 22:06:27 on Nov 13,2024
 # Loading sv_std.std
 # Loading work.tb_vga_prueba
 # Loading work.vga_prueba
@@ -283,7 +273,6 @@
 # Loading work.generate_graphic
 # Loading work.generate_rectangle
 # Loading work.CPU
-# Loading work.arm
 # Loading work.controller
 # Loading work.decoder
 # Loading work.condlogic
@@ -310,20 +299,16 @@
 #    Time: 0 ps  Iteration: 0  Instance: /tb_vga_prueba/uut/gen_grid/rectImage File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/generate_graphic.sv Line: 12
 # ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (32) for port 'top'. The port definition is at: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/generate_rectangle.sv(1).
 #    Time: 0 ps  Iteration: 0  Instance: /tb_vga_prueba/uut/gen_grid/rectImage File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/generate_graphic.sv Line: 12
-# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'Instr'. The port definition is at: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/arm.sv(3).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_vga_prueba/uut/CPU_inst/arm File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/CPU.sv Line: 11
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (16) for port 'ALUResult'. The port definition is at: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/datapath.sv(12).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_vga_prueba/uut/CPU_inst/dp File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/CPU.sv Line: 28
 # ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'c_in'. The port definition is at: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/full_subtractor.sv(7).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_vga_prueba/uut/CPU_inst/arm/dp/alu/sub_op/generate_N_bit_Adder[0]/genblk1/f File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/n_bit_subtractor.sv Line: 23
+#    Time: 0 ps  Iteration: 0  Instance: /tb_vga_prueba/uut/CPU_inst/dp/alu/sub_op/generate_N_bit_Adder[0]/genblk1/f File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/n_bit_subtractor.sv Line: 23
 # ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'cin'. The port definition is at: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/full_adder.sv(4).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_vga_prueba/uut/CPU_inst/arm/dp/alu/adder_op/generate_N_bit_Adder[0]/genblk1/f File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/n_bit_adder.sv Line: 23
+#    Time: 0 ps  Iteration: 0  Instance: /tb_vga_prueba/uut/CPU_inst/dp/alu/adder_op/generate_N_bit_Adder[0]/genblk1/f File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/n_bit_adder.sv Line: 23
 # ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'address'. The port definition is at: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/rom.v(41).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_vga_prueba/uut/CPU_inst/rom File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/CPU.sv Line: 13
-# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'q'. The port definition is at: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/rom.v(43).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_vga_prueba/uut/CPU_inst/rom File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/CPU.sv Line: 13
-# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (32) for port 'address_a'. The port definition is at: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/ram1.v(41).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_vga_prueba/uut/CPU_inst/ram File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/CPU.sv Line: 18
+#    Time: 0 ps  Iteration: 0  Instance: /tb_vga_prueba/uut/CPU_inst/rom File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/CPU.sv Line: 35
 # ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (32) for port 'address_b'. The port definition is at: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/ram1.v(42).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_vga_prueba/uut/CPU_inst/ram File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/CPU.sv Line: 18
+#    Time: 0 ps  Iteration: 0  Instance: /tb_vga_prueba/uut/CPU_inst/ram File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/CPU.sv Line: 41
 # 
 # add wave *
 # view structure
@@ -336,16 +321,16 @@
 # r =   0
 # g =   0
 # b =   0
-# MemAddress =          0
+# MemAddress =          x
 # Pixel =          0
 # ---------------------------------------------
 # ---------------------------------------------
 # ---------------------------------------------
 # X =    1
 # Y =    0
-# r = 255
-# g = 255
-# b = 255
+# r =   x
+# g =   x
+# b =   x
 # MemAddress =          0
 # Pixel =   16777215
 # ---------------------------------------------
@@ -1307,15 +1292,15 @@
 # g = 255
 # b = 246
 # MemAddress =         96
-# Pixel =   15794171
+# Pixel =         17
 # ---------------------------------------------
 # ---------------------------------------------
 # ---------------------------------------------
 # X =   98
 # Y =    0
-# r = 240
-# g = 255
-# b = 251
+# r =   0
+# g =   0
+# b =  17
 # MemAddress =         97
 # Pixel =   15597567
 # ---------------------------------------------
@@ -10345,5 +10330,5 @@
 #    Time: 20010 ns  Iteration: 0  Instance: /tb_vga_prueba
 # 1
 # Break in Module tb_vga_prueba at C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/tb_vga_prueba.sv line 60
-# End time: 17:26:13 on Nov 11,2024, Elapsed time: 0:01:08
-# Errors: 0, Warnings: 9
+# End time: 22:08:51 on Nov 13,2024, Elapsed time: 0:02:24
+# Errors: 0, Warnings: 7

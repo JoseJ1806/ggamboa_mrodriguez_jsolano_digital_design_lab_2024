@@ -36,5 +36,5 @@ module datapath(input logic clk,reset,
 	 
 	 //ALU logic
 	 mux2 #(32) srcbmux(WriteData,ExtImm,ALUSrc,SrcB);
-	 Alu alu(SrcA,SrcB,ALUControl,ALUResult,ALUFlags);
+	 Alu #(32) alu(SrcA,SrcB,ALUControl,ALUResult,ALUFlags);
 endmodule 

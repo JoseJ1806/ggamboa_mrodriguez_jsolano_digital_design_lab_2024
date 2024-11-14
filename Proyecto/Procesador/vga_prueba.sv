@@ -11,7 +11,7 @@ module vga_prueba(
 
 	logic enable;
 	
-	assign enable = (x < 200 & x >= 0) & (y < 200 & y >= 0);
+	assign enable = (x < 400 & x >= 0) & (y < 200 & y >= 0);
 	
 	
 
@@ -26,10 +26,10 @@ module vga_prueba(
 	always_ff @(posedge vgaclk) begin
 		if (rst) begin
 			memAddress <= 0;
-		end else if (memAddress >= 40000) begin
+		end else if (memAddress >= 80000) begin
 			memAddress <= 0;
 		end else if (enable) begin
-			if (memAddress < 40000) begin
+			if (memAddress < 80000) begin
 				memAddress <= memAddress + 1;
 			end
 		end

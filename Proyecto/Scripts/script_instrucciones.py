@@ -3,7 +3,7 @@ linea_objetivo = 25
 lineas = []
 
 instrucciones_sepia = ["e3a00000",
-                        "e3a01701",
+                        "e3091c40",
                         "e3092c40",
                         "e5903000",
                         "e20340ff",
@@ -49,7 +49,11 @@ instrucciones_sepia = ["e3a00000",
                         "e1877008",
                         "e1877009",
                         "e5817000",
-                        "e2800001"]
+                        "e2800001",
+                        "e2811001",
+                        "e2522001",
+                        "1affffcf",
+                        "eafffffe"]
 
 
 with open(nombre_archivo, 'r') as archivo:

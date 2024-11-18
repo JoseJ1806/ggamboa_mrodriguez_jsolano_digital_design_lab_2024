@@ -14,9 +14,7 @@
 ----------------------------------------------------------------------
 | 101  |   ALU_Out = A mov B;
 ----------------------------------------------------------------------
-| 110  |   ALU_Out = A cmp B;
-----------------------------------------------------------------------
-| 111  |   ALU_Out = A bne B;
+| 110  |   ALU_Out = A bne B;
 ----------------------------------------------------------------------*/
 
 module Alu 
@@ -96,14 +94,7 @@ module Alu
 			Neg = ALU_Result[N-1];
 			V = 1'b0;
 		end
-		3'b110: begin //CMP
-			ALU_Result = sub_result; 
-			Z = (ALU_Result == '0); 
-			Neg = ALU_Result[N-1];  
-			C = ~sub_CFlag; 
-			V = sub_VFlag; 
-		end
-		3'b111: begin //BNE
+		3'b110: begin //BNE
 			ALU_Result = sub_result; 
 			Z = (ALU_Result == '0); 
 			Neg = 1'b0;  

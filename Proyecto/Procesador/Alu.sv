@@ -15,6 +15,8 @@
 | 101  |   ALU_Out = A mov B;
 ----------------------------------------------------------------------
 | 110  |   ALU_Out = A cmp B;
+----------------------------------------------------------------------
+| 111  |   ALU_Out = A bne B;
 ----------------------------------------------------------------------*/
 
 module Alu 
@@ -101,6 +103,12 @@ module Alu
 			C = ~sub_CFlag; 
 			V = sub_VFlag; 
 		end
+		3'b111: begin //BNE
+			ALU_Result = sub_result; 
+			Z = (ALU_Result == '0); 
+			Neg = 1'b0;  
+			C = 1'b0; 
+			V = 1'b0;
       default: begin 
         ALU_Result = '0; // Valor por defecto
       end

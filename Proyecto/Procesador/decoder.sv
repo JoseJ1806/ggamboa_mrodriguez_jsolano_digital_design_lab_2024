@@ -41,6 +41,7 @@ assign{RegSrc,ImmSrc,ALUSrc,MemtoReg,
 		 4'b1101: ALUControl=3'b100; //LSR
 		 4'b1000: ALUControl=3'b101; //MOV
 		 4'b1010: ALUControl=3'b110; //CMP
+		 4'b0111: ALUControl=3'b111; //BNE
 		 default: ALUControl=3'bx; //unimplemented
 	 endcase
 	 //update flags if S bit is set(C & V only for arith)

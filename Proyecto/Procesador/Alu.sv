@@ -10,7 +10,7 @@
 ----------------------------------------------------------------------
 | 011  |   ALU_Out = A or B;
 ----------------------------------------------------------------------
-| 100  |   ALU_Out = A lsr B;
+| 100  |   ALU_Out = A * B;
 ----------------------------------------------------------------------
 | 101  |   ALU_Out = A mov B;
 ----------------------------------------------------------------------
@@ -18,7 +18,7 @@
 ----------------------------------------------------------------------*/
 
 module Alu 
-#(parameter N = 32)
+#(parameter N = 16)
 (
   input logic [N-1:0] A, B,             // Entrada de la ALU
   input logic [2:0] ALU_Sel,            // Selector de la ALU
@@ -80,8 +80,8 @@ module Alu
         C = 1'b0; // No aplica para OR
         V = 1'b0; // No aplica para OR
       end
-		3'b100: begin //LSR
-		  ALU_Result = A >> B;
+		3'b100: begin //MUL
+		  ALU_Result = A * B;
         Z = (ALU_Result == '0);
         C = 1'b0; // Carry es el bit menos significativo
         Neg = ALU_Result[N-1]; 
@@ -100,6 +100,7 @@ module Alu
 			Neg = 1'b0;  
 			C = 1'b0; 
 			V = 1'b0;
+		end
       default: begin 
         ALU_Result = '0; // Valor por defecto
       end

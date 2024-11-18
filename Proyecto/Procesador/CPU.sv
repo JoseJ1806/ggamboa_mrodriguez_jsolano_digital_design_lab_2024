@@ -2,7 +2,7 @@ module CPU(
 	input logic clk, 
 	input logic reset,
 	input logic [31:0] address,
-	output logic [31:0] q_b
+	output logic [31:0] q_b, Instr
 	);
 	
 	logic [3:0] ALUFlags; 
@@ -14,10 +14,10 @@ module CPU(
 	logic [31:0]WriteData;
 	logic [1:0] RegSrc;
 	logic [1:0] ImmSrc;
-	logic [1:0] ALUControl;
+	logic [2:0] ALUControl;
 	logic [15:0] ALUResult;
 	logic [31:0] PC;
-	logic [31:0] Instr;
+	//logic [31:0] Instr;
 	logic [31:0] ReadData;
 
 

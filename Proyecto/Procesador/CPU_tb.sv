@@ -4,13 +4,14 @@ module CPU_tb();
 	logic clk;
 	logic rst;
 	logic [31:0] address;
-	logic [31:0] q_b;
+	logic [31:0] q_b,Instr;
 	
 	CPU uft(
 		.clk(clk),
 		.reset(rst),
 		.address(address),
-		.q_b(q_b)
+		.q_b(q_b),
+		.Instr(Instr)
 		);
 	
 	always begin
@@ -20,11 +21,11 @@ module CPU_tb();
 	initial begin
 		rst = 1;
 		clk = 0;
-		address = 32'd40;
+		address = 32'd4;
 		#32;
 		rst =0;
 		
-		#100;
+		#500;
 		$stop;
 	end
 

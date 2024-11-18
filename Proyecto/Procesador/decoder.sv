@@ -2,9 +2,10 @@
 	input logic [5:0] Funct,
 	input logic [3:0] Rd,
 	output logic [1:0] FlagW,
-	output logic PCS,RegW,MemW,NoWrite,
+	output logic PCS,RegW,MemW,
 	output logic MemtoReg,ALUSrc,
-	output logic [1:0] ImmSrc,RegSrc,ALUControl);
+	output logic [1:0] ImmSrc,RegSrc,
+	output logic [2:0]ALUControl);
 	
  logic [9:0] controls;
  logic Branch,ALUOp;
@@ -38,11 +39,12 @@ assign{RegSrc,ImmSrc,ALUSrc,MemtoReg,
 		 4'b0010: ALUControl=3'b001; //SUB
 		 4'b0000: ALUControl=3'b010; //AND
 		 4'b1100: ALUControl=3'b011; //ORR
-		 4'b1101: ALUControl=3'b100; //LSR
+		 4'b0000: ALUControl=3'b100; //MUL
 		 4'b1000: ALUControl=3'b101; //MOV
-		 4'b1010: ALUControl=3'b001; NoWrite = 1'b1; //CMP
+		 4'b1010: ALUControl=3'b001; //CMP
 		 4'b0111: ALUControl=3'b110; //BNE
-		 default: ALUControl=3'bx; NoWrite = 1'b0; //unimplemented
+		 4'b1101: ALUControl=3'b000; //Shifter
+		 default: ALUControl=3'bx;  //unimplemented
 	 endcase
 	 //update flags if S bit is set(C & V only for arith)
 	 FlagW[1] = Funct[0];

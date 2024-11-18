@@ -1,0 +1,8 @@
+module shifter(input logic [6:0] Instr,
+					input logic [31:0] rd2,
+					output logic [31:0] data)
+
+					
+					
+					
+endmodule 

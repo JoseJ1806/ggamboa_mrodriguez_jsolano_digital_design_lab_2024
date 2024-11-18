@@ -34,20 +34,23 @@ assign{RegSrc,ImmSrc,ALUSrc,MemtoReg,
  always_comb
 	 if(ALUOp)begin //which DP Instr?
 	 case(Funct[4:1])
-		 4'b0100: ALUControl=2'b00; //ADD
-		 4'b0010: ALUControl=2'b01; //SUB
-		 4'b0000: ALUControl=2'b10; //AND
-		 4'b1100: ALUControl=2'b11; //ORR
-		 default: ALUControl=2'bx; //unimplemented
+		 4'b0100: ALUControl=3'b000; //ADD
+		 4'b0010: ALUControl=3'b001; //SUB
+		 4'b0000: ALUControl=3'b010; //AND
+		 4'b1100: ALUControl=3'b011; //ORR
+		 4'b1101: ALUControl=3'b100; //LSR
+		 4'b1000: ALUControl=3'b101; //MOV
+		 4'b1010: ALUControl=3'b110; //CMP
+		 default: ALUControl=3'bx; //unimplemented
 	 endcase
 	 //update flags if S bit is set(C & V only for arith)
-	 FlagW[1] =Funct[0];
-	 FlagW[0] = Funct[0] & (ALUControl == 2'b00 | ALUControl == 2'b01);
+	 FlagW[1] = Funct[0];
+	 FlagW[0] = Funct[0] & (ALUControl == 3'b000 | ALUControl == 3'b001);
 	 end else begin
-	 ALUControl = 2'b00; //addfornon-DPinstructions
-	 FlagW = 2'b00; //don'tupdateFlags
+	 ALUControl = 3'b000; //add for non-DP instructions
+	 FlagW = 2'b00; //don't update Flags
 	end
 	
  //PCLogic
- assign PCS =((Rd==4'b1111)&RegW)|Branch;
+ assign PCS =((Rd==4'b1111) & RegW) | Branch;
  endmodule 

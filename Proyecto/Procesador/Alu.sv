@@ -2,20 +2,26 @@
 ----------------------------------------------------------------------
 |ALU_Sel|   ALU Operation
 ----------------------------------------------------------------------
-| 00  |   ALU_Out = A + B;
+| 000  |   ALU_Out = A + B;
 ----------------------------------------------------------------------
-| 01  |   ALU_Out = A - B;
+| 001  |   ALU_Out = A - B;
 ----------------------------------------------------------------------
-| 10  |   ALU_Out = A and B;
+| 010  |   ALU_Out = A and B;
 ----------------------------------------------------------------------
-| 11  |   ALU_Out = A or B;
+| 011  |   ALU_Out = A or B;
+----------------------------------------------------------------------
+| 100  |   ALU_Out = A lsr B;
+----------------------------------------------------------------------
+| 101  |   ALU_Out = A mov B;
+----------------------------------------------------------------------
+| 110  |   ALU_Out = A cmp B;
 ----------------------------------------------------------------------*/
 
 module Alu 
 #(parameter N = 32)
 (
   input logic [N-1:0] A, B,             // Entrada de la ALU
-  input logic [1:0] ALU_Sel,            // Selector de la ALU
+  input logic [2:0] ALU_Sel,            // Selector de la ALU
   output logic [N-1:0] ALU_Result,    // Salida de la ALU 
   output [3:0] ALU_Flags
 );
@@ -43,7 +49,7 @@ module Alu
 
     // Operaciones de la ALU
     case(ALU_Sel)
-      2'b00: begin // ADD
+      3'b000: begin // ADD
         ALU_Result = add_result;
         Neg = add_NFlag;
         Z = add_ZFlag;
@@ -51,7 +57,7 @@ module Alu
         V = add_VFlag;
       end
 
-      2'b01: begin // SUB
+      3'b001: begin // SUB
         ALU_Result = sub_result;
         Neg = sub_NFlag;
         Z = sub_ZFlag;
@@ -59,7 +65,7 @@ module Alu
         V = sub_VFlag;
       end
 
-      2'b10: begin // AND
+      3'b010: begin // AND
         ALU_Result = A & B;
         Neg = ALU_Result[N-1:0];
         Z = (ALU_Result == '0);
@@ -67,13 +73,34 @@ module Alu
         V = 1'b0; // No aplica para AND
       end
 
-      2'b11: begin // ORR
+      3'b011: begin // ORR
         ALU_Result = A | B;
         Neg = ALU_Result[N-1:0];
         Z = (ALU_Result == '0);
         C = 1'b0; // No aplica para OR
         V = 1'b0; // No aplica para OR
       end
+		3'b100: begin //LSR
+		  ALU_Result = A >> B;
+        Z = (ALU_Result == '0);
+        C = 1'b0; // Carry es el bit menos significativo
+        Neg = ALU_Result[N-1]; 
+        V= 1'b0; // No aplica para shift
+		end
+		3'b101: begin //MOV
+			ALU_Result = B;
+			Z = (ALU_Result == '0);
+			C = 1'b0;
+			Neg = ALU_Result[N-1];
+			V = 1'b0;
+		end
+		3'b110: begin //CMP
+			ALU_Result = sub_result; 
+			Z = (ALU_Result == '0); 
+			Neg = ALU_Result[N-1];  
+			C = ~sub_CFlag; 
+			V = sub_VFlag; 
+		end
       default: begin 
         ALU_Result = '0; // Valor por defecto
       end

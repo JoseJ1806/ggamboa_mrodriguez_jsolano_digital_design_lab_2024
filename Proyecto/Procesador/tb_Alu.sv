@@ -5,7 +5,7 @@ module tb_Alu;
 
   // Entradas de la ALU
   logic [N-1:0] A, B;
-  logic [1:0] ALU_Sel;
+  logic [2:0] ALU_Sel;
 
   // Salidas de la ALU
   logic [N-1:0] ALU_Result;
@@ -38,35 +38,35 @@ module tb_Alu;
     // Prueba de operación ADD
     A = 4'b0011;  // 3
     B = 4'b0001;  // 1
-    ALU_Sel = 2'b00;
+    ALU_Sel = 3'b000;
     #10;
     print_results(ALU_Sel, 4'b0100, 4'b0000); // Espera Resultado 4, Flags = 0
 
     // Prueba de operación SUB
     A = 4'b0011;  // 3
     B = 4'b0001;  // 1
-    ALU_Sel = 2'b01;
+    ALU_Sel = 3'b01;
     #10;
     print_results(ALU_Sel, 4'b0010, 4'b0000); // Espera Resultado 2, Flags = 0
 
     // Prueba de operación AND
     A = 4'b0011;  // 3
     B = 4'b0001;  // 1
-    ALU_Sel = 2'b10;
+    ALU_Sel = 3'b010;
     #10;
     print_results(ALU_Sel, 4'b0001, 4'b0000); // Espera Resultado 1, Flags = 0
 
     // Prueba de operación OR
     A = 4'b0010;  // 2
     B = 4'b0001;  // 1
-    ALU_Sel = 2'b11;
+    ALU_Sel = 3'b011;
     #10;
     print_results(ALU_Sel, 4'b0011, 4'b0000); // Espera Resultado 3, Flags = 0
 
     // Prueba de bandera Zero (Z)
     A = 4'b0000;
     B = 4'b0000;
-    ALU_Sel = 2'b00;
+    ALU_Sel = 3'b000;
     #10;
     print_results(ALU_Sel, 4'b0000, 4'b0100); // Espera Resultado 0, Flag Z = 1
 

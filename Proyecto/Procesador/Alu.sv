@@ -22,7 +22,7 @@ module Alu
 (
   input logic [N-1:0] A, B,             // Entrada de la ALU
   input logic [2:0] ALU_Sel,            // Selector de la ALU
-  output logic [N-1:0] ALU_Result,    // Salida de la ALU 
+  output logic [2*N-1:0] ALU_Result,    // Salida de la ALU 
   output [3:0] ALU_Flags
 );
 

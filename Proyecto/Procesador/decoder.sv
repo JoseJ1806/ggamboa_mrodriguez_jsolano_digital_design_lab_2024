@@ -1,8 +1,8 @@
  module decoder(input logic [1:0] Op,
 	input logic [5:0] Funct,
-	input logic [3:0] Rd,
+	input logic [3:0] Rd, Mul,
 	output logic [1:0] FlagW,
-	output logic PCS,RegW,MemW,
+	output logic PCS,RegW,MemW,NoWrite,
 	output logic MemtoReg,ALUSrc,
 	output logic [1:0] ImmSrc,RegSrc,
 	output logic [2:0]ALUControl);
@@ -32,19 +32,23 @@ assign{RegSrc,ImmSrc,ALUSrc,MemtoReg,
 	 RegW,MemW,Branch,ALUOp}=controls;
 	 
  //ALUDecoder
- always_comb
+ always_comb begin
 	 if(ALUOp)begin //which DP Instr?
 	 case(Funct[4:1])
-		 4'b0100: ALUControl=3'b000; //ADD
-		 4'b0010: ALUControl=3'b001; //SUB
-		 4'b0000: ALUControl=3'b010; //AND
-		 4'b1100: ALUControl=3'b011; //ORR
-		 4'b0000: ALUControl=3'b100; //MUL
-		 4'b1010: ALUControl=3'b001; //CMP
-		 4'b0111: ALUControl=3'b110; //BNE
-		 4'b1101: if(Funct[5] == 1'b1) ALUControl = 3'b101; //MOV
-					else ALUControl = 3'b010; //Shifter
-		 default: ALUControl=3'bx;  //unimplemented
+		 4'b0100: begin ALUControl=3'b000; NoWrite = 1'b0; end//ADD
+		 4'b0010: begin ALUControl=3'b001; NoWrite = 1'b0; end //SUB
+		 4'b0000: begin NoWrite = 1'b0; if(Mul[3]) ALUControl=3'b100;//MUL
+					 else ALUControl=3'b010; //AND
+					 end
+		 4'b1100: begin ALUControl=3'b011; NoWrite = 1'b0; end //ORR
+		 4'b1010: begin ALUControl=3'b001; NoWrite = 1'b1; end //CMP
+		 4'b0111: begin ALUControl=3'b110; NoWrite = 1'b0; end //BNE
+		 4'b1101: begin NoWrite = 1'b0; if(Funct[5]) ALUControl = 3'b101; //MOV
+					else ALUControl = 3'b101; //Shifter
+					end
+		 default: begin ALUControl=3'bx;
+							 NoWrite = 1'b0;//unimplemented
+					 end
 	 endcase
 	 //update flags if S bit is set(C & V only for arith)
 	 FlagW[1] = Funct[0];
@@ -52,6 +56,8 @@ assign{RegSrc,ImmSrc,ALUSrc,MemtoReg,
 	 end else begin
 	 ALUControl = 3'b000; //add for non-DP instructions
 	 FlagW = 2'b00; //don't update Flags
+	 NoWrite = 1'b0;
+	end
 	end
 	
  //PCLogic

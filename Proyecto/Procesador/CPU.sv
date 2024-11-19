@@ -21,7 +21,7 @@ module CPU(
 	logic [31:0] ReadData;
 
 
-	controller c(clk,reset,Instr[31:12],ALUFlags,
+	controller c(clk,reset,Instr,ALUFlags,
 				 RegSrc,RegWrite,ImmSrc,ALUSrc,ALUControl,
              MemWrite,MemtoReg,PCSrc);
 		

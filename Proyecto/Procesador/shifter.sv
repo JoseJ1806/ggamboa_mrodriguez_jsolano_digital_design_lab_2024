@@ -11,6 +11,7 @@ module shifter (
         case (shift_type)
             2'b00: data = rd2 << shift_amount;        // SLL: Desplazamiento lógico a la izquierda
             2'b01: data = rd2 >> shift_amount;        // SRL: Desplazamiento lógico a la derecha
+				2'b10: data = rd2 >>> shift_amount ; // Arithmetic shift right (ASR)
             default: data = rd2;                     // Sin desplazamiento o tipo no definido
         endcase
     end

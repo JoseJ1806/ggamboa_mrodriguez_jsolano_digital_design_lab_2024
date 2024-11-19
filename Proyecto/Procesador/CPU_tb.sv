@@ -21,7 +21,7 @@ module CPU_tb();
 	initial begin
 		rst = 1;
 		clk = 0;
-		address = 32'd24;
+		address = 32'd4;
 		#32;
 		rst =0;
 		

@@ -37,8 +37,8 @@ module tb_Alu;
   initial begin
     // Prueba de operación ADD
     A = 4'b0011;  // 3
-    B = 4'b0001;  // 1
-    ALU_Sel = 3'b000;
+    B = 4'b0011;  // 3
+    ALU_Sel = 3'b100;
     #10;
     print_results(ALU_Sel, 4'b0100, 4'b0000); // Espera Resultado 4, Flags = 0
 

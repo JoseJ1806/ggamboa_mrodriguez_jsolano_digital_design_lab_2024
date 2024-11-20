@@ -33,7 +33,7 @@ module datapath(input logic clk,reset,
 	 mux2 #(32) resmux(ALUResult,ReadData,MemtoReg,Result);
 	 
 	 extend ext(Instr[23:0],ImmSrc,ExtImm);
-	 shifter shift(Instr[11:7],Instr[6:5],RD2,WriteData);
+	 shifter shift(Instr[5],Instr[24:21],Instr[11:7],Instr[6:5],RD2,WriteData);
 	 
 	 //ALU logic
 	 mux2 #(32) srcbmux(WriteData,ExtImm,ALUSrc,SrcB);

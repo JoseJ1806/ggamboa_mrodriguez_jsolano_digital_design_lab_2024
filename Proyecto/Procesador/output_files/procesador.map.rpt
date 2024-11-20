@@ -1,5 +1,5 @@
 Analysis & Elaboration report for procesador
-Tue Nov 19 00:20:30 2024
+Wed Nov 20 00:24:43 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -25,21 +25,22 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
  17. Parameter Settings for User Entity Instance: datapath:dp|Alu:alu
  18. Parameter Settings for User Entity Instance: datapath:dp|Alu:alu|n_bit_subtractor:sub_op
  19. Parameter Settings for User Entity Instance: datapath:dp|Alu:alu|n_bit_adder:adder_op
- 20. Parameter Settings for User Entity Instance: rom:rom|altsyncram:altsyncram_component
- 21. Parameter Settings for User Entity Instance: ram1:ram|altsyncram:altsyncram_component
- 22. altsyncram Parameter Settings by Entity Instance
- 23. Analysis & Elaboration Settings
- 24. Port Connectivity Checks: "ram1:ram"
- 25. Port Connectivity Checks: "rom:rom"
- 26. Port Connectivity Checks: "datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[0].f"
- 27. Port Connectivity Checks: "datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[0].f"
- 28. Port Connectivity Checks: "datapath:dp|Alu:alu"
- 29. Port Connectivity Checks: "datapath:dp|mux2:ra1mux"
- 30. Port Connectivity Checks: "datapath:dp|adder:pcadd2"
- 31. Port Connectivity Checks: "datapath:dp|adder:pcadd1"
- 32. Port Connectivity Checks: "datapath:dp"
- 33. Analysis & Elaboration Messages
- 34. Analysis & Elaboration Suppressed Messages
+ 20. Parameter Settings for User Entity Instance: datapath:dp|Alu:alu|n_bit_multiplier:mult_op
+ 21. Parameter Settings for User Entity Instance: rom:rom|altsyncram:altsyncram_component
+ 22. Parameter Settings for User Entity Instance: ram1:ram|altsyncram:altsyncram_component
+ 23. altsyncram Parameter Settings by Entity Instance
+ 24. Analysis & Elaboration Settings
+ 25. Port Connectivity Checks: "ram1:ram"
+ 26. Port Connectivity Checks: "rom:rom"
+ 27. Port Connectivity Checks: "datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[0].f"
+ 28. Port Connectivity Checks: "datapath:dp|Alu:alu|n_bit_subtractor:sub_op|full_subtractor:generate_N_bit_Adder[0].f"
+ 29. Port Connectivity Checks: "datapath:dp|Alu:alu"
+ 30. Port Connectivity Checks: "datapath:dp|mux2:ra1mux"
+ 31. Port Connectivity Checks: "datapath:dp|adder:pcadd2"
+ 32. Port Connectivity Checks: "datapath:dp|adder:pcadd1"
+ 33. Port Connectivity Checks: "datapath:dp"
+ 34. Analysis & Elaboration Messages
+ 35. Analysis & Elaboration Suppressed Messages
 
 
 
@@ -66,7 +67,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Tue Nov 19 00:20:30 2024       ;
+; Analysis & Elaboration Status ; Successful - Wed Nov 20 00:24:43 2024       ;
 ; Quartus Prime Version         ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                 ; procesador                                  ;
 ; Top-level Entity Name         ; CPU                                         ;
@@ -252,6 +253,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+--------------------------------------------------------------+
 ; N              ; 32    ; Signed Integer                                               ;
 +----------------+-------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|Alu:alu|n_bit_multiplier:mult_op ;
++----------------+-------+------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                             ;
++----------------+-------+------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                   ;
++----------------+-------+------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -591,7 +602,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Nov 19 00:20:09 2024
+    Info: Processing started: Wed Nov 20 00:24:25 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off procesador -c procesador --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -618,7 +629,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file mux2.sv
 Info (12021): Found 1 design units, including 1 entities, in source file adder.sv
     Info (12023): Found entity 1: adder File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/adder.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu.sv
-    Info (12023): Found entity 1: Alu File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/Alu.sv Line: 20
+    Info (12023): Found entity 1: Alu File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/Alu.sv Line: 18
 Info (12021): Found 1 design units, including 1 entities, in source file full_adder.sv
     Info (12023): Found entity 1: full_adder File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/full_adder.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file full_subtractor.sv
@@ -659,6 +670,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file ram1.v
     Info (12023): Found entity 1: ram1 File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/ram1.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file shifter.sv
     Info (12023): Found entity 1: shifter File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/shifter.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file n_bit_multiplier.sv
+    Info (12023): Found entity 1: n_bit_multiplier File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/n_bit_multiplier.sv Line: 1
 Info (12127): Elaborating entity "CPU" for the top level hierarchy
 Info (12128): Elaborating entity "controller" for hierarchy "controller:c" File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/CPU.sv Line: 26
 Info (12128): Elaborating entity "decoder" for hierarchy "controller:c|decoder:dec" File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/controller.sv Line: 15
@@ -674,8 +687,8 @@ Info (12128): Elaborating entity "regfile" for hierarchy "datapath:dp|regfile:rf
 Info (12128): Elaborating entity "extend" for hierarchy "datapath:dp|extend:ext" File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/datapath.sv Line: 35
 Info (12128): Elaborating entity "shifter" for hierarchy "datapath:dp|shifter:shift" File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/datapath.sv Line: 36
 Info (12128): Elaborating entity "Alu" for hierarchy "datapath:dp|Alu:alu" File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/datapath.sv Line: 40
-Warning (10230): Verilog HDL assignment warning at Alu.sv(70): truncated value with size 32 to match size of target (1) File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/Alu.sv Line: 70
-Warning (10230): Verilog HDL assignment warning at Alu.sv(78): truncated value with size 32 to match size of target (1) File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/Alu.sv Line: 78
+Warning (10230): Verilog HDL assignment warning at Alu.sv(71): truncated value with size 32 to match size of target (1) File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/Alu.sv Line: 71
+Warning (10230): Verilog HDL assignment warning at Alu.sv(79): truncated value with size 32 to match size of target (1) File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/Alu.sv Line: 79
 Info (12128): Elaborating entity "n_bit_subtractor" for hierarchy "datapath:dp|Alu:alu|n_bit_subtractor:sub_op" File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/Alu.sv Line: 39
 Warning (10230): Verilog HDL assignment warning at n_bit_subtractor.sv(28): truncated value with size 32 to match size of target (1) File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/n_bit_subtractor.sv Line: 28
 Warning (10230): Verilog HDL assignment warning at n_bit_subtractor.sv(31): truncated value with size 32 to match size of target (1) File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/n_bit_subtractor.sv Line: 31
@@ -684,6 +697,7 @@ Info (12128): Elaborating entity "n_bit_adder" for hierarchy "datapath:dp|Alu:al
 Warning (10230): Verilog HDL assignment warning at n_bit_adder.sv(28): truncated value with size 32 to match size of target (1) File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/n_bit_adder.sv Line: 28
 Warning (10230): Verilog HDL assignment warning at n_bit_adder.sv(31): truncated value with size 32 to match size of target (1) File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/n_bit_adder.sv Line: 31
 Info (12128): Elaborating entity "full_adder" for hierarchy "datapath:dp|Alu:alu|n_bit_adder:adder_op|full_adder:generate_N_bit_Adder[0].f" File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/n_bit_adder.sv Line: 23
+Info (12128): Elaborating entity "n_bit_multiplier" for hierarchy "datapath:dp|Alu:alu|n_bit_multiplier:mult_op" File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/Alu.sv Line: 41
 Info (12128): Elaborating entity "rom" for hierarchy "rom:rom" File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/CPU.sv Line: 39
 Info (12128): Elaborating entity "altsyncram" for hierarchy "rom:rom|altsyncram:altsyncram_component" File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/rom.v Line: 82
 Info (12130): Elaborated megafunction instantiation "rom:rom|altsyncram:altsyncram_component" File: C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/rom.v Line: 82
@@ -751,10 +765,10 @@ Info (12128): Elaborating entity "mux_ahb" for hierarchy "ram1:ram|altsyncram:al
 Warning (12241): 6 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (144001): Generated suppressed messages file C:/Users/User/Documents/GitHub/ggamboa_mrodriguez_jsolano_digital_design_lab_2024/Proyecto/Procesador/output_files/procesador.map.smsg
 Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 8 warnings
-    Info: Peak virtual memory: 4810 megabytes
-    Info: Processing ended: Tue Nov 19 00:20:30 2024
-    Info: Elapsed time: 00:00:21
-    Info: Total CPU time (on all processors): 00:00:40
+    Info: Peak virtual memory: 4811 megabytes
+    Info: Processing ended: Wed Nov 20 00:24:43 2024
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:38
 
 
 +--------------------------------------------+

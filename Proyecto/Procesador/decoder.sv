@@ -1,6 +1,7 @@
  module decoder(input logic [1:0] Op,
 	input logic [5:0] Funct,
-	input logic [3:0] Rd, Mul,
+	input logic [3:0] Rd, 
+	input logic Mul,
 	output logic [1:0] FlagW,
 	output logic PCS,RegW,MemW,NoWrite,
 	output logic MemtoReg,ALUSrc,
@@ -37,15 +38,12 @@ assign{RegSrc,ImmSrc,ALUSrc,MemtoReg,
 	 case(Funct[4:1])
 		 4'b0100: begin ALUControl=3'b000; NoWrite = 1'b0; end//ADD
 		 4'b0010: begin ALUControl=3'b001; NoWrite = 1'b0; end //SUB
-		 4'b0000: begin NoWrite = 1'b0; if(Mul[3]) ALUControl=3'b100;//MUL
-					 else ALUControl=3'b010; //AND
+		 4'b0000: begin NoWrite = 1'b0; if(Mul)begin ALUControl=3'b100; end//MUL
+					 else begin ALUControl=3'b010; end //AND
 					 end
 		 4'b1100: begin ALUControl=3'b011; NoWrite = 1'b0; end //ORR
 		 4'b1010: begin ALUControl=3'b001; NoWrite = 1'b1; end //CMP
-		 4'b0111: begin ALUControl=3'b110; NoWrite = 1'b0; end //BNE
-		 4'b1101: begin NoWrite = 1'b0; if(Funct[5]) ALUControl = 3'b101; //MOV
-					else ALUControl = 3'b101; //Shifter
-					end
+		 4'b1101: begin NoWrite = 1'b0;  ALUControl = 3'b101; end //MOV
 		 default: begin ALUControl=3'bx;
 							 NoWrite = 1'b0;//unimplemented
 					 end

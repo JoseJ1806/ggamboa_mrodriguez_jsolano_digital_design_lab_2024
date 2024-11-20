@@ -153,4 +153,5 @@ set_global_assignment -name EDA_TEST_BENCH_FILE decoder_tb.sv -section_id decode
 set_global_assignment -name EDA_TEST_BENCH_FILE tb_image_loader.sv -section_id tb_image_loader
 set_global_assignment -name EDA_TEST_BENCH_FILE tb_vga_prueba.sv -section_id tb_vga_prueba
 set_global_assignment -name EDA_TEST_BENCH_FILE testbench.sv -section_id testbench
+set_global_assignment -name SYSTEMVERILOG_FILE n_bit_multiplier.sv
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

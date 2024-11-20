@@ -13,8 +13,6 @@
 | 100  |   ALU_Out = A * B;
 ----------------------------------------------------------------------
 | 101  |   ALU_Out = A mov B;
-----------------------------------------------------------------------
-| 110  |   ALU_Out = A bne B;
 ----------------------------------------------------------------------*/
 
 module Alu 
@@ -29,16 +27,19 @@ module Alu
   // Flags intermedios
   logic add_CFlag, add_VFlag, add_ZFlag, add_NFlag;
   logic sub_CFlag, sub_VFlag, sub_ZFlag, sub_NFlag;
+  logic mul_NFlag, mul_ZFlag;
   logic Neg, Z, C, V;
 
   // Resultados intermedios
   wire [N-1:0] add_result;
   wire [N-1:0] sub_result;
+  wire [2*N-1:0] mul_result;
 
   
   n_bit_subtractor #(.N(N)) sub_op(A, B, sub_result[N-1:0], sub_CFlag, sub_ZFlag, sub_VFlag, sub_NFlag);
   n_bit_adder #(.N(N)) adder_op(A, B, add_result[N-1:0], add_ZFlag, add_CFlag, add_VFlag, add_NFlag);
-
+  n_bit_multiplier #(.N(N)) mult_op(A, B, mul_result[2*N-1:0], mul_ZFlag, mul_NFlag);
+  
   always_comb begin
     // Inicializar flags
     Neg = 0;
@@ -81,24 +82,17 @@ module Alu
         V = 1'b0; // No aplica para OR
       end
 		3'b100: begin //MUL
-		  ALU_Result = A * B;
-        Z = (ALU_Result == '0);
-        C = 1'b0; // Carry es el bit menos significativo
-        Neg = ALU_Result[N-1]; 
-        V= 1'b0; // No aplica para shift
+		  ALU_Result = mul_result;
+        Z = mul_ZFlag;
+        C = 1'b0;
+        Neg = mul_NFlag; 
+        V= 1'b0; 
 		end
 		3'b101: begin //MOV
 			ALU_Result = B;
 			Z = (ALU_Result == '0);
 			C = 1'b0;
 			Neg = ALU_Result[N-1];
-			V = 1'b0;
-		end
-		3'b110: begin //BNE
-			ALU_Result = sub_result; 
-			Z = (ALU_Result == '0); 
-			Neg = 1'b0;  
-			C = 1'b0; 
 			V = 1'b0;
 		end
       default: begin 

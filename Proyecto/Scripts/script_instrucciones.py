@@ -55,6 +55,33 @@ instrucciones_sepia = ["e3a00000",
                         "1affffcf",
                         "eafffffe"]
 
+filtro_grises = [
+                "e3a00000",
+                "e59f1054",
+                "e3092c40",
+                "e5903000",
+                "e20340ff",
+                "e2035cff",
+                "e1a05425",
+                "e20368ff",
+                "e1a06826",
+                "e0867005",
+                "e0877004",
+                "e1a07127",
+                "e35700ff",
+                "83a070ff",
+                "e1a08807",
+                "e1a09407",
+                "e1888009",
+                "e1888007",
+                "e5818000",
+                "e2800001",
+                "e2811001",
+                "e2522001",
+                "1affffeb",
+                "eafffffe"
+]
+
 
 with open(nombre_archivo, 'r') as archivo:
         lineas = archivo.readlines()[0:24]

@@ -95,6 +95,21 @@ module Alu
 			Neg = ALU_Result[N-1];
 			V = 1'b0;
 		end
+		3'b110: begin //MOVHi
+			if(A <= B) begin
+				ALU_Result = A;
+				Z = (ALU_Result == '0);
+				C = 1'b0;
+				Neg = ALU_Result[N-1];
+				V = 1'b0;
+			end else begin
+				ALU_Result = B;
+				Z = (ALU_Result == '0);
+				C = 1'b0;
+				Neg = ALU_Result[N-1];
+				V = 1'b0;
+			end
+		end
       default: begin 
         ALU_Result = '0; // Valor por defecto
       end

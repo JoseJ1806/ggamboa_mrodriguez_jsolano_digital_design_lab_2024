@@ -1,7 +1,7 @@
         .global _start
 _start:
         LDR R0, =0x00000000       @ píxel 0,0
-        LDR R1, =0x00013880       @ Dirección destino 
+        LDR R1, =255       		  @ Dirección destino 
         MOV R2, #40000            @ Contador
         
 loop:
@@ -20,8 +20,8 @@ loop:
         LSR R7, R7, #2            @ Dividir entre 4 (es raro, mejor esta aproximación porque se puede caer la división)
 
         @ Limitar el valor Gray a 255
-        CMP R7, #255
-        MOVHI R7, #255
+        CMP R7, R1
+        MOVHI R7, R1
 
         @ Reensamblar el píxel en escala de grises
         LSL R8, R7, #16           @ Gray << 16 (coloca Gray en la posición de R)
@@ -34,7 +34,6 @@ loop:
 
         @ Actualizar direcciones
         ADD R0, R0, #1            @ pixel siguiente
-        ADD R1, R1, #1            @ siguiente palabra de destino
 
         SUBS R2, R2, #1           @ Contardor -1 
         BNE loop                  @ Continuar el bucle si contador =/= 0

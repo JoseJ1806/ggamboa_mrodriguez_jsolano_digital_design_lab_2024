@@ -25,7 +25,7 @@ module CPU_tb();
 		#32;
 		rst =0;
 		
-		#500;
+		#700;
 		$stop;
 	end
 

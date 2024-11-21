@@ -1,7 +1,7 @@
  module decoder(input logic [1:0] Op,
 	input logic [5:0] Funct,
 	input logic [3:0] Rd, 
-	input logic Mul,
+	input logic [3:0] Mul,
 	output logic [1:0] FlagW,
 	output logic PCS,RegW,MemW,NoWrite,
 	output logic MemtoReg,ALUSrc,
@@ -14,7 +14,7 @@
  //Main Decoder
  always_comb begin
 	 case(Op)   // Data-processing immediate
-		 2'b00: begin if(Funct[5] & Funct[4:1] == 4'b1010) begin 				// CMP Immediate
+		 2'b00: begin if(Funct[5] & Funct[4:1] == 4'b1010) begin 	// CMP Immediate
 					controls= 10'b0000100001;
 				end else if(!Funct[5] & Funct[4:1] == 4'b1010) begin 	// CMP Register
 					controls = 10'b0000000001; 
@@ -22,6 +22,8 @@
 					controls = 10'b0000101001;
 				end else if (Funct[5] & Funct[4:1] == 4'b1000) begin  // MOVW 
 					controls = 10'b0011101001;  
+				end else if (!Funct[5] & Funct[4:1] == 4'b0000 & Mul == 4'b1001) begin  // MUL 
+					controls = 10'b0000001001;  
 				end else begin 											
 					controls = 10'b0000001001; // Data-processing register 
 				end

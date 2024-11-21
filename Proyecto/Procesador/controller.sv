@@ -10,7 +10,7 @@ module controller(input logic clk,reset,
 						output logic PCSrc);
  logic[1:0] FlagW;
  logic PCS,RegW,MemW,NoWrite;
- decoder dec(Instr[27:26],Instr[25:20],Instr[15:12],Instr[7],
+ decoder dec(Instr[27:26],Instr[25:20],Instr[15:12],Instr[7:4],
 				  FlagW,PCS,RegW,MemW,NoWrite,
 				  MemtoReg,ALUSrc,ImmSrc,RegSrc,ALUControl);
 				  

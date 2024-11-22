@@ -1,8 +1,8 @@
         .global _start
 
 _start:
-        LDR R0, =0x00000000       @ Dirección inicial de la RAM (pixel 0,0)
-        MOV R1, #255          @ Dirección destino para guardar el píxel procesado
+        MOV R0, #0       @ Dirección inicial de la RAM (pixel 0,0)
+        LDR R1, =80000   @ESTA LINEA NO SE SI FUNCIONE, EL LDR ACÁ ES DUDOSO
         MOV R2, #40000            @ Contador de píxeles (40,000 píxeles)
         
 loop:
@@ -61,10 +61,11 @@ loop:
         ORR R7, R7, R9            @ Combinar con B
 
         @ Escribir el píxel sepia en la RAM destino
-        STR R7, [R0]              @ Guardar en dirección destino
+        STR R7, [R1]              @ Guardar en dirección destino
 
         @ Actualizar direcciones
         ADD R0, R0, #1            @ Avanzar a la siguiente palabra de entrada (pixel siguiente)
+	ADD R1, R1, #1		  @ ME IMAGINO QUE SI EL LDR DE ARRIBA SE CAE, ESTE TAMBIÉN SE VA A CAER
 
         SUBS R2, R2, #1           @ Decrementar el contador de píxeles
         BNE loop                  @ Si no hemos procesado los 40,000 píxeles, continuar el bucle

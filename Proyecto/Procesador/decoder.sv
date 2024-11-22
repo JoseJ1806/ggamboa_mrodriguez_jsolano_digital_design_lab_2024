@@ -26,6 +26,8 @@
 					controls = 10'b0011101001;  
 				end else if (!Funct[5] & Funct[4:1] == 4'b0000 & Mul == 4'b1001) begin  // MUL 
 					controls = 10'b0000001001;  
+				end  else if (Funct[5] & Funct[4:1] == 4'b0000) begin  // AND 
+					controls = 10'b0000101001;
 				end else begin 											
 					controls = 10'b0000001001; // Data-processing register 
 				end

@@ -1,7 +1,7 @@
         .global _start
 _start:
         LDR R0, =0x00000000       @ píxel 0,0
-        LDR R1, =255       		  @ Dirección destino 
+        LDR R1, =255       		  @ Limite
         MOV R2, #40000            @ Contador
         
 loop:
@@ -30,7 +30,7 @@ loop:
         ORR R8, R8, R7            @ Combina Gray para B
 
         @ Escribir el píxel en escala de grises en la RAM destino
-        STR R8, [R1]              @ Guardar en dirección destino
+        STR R8, [R0]              @ Guardar en dirección destino
 
         @ Actualizar direcciones
         ADD R0, R0, #1            @ pixel siguiente

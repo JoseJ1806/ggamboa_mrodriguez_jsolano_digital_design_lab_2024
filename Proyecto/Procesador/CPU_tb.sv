@@ -21,11 +21,11 @@ module CPU_tb();
 	initial begin
 		rst = 1;
 		clk = 0;
-		address = 32'd0;
+		address = 32'd40000;
 		#32;
 		rst =0;
 		
-		#2000;
+		#3000;
 		$stop;
 	end
 

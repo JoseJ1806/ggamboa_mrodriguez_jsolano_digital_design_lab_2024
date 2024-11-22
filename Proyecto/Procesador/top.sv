@@ -1,6 +1,7 @@
 module top(
     input logic clk,
 	 input logic rst,
+	 input logic switch,
     output logic vgaclk,
     output logic hsync, vsync,
     output logic sync_b, blank_b,
@@ -10,6 +11,7 @@ module top(
 );
 
 	logic enable;
+	logic [31:0] memAddress1, memAddress2;
 	
 	assign enable = (x < 400 & x >= 0) & (y < 200 & y >= 0);
 	
@@ -25,15 +27,30 @@ module top(
 	
 	always_ff @(posedge vgaclk) begin
 		if (rst) begin
-			memAddress <= 0;
-		end else if (memAddress >= 80000) begin
-			memAddress <= 0;
+			memAddress1 <= 0;
+		end else if (memAddress1 >= 80000) begin
+			memAddress1 <= 0;
 		end else if (enable) begin
-			if (memAddress < 80000) begin
-				memAddress <= memAddress + 1;
+			if (memAddress1 < 80000) begin
+				memAddress1 <= memAddress1 + 1;
 			end
 		end
 	end
+	
+	always_ff @(posedge vgaclk) begin
+		if (rst) begin
+			memAddress2 <= 0;
+		end else if (memAddress2 == 40000) begin
+			memAddress2 <= 80000;
+		end else if (memAddress2 >= 120000) begin
+			memAddress2 <= 0;
+		end else if (enable) begin
+			if (memAddress2 < 120000) begin
+				memAddress2 <= memAddress2 + 1;
+			end
+		end
+	end
+	mux2 (#32) muxfilter(memAddress1, memAddress0, switch, memAddress); 
 	 
 
 endmodule 

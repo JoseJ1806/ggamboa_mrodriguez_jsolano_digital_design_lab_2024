@@ -4,7 +4,6 @@ module tb_top;
 	 parameter CLK_PERIOD = 10; // Periodo del reloj en unidades de tiempo
     logic clk;
     logic rst;
-	 logic switch;
     logic vgaclk;
     logic hsync, vsync;
     logic sync_b, blank_b;
@@ -16,7 +15,6 @@ module tb_top;
     top uut (
         .clk(clk),
         .rst(rst),
-		  .switch(switch),
         .vgaclk(vgaclk),
         .hsync(hsync),
         .vsync(vsync),

@@ -50,7 +50,7 @@ module top(
 			end
 		end
 	end
-	mux2 (#32) muxfilter(memAddress1, memAddress0, switch, memAddress); 
+	mux2 (#32) muxfilter(memAddress1, memAddress2, switch, memAddress); 
 	 
 
 endmodule 

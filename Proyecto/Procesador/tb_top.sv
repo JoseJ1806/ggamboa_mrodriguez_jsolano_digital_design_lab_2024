@@ -1,6 +1,6 @@
 `timescale 1 ns / 1 ns
 
-module tb_vga_prueba;
+module tb_top;
 	 parameter CLK_PERIOD = 10; // Periodo del reloj en unidades de tiempo
     logic clk;
     logic rst;
@@ -12,7 +12,7 @@ module tb_vga_prueba;
 	 logic [31:0] memAddress, pixel;
 
     // Instancia del módulo a probar
-    vga_prueba uut (
+    top uut (
         .clk(clk),
         .rst(rst),
         .vgaclk(vgaclk),

@@ -1,4 +1,4 @@
-module vga_prueba(
+module top(
     input logic clk,
 	 input logic rst,
     output logic vgaclk,

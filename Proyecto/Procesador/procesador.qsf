@@ -106,6 +106,22 @@ set_location_assignment PIN_AK29 -to r[0]
 set_location_assignment PIN_AJ22 -to sync_b
 set_location_assignment PIN_AK18 -to vsync
 set_location_assignment PIN_AK21 -to vgaclk
+set_global_assignment -name EDA_TEST_BENCH_NAME testbench -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id testbench
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME testbench -section_id testbench
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name EDA_TEST_BENCH_FILE tb_Alu.sv -section_id tb_Alu
+set_global_assignment -name EDA_TEST_BENCH_FILE tb_arm.sv -section_id tb_arm
+set_global_assignment -name EDA_TEST_BENCH_FILE CPU_tb.sv -section_id CPU_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE decoder_tb.sv -section_id decoder_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE tb_image_loader.sv -section_id tb_image_loader
+set_global_assignment -name EDA_TEST_BENCH_FILE tb_vga_prueba.sv -section_id tb_vga_prueba
+set_global_assignment -name EDA_TEST_BENCH_FILE testbench.sv -section_id testbench
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name SYSTEMVERILOG_FILE tb_top.sv
+set_global_assignment -name SYSTEMVERILOG_FILE top.sv
 set_global_assignment -name MIF_FILE pixeles_rgb.mif
 set_global_assignment -name SYSTEMVERILOG_FILE arm.sv
 set_global_assignment -name SYSTEMVERILOG_FILE controller.sv
@@ -135,23 +151,7 @@ set_global_assignment -name QIP_FILE rom.qip
 set_global_assignment -name SYSTEMVERILOG_FILE generate_graphic.sv
 set_global_assignment -name SYSTEMVERILOG_FILE generate_rectangle.sv
 set_global_assignment -name SYSTEMVERILOG_FILE decoder_tb.sv
-set_global_assignment -name SYSTEMVERILOG_FILE vga_prueba.sv
-set_global_assignment -name SYSTEMVERILOG_FILE tb_vga_prueba.sv
 set_global_assignment -name QIP_FILE ram1.qip
-set_global_assignment -name EDA_TEST_BENCH_NAME testbench -section_id eda_simulation
-set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id testbench
-set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME testbench -section_id testbench
 set_global_assignment -name MIF_FILE rom.mif
 set_global_assignment -name SYSTEMVERILOG_FILE shifter.sv
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name EDA_TEST_BENCH_FILE tb_Alu.sv -section_id tb_Alu
-set_global_assignment -name EDA_TEST_BENCH_FILE tb_arm.sv -section_id tb_arm
-set_global_assignment -name EDA_TEST_BENCH_FILE CPU_tb.sv -section_id CPU_tb
-set_global_assignment -name EDA_TEST_BENCH_FILE decoder_tb.sv -section_id decoder_tb
-set_global_assignment -name EDA_TEST_BENCH_FILE tb_image_loader.sv -section_id tb_image_loader
-set_global_assignment -name EDA_TEST_BENCH_FILE tb_vga_prueba.sv -section_id tb_vga_prueba
-set_global_assignment -name EDA_TEST_BENCH_FILE testbench.sv -section_id testbench
 set_global_assignment -name SYSTEMVERILOG_FILE n_bit_multiplier.sv
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
